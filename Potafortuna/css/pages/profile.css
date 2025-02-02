@@ -1,0 +1,469 @@
+/* =======================
+   profile top (img/ttl)
+======================= */
+.profile-top {
+  width: 100%;
+  position: relative;
+}
+
+.profile-top-img {
+  position: relative;
+  width: 100%;
+  padding: 72px 0 2vw 0;
+}
+
+.profile-top-img img {
+  width: 100%;
+}
+
+.profile-top-img::before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-top: 24.3%; /*アスペクト比 (350 / 1440 = 0.243)*/
+  background: rgb(113, 95, 90, 0.8);
+  position: absolute;
+  top: 72px;
+  left: 0;
+  z-index: 1;
+}
+
+.page-top-ttl {
+  font-family: var(--font-en-heading);
+  font-size: 6.25vw;
+  color: var(--color-text-inverse);
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+/* ===============================
+profile contents (top:名前・資格)
+================================ */
+
+/****** profile共通 *****/
+.profile__contents-lcontainer {
+  padding: 20px;
+}
+
+.profile__txt-lcontainer {
+  padding: 30px 30px 30px 60px;
+  margin: 20px 0;
+}
+
+.inverse-txt {
+  color: var(--color-text-inverse);
+}
+
+/***** profile（上:名前・資格） *****/
+.profile,
+.experience,
+.outfit {
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px 0;
+  position: relative;
+}
+
+.profile__wrap {
+  position: relative;
+  margin: 0 auto;
+}
+
+.profile__wrap-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/***** ヘッダー（名前）*****/
+.profile__header {
+  padding: 0 20px;
+}
+
+.profile__name-container {
+  text-align: left;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 20px 30px 20px 60px;
+}
+
+.profile__name {
+  font-weight: bold;
+  margin: 0;
+}
+
+.profile__name-en {
+  font-size: 3.75rem;
+  font-family: var(--font-en-heading);
+  font-weight: 300;
+}
+
+.profile__name-ja {
+  font-weight: 300;
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  padding-bottom: 0.5rem;
+}
+
+/***** 詳細部分 (資格) *****/
+.profile__img-container,
+.profile__img-position {
+  position: relative;
+}
+
+.profile__details {
+  position: relative;
+  margin: 0 auto;
+}
+
+.profile__details-back {
+  position: relative;
+}
+
+.profile__qualifications::before {
+  display: block;
+  content: "";
+  width: 98%;
+  height: 94%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: inherit;
+  border: 1px solid var(--color-base-light);
+  z-index: 1; /*！！！！後で削除！！！！*/
+}
+
+.profile__qualifications {
+  margin-bottom: 20px;
+  margin: 0 auto;
+  background-color: var(--color-base);
+}
+
+.profile__section-title {
+  font-family: var(--font-ja-heading);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.profile__list {
+  margin: 0;
+  padding-left: 3vmin;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+}
+
+.profile__list-item {
+  font-size: 16px;
+  margin-bottom: 5px;
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+.profile__list-item:nth-child(5) {
+  margin-bottom: 0;
+}
+
+/***** プロフィール写真部分 *****/
+.profile__photo {
+  position: absolute;
+  top: 35%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 40%;
+}
+
+.profile__photo img {
+  width: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.profile-height,
+.profile-age {
+  width: 80px;
+  height: 50px;
+  position: absolute;
+  font-family: var(--font-ja-heading);
+  font-size: 1.25rem;
+}
+
+.profile-height {
+  top: 11%;
+  left: 24%;
+}
+
+.profile-age {
+  top: 15%;
+  right: -5%;
+}
+
+.profile-height:before,
+.profile-age:before {
+  display: block;
+  content: "";
+  width: 1px;
+  height: 3vw;
+  background: var(--dark-color);
+  position: absolute;
+}
+
+.profile-height:before {
+  top: 79%;
+  right: 0;
+  transform: rotate(315deg) translate(-50%, -50%);
+}
+
+.profile-age:before {
+  top: 30%;
+  left: -10%;
+  transform: rotate(56deg);
+}
+
+/***** 実績 *****/
+.profile__experience-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile__photo-career {
+  position: relative;
+}
+
+.profile__photo-career::before,
+.profile__photo-career::after {
+  display: block;
+  content: "";
+  background: var(--color-base);
+  position: absolute;
+}
+
+.profile__photo-career::before {
+  width: 100%;
+  height: 85%;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.profile__photo-career::after {
+  width: 95%;
+  height: 80%;
+  position: absolute;
+  top: calc(100% - 42.5%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/* =======================
+ outfit
+ ======================= */
+.profile__outfit-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 画像 */
+.profile__outfit-img {
+  width: 95%;
+  position: relative;
+}
+
+.profile__outfit-img-ttl {
+  font-family: var(--font-en-cursive);
+  font-size: 22.5rem;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: -12px 2px 1px var(--color-text-inverse);
+  width: 80%;
+  text-align: center;
+  color: var(--color-base);
+  letter-spacing: 40px;
+}
+
+.profile__outfit-img::before,
+.profile__outfit-img::after {
+  display: block;
+  content: "";
+  position: absolute;
+  background: var(--color-base);
+}
+
+.profile__outfit-img::before {
+  width: 100%;
+  height: calc(100% - 35%);
+  top: 5%;
+  left: 0;
+  z-index: -2;
+}
+
+.profile__outfit-img::after {
+  width: 98%;
+  height: calc(100% - 37%);
+  border: solid 1px var(--color-base-light);
+  top: 6%;
+  left: 1%;
+  z-index: -1;
+}
+
+.profile__photo-outfit img {
+  width: 100%;
+}
+
+/* テキスト */
+.profile__outfit-reason {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.profile__outfit-left-wrap,
+.profile__outfit-center-wrap,
+.profile__outfit-right-wrap {
+  width: 30%;
+  padding: 0 3%;
+  line-height: var(--line-height-base);
+}
+
+.profile__outfit-center-wrap,
+.profile__outfit-right-wrap {
+  border-left: dotted 1px var(--color-base);
+}
+
+.profile__outfit-left,
+.profile__outfit-center,
+.profile__outfit-right {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.profile_outfit-ttl {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.profile__outfit-txt {
+  padding-top: 10px;
+}
+
+/* =======================
+ QA
+ ======================= */
+.profile__qa-img {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: calc(100% - 65%);
+  margin: 0 auto;
+}
+
+.profile__qa-img-ttl {
+  display: block;
+  font-family: var(--font-en-cursive);
+  font-size: 12rem;
+  text-align: center;
+  text-shadow: -9px 2px 1px var(--color-text-inverse);
+}
+
+/* QA画像 */
+.profile__photo-qa {
+}
+
+.profile__photo-qa::before {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 36%;
+  background: var(--color-base);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.profile__photo-qa::after {
+  display: block;
+  content: "";
+  width: 96%;
+  height: 34%;
+  background: var(--color-base);
+  border: solid 1px var(--color-base-light);
+  position: absolute;
+  bottom: 1%;
+  left: 2%;
+  z-index: -1;
+}
+
+.profile__photo-qa img {
+  width: 100%;
+}
+
+/* QA項目 */
+.profile__qa-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  width: 100%;
+  position: relative;
+  margin-top: 30px;
+}
+
+.profile__qa-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 38%;
+  padding: 2.5% 0;
+  position: relative;
+}
+
+.profile__qa-list:nth-child(3) {
+  gap: 20px;
+}
+
+.profile__qa-list-item {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 0;
+}
+
+.profile__qa-q-ttl {
+  display: block;
+  font-family: var(--font-ja-heading);
+  font-size: 1.5rem;
+  padding: 10px;
+  text-align: left;
+}
+
+.profile__qa-a-txt {
+  display: block;
+  padding: 10px;
+  text-align: left;
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+

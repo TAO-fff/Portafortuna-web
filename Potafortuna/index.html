@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Porta fortuna</title>
+    <meta name="description" content="" />
+
+    <!-- ファビコン有無確認 -->
+    <link rel="icon" href="" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Qwitcher+Grypen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SEO関連 -->
+    <meta name="description" content="ページの簡単な説明" />
+    <!-- キーワード → 現在、あまり重要視されていないですが付けるか確認 -->
+    <meta name="keywords" content="キーワード1, キーワード2, キーワード3" />
+    <meta name="author" content="作成者名" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+
+    <!-- SNSやOGP対応（オプション） -->
+    <meta property="og:title" content="ページタイトル" />
+    <meta property="og:description" content="ページの説明" />
+    <meta property="og:image" content="og-image.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- jsファイル -->
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <nav class="header-nav">
+        <ul>
+          <li class="header-item nav-item"><a href="">ホーム</a></li>
+          <li class="header-item nav-item"><a href="">メニュー</a></li>
+          <li class="header-item nav-item"><a href="">プロフィール</a></li>
+          <li class="header-item nav-item"><a href="">お客様の声</a></li>
+          <li class="header-item nav-item"><a href="">お問い合わせ</a></li>
+        </ul>
+        <div class="header-btn">
+          <a class="cta-btn header-btn-link" href="">ご予約はこちら</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- top -->
+    <div class="home__top">
+      <!-- 画像 -->
+      <div class="home__top-mv">
+        <img src="./img/home-fv-pic.jpg" />
+      </div>
+      <!-- キャッチコピー -->
+      <div class="home__top-copy">
+        <div class="home__top-copy-vertical">
+          <p>何を着ればいいかもう迷わない</p>
+        </div>
+        <div class="home__top-copy-horizontal">
+          <p>似合うがその場でわかる特別な体験</p>
+        </div>
+      </div>
+      <!-- ロゴ -->
+      <div class="home__top-logo">
+        <h1>porta fortuna</h1>
+      </div>
+      <!-- メッセージ -->
+      <div class="home__top-message">
+        <div class="home__top-message-ttl-en">
+          <p>Message</p>
+        </div>
+        <div class="home__top-message-wrap">
+          <div class="home__top-message-ttl-ja">
+            <p>年齢でおしゃれを諦めていませんか？</p>
+          </div>
+          <div class="home__top-message-txt">
+            <p>
+              年齢とともにライフスタイルや体型が変わり、
+              『似合う服がわからない』『何を買えばいいのか迷う』と悩んでいませんか？<br />当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
+              お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。
+              ファッションのお悩みを解決して、おしゃれを楽しみましょう。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- reasonコンテンツ -->
+    <div class="home__l-container">
+      <section class="home__reason">
+        <div class="home__reason-back">
+          <div class="home__reason-wrap">
+            <!-- タイトル -->
+            <div class="home__section-ttl-wrap">
+              <div class="home__section-ttl">
+                <h2 class="home__section-ttl-en home__reason-ttl">REASON</h2>
+              </div>
+              <div class="home__section-ttl">
+                <p class="home__section-ttl-ja home__reason-ttl">
+                  当サロンが選ばれる4つの理由
+                </p>
+              </div>
+            </div>
+            <!-- 4つの理由 -->
+            <div class="home__reason-area">
+              <ul class="home__reason-groupe">
+                <li class="home__reason-item">
+                  <div class="home__reason-item-wrap">
+                    <div class="home__reason-item-ttl">
+                      <p>
+                        <span class="home__reason-big">
+                          1,000名以上の診断実績</span
+                        >で<br />磨いた確かな提案力
+                      </p>
+                    </div>
+                    <div class="home__reason-txt">
+                      <p>
+                        イメージコンサルタント歴5年以上、診断実績1,000名以上の豊富な経験を活かし、お客様の「好き」やライフスタイルに寄り添った具体的なコーディネートをご提案します。
+                        さらに、年齢や体型に縛られず、自分らしさを引き出すスタイリングのコツを丁寧にお伝えし、おしゃれの可能性を広げるお手伝いをいたします。
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="home__reason-item">
+                  <div class="home__reason-item-wrap">
+                    <div class="home__reason-item-ttl">
+                      <p>
+                        <span class="home__reason-big"> リピーター続出中</span
+                        >の<br />
+                        満足度が高いサービス
+                      </p>
+                    </div>
+                    <div class="home__reason-txt">
+                      <p>
+                        お手持ちのお洋服にどんなアイテムを買い足せばコーディネートが広がるのか。また、着こなしに悩むお洋服をどうすればおしゃれに見えるのか。そんなお悩みに丁寧にお応えします。
+                        「自分らしい新しいおしゃれが見つかる」と多くの好評を頂戴しており、定期的に予約いただくお客様が増えております。
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <ul class="home__reason-groupe">
+                <li class="home__reason-item">
+                  <div class="home__reason-item-wrap">
+                    <div class="home__reason-item-ttl">
+                      <p>
+                        <span class="home__reason-big"> 専門資格を持つプロ</span
+                        >が<br />
+                        お伝えする身につくセンス
+                      </p>
+                    </div>
+                    <div class="home__reason-txt">
+                      <p>
+                        顔タイプ診断®︎1級アドバイザー、パーソナルカラー診断、骨格診断などの資格保有者として、確かな知識に基づいた自信を持てるおしゃれのご提案をします。
+                        また、なぜお似合いになるのかを理論に基づいてお伝えするため、お洋服選びやコーディネートの組み方に活かせるようなセンスを身に付けていただけます。
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="home__reason-item">
+                  <div class="home__reason-item-wrap">
+                    <div class="home__reason-item-ttl">
+                      <p>
+                        <span class="home__reason-big">
+                          業界内から信頼される</span
+                        ><br />
+                        スタイリング技術
+                      </p>
+                    </div>
+                    <div class="home__reason-txt">
+                      <p>
+                        顔タイプ診断®︎協会公式YouTubeを筆頭に、さまざまなメディアでスタイリングを担当。
+                        さらに、プロのイメージコンサルタントを育成する講座でスタイリングの実習講師を担当しており、業界内からも「信頼性が高いスタイリング技術」と支持されております。
+                        プロも認める技術で、お客様の魅力を引き立たせる提案をいたします。
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- menuコンテンツ -->
+    <div class="l-container">
+      <section class="home__menu">
+        <div class="home__menu-wrap">
+          <!-- タイトル -->
+          <div class="home__section-ttl-wrap">
+            <div class="home__section-ttl">
+              <h2 class="home__section-ttl-en">MENU</h2>
+            </div>
+            <div class="home__section-ttl">
+              <p class="home__section-ttl-ja">メニュー</p>
+            </div>
+          </div>
+          <!-- メニュー内容 -->
+          <div class="home__menu-list">
+            <ul>
+              <li class="home__menu-item">
+                <div class="home__menu-item-ttl">
+                  <p>ショッピング同行</p>
+                </div>
+                <div class="home__menu-item-img">
+                  <span class="home__menu-item-rank"></span>
+                  <img
+                    src="./img/menu-shopping-trip.jpg"
+                    alt="ショッピング同行"
+                  />
+                </div>
+                <div class="home__menu-item-txt">
+                  <p>
+                    お客様に合うお洋服を事前に下見してご用意。当日は試着しながら、ショップ選びやコーディネートのアドバイスをいたします。新しい自分の魅力を発見できる、当サロンで一番人気のメニューです。
+                  </p>
+                </div>
+              </li>
+              <li class="home__menu-item">
+                <div class="home__menu-item-ttl">
+                  <p>ショップクルーズ+お茶会</p>
+                </div>
+                <div class="home__menu-item-img">
+                  <img
+                    src="./img/menu-shopping-clues.jpg"
+                    alt="ショップクルーズ＋お茶会"
+                  />
+                </div>
+                <div class="home__menu-item-txt">
+                  <p>
+                    ショップを巡りながら、ショップ選びのコツやお客様におすすめのお店をご紹介します。その後は、お茶を楽しみながら気軽にお話しできる時間もご用意しています。
+                  </p>
+                </div>
+              </li>
+              <li class="home__menu-item">
+                <div class="home__menu-item-ttl">
+                  <p>オンラインクローゼット診断</p>
+                </div>
+                <div class="home__menu-item-img">
+                  <img
+                    src="./img/menu-closet-check.png
+                    "
+                    alt="オンラインクローゼット診断"
+                  />
+                </div>
+                <div class="home__menu-item-txt">
+                  <p>
+                    オンラインでご自宅にあるお洋服を診断し、着回しのご提案や断捨離のご相談、おすすめのブランドのご紹介をいたします。ご自宅で気軽におしゃれを学べるメニューです。
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="home__link-area">
+              <div class="home__link-txt">
+                <p>メニューの詳細はこちら</p>
+              </div>
+              <div class="home__link-btn">
+                <a class="home__link-url" href="">CHECK</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- voiceコンテンツ -->
+    <div class="l-container">
+      <section class="home__voice">
+        <!-- タイトル -->
+        <div class="home__section-ttl-wrap">
+          <div class="home__section-ttl">
+            <h2 class="home__section-ttl-en">VOICE</h2>
+          </div>
+          <div class="home__section-ttl">
+            <p class="home__section-ttl-ja">お客様からの声</p>
+          </div>
+        </div>
+          <!-- voice1 -->
+          <div class="home__voice-area">
+          <div class="home__voice-text-wrap">
+            <!-- num -->
+            <div class="home__voice-order">
+              <div class="home__voice-num-txt">
+                <p>User<br />Voice</p>
+              </div>
+              <div class="home__voice-num">
+                <p>1</p>
+              </div>
+            </div>
+            <!-- 感想 -->
+            <div class="home__voice-customer">
+              <p>
+                “感動の連続！<br />
+                毎日がもっと素敵になりました”
+              </p>
+            </div>
+          </div>
+          <div class="home__voice-img-wrap">
+            <img src="./img/home-voice1.jpg" alt="お客様の声" />
+          </div>
+        </div>
+          <!-- voice2 -->
+          <div class="home__voice-area">
+          <div class="home__voice-text-wrap">
+            <!-- num -->
+            <div class="home__voice-order">
+              <div class="home__voice-num-txt">
+                <p>User<br />Voice</p>
+              </div>
+              <div class="home__voice-num">
+                <p>2</p>
+              </div>
+            </div>
+            <!-- 感想 -->
+            <div class="home__voice-customer">
+              <p>
+                “似合うアイテムを手元に<br />
+                揃える喜びを実感しました”
+              </p>
+            </div>
+          </div>
+          <div class="home__voice-img-wrap">
+            <img src="./img/home-voice2.jpg" alt="お客様の声" />
+          </div>
+        </div>
+                 <!-- voice3 -->
+          <div class="home__voice-area">
+            <div class="home__voice-text-wrap">
+              <!-- num -->
+              <div class="home__voice-order">
+                <div class="home__voice-num-txt">
+                  <p>User<br />Voice</p>
+                </div>
+                <div class="home__voice-num">
+                  <p>3</p>
+                </div>
+              </div>
+              <!-- 感想 -->
+              <div class="home__voice-customer">
+                <p>
+                  “みんなに褒められるお洋服と<br />
+                  出会えて毎日がハッピーです”
+                </p>
+              </div>
+            </div>
+            <div class="home__voice-img-wrap">
+              <img src="./img/home-voice3.jpg" alt="お客様の声" />
+            </div>
+          </div>
+          <div class="home__link-area">
+            <div class="home__link-txt">
+              <p>メニューの詳細はこちら</p>
+            </div>
+            <div class="home__link-btn">
+              <a class="home__link-url" href="">CHECK</a>
+            </div>
+          </div>
+      </section>
+    </div>
+
+    <!-- profile -->
+     <div class="l-container">
+      <section class="home__profile">
+        <div class="home__profile-wrap">
+          <!-- 画像 -->
+          <div class="home__profile-img">
+            <img src="./img/home-profile-img.png" alt="プロフィール写真">
+          </div>
+          <!-- 文章 -->
+          <div class="home__profile-txt-wrap">
+            <div class="homme__profile-txt-name">
+              <p>SAYA</p>
+            </div>
+            <div class="home__profile-txt-content">
+              <p>50代、身長150cm。背が低く、ぽっちゃり体型の私。<br>
+                数年前までは、どこにでもいる普通の50代の主婦でした。<br>
+                会社員、結婚、出産、子育て、専業主婦、パート勤務…。<br>
+                人生のさまざまな場面を経験してきたからこそ、「年齢を重ねてもおしゃれを楽しむことの大切さ」を実感しています。
+                お洋服選びに迷ったり、似合うスタイルがわからなくなったりするのは、
+                どんな方でも経験すること。私自身もその悩みを抱えた一人だからこそ、
+                お客様にリアルなお悩みに寄り添ったご提案ができます。
+                「今の自分だからこそ楽しめるおしゃれ」を一緒に見つけましょう。</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+     </div>
+
+     <!-- NEWS -->
+      <div class="l-container">
+        <section class="home__news">
+           <!-- タイトル -->
+        <div class="home__section-ttl-wrap">
+          <div class="home__section-ttl">
+            <h2 class="home__section-ttl-en">NEWS</h2>
+          </div>
+          <div class="home__section-ttl">
+            <p class="home__section-ttl-ja">最新情報</p>
+          </div>
+        </div>
+        <!-- テキスト -->
+         <div class="home__news-wrap">
+          <div class="home__news-txt">
+            <p>最新情報はInstagramにて更新しております。<br>ファッションのお役立ち情報も発信しておりますので、ぜひご確認ください。</p>
+          </div>
+         </div>
+         <!-- 画像 -->
+         <div class="home__news-img-groupe">
+          <div class="home_news-img-item home__news-left">
+            <img src="./img/home-news-left.jpg" alt="">
+          </div>
+          <div class="home_news-img-item home__news-center">
+            <img src="./img/home-news-center.jpg" alt="">
+          </div>
+          <div class="home_news-img-item home__news-right">
+            <img src="./img/home-news-right.jpg" alt="">
+          </div>
+         </div>
+         <div class="home__link-area">
+          <div class="home__link-txt">
+            <p>メニューの詳細はこちら</p>
+          </div>
+          <div class="home__link-btn">
+            <a class="home__link-url" href="">CHECK</a>
+          </div>
+        </div>
+        </section>
+      </div>
+
+    <!-- 以下、前ページ共通 -->
+    <!-- reserve -->
+    <div class="reserve__container">
+      <section class="reserve__btn">
+        <div class="reserve__btn-wrap">
+          <div class="reserve__btn-message">
+            <p>あなたの毎日を輝かせるためのおしゃれを見つけましょう</p>
+          </div>
+          <div class="reserve__btn-link">
+            <a class="reserve__btn-footer cta-btn" href="">ご予約はこちら</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="footer__nav-wrap">
+        <nav class="footer__nav">
+          <ul>
+            <li class="footer__item nav-item"><a href="">ホーム</a></li>
+            <li class="footer__item nav-item"><a href="">メニュー</a></li>
+            <li class="footer__item nav-item"><a href="">プロフィール</a></li>
+            <li class="footer__item nav-item"><a href="">お客様の声</a></li>
+            <li class="footer__item nav-item"><a href="">お問い合わせ</a></li>
+          </ul>
+          <div class="footer__copyright">
+            <p>©2024 porta fortuna プライバシーポリシー</p>
+          </div>
+        </nav>
+      </div>
+
+      <!-- sns -->
+      <ul class="footer__nav-sns">
+        <li class="footer__nav-sns-item">
+          <a class="footer__na-sns-link" href=""
+            ><img src="./img/Vector.png" alt="Instagram" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>

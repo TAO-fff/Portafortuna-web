@@ -1,0 +1,44 @@
+/* 変数*/
+/* =======================
+   共通
+======================= */
+:root {
+      /* Font settings */
+      --font-ja: "Noto Sans JP", sans-serif; /* ゴシック 和文フォント */
+      --font-ja-heading: "Noto Serif JP", serif; /* 明朝 和文見出しフォント */
+      --font-en-heading: "Aboreto", cursive; /* 英字見出しフォント */
+      --font-en-cursive: "Qwitcher Grypen", serif; /* 筆記体 英語タイトル用 */
+
+        /* Font Weight */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+     /* Color settings */
+     --color-text: #715f5a; /* 基本テキスト */
+     --color-text-inverse: #fff; /* 逆色（白） */
+     --color-base: #a28f81; /* ベースカラー */
+     --color-base-light: #fff; /* 明るいベースカラー */
+     --color-base-dark: #715f5a; /* 暗いベースカラー */
+     --color-key: #8b3333; /* キーカラー */
+     --color-nav:#716053; /*nav item*/
+  
+    /* Line-height */
+    --line-height-base: 2; /* 基本の行間 */
+    --line-height-tight:1.5; /* 狭め*/
+  
+    /* Letter-spacing */
+    --letter-spacing-base: 10%;/* 通常 */
+    --letter-spacing-wide: 15%; /* 広め */
+    --letter-spacing-tight: -0.02em; /* 狭め */
+  }
+  
+  
+  body {
+    color: var(--color-text);
+    font-size: 1.25rem;
+    font-family: var(--font-ja);
+  }
+  
+  .img {
+    width: 100%;
+  }
