@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/home.css" />
 
     <!-- SNSやOGP対応（オプション） -->
@@ -45,7 +46,9 @@
         <ul>
           <li class="header-item nav-item"><a href="">ホーム</a></li>
           <li class="header-item nav-item"><a href="">メニュー</a></li>
-          <li class="header-item nav-item"><a href="">プロフィール</a></li>
+          <li class="header-item nav-item">
+            <a href="./profile.html">プロフィール</a>
+          </li>
           <li class="header-item nav-item"><a href="">お客様の声</a></li>
           <li class="header-item nav-item"><a href="">お問い合わせ</a></li>
         </ul>
@@ -97,7 +100,7 @@
               </div>
               <div class="home__top-message-txt">
                 <p>
-                  年齢とともにライフスタイルや体型が変わり、
+                  年齢とともにライフスタイルや体型が変わり、<br />
                   『似合う服がわからない』『何を買えばいいのか迷う』と悩んでいませんか？<br />当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
                   お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。
                   ファッションのお悩みを解決して、おしゃれを楽しみましょう。
@@ -115,7 +118,7 @@
         <div class="home__reason-back">
           <div class="home__reason-wrap">
             <!-- タイトル -->
-            <div class="l-heading-ttl-wrap">
+            <div class="l-heading-ttl-wrap l-container">
               <div class="l-heading-ttl">
                 <h2 class="l-heading-ttl-en home__reason-ttl-en">REASON</h2>
               </div>
@@ -131,8 +134,9 @@
                 <li class="home__reason-item">
                   <div class="home__reason-item-wrap">
                     <div class="home__reason-item-ttl">
+                      <span class="home__reason-ttl-back">01</span>
                       <p>
-                        <span class="home__reason-big">
+                        <span class="home__reason-big-txt">
                           1,000名以上の診断実績</span
                         >で<br />磨いた確かな提案力
                       </p>
@@ -148,8 +152,10 @@
                 <li class="home__reason-item">
                   <div class="home__reason-item-wrap">
                     <div class="home__reason-item-ttl">
+                      <span class="home__reason-ttl-back">02</span>
                       <p>
-                        <span class="home__reason-big"> リピーター続出中</span
+                        <span class="home__reason-big-txt">
+                          リピーター続出中</span
                         >の<br />
                         満足度が高いサービス
                       </p>
@@ -167,8 +173,10 @@
                 <li class="home__reason-item">
                   <div class="home__reason-item-wrap">
                     <div class="home__reason-item-ttl">
+                      <span class="home__reason-ttl-back">03</span>
                       <p>
-                        <span class="home__reason-big"> 専門資格を持つプロ</span
+                        <span class="home__reason-big-txt">
+                          専門資格を持つプロ</span
                         >が<br />
                         お伝えする身につくセンス
                       </p>
@@ -184,8 +192,9 @@
                 <li class="home__reason-item">
                   <div class="home__reason-item-wrap">
                     <div class="home__reason-item-ttl">
+                      <span class="home__reason-ttl-back">04</span>
                       <p>
-                        <span class="home__reason-big">
+                        <span class="home__reason-big-txt">
                           業界内から信頼される</span
                         ><br />
                         スタイリング技術
@@ -280,6 +289,7 @@
               </div>
               <div class="home__link-btn">
                 <a class="home__link-url" href="">CHECK</a>
+                <span class="home__link-btn-arrow"></span>
               </div>
             </div>
           </div>
@@ -377,6 +387,7 @@
           </div>
           <div class="home__link-btn">
             <a class="home__link-url" href="">CHECK</a>
+            <span class="home__link-btn-arrow"></span>
           </div>
         </div>
       </section>
@@ -415,6 +426,7 @@
           </div>
           <div class="home__link-btn">
             <a class="home__link-url" href="">CHECK</a>
+            <span class="home__link-btn-arrow"></span>
           </div>
         </div>
       </section>
@@ -458,6 +470,7 @@
           </div>
           <div class="home__link-btn">
             <a class="home__link-url" href="">CHECK</a>
+            <span class="home__link-btn-arrow"></span>
           </div>
         </div>
       </section>
@@ -467,7 +480,7 @@
     <!-- reserve -->
     <div class="reserve__container">
       <section class="reserve__btn">
-        <div class="reserve__btn-wrap">
+        <div class="reserve__btn-wrap l-container">
           <div class="reserve__btn-message">
             <p>あなたの毎日を輝かせるためのおしゃれを見つけましょう</p>
           </div>
@@ -480,30 +493,101 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="footer__nav-wrap">
-        <nav class="footer__nav">
-          <ul>
-            <li class="footer__item nav-item"><a href="">ホーム</a></li>
-            <li class="footer__item nav-item"><a href="">メニュー</a></li>
-            <li class="footer__item nav-item"><a href="">プロフィール</a></li>
-            <li class="footer__item nav-item"><a href="">お客様の声</a></li>
-            <li class="footer__item nav-item"><a href="">お問い合わせ</a></li>
-            <li class="footer__item nav-item">
-              <a class="footer__nav-sns-link" href="">Instagram </a>
-            </li>
-          </ul>
-          <div class="footer__nav-sns">
-              <a class="footer__nav-sns-link" href=""
-                ><img src="./img/Vector.png" alt="Instagram" />
-              </a>
-          </div>
-        </nav>
+      <div class="footer__nav-wrap l-container">
+        <!-- left -->
+        <div class="footer__nav-wrap-left">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="./index.html">ホーム</a>
+              </li>
+            </ul>
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">メニュー</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">ショッピング同行</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">ショップクルーズ＋お茶会</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">オンラインクローゼット診断</a>
+              </li>
+              <li class="footer__item nav-item"><a href="">料金のご案内</a></li>
+              <li class="footer__item nav-item">
+                <a href="">サービス対応エリア</a>
+              </li>
+              <li class="footer__item nav-item"><a href="">よくある質問</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- center left-->
+        <div class="footer__nav-wrap-centerleft">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">お客様の声</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">診断前のお客様のお悩み</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">診断後のお客様の感想 </a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">ご提案コーデ一覧</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- center right -->
+        <div class="footer__nav-wrap-centerright">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="./profile.html">プロフィール</a>
+              </li>
+              <li class="footer__item nav-item"><a href="./test-profile.html#profile-qualifications">保有資格</a></li>
+              <li class="footer__item nav-item"><a href="./test-profile.html#profile-diagnosis">各診断タイプ</a></li>
+              <li class="footer__item nav-item">
+                <a href="./test-profile.html#profile-outfit">サロンオーナーの強み</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="./test-profile.html#experience-company">企業研修実績 </a>
+              </li>
+              <li class="footer__item nav-item"><a href="./test-profile.html#experience-event">イベント出演・監修実績</a></li>
+              <li class="footer__item nav-item">
+                <a href="./test-profile.html#experience-media">メディア出演実績</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- right -->
+        <div class="footer__nav-wrap-right">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">お問い合わせ</a>
+              </li>
+            </ul>
+            <ul>
+              <div class="footer__nav-sns">
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="">Instagram</a>
+                </li>
+                <div class="footer-__sns-img">
+                  <img src="./img/Vector.png" alt="Instagram" />
+                </div>
+              </div>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="footer__copyright">
         <p>©2024 porta fortuna プライバシーポリシー</p>
       </div>
-
-      <!-- sns -->
     </footer>
   </body>
 </html>

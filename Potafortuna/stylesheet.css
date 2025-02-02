@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'syunka2pbb';
+    src: url('syunka2pbb.woff2') format('woff2'),
+        url('syunka2pbb.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

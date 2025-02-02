@@ -194,47 +194,6 @@ profile contents (top:名前・資格)
   z-index: 1;
 }
 
-.profile-height,
-.profile-age {
-  width: 80px;
-  height: 50px;
-  position: absolute;
-  font-family: var(--font-ja-heading);
-  font-size: 1.25rem;
-}
-
-.profile-height {
-  top: 11%;
-  left: 24%;
-}
-
-.profile-age {
-  top: 15%;
-  right: -5%;
-}
-
-.profile-height:before,
-.profile-age:before {
-  display: block;
-  content: "";
-  width: 1px;
-  height: 3vw;
-  background: var(--dark-color);
-  position: absolute;
-}
-
-.profile-height:before {
-  top: 79%;
-  right: 0;
-  transform: rotate(315deg) translate(-50%, -50%);
-}
-
-.profile-age:before {
-  top: 30%;
-  left: -10%;
-  transform: rotate(56deg);
-}
-
 /***** 実績 *****/
 .profile__experience-wrap {
   display: flex;

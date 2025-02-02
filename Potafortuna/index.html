@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/home.css" />
 
     <!-- SNSやOGP対応（オプション） -->
@@ -41,11 +42,13 @@
   <body>
     <!-- header -->
     <header class="header">
-      <nav class="header-nav">
+      <nav class="header-nav l-container">
         <ul>
           <li class="header-item nav-item"><a href="">ホーム</a></li>
           <li class="header-item nav-item"><a href="">メニュー</a></li>
-          <li class="header-item nav-item"><a href="">プロフィール</a></li>
+          <li class="header-item nav-item">
+            <a href="./profile.html">プロフィール</a>
+          </li>
           <li class="header-item nav-item"><a href="">お客様の声</a></li>
           <li class="header-item nav-item"><a href="">お問い合わせ</a></li>
         </ul>
@@ -57,39 +60,53 @@
 
     <!-- top -->
     <div class="home__top">
-      <!-- 画像 -->
-      <div class="home__top-mv">
-        <img src="./img/home-fv-pic.jpg" />
-      </div>
-      <!-- キャッチコピー -->
-      <div class="home__top-copy">
-        <div class="home__top-copy-vertical">
-          <p>何を着ればいいかもう迷わない</p>
-        </div>
-        <div class="home__top-copy-horizontal">
-          <p>似合うがその場でわかる特別な体験</p>
-        </div>
-      </div>
-      <!-- ロゴ -->
-      <div class="home__top-logo">
-        <h1>porta fortuna</h1>
-      </div>
-      <!-- メッセージ -->
-      <div class="home__top-message">
-        <div class="home__top-message-ttl-en">
-          <p>Message</p>
-        </div>
-        <div class="home__top-message-wrap">
-          <div class="home__top-message-ttl-ja">
-            <p>年齢でおしゃれを諦めていませんか？</p>
+      <!-- 画像back -->
+      <div class="home__mv-img-wrap">
+        <div class="home__top-mv">
+          <img src="./img/home-fv-pic.png" />
+          <!-- 画像 triangle -->
+          <div class="home__top-mv-triangle">
+            <img src="./img/home-mv-triangle.png" alt="" />
           </div>
-          <div class="home__top-message-txt">
-            <p>
-              年齢とともにライフスタイルや体型が変わり、
-              『似合う服がわからない』『何を買えばいいのか迷う』と悩んでいませんか？<br />当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
-              お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。
-              ファッションのお悩みを解決して、おしゃれを楽しみましょう。
-            </p>
+          <!-- 画像 -->
+          <div class="home__top-mv-small">
+            <img src="./img/home-fv-pic-saya.png" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="l-container">
+        <!-- キャッチコピー -->
+        <div class="home__mv-txt-wrap">
+          <div class="home__top-copy">
+            <div class="home__top-copy-vertical">
+              <p>何を着ればいいかもう迷わない</p>
+            </div>
+            <div class="home__top-copy-horizontal">
+              <p>似合うがその場でわかる特別な体験</p>
+            </div>
+          </div>
+          <!-- ロゴ -->
+          <div class="home__top-logo">
+            <h1>porta fortuna</h1>
+          </div>
+          <!-- メッセージ -->
+          <div class="home__top-message">
+            <div class="home__top-message-ttl-en">
+              <p>Message</p>
+            </div>
+            <div class="home__top-message-wrap">
+              <div class="home__top-message-ttl-ja">
+                <p>年齢でおしゃれを諦めていませんか？</p>
+              </div>
+              <div class="home__top-message-txt">
+                <p>
+                  年齢とともにライフスタイルや体型が変わり、<br />
+                  『似合う服がわからない』『何を買えばいいのか迷う』と悩んでいませんか？<br />当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
+                  お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。
+                  ファッションのお悩みを解決して、おしゃれを楽しみましょう。
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -101,12 +118,12 @@
         <div class="home__reason-back">
           <div class="home__reason-wrap">
             <!-- タイトル -->
-            <div class="home__section-ttl-wrap">
-              <div class="home__section-ttl">
-                <h2 class="home__section-ttl-en home__reason-ttl">REASON</h2>
+            <div class="l-heading-ttl-wrap l-container">
+              <div class="l-heading-ttl">
+                <h2 class="l-heading-ttl-en home__reason-ttl-en">REASON</h2>
               </div>
-              <div class="home__section-ttl">
-                <p class="home__section-ttl-ja home__reason-ttl">
+              <div class="l-heading-ttl">
+                <p class="l-heading-ttl-ja home__reason-ttl-ja">
                   当サロンが選ばれる4つの理由
                 </p>
               </div>
@@ -117,8 +134,9 @@
                 <li class="home__reason-item">
                   <div class="home__reason-item-wrap">
                     <div class="home__reason-item-ttl">
+                      <span class="home__reason-ttl-back">01</span>
                       <p>
-                        <span class="home__reason-big">
+                        <span class="home__reason-big-txt">
                           1,000名以上の診断実績</span
                         >で<br />磨いた確かな提案力
                       </p>
@@ -134,8 +152,10 @@
                 <li class="home__reason-item">
                   <div class="home__reason-item-wrap">
                     <div class="home__reason-item-ttl">
+                      <span class="home__reason-ttl-back">02</span>
                       <p>
-                        <span class="home__reason-big"> リピーター続出中</span
+                        <span class="home__reason-big-txt">
+                          リピーター続出中</span
                         >の<br />
                         満足度が高いサービス
                       </p>
@@ -153,8 +173,10 @@
                 <li class="home__reason-item">
                   <div class="home__reason-item-wrap">
                     <div class="home__reason-item-ttl">
+                      <span class="home__reason-ttl-back">03</span>
                       <p>
-                        <span class="home__reason-big"> 専門資格を持つプロ</span
+                        <span class="home__reason-big-txt">
+                          専門資格を持つプロ</span
                         >が<br />
                         お伝えする身につくセンス
                       </p>
@@ -170,8 +192,9 @@
                 <li class="home__reason-item">
                   <div class="home__reason-item-wrap">
                     <div class="home__reason-item-ttl">
+                      <span class="home__reason-ttl-back">04</span>
                       <p>
-                        <span class="home__reason-big">
+                        <span class="home__reason-big-txt">
                           業界内から信頼される</span
                         ><br />
                         スタイリング技術
@@ -197,12 +220,12 @@
       <section class="home__menu">
         <div class="home__menu-wrap">
           <!-- タイトル -->
-          <div class="home__section-ttl-wrap">
-            <div class="home__section-ttl">
-              <h2 class="home__section-ttl-en">MENU</h2>
+          <div class="l-heading-ttl-wrap">
+            <div class="l-heading-ttl">
+              <h2 class="l-heading-ttl-en">MENU</h2>
             </div>
-            <div class="home__section-ttl">
-              <p class="home__section-ttl-ja">メニュー</p>
+            <div class="l-heading-ttl">
+              <p class="l-heading-ttl-ja">メニュー</p>
             </div>
           </div>
           <!-- メニュー内容 -->
@@ -266,6 +289,7 @@
               </div>
               <div class="home__link-btn">
                 <a class="home__link-url" href="">CHECK</a>
+                <span class="home__link-btn-arrow"></span>
               </div>
             </div>
           </div>
@@ -277,16 +301,16 @@
     <div class="l-container">
       <section class="home__voice">
         <!-- タイトル -->
-        <div class="home__section-ttl-wrap">
-          <div class="home__section-ttl">
-            <h2 class="home__section-ttl-en">VOICE</h2>
+        <div class="l-heading-ttl-wrap">
+          <div class="l-heading-ttl">
+            <h2 class="l-heading-ttl-en">VOICE</h2>
           </div>
-          <div class="home__section-ttl">
-            <p class="home__section-ttl-ja">お客様からの声</p>
+          <div class="l-heading-ttl">
+            <p class="l-heading-ttl-ja">お客様からの声</p>
           </div>
         </div>
-          <!-- voice1 -->
-          <div class="home__voice-area">
+        <!-- voice1 -->
+        <div class="home__voice-area">
           <div class="home__voice-text-wrap">
             <!-- num -->
             <div class="home__voice-order">
@@ -309,8 +333,8 @@
             <img src="./img/home-voice1.jpg" alt="お客様の声" />
           </div>
         </div>
-          <!-- voice2 -->
-          <div class="home__voice-area">
+        <!-- voice2 -->
+        <div class="home__voice-area">
           <div class="home__voice-text-wrap">
             <!-- num -->
             <div class="home__voice-order">
@@ -333,48 +357,49 @@
             <img src="./img/home-voice2.jpg" alt="お客様の声" />
           </div>
         </div>
-                 <!-- voice3 -->
-          <div class="home__voice-area">
-            <div class="home__voice-text-wrap">
-              <!-- num -->
-              <div class="home__voice-order">
-                <div class="home__voice-num-txt">
-                  <p>User<br />Voice</p>
-                </div>
-                <div class="home__voice-num">
-                  <p>3</p>
-                </div>
+        <!-- voice3 -->
+        <div class="home__voice-area">
+          <div class="home__voice-text-wrap">
+            <!-- num -->
+            <div class="home__voice-order">
+              <div class="home__voice-num-txt">
+                <p>User<br />Voice</p>
               </div>
-              <!-- 感想 -->
-              <div class="home__voice-customer">
-                <p>
-                  “みんなに褒められるお洋服と<br />
-                  出会えて毎日がハッピーです”
-                </p>
+              <div class="home__voice-num">
+                <p>3</p>
               </div>
             </div>
-            <div class="home__voice-img-wrap">
-              <img src="./img/home-voice3.jpg" alt="お客様の声" />
+            <!-- 感想 -->
+            <div class="home__voice-customer">
+              <p>
+                “みんなに褒められるお洋服と<br />
+                出会えて毎日がハッピーです”
+              </p>
             </div>
           </div>
-          <div class="home__link-area">
-            <div class="home__link-txt">
-              <p>メニューの詳細はこちら</p>
-            </div>
-            <div class="home__link-btn">
-              <a class="home__link-url" href="">CHECK</a>
-            </div>
+          <div class="home__voice-img-wrap">
+            <img src="./img/home-voice3.jpg" alt="お客様の声" />
           </div>
+        </div>
+        <div class="home__link-area">
+          <div class="home__link-txt">
+            <p>詳しいお客様の声はこちら</p>
+          </div>
+          <div class="home__link-btn">
+            <a class="home__link-url" href="">CHECK</a>
+            <span class="home__link-btn-arrow"></span>
+          </div>
+        </div>
       </section>
     </div>
 
     <!-- profile -->
-     <div class="l-container">
+    <div class="l-container">
       <section class="home__profile">
         <div class="home__profile-wrap">
           <!-- 画像 -->
           <div class="home__profile-img">
-            <img src="./img/home-profile-img.png" alt="プロフィール写真">
+            <img src="./img/home-profile-img.png" alt="プロフィール写真" />
           </div>
           <!-- 文章 -->
           <div class="home__profile-txt-wrap">
@@ -382,67 +407,80 @@
               <p>SAYA</p>
             </div>
             <div class="home__profile-txt-content">
-              <p>50代、身長150cm。背が低く、ぽっちゃり体型の私。<br>
-                数年前までは、どこにでもいる普通の50代の主婦でした。<br>
-                会社員、結婚、出産、子育て、専業主婦、パート勤務…。<br>
+              <p>
+                50代、身長150cm。背が低く、ぽっちゃり体型の私。<br />
+                数年前までは、どこにでもいる普通の50代の主婦でした。<br />
+                会社員、結婚、出産、子育て、専業主婦、パート勤務…。<br />
                 人生のさまざまな場面を経験してきたからこそ、「年齢を重ねてもおしゃれを楽しむことの大切さ」を実感しています。
                 お洋服選びに迷ったり、似合うスタイルがわからなくなったりするのは、
                 どんな方でも経験すること。私自身もその悩みを抱えた一人だからこそ、
                 お客様にリアルなお悩みに寄り添ったご提案ができます。
-                「今の自分だからこそ楽しめるおしゃれ」を一緒に見つけましょう。</p>
+                「今の自分だからこそ楽しめるおしゃれ」を一緒に見つけましょう。
+              </p>
             </div>
-
           </div>
         </div>
-      </section>
-     </div>
-
-     <!-- NEWS -->
-      <div class="l-container">
-        <section class="home__news">
-           <!-- タイトル -->
-        <div class="home__section-ttl-wrap">
-          <div class="home__section-ttl">
-            <h2 class="home__section-ttl-en">NEWS</h2>
-          </div>
-          <div class="home__section-ttl">
-            <p class="home__section-ttl-ja">最新情報</p>
-          </div>
-        </div>
-        <!-- テキスト -->
-         <div class="home__news-wrap">
-          <div class="home__news-txt">
-            <p>最新情報はInstagramにて更新しております。<br>ファッションのお役立ち情報も発信しておりますので、ぜひご確認ください。</p>
-          </div>
-         </div>
-         <!-- 画像 -->
-         <div class="home__news-img-groupe">
-          <div class="home_news-img-item home__news-left">
-            <img src="./img/home-news-left.jpg" alt="">
-          </div>
-          <div class="home_news-img-item home__news-center">
-            <img src="./img/home-news-center.jpg" alt="">
-          </div>
-          <div class="home_news-img-item home__news-right">
-            <img src="./img/home-news-right.jpg" alt="">
-          </div>
-         </div>
-         <div class="home__link-area">
+        <div class="home__link-area">
           <div class="home__link-txt">
-            <p>メニューの詳細はこちら</p>
+            <p>詳しいプロフィールはこちら</p>
           </div>
           <div class="home__link-btn">
             <a class="home__link-url" href="">CHECK</a>
+            <span class="home__link-btn-arrow"></span>
           </div>
         </div>
-        </section>
-      </div>
+      </section>
+    </div>
+
+    <!-- NEWS -->
+    <div class="l-container">
+      <section class="home__news">
+        <!-- タイトル -->
+        <div class="l-heading-ttl-wrap">
+          <div class="l-heading-ttl">
+            <h2 class="l-heading-ttl-en">NEWS</h2>
+          </div>
+          <div class="l-heading-ttl">
+            <p class="l-heading-ttl-ja">最新情報</p>
+          </div>
+        </div>
+        <!-- テキスト -->
+        <div class="home__news-wrap">
+          <div class="home__news-txt">
+            <p>
+              最新情報はInstagramにて更新しております。<br />ファッションのお役立ち情報も発信しておりますので、ぜひご確認ください。
+            </p>
+          </div>
+        </div>
+        <!-- 画像 -->
+        <div class="home__news-img-groupe">
+          <div class="home_news-img-item home__news-left">
+            <img src="./img/home-news-left.jpg" alt="" />
+          </div>
+          <div class="home_news-img-item home__news-center">
+            <img src="./img/home-news-center.jpg" alt="" />
+          </div>
+          <div class="home_news-img-item home__news-right">
+            <img src="./img/home-news-right.jpg" alt="" />
+          </div>
+        </div>
+        <div class="home__link-area">
+          <div class="home__link-txt">
+            <p>最新情報はこちら</p>
+          </div>
+          <div class="home__link-btn">
+            <a class="home__link-url" href="">CHECK</a>
+            <span class="home__link-btn-arrow"></span>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- 以下、前ページ共通 -->
     <!-- reserve -->
     <div class="reserve__container">
       <section class="reserve__btn">
-        <div class="reserve__btn-wrap">
+        <div class="reserve__btn-wrap l-container">
           <div class="reserve__btn-message">
             <p>あなたの毎日を輝かせるためのおしゃれを見つけましょう</p>
           </div>
@@ -455,29 +493,101 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="footer__nav-wrap">
-        <nav class="footer__nav">
-          <ul>
-            <li class="footer__item nav-item"><a href="">ホーム</a></li>
-            <li class="footer__item nav-item"><a href="">メニュー</a></li>
-            <li class="footer__item nav-item"><a href="">プロフィール</a></li>
-            <li class="footer__item nav-item"><a href="">お客様の声</a></li>
-            <li class="footer__item nav-item"><a href="">お問い合わせ</a></li>
-          </ul>
-          <div class="footer__copyright">
-            <p>©2024 porta fortuna プライバシーポリシー</p>
-          </div>
-        </nav>
+      <div class="footer__nav-wrap l-container">
+        <!-- left -->
+        <div class="footer__nav-wrap-left">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="./index.html">ホーム</a>
+              </li>
+            </ul>
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">メニュー</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">ショッピング同行</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">ショップクルーズ＋お茶会</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">オンラインクローゼット診断</a>
+              </li>
+              <li class="footer__item nav-item"><a href="">料金のご案内</a></li>
+              <li class="footer__item nav-item">
+                <a href="">サービス対応エリア</a>
+              </li>
+              <li class="footer__item nav-item"><a href="">よくある質問</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- center left-->
+        <div class="footer__nav-wrap-centerleft">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">お客様の声</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">診断前のお客様のお悩み</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">診断後のお客様の感想 </a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">ご提案コーデ一覧</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- center right -->
+        <div class="footer__nav-wrap-centerright">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="./profile.html">プロフィール</a>
+              </li>
+              <li class="footer__item nav-item"><a href="./test-profile.html#profile-qualifications">保有資格</a></li>
+              <li class="footer__item nav-item"><a href="./test-profile.html#profile-diagnosis">各診断タイプ</a></li>
+              <li class="footer__item nav-item">
+                <a href="./test-profile.html#profile-outfit">サロンオーナーの強み</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="./test-profile.html#experience-company">企業研修実績 </a>
+              </li>
+              <li class="footer__item nav-item"><a href="./test-profile.html#experience-event">イベント出演・監修実績</a></li>
+              <li class="footer__item nav-item">
+                <a href="./test-profile.html#experience-media">メディア出演実績</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- right -->
+        <div class="footer__nav-wrap-right">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">お問い合わせ</a>
+              </li>
+            </ul>
+            <ul>
+              <div class="footer__nav-sns">
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="">Instagram</a>
+                </li>
+                <div class="footer-__sns-img">
+                  <img src="./img/Vector.png" alt="Instagram" />
+                </div>
+              </div>
+            </ul>
+          </nav>
+        </div>
       </div>
-
-      <!-- sns -->
-      <ul class="footer__nav-sns">
-        <li class="footer__nav-sns-item">
-          <a class="footer__na-sns-link" href=""
-            ><img src="./img/Vector.png" alt="Instagram" />
-          </a>
-        </li>
-      </ul>
+      <div class="footer__copyright">
+        <p>©2024 porta fortuna プライバシーポリシー</p>
+      </div>
     </footer>
   </body>
 </html>

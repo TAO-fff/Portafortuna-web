@@ -9,8 +9,12 @@
       --font-en-heading: "Aboreto", cursive; /* 英字見出しフォント */
       --font-en-cursive: "Qwitcher Grypen", serif; /* 筆記体 英語タイトル用 */
 
+      /* font size */
+      --font-size-text: 1.125rem;
+      --heading-en-pc-size: 3rem;
+      --heading-en-sp-size: 2rem;
+
         /* Font Weight */
-    --font-weight-regular: 400;
     --font-weight-bold: 700;
 
      /* Color settings */
@@ -20,7 +24,8 @@
      --color-base-light: #fff; /* 明るいベースカラー */
      --color-base-dark: #715f5a; /* 暗いベースカラー */
      --color-key: #8b3333; /* キーカラー */
-     --color-nav:#716053; /*nav item*/
+     --color-primary: #716053;/* nav・あしらい */
+
   
     /* Line-height */
     --line-height-base: 2; /* 基本の行間 */
@@ -32,10 +37,18 @@
     --letter-spacing-tight: -0.02em; /* 狭め */
   }
   
+  /* お客様voice フォント */
+  @font-face {
+    font-family: 'Syunka';
+    src: url('../font/syunka2pbb.woff2') format('woff2'),
+         url('../font/syunka2pbb.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
   
   body {
     color: var(--color-text);
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-family: var(--font-ja);
   }
   

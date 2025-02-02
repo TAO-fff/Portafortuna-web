@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css">
     <link rel="stylesheet" href="./css/pages/profile.css" />
 
     <!-- SNSやOGP対応（オプション） -->
@@ -43,7 +44,7 @@
     <header class="header">
       <nav class="header-nav l-container">
         <ul>
-          <li class="header-item nav-item"><a href="">ホーム</a></li>
+          <li class="header-item nav-item"><a href="./index.html">ホーム</a></li>
           <li class="header-item nav-item"><a href="">メニュー</a></li>
           <li class="header-item nav-item"><a href="">プロフィール</a></li>
           <li class="header-item nav-item"><a href="">お客様の声</a></li>
@@ -83,7 +84,7 @@
           
 
           <!-- 資格 -->
-          <div class="profile__img-container">
+          <div class="profile__img-container" id="profile-qualifications">
             <div class="profile__img-position">
               <!-- 資格テキスト -->
               <div class="profile__details profile__contents-lcontainer">
@@ -111,7 +112,7 @@
                 </div>
 
                 <!-- タイプ -->
-                <div class="profile__content">
+                <div class="profile__content" id="profile-diagnosis">
                   <div class="profile__diagnosis profile__txt-lcontainer">
                     <h2 class="profile__section-title">診断タイプ</h2>
                     <ul class="profile__list">
@@ -132,8 +133,6 @@
                 <!-- プロフィール画像 -->
                 <div class="profile__wrap-img">
                   <div class="profile__photo">
-                    <span class="profile-height">150cm</span>
-                    <span class="profile-age">50S</span>
                     <img src="./img/analist-name.png" alt="SAYAの写真" />
                   </div>
                 </div>
@@ -145,7 +144,7 @@
     </section>
 
     <!-- outfit コンテンツ -->
-    <section class="outfit">
+    <section class="outfit" id="profile-outfit">
       <div class="l-container">
         <div class="profile__wrap">
           <div class="profile__outfit-wrap">
@@ -225,7 +224,7 @@
                 <!-- 企業実績 -->
                 <div
                   class="profile__experience-company profile__txt-lcontainer"
-                >
+                  id="experience-company">
                   <h2 class="profile__section-title">企業研修</h2>
                   <ul class="profile__list">
                     <li class="profile__list-item">TDK株式会社 様</li>
@@ -245,7 +244,7 @@
                 <div class="profile__content profile__contents-lcontainer">
                   <div
                     class="profile__experience-event profile__txt-lcontainer"
-                  >
+                   id="experience-event">
                     <h2 class="profile__section-title">イベント出演・監修</h2>
                     <ul class="profile__list">
                       <li class="profile__list-item">銀座三越 様</li>
@@ -270,7 +269,7 @@
                 <div class="profile__content profile__contents-lcontainer">
                   <div
                     class="profile__experience-media profile__txt-lcontainer"
-                  >
+                   id="experience-media">
                     <h2 class="profile__section-title">メディア出演</h2>
                     <ul class="profile__list">
                       <li class="profile__list-item">
@@ -357,11 +356,11 @@
       </div>
     </section>
 
-    <!-- 以下、前ページ共通 -->
+  <!-- 以下、前ページ共通 -->
     <!-- reserve -->
     <div class="reserve__container">
       <section class="reserve__btn">
-        <div class="reserve__btn-wrap">
+        <div class="reserve__btn-wrap l-container">
           <div class="reserve__btn-message">
             <p>あなたの毎日を輝かせるためのおしゃれを見つけましょう</p>
           </div>
@@ -374,29 +373,101 @@
 
     <!-- footer -->
     <footer class="footer">
-      <div class="footer__nav-wrap">
-        <nav class="footer__nav">
-          <ul>
-            <li class="footer__item nav-item"><a href="">ホーム</a></li>
-            <li class="footer__item nav-item"><a href="">メニュー</a></li>
-            <li class="footer__item nav-item"><a href="">プロフィール</a></li>
-            <li class="footer__item nav-item"><a href="">お客様の声</a></li>
-            <li class="footer__item nav-item"><a href="">お問い合わせ</a></li>
-            <li class="footer__item nav-item">
-              <a class="footer__nav-sns-link" href="">Instagram </a>
-            </li>
-          </ul>
-          <div class="footer__nav-sns">
-              <a class="footer__nav-sns-link" href=""
-                ><img src="./img/Vector.png" alt="Instagram" />
-              </a>
-          </div>
-        </nav>
+      <div class="footer__nav-wrap l-container">
+        <!-- left -->
+        <div class="footer__nav-wrap-left">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">ホーム</a>
+              </li>
+            </ul>
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">メニュー</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">ショッピング同行</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">ショップクルーズ＋お茶会</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">オンラインクローゼット診断</a>
+              </li>
+              <li class="footer__item nav-item"><a href="">料金のご案内</a></li>
+              <li class="footer__item nav-item">
+                <a href="">サービス対応エリア</a>
+              </li>
+              <li class="footer__item nav-item"><a href="">よくある質問</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- center left-->
+        <div class="footer__nav-wrap-centerleft">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">お客様の声</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">診断前のお客様のお悩み</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">診断後のお客様の感想 </a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">ご提案コーデ一覧</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- center right -->
+        <div class="footer__nav-wrap-centerright">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">プロフィール</a>
+              </li>
+              <li class="footer__item nav-item"><a href="">保有資格</a></li>
+              <li class="footer__item nav-item"><a href="">各診断タイプ</a></li>
+              <li class="footer__item nav-item">
+                <a href="">サロンオーナーの強み</a>
+              </li>
+              <li class="footer__item nav-item">
+                <a href="">企業研修実績 </a>
+              </li>
+              <li class="footer__item nav-item">イベント出演・監修実績</li>
+              <li class="footer__item nav-item">
+                <a href="">メディア出演実績</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- right -->
+        <div class="footer__nav-wrap-right">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__item footer_nav-ttl nav-item">
+                <a href="">お問い合わせ</a>
+              </li>
+            </ul>
+            <ul>
+              <div class="footer__nav-sns">
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="">Instagram</a>
+                </li>
+                <div class="footer-__sns-img">
+                  <img src="./img/Vector.png" alt="Instagram" />
+                </div>
+              </div>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="footer__copyright">
         <p>©2024 porta fortuna プライバシーポリシー</p>
       </div>
-
     </footer>
   </body>
 </html>
