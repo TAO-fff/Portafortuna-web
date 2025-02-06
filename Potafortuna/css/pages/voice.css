@@ -1,0 +1,127 @@
+/* =======================
+  before
+======================= */
+.voice__before {
+}
+
+.voice__before-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 47px;
+  padding: 65px 0 20px 0;
+}
+
+.voice__before-wrap {
+}
+
+.voice__before-list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 160px;
+}
+
+.voice__before-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 37%;
+}
+
+.voice__before-ttl {
+  padding: 56px 65px;
+  margin: 0 auto;
+  background-color: rgba(162, 143, 129, 0.2);
+  position: relative;
+}
+
+.voice__before-num {
+  font-family: var(--font-ja-heading);
+  color: var(--color-primary);
+  opacity: 0.3;
+  line-height: var(--line-height-base);
+  position: absolute;
+  text-align: center;
+  position: absolute;
+  top: 1.5%;
+  left: 2.5%;
+}
+
+.voice__before-num:before {
+  display: block;
+  content: "";
+  background: var(--color-primary);
+  width: 0.1px;
+  height: 190px;
+  position: absolute;
+  top: -71%;
+  left: 120%;
+  transform: rotate(47deg);
+}
+
+.voice__before-ttl p {
+  text-align: center;
+  font-family: var(--font-ja-heading);
+  font-size: 1.375rem;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
+  letter-spacing: 0.1375rem;
+}
+
+.before_voice-txt {
+  width: 81%;
+}
+
+.before_voice-txt p {
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+/* =======================
+  after
+======================= */
+/* 感想部分レイアウトはcommon.css */
+.voice__after {}
+
+.voice__after-group {
+  padding: 40px 0 30px 0;
+}
+
+.voice__after-item {
+  gap: 110px;
+}
+
+/* =======================
+  voice-gallery
+======================= */
+.voice__gallery {}
+
+.voice__gallery-slider {
+  padding: 124px 0 190px 0;
+}
+
+.voice__gallery-slider-list {
+  display: flex;
+  align-items: stretch;
+  gap: 50px;
+}
+
+.voice__gallery-slider-item {}
+
+.voice__gallery-attension {
+  padding-bottom: 130px;
+
+}
+
+.voice__gallery-attension p {
+  color: var( --color-primary);
+  text-align: center;
+  font-family: var(--font-ja-heading);
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-base);
+}

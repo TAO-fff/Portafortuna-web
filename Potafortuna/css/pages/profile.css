@@ -1,45 +1,3 @@
-/* =======================
-   profile top (img/ttl)
-======================= */
-.profile-top {
-  width: 100%;
-  position: relative;
-}
-
-.profile-top-img {
-  position: relative;
-  width: 100%;
-  padding: 72px 0 2vw 0;
-}
-
-.profile-top-img img {
-  width: 100%;
-}
-
-.profile-top-img::before {
-  display: block;
-  content: "";
-  width: 100%;
-  padding-top: 24.3%; /*アスペクト比 (350 / 1440 = 0.243)*/
-  background: rgb(113, 95, 90, 0.8);
-  position: absolute;
-  top: 72px;
-  left: 0;
-  z-index: 1;
-}
-
-.page-top-ttl {
-  font-family: var(--font-en-heading);
-  font-size: 6.25vw;
-  color: var(--color-text-inverse);
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  letter-spacing: 8px;
-  text-align: center;
-}
 
 /* ===============================
 profile contents (top:名前・資格)
@@ -55,7 +13,7 @@ profile contents (top:名前・資格)
   margin: 20px 0;
 }
 
-.inverse-txt {
+.profile__list-inverse-txt {
   color: var(--color-text-inverse);
 }
 
@@ -65,7 +23,7 @@ profile contents (top:名前・資格)
 .outfit {
   width: 100%;
   margin: 0 auto;
-  padding: 70px 0;
+  padding: 100px 0 70px 0;
   position: relative;
 }
 
@@ -285,6 +243,13 @@ profile contents (top:名前・資格)
   z-index: -1;
 }
 
+.profile__photo-outfit-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+
+}
+
 .profile__photo-outfit img {
   width: 100%;
 }
@@ -300,7 +265,7 @@ profile contents (top:名前・資格)
 .profile__outfit-center-wrap,
 .profile__outfit-right-wrap {
   width: 30%;
-  padding: 0 3%;
+  padding: 0 20px;
   line-height: var(--line-height-base);
 }
 
@@ -329,12 +294,13 @@ profile contents (top:名前・資格)
  QA
  ======================= */
 .profile__qa-img {
-  width: 32%;
+  width: 33%;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  left: calc(100% - 65%);
+  top: -15%;
+  left: calc(100% - 67%);
   margin: 0 auto;
 }
 
@@ -420,7 +386,7 @@ profile contents (top:名前・資格)
 
 .profile__qa-a-txt {
   display: block;
-  padding: 10px;
+  padding: 10px 15px;
   text-align: left;
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-base);

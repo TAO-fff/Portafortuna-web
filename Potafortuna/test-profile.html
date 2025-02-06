@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile</title>
+    <title>TESTProfile</title>
     <meta name="description" content="" />
 
     <!-- ファビコン有無確認 -->
@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="stylesheet" href="./css/components.css">
+    <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/pages/profile.css" />
 
     <!-- SNSやOGP対応（オプション） -->
@@ -36,17 +36,17 @@
     <meta property="og:image" content="og-image.jpg" />
     <meta property="og:url" content="https://example.com" />
     <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- jsファイル -->
   </head>
   <body>
     <!-- header -->
-    <header class="header">
-      <nav class="header-nav l-container">
+    <header class="header components-container">
+      <nav class="header-nav">
         <ul>
-          <li class="header-item nav-item"><a href="./index.html">ホーム</a></li>
+          <li class="header-item nav-item"><a href="">ホーム</a></li>
           <li class="header-item nav-item"><a href="">メニュー</a></li>
-          <li class="header-item nav-item"><a href="">プロフィール</a></li>
+          <li class="header-item nav-item">
+            <a href="./profile.html">プロフィール</a>
+          </li>
           <li class="header-item nav-item"><a href="">お客様の声</a></li>
           <li class="header-item nav-item"><a href="">お問い合わせ</a></li>
         </ul>
@@ -54,14 +54,29 @@
           <a class="cta-btn header-btn-link" href="">ご予約はこちら</a>
         </div>
       </nav>
+
+      <!-- humメニュー -->
+      <div class="sp-menu-btn"><span></span></div>
+      <nav class="header-nav-sp">
+        <ul>
+          <li><a href="#about"> ホーム</a></li>
+          <li><a href="#menu">メニュー</a></li>
+          <li><a href="#gallery">プロフィール</a></li>
+          <li><a href="#event">お客様の声</a></li>
+          <li><a href="#access">お問い合わせ</a></li>
+          <div class="header-btn">
+            <a class="cta-btn header-btn-link" href="">ご予約はこちら</a>
+          </div>
+        </ul>
+      </nav>
     </header>
 
     <!-- top -->
-    <div class="profile-top">
-      <div class="profile-top-img">
-        <img src="./img/profile-top.png" alt="プロフィールページ" />
+    <div class="individual-top components-container">
+      <div class="individual-top-img">
+        <img src="./img/profile-top.png" alt="プロフィール" />
       </div>
-      <h1 class="page-top-ttl l-container">PROFILE</h1>
+      <h1 class="individual-top-ttl l-container">PROFILE</h1>
     </div>
 
     <!-- profile コンテンツ -->
@@ -81,7 +96,6 @@
               </div>
             </div>
           </div>
-          
 
           <!-- 資格 -->
           <div class="profile__img-container" id="profile-qualifications">
@@ -91,21 +105,23 @@
                 <div
                   class="profile__qualifications profile__txt-lcontainer profile__details-back"
                 >
-                  <h2 class="profile__section-title inverse-txt">保有資格</h2>
+                  <h2 class="profile__section-title profile__list-inverse-txt">
+                    保有資格
+                  </h2>
                   <ul class="profile__list">
-                    <li class="profile__list-item inverse-txt">
+                    <li class="profile__list-item profile__list-inverse-txt">
                       顔タイプ診断1級アドバイザー
                     </li>
-                    <li class="profile__list-item inverse-txt">
+                    <li class="profile__list-item profile__list-inverse-txt">
                       顔タイプ診断®メンズアドバイザー
                     </li>
-                    <li class="profile__list-item inverse-txt">
+                    <li class="profile__list-item profile__list-inverse-txt">
                       パーソナルカラー診断（Sci/ART 12分類）
                     </li>
-                    <li class="profile__list-item inverse-txt">
+                    <li class="profile__list-item profile__list-inverse-txt">
                       骨格診断アドバイザー
                     </li>
-                    <li class="profile__list-item inverse-txt">
+                    <li class="profile__list-item profile__list-inverse-txt">
                       イメージコントロールメイクアドバイザー
                     </li>
                   </ul>
@@ -151,11 +167,16 @@
             <!-- outfit画像 -->
             <div class="profile__outfit-img">
               <div class="profile__outfit-img-ttl">outfit</div>
-              <div class="profile__photo-outfit">
-                <img
-                  src="./img/Footer/LINE_ALBUM_サイト掲載用_241224654_19 1.svg"
-                  alt="SAYAの写真"
-                />
+              <div class="profile__photo-outfit-list">
+                <div class="profile__photo-outfit-item">
+                  <img src="./img/profile-outfit-left.png" alt="SAYAの写真" />
+                </div>
+                <div class="profile__photo-outfit-item">
+                  <img src="./img/profile-outfit-center.png" alt="SAYAの写真" />
+                </div>
+                <div class="profile__photo-outfit-item">
+                  <img src="./img/profile-outfit-right.png" alt="SAYAの写真" />
+                </div>
               </div>
             </div>
             <!-- outfit txt -->
@@ -224,7 +245,8 @@
                 <!-- 企業実績 -->
                 <div
                   class="profile__experience-company profile__txt-lcontainer"
-                  id="experience-company">
+                  id="experience-company"
+                >
                   <h2 class="profile__section-title">企業研修</h2>
                   <ul class="profile__list">
                     <li class="profile__list-item">TDK株式会社 様</li>
@@ -244,7 +266,8 @@
                 <div class="profile__content profile__contents-lcontainer">
                   <div
                     class="profile__experience-event profile__txt-lcontainer"
-                   id="experience-event">
+                    id="experience-event"
+                  >
                     <h2 class="profile__section-title">イベント出演・監修</h2>
                     <ul class="profile__list">
                       <li class="profile__list-item">銀座三越 様</li>
@@ -269,7 +292,8 @@
                 <div class="profile__content profile__contents-lcontainer">
                   <div
                     class="profile__experience-media profile__txt-lcontainer"
-                   id="experience-media">
+                    id="experience-media"
+                  >
                     <h2 class="profile__section-title">メディア出演</h2>
                     <ul class="profile__list">
                       <li class="profile__list-item">
@@ -356,9 +380,9 @@
       </div>
     </section>
 
-  <!-- 以下、前ページ共通 -->
+    <!-- 以下、前ページ共通 -->
     <!-- reserve -->
-    <div class="reserve__container">
+    <div class="reserve__container components-container">
       <section class="reserve__btn">
         <div class="reserve__btn-wrap l-container">
           <div class="reserve__btn-message">
@@ -372,102 +396,126 @@
     </div>
 
     <!-- footer -->
-    <footer class="footer">
-      <div class="footer__nav-wrap l-container">
-        <!-- left -->
-        <div class="footer__nav-wrap-left">
-          <nav class="footer__nav">
-            <ul>
-              <li class="footer__item footer_nav-ttl nav-item">
-                <a href="">ホーム</a>
-              </li>
-            </ul>
-            <ul>
-              <li class="footer__item footer_nav-ttl nav-item">
-                <a href="">メニュー</a>
-              </li>
-              <li class="footer__item nav-item">
-                <a href="">ショッピング同行</a>
-              </li>
-              <li class="footer__item nav-item">
-                <a href="">ショップクルーズ＋お茶会</a>
-              </li>
-              <li class="footer__item nav-item">
-                <a href="">オンラインクローゼット診断</a>
-              </li>
-              <li class="footer__item nav-item"><a href="">料金のご案内</a></li>
-              <li class="footer__item nav-item">
-                <a href="">サービス対応エリア</a>
-              </li>
-              <li class="footer__item nav-item"><a href="">よくある質問</a></li>
-            </ul>
-          </nav>
-        </div>
-        <!-- center left-->
-        <div class="footer__nav-wrap-centerleft">
-          <nav class="footer__nav">
-            <ul>
-              <li class="footer__item footer_nav-ttl nav-item">
-                <a href="">お客様の声</a>
-              </li>
-              <li class="footer__item nav-item">
-                <a href="">診断前のお客様のお悩み</a>
-              </li>
-              <li class="footer__item nav-item">
-                <a href="">診断後のお客様の感想 </a>
-              </li>
-              <li class="footer__item nav-item">
-                <a href="">ご提案コーデ一覧</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <!-- center right -->
-        <div class="footer__nav-wrap-centerright">
-          <nav class="footer__nav">
-            <ul>
-              <li class="footer__item footer_nav-ttl nav-item">
-                <a href="">プロフィール</a>
-              </li>
-              <li class="footer__item nav-item"><a href="">保有資格</a></li>
-              <li class="footer__item nav-item"><a href="">各診断タイプ</a></li>
-              <li class="footer__item nav-item">
-                <a href="">サロンオーナーの強み</a>
-              </li>
-              <li class="footer__item nav-item">
-                <a href="">企業研修実績 </a>
-              </li>
-              <li class="footer__item nav-item">イベント出演・監修実績</li>
-              <li class="footer__item nav-item">
-                <a href="">メディア出演実績</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <!-- right -->
-        <div class="footer__nav-wrap-right">
-          <nav class="footer__nav">
-            <ul>
-              <li class="footer__item footer_nav-ttl nav-item">
-                <a href="">お問い合わせ</a>
-              </li>
-            </ul>
-            <ul>
-              <div class="footer__nav-sns">
+    <div class="components-container">
+      <footer class="footer">
+        <div class="footer__nav-wrap l-container">
+          <!-- left -->
+          <div class="footer__nav-wrap-left">
+            <nav class="footer__nav">
+              <ul>
                 <li class="footer__item footer_nav-ttl nav-item">
-                  <a href="">Instagram</a>
+                  <a href="./index.html">ホーム</a>
                 </li>
-                <div class="footer-__sns-img">
-                  <img src="./img/Vector.png" alt="Instagram" />
+              </ul>
+              <ul>
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="">メニュー</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">ショッピング同行</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">ショップクルーズ＋お茶会</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">オンラインクローゼット診断</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">料金のご案内</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">サービス対応エリア</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">よくある質問</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- center left-->
+          <div class="footer__nav-wrap-centerleft">
+            <nav class="footer__nav">
+              <ul>
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="">お客様の声</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">診断前のお客様のお悩み</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">診断後のお客様の感想 </a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">ご提案コーデ一覧</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- center right -->
+          <div class="footer__nav-wrap-centerright">
+            <nav class="footer__nav">
+              <ul>
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="./profile.html">プロフィール</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#profile-qualifications"
+                    >保有資格</a
+                  >
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#profile-diagnosis"
+                    >各診断タイプ</a
+                  >
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#profile-outfit"
+                    >サロンオーナーの強み</a
+                  >
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#experience-company"
+                    >企業研修実績
+                  </a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#experience-event"
+                    >イベント出演・監修実績</a
+                  >
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#experience-media"
+                    >メディア出演実績</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- right -->
+          <div class="footer__nav-wrap-right">
+            <nav class="footer__nav">
+              <ul>
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="">お問い合わせ</a>
+                </li>
+              </ul>
+              <ul>
+                <div class="footer__nav-sns">
+                  <li class="footer__item footer_nav-ttl nav-item">
+                    <a href="">Instagram</a>
+                  </li>
+                  <div class="footer-__sns-img">
+                    <img src="./img/Vector.png" alt="Instagram" />
+                  </div>
                 </div>
-              </div>
-            </ul>
-          </nav>
+              </ul>
+            </nav>
+          </div>
         </div>
-      </div>
-      <div class="footer__copyright">
-        <p>©2024 porta fortuna プライバシーポリシー</p>
-      </div>
-    </footer>
+        <div class="footer__copyright">
+          <p>©2024 porta fortuna プライバシーポリシー</p>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

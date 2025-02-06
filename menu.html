@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TESTProfile</title>
+    <title>MENU</title>
     <meta name="description" content="" />
 
     <!-- ファビコン有無確認 -->
@@ -24,11 +24,12 @@
     <meta name="author" content="作成者名" />
 
     <!-- css -->
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/base.css" />
-    <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="stylesheet" href="./css/components.css" />
-    <link rel="stylesheet" href="./css/pages/profile.css" />
+    <link rel="stylesheet" href="./Potafortuna/css/reset.css" />
+    <link rel="stylesheet" href="./Potafortuna/css/base.css" />
+    <link rel="stylesheet" href="./Potafortuna/css/layout.css" />
+    <link rel="stylesheet" href="./Potafortuna/css/components.css" />
+    <link rel="stylesheet" href="./Potafortuna/css/common.css" />
+    <link rel="stylesheet" href="./Potafortuna/css/pages/menu.css" />
 
     <!-- SNSやOGP対応（オプション） -->
     <meta property="og:title" content="ページタイトル" />
@@ -74,93 +75,282 @@
     <!-- top -->
     <div class="individual-top components-container">
       <div class="individual-top-img">
-        <img src="./img/profile-top.png" alt="プロフィール" />
+        <img src="./Potafortuna/img/menu-top.jpg" alt="プロフィール" />
       </div>
       <h1 class="individual-top-ttl l-container">PROFILE</h1>
     </div>
 
-    <!-- profile コンテンツ -->
-    <section class="profile">
+    <!-- menu concept -->
+    <section class="menu__concept">
       <div class="l-container">
-        <!-- 名前 -->
-        <div class="profile__wrap">
-          <div class="profile__wrap-txt">
-            <div class="profile__header">
-              <div class="profile__name-container profile__layout-container">
-                <h2 class="profile__name">
-                  <p class="profile__name-en">SAYA</p>
-                </h2>
-                <h2 class="profile__name">
-                  <p class="profile__name-ja">本名：高橋明香</p>
-                </h2>
-              </div>
+        <!-- タイトル -->
+        <div class="l-heading-ttl-wrap">
+          <div class="l-heading-ttl">
+            <h2 class="l-heading-ttl-en">Concept</h2>
+          </div>
+          <div class="l-heading-ttl">
+            <p class="l-heading-ttl-ja">
+              どんな方でも安心できるサービスをお約束
+            </p>
+          </div>
+        </div>
+
+        <div class="menu__concept-group">
+          <!-- concept left -->
+          <div class="menu__concept-left-wrap">
+            <div class="menu__concept-left">
+              <h3 class="menu__concept-ttl">
+                ご購入の必要は<br />一切ありません
+              </h3>
+            </div>
+            <div class="menu__concept-txt">
+              <p>
+                ご提案したアイテムは、一切ご購入を強制しておりません。また、お客様のご予算に合わせてご提案します。押し売りなどはございませんので、当日は気軽にショッピングを楽しんでいただければと思います。
+              </p>
             </div>
           </div>
 
-          <!-- 資格 -->
-          <div class="profile__img-container" id="profile-qualifications">
-            <div class="profile__img-position">
-              <!-- 資格テキスト -->
-              <div class="profile__details profile__contents-lcontainer">
-                <div
-                  class="profile__qualifications profile__txt-lcontainer profile__details-back"
-                >
-                  <h2 class="profile__section-title profile__list-inverse-txt">
-                    保有資格
-                  </h2>
-                  <ul class="profile__list">
-                    <li class="profile__list-item profile__list-inverse-txt">
-                      顔タイプ診断1級アドバイザー
-                    </li>
-                    <li class="profile__list-item profile__list-inverse-txt">
-                      顔タイプ診断®メンズアドバイザー
-                    </li>
-                    <li class="profile__list-item profile__list-inverse-txt">
-                      パーソナルカラー診断（Sci/ART 12分類）
-                    </li>
-                    <li class="profile__list-item profile__list-inverse-txt">
-                      骨格診断アドバイザー
-                    </li>
-                    <li class="profile__list-item profile__list-inverse-txt">
-                      イメージコントロールメイクアドバイザー
-                    </li>
-                  </ul>
-                </div>
+          <!-- concept center -->
+          <div class="menu__concept-center-wrap">
+            <div class="menu__concept-center">
+              <h3 class="menu__concept-ttl">
+                お買い物が苦手な方も<br />安心のサポート体制
+              </h3>
+            </div>
+            <div class="menu__concept-txt">
+              <p>
+                お買い物やご試着が苦手と感じる方にリラックスしていただくために、ショップとのやり取りはすべて当サロンが対応します。ショップ内では常にお客様の傍でアテンドいたしますので、ご安心ください。
+              </p>
+            </div>
+          </div>
 
-                <!-- タイプ -->
-                <div class="profile__content" id="profile-diagnosis">
-                  <div class="profile__diagnosis profile__txt-lcontainer">
-                    <h2 class="profile__section-title">診断タイプ</h2>
-                    <ul class="profile__list">
-                      <li class="profile__list-item">
-                        顔タイプ：ソフトエレガント
-                      </li>
-                      <li class="profile__list-item">
-                        パーソナルカラー：ソフトオータム（サイアート12分類）
-                      </li>
-                      <li class="profile__list-item">骨格診断：ストレート</li>
-                      <li class="profile__list-item">
-                        （7タイプ：ドラマチックタイプ、12タイプ：メリハリナチュラル）
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- プロフィール画像 -->
-                <div class="profile__wrap-img">
-                  <div class="profile__photo">
-                    <img src="./img/analist-name.png" alt="SAYAの写真" />
-                  </div>
-                </div>
-              </div>
+          <!-- concept right -->
+          <div class="menu__concept-right-wrap">
+            <div class="menu__concept-right">
+              <h3 class="menu__concept-ttl">
+                診断未経験・他サロン<br />診断済みの方も大歓迎
+              </h3>
+            </div>
+            <div class="menu__concept-txt">
+              <p>
+                パーソナルカラー診断・骨格診断・顔タイプ診断を受けたことがない方には、専門用語を使わず丁寧にご提案いたしますのでご安心ください。また、他サロンで診断を受けた方も、ぜひお気軽にお申し込みください。
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- outfit コンテンツ -->
-    <section class="outfit" id="profile-outfit">
+    <!-- menu-item -->
+    <div class="l-container">
+      <section class="menu__item">
+        <!-- menu trip -->
+        <div class="menu__item-wrap">
+          <div class="menu__item-trip">
+            <div class="menu__item-top">
+              <!-- menu left 画像 -->
+              <div class="menu__item-top-left">
+                <div class="menu__item-top-img">
+                  <img
+                    src="./Potafortuna/img/menu-shopping-trip.jpg"
+                    alt="ショッピング同行メニュー"
+                  />
+                </div>
+              </div>
+              <!-- menu right テキスト -->
+              <div class="menu__item-top-right">
+                <div class="menu__top-ttl-wrap">
+                  <div class="menu__item-top-sub-ttl">
+                    <p>理想のスタイルを見つける1日</p>
+                  </div>
+                  <div class="menu__item-top-ttl">
+                    <p>ショッピング同行</p>
+                  </div>
+                </div>
+                <div class="menu__item-top-txt">
+                  <p>
+                    当サロンが下見を行い、お客様に似合うショップやアイテムをセレクトします。<br />
+                    当日はセレクトしたアイテムを試着いただきながら、具体的なショップ選びのコツや、お悩みに添ったコーディネートのご提案、さらに着こなすためのアドバイスを丁寧にお伝えします。試着いただくことで、自分に似合うお洋服や新たな可能性を体感いただけます。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- menu 下部（flow） -->
+            <div class="menu__item-bottom">
+              <div class="menu__item-bottom-ttl">
+                <p>お申し込み後から当日の流れ</p>
+              </div>
+              <ul class="menu__item-flow">
+                <li class="menu__item-flow-list">
+                  <div class="menu__item-flow-num">
+                    <p><span class="menu__item-small-txt">STEP</span>01</p>
+                  </div>
+                  <div class="menu_item-flow-ttl">
+                    <p>ルート決定</p>
+                  </div>
+                  <div class="menu__item-flow-txt">
+                    <p>
+                      当日待ち合わせ後にお客様のご希望を伺いながら、お茶会とショッピングの順番を決めます。
+                    </p>
+                  </div>
+                </li>
+                <li class="menu__item-flow-list">
+                  <div class="menu__item-flow-num">
+                    <p><span class="menu__item-small-txt">STEP</span>01</p>
+                  </div>
+                  <div class="menu_item-flow-ttl">
+                    <p>ルート決定</p>
+                  </div>
+                  <div class="menu__item-flow-txt">
+                    <p>
+                      当日待ち合わせ後にお客様のご希望を伺いながら、お茶会とショッピングの順番を決めます。
+                    </p>
+                  </div>
+                </li>
+                <li class="menu__item-flow-list">
+                  <div class="menu__item-flow-num">
+                    <p><span class="menu__item-small-txt">STEP</span>01</p>
+                  </div>
+                  <div class="menu_item-flow-ttl">
+                    <p>ルート決定</p>
+                  </div>
+                  <div class="menu__item-flow-txt">
+                    <p>
+                      当日待ち合わせ後にお客様のご希望を伺いながら、お茶会とショッピングの順番を決めます。
+                    </p>
+                  </div>
+                </li>
+                <li class="menu__item-flow-list">
+                  <div class="menu__item-flow-num">
+                    <p><span class="menu__item-small-txt">STEP</span>01</p>
+                  </div>
+                  <div class="menu_item-flow-ttl">
+                    <p>ルート決定</p>
+                  </div>
+                  <div class="menu__item-flow-txt">
+                    <p>
+                      当日待ち合わせ後にお客様のご希望を伺いながら、お茶会とショッピングの順番を決めます。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- menu cruse -->
+        <div class="menu__item-wrap">
+          <div class="menu__item-trip">
+            <div class="menu__item-top">
+              <!-- menu left 画像 -->
+              <div class="menu__item-top-left">
+                <div class="menu__item-top-img">
+                  <img
+                    src="./Potafortuna/img/menu-shopping-trip.jpg"
+                    alt="ショッピング同行メニュー"
+                  />
+                </div>
+              </div>
+              <!-- menu right テキスト -->
+              <div class="menu__item-top-right">
+                <div class="menu__top-ttl-wrap">
+                  <div class="menu__item-top-sub-ttl">
+                    <p>理想のスタイルを見つける1日</p>
+                  </div>
+                  <div class="menu__item-top-ttl">
+                    <p>ショッピング同行</p>
+                  </div>
+                </div>
+                <div class="menu__item-top-txt">
+                  <p>
+                    当サロンが下見を行い、お客様に似合うショップやアイテムをセレクトします。<br />
+                    当日はセレクトしたアイテムを試着いただきながら、具体的なショップ選びのコツや、お悩みに添ったコーディネートのご提案、さらに着こなすためのアドバイスを丁寧にお伝えします。試着いただくことで、自分に似合うお洋服や新たな可能性を体感いただけます。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- menu 下部（flow） -->
+            <div class="menu__item-bottom">
+              <div class="menu__item-bottom-ttl">
+                <p>お申し込み後から当日の流れ</p>
+              </div>
+              <ul class="menu__item-flow">
+                <li class="menu__item-flow-list">
+                  <div class="menu__item-flow-num">
+                    <p><span class="menu__item-small-txt">STEP</span>01</p>
+                  </div>
+                  <div class="menu_item-flow-ttl">
+                    <p>ルート決定</p>
+                  </div>
+                  <div class="menu__item-flow-txt">
+                    <p>
+                      当日待ち合わせ後にお客様のご希望を伺いながら、お茶会とショッピングの順番を決めます。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- menu online closet -->
+        <div class="menu__item-wrap">
+          <div class="menu__item-trip">
+            <div class="menu__item-top">
+              <!-- menu left 画像 -->
+              <div class="menu__item-top-left">
+                <div class="menu__item-top-img">
+                  <img
+                    src="./Potafortuna/img/menu-shopping-trip.jpg"
+                    alt="ショッピング同行メニュー"
+                  />
+                </div>
+              </div>
+              <!-- menu right テキスト -->
+              <div class="menu__item-top-right">
+                <div class="menu__top-ttl-wrap">
+                  <div class="menu__item-top-sub-ttl">
+                    <p>理想のスタイルを見つける1日</p>
+                  </div>
+                  <div class="menu__item-top-ttl">
+                    <p>ショッピング同行</p>
+                  </div>
+                </div>
+                <div class="menu__item-top-txt">
+                  <p>
+                    当サロンが下見を行い、お客様に似合うショップやアイテムをセレクトします。<br />
+                    当日はセレクトしたアイテムを試着いただきながら、具体的なショップ選びのコツや、お悩みに添ったコーディネートのご提案、さらに着こなすためのアドバイスを丁寧にお伝えします。試着いただくことで、自分に似合うお洋服や新たな可能性を体感いただけます。
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- menu 下部（flow） -->
+            <div class="menu__item-bottom">
+              <div class="menu__item-bottom-ttl">
+                <p>お申し込み後から当日の流れ</p>
+              </div>
+              <ul class="menu__item-flow">
+                <li class="menu__item-flow-list">
+                  <div class="menu__item-flow-num">
+                    <p><span class="menu__item-small-txt">STEP</span>01</p>
+                  </div>
+                  <div class="menu_item-flow-ttl">
+                    <p>ルート決定</p>
+                  </div>
+                  <div class="menu__item-flow-txt">
+                    <p>
+                      当日待ち合わせ後にお客様のご希望を伺いながら、お茶会とショッピングの順番を決めます。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!--  -->
+    <section class="menu__item">
       <div class="l-container">
         <div class="profile__wrap">
           <div class="profile__outfit-wrap">
