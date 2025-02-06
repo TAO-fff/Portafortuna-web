@@ -1,0 +1,193 @@
+/* =======================
+   concept
+======================= */
+.menu__concept-group {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 65px;
+  padding-bottom: 225px;
+}
+
+.menu__concept-left-wrap,
+.menu__concept-center-wrap,
+.menu__concept-right-wrap {
+  width: 30%;
+  padding: 0 20px;
+  line-height: var(--line-height-base);
+}
+
+.menu__concept-center-wrap,
+.menu__concept-right-wrap {
+  border-left: dotted 1px var(--color-base);
+}
+
+.menu__concept-left,
+.menu__concept-center,
+.menu__concept-right {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.menu__concept-ttl {
+  font-size: 1.875rem;
+  text-align: center;
+  font-family: var(--font-ja-heading);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.menu__concept-txt {
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  padding-top: 10px;
+}
+
+/* =======================
+   menu-item
+======================= */
+.menu__item {
+}
+
+.menu__item-trip {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 112px;
+  padding: 90px 0 120px 0;
+}
+
+.menu__item-wrap {
+  position: relative;
+}
+
+.menu__item-top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* menu上部 左（img） */
+.menu__item-top-left {
+  width: 53%;
+}
+
+.menu__item-top-img {
+}
+
+.menu__item-top-img img {
+  width: 100%;
+}
+
+.menu__item-top-right {
+  display: flex;
+  flex-direction: column;
+  width: 44%;
+  gap: 44px;
+}
+
+.menu__top-ttl-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  margin-left: -19%;
+  margin-top: 5%;
+}
+
+.menu__item-top-sub-ttl p,
+.menu__item-top-ttl p {
+  font-family: var(--font-ja-heading);
+  color: var(--color-primary);
+  line-height: 1.2;
+  background-color: var(--color-text-inverse);
+}
+
+.menu__item-top-sub-ttl p {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  padding: 21px 20px;
+}
+
+.menu__item-top-ttl p {
+  font-size: 3.125rem;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.3125rem;
+  padding: 10px 15px;
+}
+
+.menu__item-top-txt {
+  width: 95%;
+  text-align: justify;
+}
+
+.menu__item-top-txt p {
+  color: var(--color-primary);
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+/* menu下部 flow */
+.menu__item-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu__item-bottom-ttl {
+}
+
+.menu__item-bottom-ttl p {
+  font-family: var(--font-ja-heading);
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.menu__item-flow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 55px;
+  width: 100%;
+}
+
+.menu__item-flow-list {
+}
+
+.menu__item-flow-num {
+  background-color: var(--color-base);
+  width: 80%;
+}
+
+.menu__item-flow-num p {
+  color: var(--color-text-inverse);
+  font-family: var(--font-en-heading);
+  font-size: 2rem;
+  line-height: var(--line-height-tight);
+  letter-spacing: 0.12rem;
+}
+
+.menu__item-small-txt {
+  font-size: 1.25rem;
+  letter-spacing: 0.1rem;
+}
+
+.menu_item-flow-ttl {
+}
+
+.menu_item-flow-ttl p {
+}
+
+.menu__item-flow-txt {
+}
+
+.menu__item-flow-txt p {
+}
