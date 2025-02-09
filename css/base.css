@@ -3,55 +3,62 @@
    共通
 ======================= */
 :root {
-      /* Font settings */
-      --font-ja: "Noto Sans JP", sans-serif; /* ゴシック 和文フォント */
-      --font-ja-heading: "Noto Serif JP", serif; /* 明朝 和文見出しフォント */
-      --font-en-heading: "Aboreto", cursive; /* 英字見出しフォント */
-      --font-en-cursive: "Qwitcher Grypen", serif; /* 筆記体 英語タイトル用 */
+  /* Font settings */
+  --font-ja: "Noto Sans JP", sans-serif; /* ゴシック 和文フォント */
+  --font-ja-heading: "Noto Serif JP", serif; /* 明朝 和文見出しフォント */
+  --font-en-heading: "Aboreto", cursive; /* 英字見出しフォント */
+  --font-en-cursive: "Qwitcher Grypen", serif; /* 筆記体 英語タイトル用 */
 
-      /* font size */
-      --font-size-text: 1.125rem;
-      --heading-en-pc-size: 3rem;
-      --heading-en-sp-size: 2rem;
+  /* font size */
+  --font-size-text: 1.125rem;
+  --heading-en-pc-size: 3rem;
+  --heading-en-sp-size: 2rem;
 
-        /* Font Weight */
-    --font-weight-bold: 700;
+  /* Font Weight */
+  --font-weight-bold: 700;
 
-     /* Color settings */
-     --color-text: #715f5a; /* 基本テキスト */
-     --color-text-inverse: #fff; /* 逆色（白） */
-     --color-base: #a28f81; /* ベースカラー */
-     --color-base-light: #fff; /* 明るいベースカラー */
-     --color-base-dark: #715f5a; /* 暗いベースカラー */
-     --color-key: #8b3333; /* キーカラー */
-     --color-primary: #716053;/* nav・あしらい */
+  /* Color settings */
+  --color-text: #715f5a; /* 基本テキスト */
+  --color-text-inverse: #fff; /* 逆色（白） */
+  --color-base: #a28f81; /* ベースカラー */
+  --color-base-light: #fff; /* 明るいベースカラー */
+  --color-base-dark: #715f5a; /* 暗いベースカラー */
+  --color-key: #8b3333; /* キーカラー */
+  --color-primary: #716053; /* nav・あしらい */
 
-  
-    /* Line-height */
-    --line-height-base: 2; /* 基本の行間 */
-    --line-height-tight:1.5; /* 狭め*/
-  
-    /* Letter-spacing */
-    --letter-spacing-base: 10%;/* 通常 */
-    --letter-spacing-wide: 15%; /* 広め */
-    --letter-spacing-tight: -0.02em; /* 狭め */
+  /* Line-height */
+  --line-height-base: 2; /* 基本の行間 */
+  --line-height-tight: 1.5; /* 狭め*/
+
+  /* Letter-spacing */
+  --letter-spacing-base: 0.1em; /* 通常 */
+  --letter-spacing-wide: 0.15em; /* 広め */
+  --letter-spacing-tight: -0.02em; /* 狭め */
+}
+
+/* お客様voice フォント */
+@font-face {
+  font-family: "Syunka";
+  src: url("../font/syunka2pbb.woff2") format("woff2"),
+    url("../font/syunka2pbb.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  color: var(--color-text);
+  font-size: 1rem;
+  font-family: var(--font-ja);
+}
+
+.img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px)  {
+  :root {
+    /* font size */
+  --font-size-text: 1rem;
+  --heading-en-pc-size: 2.25rem;
   }
-  
-  /* お客様voice フォント */
-  @font-face {
-    font-family: 'Syunka';
-    src: url('../font/syunka2pbb.woff2') format('woff2'),
-         url('../font/syunka2pbb.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  body {
-    color: var(--color-text);
-    font-size: 1rem;
-    font-family: var(--font-ja);
-  }
-  
-  .img {
-    width: 100%;
-  }
+}

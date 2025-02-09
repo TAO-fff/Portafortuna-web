@@ -99,6 +99,12 @@
 }
 
 /* =======================
+   sp home共通
+======================= */
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+}
+
+/* =======================
   FV
 ======================= */
 .home__top {
@@ -107,6 +113,14 @@
   position: relative;
   padding-top: 72px;
   margin: 0 auto;
+}
+
+.home__top::after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 1px; /* 高さを持たせる */
+  visibility: hidden;
 }
 
 /* 画像 back */
@@ -173,17 +187,16 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: var(--font-ja-heading);
   line-height: var(--line-height-base);
-  letter-spacing: 20%;
 }
 
 .home__top-copy-vertical p {
   font-size: 2.5rem;
-  letter-spacing: 8px;
+  letter-spacing: 0.5rem;
 }
 
 .home__top-copy-horizontal p {
   font-size: 1.875rem;
-  letter-spacing: 6px;
+  letter-spacing: 0.375rem;
 }
 
 .home__top-logo {
@@ -225,6 +238,7 @@
 
 .home__top-message-txt {
   width: 85%;
+  padding-top: 37px;
 }
 
 .home__top-message-txt p {
@@ -236,15 +250,97 @@
 
 .home__top-message-ttl-en {
   position: absolute;
-  top: 6vh;
+  top: 20%;
 }
 
 .home__top-message-ttl-en p {
   font-family: var(--font-en-cursive);
   font-size: 14.375rem;
   line-height: 1.2;
-  letter-spacing: 1.4375rem;
-  opacity: 0.2;
+  letter-spacing: var(--letter-spacing-base);
+  opacity: 0.1;
+}
+
+/* =======================
+  sp FV
+======================= */
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .home__top {
+    margin-bottom: 6%;
+  }
+
+  .home__mv-txt-wrap {
+    right: 1%;
+    gap: 6vw;
+  }
+
+  .home__top-copy-vertical p {
+    font-size: 2.5vw;
+  }
+
+  .home__top-copy-horizontal p {
+    font-size: 2.2vw;
+  }
+
+  .home__top-logo h1 {
+    font-size: 3.1vw;
+  }
+
+  .home__top-message-ttl-ja p {
+    font-size: 2.55vw;
+  }
+
+  .home__top-message-ttl-en {
+    right: 12%;
+  }
+
+  .home__top-message-ttl-en p {
+    font-size: 16vw;
+  }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .home__top {
+    margin-bottom: 6%;
+  }
+
+  .home__mv-txt-wrap {
+    width: 59%;
+    right: 0vw;
+    gap: 5vw;
+  }
+
+  .home__top-copy-vertical p {
+    font-size: 3vw;
+    letter-spacing: 0.2em;
+  }
+
+  .home__top-copy-horizontal p {
+    font-size: 2.4vw;
+    letter-spacing: 0.2em;
+  }
+
+  .home__top-logo h1 {
+    font-size: 3.1vw;
+  }
+
+  .home__top-message-ttl-ja p {
+    font-size: 2.7vw;
+    letter-spacing: var(--letter-spacing-base);
+  }
+
+  .home__top-message-ttl-en {
+    right: 12vw;
+  }
+
+  .home__top-message-ttl-en p {
+    font-size: 16vw;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 767px) {
 }
 
 /* =======================
@@ -366,7 +462,7 @@
   font-size: 1.875rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  letter-spacing: 0.1875rem;
+  letter-spacing: var(--letter-spacing-base);
 }
 
 .home__reason-txt p {
@@ -374,6 +470,42 @@
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-wide);
   padding: 0 30px;
+}
+
+/* =======================
+  sp reason
+======================= */
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .home__reason-big-txt {
+    font-size: 2.8vw;
+  }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .home__l-container {
+    padding: 130px 0;
+  }
+
+  .home__reason-item-ttl {
+    padding-bottom: 30px;
+  }
+
+  .home__reason-ttl-back {
+    font-size: 7.5vw;
+  }
+
+  .home__reason-big-txt {
+    font-size: 2.45vw;
+  }
+
+  .home__reason-txt p {
+    padding: 0 10px;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 767px) {
 }
 
 /* =======================
@@ -385,7 +517,7 @@
 
 .home__menu-list ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: stretch;
   gap: 15px;
   padding: 80px 0 59px 0;
@@ -444,7 +576,7 @@
   font-size: 1.375rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
-  letter-spacing: 0.1375rem;
+  letter-spacing: var(--letter-spacing-base);
 }
 
 .home__menu-item-img::before {
@@ -475,6 +607,60 @@
 }
 
 /* =======================
+  sp  menu
+======================= */
+
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .home__menu-list ul {
+    justify-content: space-around;
+    gap: 0;
+    padding: 80px 10px 59px 10px;
+  }
+
+  .home__menu-item {
+    gap: 4vw;
+  }
+
+  .home__menu-item-ttl p {
+    font-size: 1.69vw;
+  }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .home__menu-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .home__menu-item {
+    width: 80%;
+    gap: 80px;
+    padding-bottom: 100px;
+  }
+
+  .home__menu-item-rank {
+    font-size: 1.75rem;
+  }
+
+  .home__menu-item-ttl p {
+    font-size: 3vw;
+  }
+
+  .home__menu-item-img::before {
+    width: 70%;
+    top: -13%;
+    left: 15%;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 767px) {
+}
+
+/* =======================
   voice
 ======================= */
 .home__voice {
@@ -482,6 +668,13 @@
 }
 
 /* 感想部分レイアウトはcommon.css */
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .home__voice {
+    padding-top: 130px;
+  }
+}
 
 /* =======================
   profile
@@ -554,7 +747,7 @@
   left: 0;
 }
 
-.homme__profile-txt-name p {
+.home__profile-txt-name p {
   font-family: var(--font-en-heading);
   font-size: 3.75rem;
   line-height: var(--line-height-tight);
@@ -565,6 +758,35 @@
   font-size: var(--font-size-text);
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-base);
+}
+
+/* =======================
+  sp profile
+======================= */
+
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .home__profile-wrap {
+    padding: 0 10px 95px 10px;
+  }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .home__profile-wrap {
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+    padding: 0 0% 95px 0%;
+  }
+
+  .home__profile-txt-wrap {
+    padding-right: 0;
+  }
+
+
+  .home__profile-txt-content {
+    padding-top: 30px;
+  }
 }
 
 /* =======================

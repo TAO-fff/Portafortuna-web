@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>testPorta fortuna</title>
+    <title>Porta fortuna</title>
     <meta name="description" content="" />
 
     <!-- ファビコン有無確認 -->
@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/home.css" />
 
     <!-- SNSやOGP対応（オプション） -->
@@ -45,12 +45,18 @@
     <header class="header components-container">
       <nav class="header-nav">
         <ul>
-          <li class="header-item nav-item"><a href="./index.html">ホーム</a></li>
-          <li class="header-item nav-item"><a href="./menu.html">メニュー</a></li>
+          <li class="header-item nav-item">
+            <a href="./index.html">ホーム</a>
+          </li>
+          <li class="header-item nav-item">
+            <a href="./menu.html">メニュー</a>
+          </li>
           <li class="header-item nav-item">
             <a href="./profile.html">プロフィール</a>
           </li>
-          <li class="header-item nav-item"><a href="./voice.html">お客様の声</a></li>
+          <li class="header-item nav-item">
+            <a href="./voice.html">お客様の声</a>
+          </li>
           <li class="header-item nav-item"><a href="">お問い合わせ</a></li>
         </ul>
         <div class="header-btn">
@@ -62,11 +68,11 @@
       <div class="sp-menu-btn"><span></span></div>
       <nav class="header-nav-sp">
         <ul>
-          <li><a href="#about"> ホーム</a></li>
-          <li><a href="#menu">メニュー</a></li>
-          <li><a href="#gallery">プロフィール</a></li>
-          <li><a href="#event">お客様の声</a></li>
-          <li><a href="#access">お問い合わせ</a></li>
+          <li><a href="./index.html"> ホーム</a></li>
+          <li><a href="./menu.html">メニュー</a></li>
+          <li><a href="./profile.html">プロフィール</a></li>
+          <li><a href="./voice.html">お客様の声</a></li>
+          <li><a href="">お問い合わせ</a></li>
           <div class="header-btn">
             <a class="cta-btn header-btn-link" href="">ご予約はこちら</a>
           </div>
@@ -114,20 +120,20 @@
               <div class="home__top-message-ttl-ja">
                 <p>年齢でおしゃれを諦めていませんか？</p>
               </div>
-              <div class="home__top-message-txt">
-                <p>
-                  年齢とともにライフスタイルや体型が変わり、<br />
-                  『似合う服がわからない』『何を買えばいいのか迷う』と悩んでいませんか？<br />当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
-                  お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。
-                  ファッションのお悩みを解決して、おしゃれを楽しみましょう。
-                </p>
-              </div>
+            </div>
+
+            <div class="home__top-message-txt">
+              <p>
+                年齢とともにライフスタイルや体型が変わり、<br />
+                『似合う服がわからない』『何を買えばいいのか迷う』と悩んでいませんか？<br />当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
+                お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。
+                ファッションのお悩みを解決して、おしゃれを楽しみましょう。
+              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
-
     <!-- reasonコンテンツ -->
     <div class="home__l-container">
       <section class="home__reason">
@@ -254,7 +260,7 @@
                   <p>ショッピング同行</p>
                 </div>
                 <div class="home__menu-item-img">
-                  <span class="home__menu-item-rank"></span>
+                  <span class="home__menu-item-rank common__menu-rank"></span>
                   <img
                     src="./img/menu-shopping-trip.jpg"
                     alt="ショッピング同行"
@@ -421,7 +427,7 @@
           </div>
           <!-- 文章 -->
           <div class="home__profile-txt-wrap">
-            <div class="homme__profile-txt-name">
+            <div class="home__profile-txt-name">
               <p>SAYA</p>
             </div>
             <div class="home__profile-txt-content">
@@ -618,7 +624,7 @@
                   <li class="footer__item footer_nav-ttl nav-item">
                     <a href="">Instagram</a>
                   </li>
-                  <div class="footer-__sns-img">
+                  <div class="footer__sns-img">
                     <img src="./img/Vector.png" alt="Instagram" />
                   </div>
                 </div>

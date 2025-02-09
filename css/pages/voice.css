@@ -35,6 +35,7 @@
   margin: 0 auto;
   background-color: rgba(162, 143, 129, 0.2);
   position: relative;
+  width: 70%;
 }
 
 .voice__before-num {
@@ -67,7 +68,7 @@
   font-size: 1.375rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-base);
-  letter-spacing: 0.1375rem;
+  letter-spacing: var(--line-height-base);
 }
 
 .before_voice-txt {
@@ -81,10 +82,76 @@
 }
 
 /* =======================
+  sp     before
+======================= */
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+.voice__before-area {
+  gap: 80px;
+  padding: 65px 0 100px 0;
+}
+
+  .voice__before-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 50px;
+  }
+
+  .voice__before-item {
+    gap: 20px;
+    width: 50%;
+  }
+
+  .voice__before-ttl {
+    width: 65%;
+  }
+
+  .voice__before-ttl p {
+    font-size: 1.125rem;
+  }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .voice__before-area {
+    gap: 150px;
+    padding: 65px 0 100px 0;
+  }
+  
+  .voice__before-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+  }
+
+  .voice__before-item {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .voice__before-ttl {
+    width: 70%;
+    font-size: 1.375rem;
+  }
+
+  .voice__before-num:before {
+    height: 280px;
+    top: -75%;
+    left: 121%;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 767px) {
+}
+
+/* =======================
   after
 ======================= */
 /* 感想部分レイアウトはcommon.css */
-.voice__after {}
+.voice__after {
+}
 
 .voice__after-group {
   padding: 40px 0 30px 0;
@@ -95,9 +162,30 @@
 }
 
 /* =======================
+  sp    home/voice 
+======================= */
+
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+}
+
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .voice__after-item {
+    gap: 45px;
+  }
+}
+
+
+/* sp */
+@media screen and (max-width: 767px) {
+}
+
+/* =======================
   voice-gallery
 ======================= */
-.voice__gallery {}
+.voice__gallery {
+}
 
 .voice__gallery-slider {
   padding: 124px 0 190px 0;
@@ -109,15 +197,15 @@
   gap: 50px;
 }
 
-.voice__gallery-slider-item {}
+.voice__gallery-slider-item {
+}
 
 .voice__gallery-attension {
   padding-bottom: 130px;
-
 }
 
 .voice__gallery-attension p {
-  color: var( --color-primary);
+  color: var(--color-primary);
   text-align: center;
   font-family: var(--font-ja-heading);
   font-size: var(--font-size-text);
