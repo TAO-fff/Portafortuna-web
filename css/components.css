@@ -1,84 +1,15 @@
 /* =======================
-   共通パーツ heading-ttl / btn
-======================= */
-/* heading ttl */
-.l-heading-ttl-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding-top: 80px;
-}
-
-.l-heading-ttl-en {
-  display: block;
-  position: relative;
-  font-family: var(--font-en-heading);
-  font-size: var(--heading-en-pc-size);
-  line-height: var(--line-height-heading);
-  letter-spacing: var(--letter-spacing-base);
-  color: var(--color-text);
-}
-
-.l-heading-ttl-en:before {
-  display: block;
-  content: "";
-  background: var(--color-text);
-  opacity: 0.3;
-  width: 0.5px;
-  height: 90px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(30deg);
-}
-
-.l-heading-ttl-ja {
-  font-family: var(--font-ja-heading);
-  font-size: var(--font-size-text);
-  line-height: var(--line-height-tight);
-  letter-spacing: var(--letter-spacing-base);
-  color: var(--color-text);
-}
-
-/* 予約btn */
-.cta-btn {
-  font-family: var(--font-ja-heading);
-  background-color: var(--color-key);
-  color: var(--color-text-inverse);
-  box-shadow: 2px 2px 10px #555555;
-  text-align: center;
-  border: none;
-  transition: 0.3s ease-in-out;
-}
-
-.cta-btn:hover {
-  background-color: var(--color-base-light);
-  color: var(--color-text);
-}
-
-/* 予約btn  headerのみ*/
-.header-btn {
-  width: 25%;
-  text-align: right;
-}
-
-.header-btn-link,
-.header-btn a {
-  font-size: 1.15rem;
-  padding: 10px 20px;
-}
-
-/* header・footer共通 */
-.nav-item {
-  font-family: var(--font-ja-heading);
-  color: var(--color-primary);
-}
-
+     layout & header/footer 共通
+  ======================= */
 .components-container {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
+}
+  
+.nav-item {
+  font-family: var(--font-ja-heading);
+  color: var(--color-primary);
 }
 
 /* =======================
@@ -90,7 +21,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 999;
+  z-index: 990;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,6 +36,7 @@
   max-width: 1140px;
   margin: 0 auto;
   line-height: 72px;
+  padding-left: 6%;
 }
 
 .header-nav ul {
@@ -130,6 +62,10 @@
      sp header
   ======================= */
 @media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .header-nav {
+    padding-left: 0;
+  }
+
   .header-nav ul {
     justify-content: space-around;
   }
@@ -145,6 +81,10 @@
 
 /* tab */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
+  .header-nav {
+    padding-left: 0;
+  }
+  
   .header-nav ul {
     justify-content: space-around;
     width: 75%;
@@ -166,68 +106,109 @@
 }
 
 /* sp */
-@media screen and (max-width: 767px) {
-}
-
-/* =======================
-   reserve
-   ======================= */
-.reserve__container {
-  margin-top: 55px;
-  background-color: var(--color-base);
-}
-
-.reserve__btn {
-}
-
-.reserve__btn-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem;
-  padding: 95px 0;
-}
-
-.reserve__btn-message {
-  font-family: var(--font-ja-heading);
-  font-size: 1.625rem;
-  color: var(--color-text-inverse);
-}
-
-.reserve__btn-link {
-}
-
-.reserve__btn-link a {
-  font-size: 1.625rem;
-  padding: 18px 63px;
-}
-
-/* =======================
-   reserve
-   ======================= */
-@media screen and (max-width: 1300px) and (min-width: 1024px) {
-  .reserve__btn-message,
-  .reserve__btn-link a {
-    font-size: 1.45rem;
+@media screen and (max-width: 768px) {
+  .header {
+    background-color: transparent;
+    border: none;
   }
-}
 
-/* tab */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-  .reserve__btn-wrap {
-    gap: 4.25rem;
+  .header-nav {
+    display: none;
+  }
+
+  .header-nav-sp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-base);
+    z-index: 9998;
+    display: flex;
     flex-direction: column;
-    padding: 75px 0;
+    align-items: flex-start;
   }
 
-  .reserve__btn-message,
-  .reserve__btn-link a {
-    font-size: 1.25rem;
+  .header-nav-sp ul {
+    gap: 24px;
+    padding: 17% 5% 0 5%;
   }
-}
 
-/* sp */
-@media screen and (max-width: 767px) {
+  .header-nav-sp ul li {
+    color: var(--color-base-light);
+    font-family: var(--font-ja-heading);
+    font-size: 4.5vw;
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-base);
+    padding: 12px 0;
+  }
+
+  .sp-header-btn {
+    width: 100%;
+    max-width: 767px;
+    padding-top: 10%;
+    margin: 0 auto;
+  }
+
+  .sp-header-btn-link {
+    width: 100%;
+    max-width: 600px;
+    padding: 2.5% 30%;
+  }
+
+  /* ハンバーガーメニュー */
+  .sp-menu-btn {
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
+  .sp-menu-btn span {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    top: 15px;
+    transition: 0.5s;
+  }
+
+  .sp-menu-btn span::before,
+  .sp-menu-btn span::after {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+
+  .sp-menu-btn span::before {
+    top: -11px;
+  }
+
+  .sp-menu-btn span::after {
+    bottom: -11px;
+  }
+
+  /* openクラスが付いた時のアニメーション */
+  .sp-menu-btn.open span {
+    background-color: transparent;
+  }
+
+  .sp-menu-btn.open span::before {
+    transform: rotate(45deg);
+    top: 0;
+  }
+
+  .sp-menu-btn.open span::after {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
 }
 
 /* =======================
@@ -365,8 +346,8 @@
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .footer {
     padding: 100px 0 122px 0;
-}
-  
+  }
+
   .footer__item {
     font-size: 0.7rem;
   }
@@ -387,6 +368,307 @@
 /* sp */
 @media screen and (max-width: 767px) {
 }
+
+/* =======================
+   reserve
+   ======================= */
+.reserve__container {
+  margin-top: 55px;
+  background-color: var(--color-base);
+}
+
+.reserve__btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 95px 0;
+}
+
+.reserve__btn-message {
+  font-family: var(--font-ja-heading);
+  font-size: 1.625rem;
+  color: var(--color-text-inverse);
+}
+
+.reserve__btn-link a {
+  font-size: 1.625rem;
+  padding: 18px 63px;
+}
+
+/* =======================
+     sp reserve
+     ======================= */
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .reserve__btn-message,
+  .reserve__btn-link a {
+    font-size: 1.45rem;
+  }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .reserve__btn-wrap {
+    gap: 4.25rem;
+    flex-direction: column;
+    padding: 75px 0;
+  }
+
+  .reserve__btn-message,
+  .reserve__btn-link a {
+    font-size: 1.25rem;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 767px) {
+}
+
+/* =======================
+   共通パーツ
+   - heading-ttl
+======================= */
+/******* heading ttl *******/
+.l-heading-ttl-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 80px;
+}
+
+.l-heading-ttl-en {
+  display: block;
+  position: relative;
+  font-family: var(--font-en-heading);
+  font-size: var(--heading-en-pc-size);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--letter-spacing-base);
+  color: var(--color-text);
+}
+
+.l-heading-ttl-en:before {
+  display: block;
+  content: "";
+  background: var(--color-text);
+  opacity: 0.3;
+  width: 0.5px;
+  height: 90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.l-heading-ttl-ja {
+  font-family: var(--font-ja-heading);
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-base);
+  color: var(--color-text);
+}
+
+/* =======================
+   共通パーツ
+   - btn
+======================= */
+/******* header /reserve btn *******/
+.cta-btn,
+.sp-cta-btn {
+  font-family: var(--font-ja-heading);
+  background-color: var(--color-key);
+  color: var(--color-text-inverse);
+  box-shadow: 2px 2px 10px #555555;
+  text-align: center;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.cta-btn:hover,
+.sp-cta-btn:hover {
+  background-color: var(--color-base-light);
+  color: var(--color-text);
+}
+
+/* 予約btn  headerのみ*/
+.header-btn {
+  width: 25%;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.header-btn a {
+  font-size: 1.15rem;
+  padding: 13px 20px;
+}
+
+
+/******* セクション下 btn *******/
+.home__link-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 80px 0;
+  position: relative;
+  width: 30%;
+}
+
+.home__link-txt p {
+  font-size: 0.9375rem;
+  line-height: var(--line-height-tight);
+  letter-spacing: 1.5px;
+  padding-bottom: 20px;
+}
+
+.home__link-btn {
+  position: relative;
+    display: flex;
+  align-items: center;
+}
+
+.home__link-btn a {
+  font-family: var(--font-en-heading);
+  font-size: 1.5rem;
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-base);
+  padding: 25px 100px;
+  color: var(--color-text-inverse);
+  background-color: var(--color-base);
+  border: solid 1px var(--color-base-dark);
+  transition: 0.3s ease-in-out;
+  box-shadow: 2px 2px 10px rgba(113, 95, 90, 0.5);
+}
+
+.home__link-btn a:hover {
+  border: solid 1px var(--color-base-dark);
+}
+
+
+/* btn 矢印 */
+.home__link-btn-arrow {
+  display: block;
+  background: var(--color-primary);
+  width: 30%;
+  height: 1px;
+  position: absolute;
+  bottom: 60%;
+  right: -35px;
+}
+
+.home__link-btn-arrow::before,
+.home__link-btn-arrow::after {
+  display: block;
+  content: "";
+  background: var(--color-primary);
+  position: absolute;
+  width: 8%;
+  height: 0.75px;
+  transition: 0.3s ease-in-out;
+}
+
+.home__link-btn-arrow::before {
+  bottom: 2.5px;
+  right: 0%;
+  transform: rotate(35deg);
+}
+
+.home__link-btn-arrow::after {
+  bottom: -2.5px;
+  right: 0%;
+  transform: rotate(-35deg);
+}
+
+/* btn-hover */
+.home__link-btn a:hover {
+  background-color: var(--color-text-inverse);
+  color: var(--color-base);
+}
+
+.home__link-btn a:hover + .home__link-btn-arrow {
+  width: 33%;
+  height: 1px;
+  transform: translateX(12px); /* 右3px移動 */
+}
+
+.home__link-btn a:hover + .home__link-btn-arrow::before,
+.home__link-btn a:hover + .home__link-btn-arrow::after {
+  transform: translateX(5px) rotate(35deg); /* 矢印も右に動かす */
+}
+
+.home__link-btn a:hover + .home__link-btn-arrow::after {
+  transform: translateX(5px) rotate(-35deg); /* 矢印の下側 */
+}
+
+
+/******************
+ hover skewアニメーション 
+ - header
+ - 各section下 btn
+ - reserve
+ ******************/
+/* ボタン共通設定 */
+.header-btn,
+.reserve__btn-footer,
+.home__link-url  {
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+  overflow: hidden;
+  /*ボタンの形状*/
+  display: inline-block;
+  text-align: center;
+  /*アニメーションの指定*/
+  transition: ease 0.2s;
+}
+
+/*ボタン内spanの形状*/
+.header-btn span,
+.reserve__btn-footer span,
+.home__link-url  span {
+  position: relative;
+  z-index: 3; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  color: var(--color-base-base);
+}
+
+.header-btn :hover span,
+.home__link-url :hover span,
+.reserve__btn-footer :hover span {
+  color: var(--color-base-dark);
+}
+
+/* 背景が流れる（斜め） */
+.bg-skew::before {
+  content: "";
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: -130%;
+  /*色や形状*/
+  background: var(--color-base-light);
+  width: 120%;
+  height: 100%;
+  transform: skewX(-25deg);
+}
+
+.bg-skew-header::before {
+  height: 80%;
+}
+
+/*hoverした時のアニメーション*/
+.bg-skew:hover::before {
+  animation: skewanime 0.5s forwards; /*アニメーションの名前と速度を定義*/
+}
+
+@keyframes skewanime {
+  100% {
+    left: -10%;
+  }
+}
+
 
 /* =======================
    個別page top (img/ttl)
