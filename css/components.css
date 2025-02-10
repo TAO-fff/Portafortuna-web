@@ -669,6 +669,18 @@
   }
 }
 
+/* =======================
+     sp 共通パーツ
+ ======================= */
+     @media screen and (max-width: 1300px) and (min-width: 1024px) {
+      .home__link-txt p {
+        font-size: 1rem;
+        line-height: var(--line-height-tight);
+        letter-spacing: 1.5px;
+        padding-bottom: 20px;
+      }
+      
+     }
 
 /* =======================
    個別page top (img/ttl)

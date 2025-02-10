@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/pages/voice.css" />
 
     <!-- SNSやOGP対応（オプション） -->
@@ -43,12 +43,18 @@
     <header class="header components-container">
       <nav class="header-nav">
         <ul>
-          <li class="header-item nav-item"><a href="./index.html">ホーム</a></li>
-          <li class="header-item nav-item"><a href="./menu.html">メニュー</a></li>
+          <li class="header-item nav-item">
+            <a href="./index.html">ホーム</a>
+          </li>
+          <li class="header-item nav-item">
+            <a href="./menu.html">メニュー</a>
+          </li>
           <li class="header-item nav-item">
             <a href="./profile.html">プロフィール</a>
           </li>
-          <li class="header-item nav-item"><a href="./voice.html">お客様の声</a></li>
+          <li class="header-item nav-item">
+            <a href="./voice.html">お客様の声</a>
+          </li>
           <li class="header-item nav-item"><a href="">お問い合わせ</a></li>
         </ul>
         <div class="header-btn">
@@ -172,23 +178,38 @@
 
         <!-- お客様の声 -->
         <div class="voice__after-group">
-           <!-- voice1 -->
-           <div class="common__voice-area voice__after-item">
-            <div class="common__voice-text-wrap">
-              <!-- num -->
-              <div class="common__voice-order">
-                <div class="common__voice-num-txt">
-                  <p>User<br />Voice</p>
+          <!-- voice1 -->
+          <div class="common__voice-area voice__after-item">
+            <div class="voice__voice-txt-inner">
+              <div class="voice__voice-text-wrap">
+                <!-- num -->
+                <div class="common__voice-order">
+                  <div class="common__voice-num-txt">
+                    <p>User<br />Voice</p>
+                  </div>
+                  <div class="common__voice-num">
+                    <p>1</p>
+                  </div>
                 </div>
-                <div class="common__voice-num">
-                  <p>1</p>
+                <!-- 感想 -->
+                <div class="voice__voice-customer">
+                  <p>
+                    “感動の連続！<br />
+                    毎日がもっと素敵になりました”
+                  </p>
                 </div>
               </div>
-              <!-- 感想 -->
-              <div class="common__voice-customer">
+
+              <div class="voice__voice-txt">
                 <p>
-                  “感動の連続！<br />
-                  毎日がもっと素敵になりました”
+                  どれも手持ちの服と合わせやすく、その場で感動しましたが、
+                  毎日着るたびにさらに感心しています。<br />
+                  こんな提案ができるなんて、本当にすごいです！<br />
+
+                  家族にも写真を見せたところ、<br />
+                  『さすがだね！』『レベルが違う！』とまで言われました。<br />
+
+                  この満足感なら、料金の3万円が全然高く感じません。
                 </p>
               </div>
             </div>
@@ -196,48 +217,81 @@
               <img src="./img/home-voice1.jpg" alt="40代女性の感想" />
             </div>
           </div>
+
           <!-- voice2 -->
           <div class="common__voice-area voice__after-item">
-            <!-- img -->
             <div class="common__voice-img-wrap">
               <img src="./img/home-voice2.jpg" alt="50代女性の感想" />
             </div>
-            <div class="common__voice-text-wrap">
-              <!-- num -->
-              <div class="common__voice-order">
-                <div class="common__voice-num-txt">
-                  <p>User<br />Voice</p>
+
+            <div class="voice__voice-txt-inner">
+              <div class="voice__voice-text-wrap">
+                <!-- num -->
+                <div class="common__voice-order">
+                  <div class="common__voice-num-txt">
+                    <p>User<br />Voice</p>
+                  </div>
+                  <div class="common__voice-num">
+                    <p>2</p>
+                  </div>
                 </div>
-                <div class="common__voice-num">
-                  <p>2</p>
+                <!-- 感想 -->
+                <div class="voice__voice-customer">
+                  <p>
+                    “似合うアイテムを手元に<br />
+                    揃える喜びを実感しました”
+                  </p>
                 </div>
               </div>
-              <!-- 感想 -->
-              <div class="common__voice-customer">
+
+              <div class="voice__voice-txt">
                 <p>
-                  “似合うアイテムを手元に<br />
-                  揃える喜びを実感しました”
+                  たくさん下見をしてくださり、本当にありがとうございました♡<br />
+                  <br />
+                  おすすめいただいたアクセサリーなどの小物を探しながら、
+                  自分の定番アイテムを作っていくのが建設的で楽しいです！<br />
+                  手元に確実に似合う服が揃うと、安心感も違いますね。<br />
+                  <br />
+                  素晴らしいラインナップをいくつも紹介いただき、
+                  自分では思いつかないものばかりで、さすがだと思いました！
                 </p>
               </div>
             </div>
           </div>
+
           <!-- voice3 -->
           <div class="common__voice-area voice__after-item">
-            <div class="common__voice-text-wrap">
-              <!-- num -->
-              <div class="common__voice-order">
-                <div class="common__voice-num-txt">
-                  <p>User<br />Voice</p>
+            <div class="voice__voice-txt-inner">
+              <div class="voice__voice-text-wrap">
+                <!-- num -->
+                <div class="common__voice-order">
+                  <div class="common__voice-num-txt">
+                    <p>User<br />Voice</p>
+                  </div>
+                  <div class="common__voice-num">
+                    <p>3</p>
+                  </div>
                 </div>
-                <div class="common__voice-num">
-                  <p>3</p>
+                <!-- 感想 -->
+                <div class="voice__voice-customer">
+                  <p>
+                    “みんなに褒められるお洋服と<br />
+                    出会えて毎日がハッピーです”
+                  </p>
                 </div>
               </div>
-              <!-- 感想 -->
-              <div class="common__voice-customer">
+
+              <div class="voice__voice-txt">
                 <p>
-                  “みんなに褒められるお洋服と<br />
-                  出会えて毎日がハッピーです”
+                  さやさんに選んでいただいたお洋服は、
+                  出番がない日が無いものばかりで本当に重宝しています！<br>
+                  <br>
+                  さらに周りからも大好評のコーディネートで、
+                  みんなに「可愛い〜！」と言われてとても嬉しいです！<br>
+                  <br>
+                  『さやさんに選んでもらったの』と自慢しちゃいました笑<br>
+                  具体的なコーディネートまで教えていただき、
+                  本当にありがとうございました♡
                 </p>
               </div>
             </div>
@@ -248,41 +302,88 @@
         </div>
       </section>
     </div>
-   
-    <!-- styling-gallery -->
-     <div class="l-container">
-      <section class="voice__gallery">
-          <!-- タイトル -->
-          <div class="l-heading-ttl-wrap">
-            <div class="l-heading-ttl">
-              <h2 class="l-heading-ttl-en home__reason-ttl-en">Styling Gallery</h2>
-            </div>
-            <div class="l-heading-ttl">
-              <p class="l-heading-ttl-ja home__reason-ttl-ja">
-                ご提案コーデ
-              </p>
-            </div>
-          </div>
-      <div class="voice__gallery-slider">
-        <ul class="voice__gallery-slider-list">
-          <li class="voice__gallery-slider-item"><img src="./img/voice-slider-1.jpg" alt="お客様への提案コーディネート"></li>
-          <li class="voice__gallery-slider-item"><img src="./img/voice-slider-2.jpg" alt="お客様への提案コーディネート"></li>
-          <li class="voice__gallery-slider-item"><img src="./img/voice-slider-3.jpg" alt="お客様への提案コーディネート"></li>
-          <li class="voice__gallery-slider-item"><img src="./img/voice-slider-4.jpg" alt="お客様への提案コーディネート"></li>
-          <li class="voice__gallery-slider-item"><img src="./img/voice-slider-5.jpg" alt="お客様への提案コーディネート"></li>
-          <li class="voice__gallery-slider-item"><img src="./img/voice-slider-6.jpg" alt="お客様への提案コーディネート"></li>
-          <li class="voice__gallery-slider-item"><img src="./img/voice-slider-7.jpg" alt="お客様への提案コーディネート"></li>
-          <li class="voice__gallery-slider-item"><img src="./img/voice-slider-8.jpg" alt="お客様への提案コーディネート"></li>
-          <li class="voice__gallery-slider-item"><img src="./img/voice-slider-9.jpg" alt="お客様への提案コーディネート"></li>
-        </ul>
-      </div>
-      <div class="voice__gallery-attension">
-        <p>※掲載している写真は、お客様・ショップに掲載許可を頂戴しております。</p>
-      </div>
-    </section>
-     </div>
 
-    
+    <!-- styling-gallery -->
+    <div class="l-container">
+      <section class="voice__gallery">
+        <!-- タイトル -->
+        <div class="l-heading-ttl-wrap">
+          <div class="l-heading-ttl">
+            <h2 class="l-heading-ttl-en home__reason-ttl-en">
+              Styling Gallery
+            </h2>
+          </div>
+          <div class="l-heading-ttl">
+            <p class="l-heading-ttl-ja home__reason-ttl-ja">ご提案コーデ</p>
+          </div>
+        </div>
+        <!-- gallery slider -->
+        <div class="voice__gallery-slider">
+          <ul class="voice__gallery-slider-list">
+            <li class="voice__gallery-slider-item">
+              <img
+                src="./img/voice-slider-1.jpg"
+                alt="お客様への提案コーディネート"
+              />
+            </li>
+            <li class="voice__gallery-slider-item">
+              <img
+                src="./img/voice-slider-2.jpg"
+                alt="お客様への提案コーディネート"
+              />
+            </li>
+            <li class="voice__gallery-slider-item">
+              <img
+                src="./img/voice-slider-3.jpg"
+                alt="お客様への提案コーディネート"
+              />
+            </li>
+            <li class="voice__gallery-slider-item">
+              <img
+                src="./img/voice-slider-4.jpg"
+                alt="お客様への提案コーディネート"
+              />
+            </li>
+            <li class="voice__gallery-slider-item">
+              <img
+                src="./img/voice-slider-5.jpg"
+                alt="お客様への提案コーディネート"
+              />
+            </li>
+            <li class="voice__gallery-slider-item">
+              <img
+                src="./img/voice-slider-6.jpg"
+                alt="お客様への提案コーディネート"
+              />
+            </li>
+            <li class="voice__gallery-slider-item">
+              <img
+                src="./img/voice-slider-7.jpg"
+                alt="お客様への提案コーディネート"
+              />
+            </li>
+            <li class="voice__gallery-slider-item">
+              <img
+                src="./img/voice-slider-8.jpg"
+                alt="お客様への提案コーディネート"
+              />
+            </li>
+            <li class="voice__gallery-slider-item">
+              <img
+                src="./img/voice-slider-9.jpg"
+                alt="お客様への提案コーディネート"
+              />
+            </li>
+          </ul>
+        </div>
+        <div class="voice__gallery-attension">
+          <p>
+            ※掲載している写真は、お客様・ショップに掲載許可を頂戴しております。
+          </p>
+        </div>
+      </section>
+    </div>
+
     <!-- 以下、前ページ共通 -->
     <!-- reserve -->
     <div class="reserve__container components-container">
@@ -420,5 +521,18 @@
         </div>
       </footer>
     </div>
+
+     <!-- jquery -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+     <script
+       src="https://code.jquery.com/jquery-3.4.1.min.js"
+       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+       crossorigin="anonymous"
+     ></script>
+     <!-- slick -->
+     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+     <!-- js -->
+     <script src="./js/voice.js" defer></script>
   </body>
 </html>

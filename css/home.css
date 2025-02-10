@@ -87,16 +87,16 @@
   top: 35.5%;
   right: 0vw;
   gap: 110px;
-  animation: fadeInUp 1.75s ease-in-out forwards;
-  opacity: 0;
+  /* animation: fadeInUp 1.75s ease-in-out forwards;
+  opacity: 0; */
 }
 
 .home__top-copy {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  /* animation: fadeInUp 1.75s ease-in-out forwards;
-  opacity: 0; */
+  animation: fadeInUp 1.75s ease-in-out forwards;
+  opacity: 0;
 }
 
 .home__top-copy-vertical p,
@@ -137,6 +137,9 @@
 
 .home__top-message {
   width: 100%;
+  animation: fadeInUp 1.75s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 1s;
 }
 
 .home__top-message-wrap {
@@ -205,7 +208,7 @@
   }
 }
 
-/* @keyframes fadeInUp {
+@keyframes fadeInUp {
   from {
     opacity: 0;
     bottom: 0;
@@ -213,16 +216,6 @@
   to {
     opacity: 1;
     top: 0;
-  } */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    top: 75%;
-  }
-  to {
-    opacity: 1;
-    top: 35.5%;
   }
 }
 
@@ -458,7 +451,7 @@
 /*背景色が伸びて出現 共通*/
 .bgextend {
   animation-name: bgextendAnimeBase;
-  animation-duration: 1.45s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
   position: relative;
   overflow: hidden; /*　はみ出た色要素を隠す　*/
@@ -503,7 +496,6 @@
   width: 100%;
   height: 100%;
   background-color: #715f5a; /*伸びる背景色の設定*/
-  opacity: 0.8;
 }
 
 @keyframes bgUDextendAnime {
@@ -521,6 +513,25 @@
   100% {
     transform-origin: bottom;
     transform: scaleY(0);
+  }
+}
+
+.fadeUp {
+  animation-name: fadeUpAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -662,6 +673,17 @@
   letter-spacing: var(--letter-spacing-base);
 }
 
+.home__menu-item {
+  opacity: 0;
+  transform: translateY(50px); /* 初期位置は左に50pxずらす */
+  transition: all 0.8s ease; /* アニメーションの滑らかさを設定 */
+}
+
+.home__menu-item.fadeInLeft {
+  opacity: 1;
+  transform: translateY(0); /* 左から元の位置に移動 */
+}
+
 /* =======================
   sp  menu
 ======================= */
@@ -723,7 +745,137 @@
   padding-top: 27px;
 }
 
+/* slider */
+.home__voice-slider {
+  overflow: hidden;
+  padding-top: 80px;
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 5px;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  bottom: 20%;
+  left: 0%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px 30px;
+  list-style: none;
+  border-radius: 5rem;
+}
+
+.slick-dots:hover,
+.slick-prev:hover,
+.slick-next:hover {
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-base-dark);
+  border: none;
+  transition: background-color 0.3s ease;
+  font-size: 0;
+  color: transparent;
+}
+
+.slick-dots li.slick-active button {
+  background-color: var(--color-base-light);
+  border: solid 1px var(--color-base-dark);
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  bottom: 20%;
+  left: 0%;
+  font-size: 0;
+  border-radius: 50%;
+  padding: 30px;
+  border: solid 1px var(--color-base-dark);
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  z-index: 5;
+}
+
+.slick-prev {
+  left: 38%;
+  transform: translateX(-50%);
+}
+
+.slick-next {
+  left: 48%;
+  transform: translateX(-50%);
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  opacity: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev:before {
+  content: "←";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  backdrop-filter: blur(10px);
+}
+
+.slick-next:before {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  backdrop-filter: blur(10px);
+}
+
 /* 感想部分レイアウトはcommon.css */
+
+/* =======================
+  sp  voice
+======================= */
+
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .slick-slide {
+    gap: 50px;
+  }
+
+  .slick-dots {
+    bottom: 15%;
+  }
+
+  .slick-prev,
+  .slick-next {
+    bottom: 14%;
+  }
+}
 
 /* tab */
 @media screen and (max-width: 1024px) and (min-width: 768px) {

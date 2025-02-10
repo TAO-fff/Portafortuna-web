@@ -192,12 +192,18 @@
 }
 
 .voice__gallery-slider-list {
-  display: flex;
-  align-items: stretch;
   gap: 50px;
 }
 
 .voice__gallery-slider-item {
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+
+.slick-active .voice__gallery-slider-item {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .voice__gallery-attension {

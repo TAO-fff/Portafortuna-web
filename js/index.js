@@ -1,38 +1,28 @@
-//reason afdein 
-function delayScrollAnime() {
-  var time = 1.2; // 遅延時間
-  var value = time;
+//home__menu アニメーション 
+function menuScrollAnime() {
+  var time = 750;
 
-  $('.delayScroll').each(function () {
+  $('.home__menu-list').each(function () {
     var parent = this;
-    var elemPos = $(this).offset().top;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    var childs = $(this).children();
+    var elemPos = $(this).offset().top; // 要素の位置
+    var scroll = $(window).scrollTop(); // 現在のスクロール位置
+    var windowHeight = $(window).height(); // 画面の高さ
+    var childs = $(this).find('.home__menu-item'); // home__menu-itemを取得
 
     if (scroll >= elemPos - windowHeight && !$(parent).hasClass("play")) {
-      $(childs).each(function () {
-        if (!$(this).hasClass("fadeUp")) {
-          $(parent).addClass("play");
-          $(this).css("animation-delay", value + "s");
-          $(this).addClass("fadeUp");
-          value = value + time;
+      $(parent).addClass("play"); // playクラスを追加して一度だけ実行
 
-          // 最後の要素が終わったらplayクラスを外す
-          var index = $(childs).index(this);
-          if ((childs.length - 1) == index) {
-            $(parent).removeClass("play");
-          }
-        }
+      // 各home__menu-itemを順番に表示
+      $(childs).each(function (i) {
+        var that = this;
+        setTimeout(function () {
+          $(that).addClass("fadeInLeft");
+        }, i * time); // iの値で遅延時間を調整
       });
-    } else {
-      $(childs).removeClass("fadeUp");
-      value = time;
     }
   });
 }
 
-// スクロールイベントでdelayScrollAnimeを実行
 $(window).on('scroll', function () {
-  delayScrollAnime();
+  menuScrollAnime();
 });
