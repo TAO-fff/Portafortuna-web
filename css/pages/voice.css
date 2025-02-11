@@ -189,28 +189,40 @@
 
 .voice__gallery-slider {
   padding: 124px 0 190px 0;
+  width: 100%;
 }
 
 .voice__gallery-slider-list {
-  gap: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .voice__gallery-slider-item {
-  transform: translateY(30px);
-  transition: opacity 1s ease, transform 1s ease;
+  opacity: 1; /* 初期状態で表示する */
+  transform: none; /* translateY(0)を削除 */
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  width: 30%;
 }
 
 
-.slick-active .voice__gallery-slider-item {
-  opacity: 1;
-  transform: translateY(0);
+.slick-slide {
+  display: flex !important; /* flexで中央揃え */
+  justify-content: center;
+  align-items: center;
+  height: auto; /* 高さが揃わない場合に調整 */
 }
 
-.voice__gallery-attension {
+.voice__gallery-slider-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.voice__gallery-attention {
   padding-bottom: 130px;
 }
 
-.voice__gallery-attension p {
+.voice__gallery-attention p {
   color: var(--color-primary);
   text-align: center;
   font-family: var(--font-ja-heading);

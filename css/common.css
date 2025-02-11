@@ -83,7 +83,6 @@
   box-sizing: border-box;
 }
 
-
 .voice__voice-txt-inner {
   display: flex;
   flex-direction: column;
@@ -108,7 +107,8 @@
   width: 100%;
 }
 
-.common__voice-order {
+.common__voice-order,
+.sp-voice__voice-order {
   color: var(--color-primary);
   display: flex;
   justify-content: center;
@@ -118,7 +118,9 @@
 }
 
 .common__voice-order::before,
-.common__voice-order::after {
+.common__voice-order::after,
+.sp-voice__voice-order::before,
+.sp-voice__voice-order::after {
   display: block;
   content: "";
   background: var(--color-primary);
@@ -127,12 +129,14 @@
   height: 1px;
 }
 
-.common__voice-order::before {
+.common__voice-order::before,
+.sp-voice__voice-order::before {
   top: 20px;
   left: 0;
 }
 
-.common__voice-order::after {
+.common__voice-order::after,
+.sp-voice__voice-order::after {
   bottom: 20px;
   left: 0;
 }
@@ -141,7 +145,8 @@
   width: 80%;
 }
 
-.common__voice-num-txt p {
+.common__voice-num-txt p,
+.sp-voice__voice-num-txt p {
   font-family: var(--font-ja-heading);
   font-size: var(--font-size-text);
   font-weight: var(--font-weight-bold);
@@ -163,7 +168,8 @@
 }
 
 .common__voice-customer p,
-.voice__voice-customer p {
+.voice__voice-customer p,
+.sp-voice__voice-customer p {
   font-family: "Syunka", sans-serif;
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-wide);
@@ -193,6 +199,10 @@
   width: 100%;
 }
 
+.sp-voice__after-group {
+  display: none;
+}
+
 /* =======================
   sp    home/voice 
 ======================= */
@@ -203,17 +213,59 @@
     line-height: var(--line-height-base);
   }
 
-  .common__voice-area,
-  .voice__after-item {
+  .common__voice-area {
     gap: 46px;
     padding: 55px 50px 20px 50px;
+  }
+
+  .voice__after-item {
+    padding: 60px 5%;
+  }
+
+  .voice__voice-customer p {
+    font-size: 1.33rem;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 820px) {
+  .common__voice-area {
+    gap: 46px;
+    padding: 55px 50px 20px 50px;
+  }
+
+  .common__voice-text-wrap {
+    width: 55%;
+  }
+
+  .voice__voice-text-wrap {
+    gap: 5.7%;
+  }
+
+  .voice__after-item {
+    gap: 75px;
+  }
+
+  .common__voice-num {
+    font-size: 7.25vw;
+  }
+
+  .common__voice-customer p {
+    font-size: 2.75vw;
+    line-height: var(--line-height-base);
+  }
+
+  .voice__voice-customer p {
+    font-size: 2vw;
+  }
+
+  .common__voice-img-wrap {
+    width: 45%;
   }
 }
 
 /* tab */
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-  .common__voice-area,
-  .voice__after-item {
+@media screen and (max-width: 820px) and (min-width: 768px) {
+  .common__voice-area {
     gap: 46px;
     padding: 55px 50px 20px 50px;
   }
@@ -237,6 +289,89 @@
 
   .common__voice-img-wrap {
     width: 45%;
+  }
+
+  /* sp用 */
+  .sp-voice__after-group {
+    display: block;
+  }
+
+  .sp-voice__after-item {
+    padding: 26px 20px 120px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .sp-voice__voice-img-wrap {
+    width: 60%;
+    padding: 30px 0 20px 0;
+  }
+
+  .sp-voice__voice-img-wrap img {
+    width: 100%;
+  }
+
+  .sp-voice__voice-txt-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 50px;
+  }
+
+  .sp-voice__voice-text-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 6%;
+    width: 73%;
+    margin: 0 auto;
+  }
+
+  .sp-voice__voice-order {
+    width: 24%;
+  }
+
+  .sp-voice__voice-order::before {
+    top: 0;
+  }
+  .sp-voice__voice-order::after {
+    bottom: 0;
+  }
+
+  .sp-voice__voice-num p {
+    font-family: var(--font-ja-heading);
+    font-size: 2.375rem;
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-base);
+  }
+
+  .sp-voice__voice-customer {
+    width: 75%;
+  }
+
+  .sp-voice__voice-customer p {
+    font-size: 2.75vw;
+    line-height: var(--line-height-base);
+  }
+
+  .sp-voice__voice-txt {
+    color: var(--color-primary);
+    font-size: var(--font-size-text);
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-base);
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .sp-voice__voice-txt p {
+    color: var(--color-primary);
+    font-size: var(--font-size-text);
+  }
+
+  .voice__after-group {
+    display: none;
   }
 }
 
