@@ -85,10 +85,10 @@
   sp     before
 ======================= */
 @media screen and (max-width: 1300px) and (min-width: 1024px) {
-.voice__before-area {
-  gap: 80px;
-  padding: 65px 0 100px 0;
-}
+  .voice__before-area {
+    gap: 80px;
+    padding: 65px 0 100px 0;
+  }
 
   .voice__before-list {
     display: flex;
@@ -117,7 +117,7 @@
     gap: 150px;
     padding: 65px 0 100px 0;
   }
-  
+
   .voice__before-list {
     display: flex;
     flex-direction: column;
@@ -168,14 +168,12 @@
 @media screen and (max-width: 1300px) and (min-width: 1024px) {
 }
 
-
 /* tab */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .voice__after-item {
     gap: 45px;
   }
 }
-
 
 /* sp */
 @media screen and (max-width: 767px) {
@@ -185,39 +183,46 @@
   voice-gallery
 ======================= */
 .voice__gallery {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .voice__gallery-slider {
-  padding: 124px 0 190px 0;
+  display: block;
   width: 100%;
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  gap: 50px;
+  width: 90%;
+  position: relative;
 }
 
 .voice__gallery-slider-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 124px 0 65px 0;
+  position: relative;
+}
+
+.slick-slide {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .voice__gallery-slider-item {
-  opacity: 1; /* 初期状態で表示する */
-  transform: none; /* translateY(0)を削除 */
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  width: 30%;
-}
-
-
-.slick-slide {
-  display: flex !important; /* flexで中央揃え */
-  justify-content: center;
-  align-items: center;
-  height: auto; /* 高さが揃わない場合に調整 */
+  position: relative;
 }
 
 .voice__gallery-slider-item img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  object-fit: cover;
+  display: block;
 }
+
 .voice__gallery-attention {
   padding-bottom: 130px;
 }
@@ -230,4 +235,114 @@
   font-weight: var(--font-weight-bold);
   line-height: 1.2;
   letter-spacing: var(--letter-spacing-base);
+}
+
+/* arrow・btn */
+/* arrow全体 */
+.voice__gallery-slider-arrows {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 45%;
+  left: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+/* arrowボタン全体のデザイン */
+.voice__gallery-slider-arrows button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+}
+
+.voice__gallery-slider-arrows .slick-prev {
+  left: -11vw;
+}
+
+.voice__gallery-slider-arrows .slick-next {
+  right: -10.5vw;
+}
+
+/* 矢印ラインのデザイン */
+.voice__gallery-slider-arrows button::before,
+.voice__gallery-slider-arrows button::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 1.5px;
+  background-color: var(--color-primary);
+  transition: all 0.3s ease;
+}
+
+.voice__gallery-slider-arrows .slick-prev::before {
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(-60deg);
+}
+
+.voice__gallery-slider-arrows .slick-prev::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%) rotate(60deg);
+}
+
+.voice__gallery-slider-arrows .slick-next::before {
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -100%) rotate(60deg);
+}
+
+.voice__gallery-slider-arrows .slick-next::after {
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0%)  rotate(-60deg);
+}
+
+/* ホバー時のエフェクト */
+.voice__gallery-slider-arrows button:hover::before,
+.voice__gallery-slider-arrows button:hover::after {
+  background-color: var(--color-accent);
+}
+
+
+
+.voice__gallery-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+  height: 20%;
+}
+
+.voice__gallery-slider-dots .slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 125px;
+  gap: 10px;
+}
+
+.voice__dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-base);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+.voice__gallery-slider-dots li.slick-active .voice__dot {
+  background-color: var(--color-base-light);
+  border: solid.5px var(--color-base);
 }
