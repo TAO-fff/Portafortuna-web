@@ -246,14 +246,13 @@
   top: 45%;
   left: 0;
   transform: translateY(-50%);
-  pointer-events: none;
 }
 /* arrowボタン全体のデザイン */
 .voice__gallery-slider-arrows button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
+  width: 70px;
   height: 50px;
   background: none;
   border: none;
@@ -263,14 +262,15 @@
   justify-content: center;
   align-items: center;
   font-size: 0;
+  z-index: 10;
 }
 
 .voice__gallery-slider-arrows .slick-prev {
-  left: -11vw;
+  left: -9vw;
 }
 
 .voice__gallery-slider-arrows .slick-next {
-  right: -10.5vw;
+  right: -8.5vw;
 }
 
 /* 矢印ラインのデザイン */
@@ -311,7 +311,7 @@
 /* ホバー時のエフェクト */
 .voice__gallery-slider-arrows button:hover::before,
 .voice__gallery-slider-arrows button:hover::after {
-  background-color: var(--color-accent);
+  background-color: var(--color-base);
 }
 
 
