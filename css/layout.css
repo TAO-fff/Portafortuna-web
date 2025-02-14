@@ -16,3 +16,10 @@
    padding: 0 5%;
   }
 }
+
+/* sp */
+@media screen and (max-width: 767px) {
+  .l-container {
+    padding: 0 5%;
+   }
+}

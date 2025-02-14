@@ -1,9 +1,10 @@
 // outfit-fadeUp アニメーションをスクロール時に発火させる
 const items = document.querySelectorAll('.profile__photo-outfit-item');
-const randomizedOrder = [...items].sort(() => Math.random() - 0.5); // ランダムな順番に並び替え
 
-randomizedOrder.forEach((item, index) => {
-  const delay = index * 0.4; // 0.3秒ずつ遅れてアニメーションする
+const orderedItems = [items[0], items[2], items[1]];
+
+orderedItems.forEach((item, index) => {
+  const delay = index * 0.4; 
   item.style.transitionDelay = `${delay}s`;
   item.classList.add('outfit-fadeUp');
 });
@@ -12,9 +13,9 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('play');
-      observer.unobserve(entry.target); // 1回だけ発火
+      observer.unobserve(entry.target); 
     }
   });
 }, { threshold: 0.2 });
 
-randomizedOrder.forEach(item => observer.observe(item));
+orderedItems.forEach(item => observer.observe(item));

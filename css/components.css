@@ -6,31 +6,39 @@
   max-width: 1440px;
   margin: 0 auto;
 }
-  
+
 .nav-item {
   font-family: var(--font-ja-heading);
   color: var(--color-primary);
 }
 
-.nav-item a{
-	position: relative;
-	transition: 0.3s;
+.nav-item a {
+  position: relative;
+  transition: 0.3s;
 }
-.nav-item a:hover{
-	color: var(--color-primary);
+.nav-item a:hover {
+  color: var(--color-primary);
 }
-.nav-item a::before{
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: -4px;
-	width: 0;
-	height: 1px;
-	background: var(--color-primary);
-	transition: 0.3s;
+.nav-item a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: var(--color-primary);
+  transition: 0.3s;
 }
-.nav-item a:hover::before{
-	width: 100%;
+.nav-item a:hover::before {
+  width: 100%;
+}
+
+/* sp */
+@media screen and (max-width: 768px) {
+  .sp-br {
+    display: inline-block;
+    padding-top: 8px;
+  }
 }
 
 /* =======================
@@ -105,7 +113,7 @@
   .header-nav {
     padding-left: 0;
   }
-  
+
   .header-nav ul {
     justify-content: space-around;
     width: 75%;
@@ -137,7 +145,8 @@
     display: none;
   }
 
-  /* .header-nav-sp {
+  .header-nav-sp {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -148,7 +157,9 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  } */
+    padding-left: 4vw;
+    gap: 7vw;
+  }
 
   .header-nav-sp ul {
     gap: 24px;
@@ -168,18 +179,16 @@
     width: 100%;
     max-width: 767px;
     padding-top: 10%;
-    margin: 0 auto;
   }
 
   .sp-header-btn-link {
     width: 100%;
     max-width: 600px;
-    padding: 2.5% 30%;
+    padding: 7vw 14vw;
   }
-}
 
   /* ハンバーガーメニュー */
-  /* .sp-menu-btn {
+  .sp-menu-btn {
     display: block;
     width: 30px;
     height: 30px;
@@ -192,46 +201,49 @@
 
   .sp-menu-btn span {
     position: absolute;
+    content: "";
     width: 30px;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--color-base-light);
     top: 15px;
     transition: 0.5s;
   }
 
-  .sp-menu-btn span::before,
+  .sp-menu-btn span::before {
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: var(--color-base-light);
+    top: -11px;
+    transition: 0.5s;
+  }
+
   .sp-menu-btn span::after {
     position: absolute;
     content: "";
     width: 30px;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--color-base-light);
+    bottom: -11px;
     transition: 0.5s;
   }
 
-  .sp-menu-btn span::before {
-    top: -11px;
-  }
-
-  .sp-menu-btn span::after {
-    bottom: -11px;
-  } */
-
-  /* openクラスが付いた時のアニメーション */
-  /* .sp-menu-btn.open span {
+  /* hamメニュークリック時動き */
+  .open span {
     background-color: transparent;
   }
 
-  .sp-menu-btn.open span::before {
+  .open span::before {
     transform: rotate(45deg);
     top: 0;
   }
 
-  .sp-menu-btn.open span::after {
+  .open span::after {
     transform: rotate(-45deg);
     bottom: 0;
   }
-} */
+}
 
 /* =======================
      footer
@@ -248,7 +260,6 @@
   justify-content: center;
   align-items: flex-start;
   padding-bottom: 63px;
-  /* border-bottom: solid 1px var(--color-base); */
   position: relative;
 }
 
@@ -311,13 +322,21 @@
 
 .footer__nav-sns {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 10px; /* 文字と画像の間の余白 */
 }
 
-.footer__nav-sns-img {
-  display: block;
+.footer__nav-sns a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer__sns-text {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-bold);
 }
 
 .footer__sns-img {
@@ -327,6 +346,7 @@
 .footer__sns-img img {
   width: 100%;
 }
+
 
 .footer__copyright {
   margin: 0 auto;
@@ -388,7 +408,48 @@
 }
 
 /* sp */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+  .footer {
+    background-color: var(--color-base);
+    box-sizing: border-box;
+  }
+
+  .footer__nav-wrap {
+    flex-direction: column;
+  }
+
+  .footer__nav-wrap-left,
+  .footer__nav-wrap-centerleft,
+  .footer__nav-wrap-centerright,
+  .footer__nav-wrap-right {
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .footer__nav {
+    width: 100%;
+  }
+
+  .footer__nav ul {
+    gap: 35px;
+    padding: 16px 0;
+    border-top: solid .5px var(--color-base-light);
+    width: 100%;
+  }
+
+  .footer__item {
+    color: var(--color-text-inverse);
+    width: 100%;
+  }
+
+  .footer_nav-ttl {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .footer__copyright {
+    color: var(--color-text-inverse);
+  }
 }
 
 /* =======================
@@ -443,7 +504,23 @@
 }
 
 /* sp */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+  .reserve__btn-wrap {
+    gap: 4.25rem;
+    flex-direction: column;
+    padding: 75px 0;
+    width: 90%;
+  }
+
+  .reserve__btn-message,
+  .reserve__btn-link a {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .reserve__btn-link a {
+    padding: 10vw 17vw;
+  }
 }
 
 /* =======================
@@ -490,6 +567,20 @@
   color: var(--color-text);
 }
 
+/* sp */
+@media screen and (max-width: 768px) {
+  .l-heading-ttl-en:before {
+    height: 50px;
+    top: 43%;
+    left: 48%;
+    transform: translate(-50%, -50%) rotate(47deg);
+  }
+
+  .l-heading-ttl-ja {
+    text-align: center;
+  }
+}
+
 /* =======================
    共通パーツ
    - btn
@@ -527,7 +618,6 @@
   padding: 13px 20px;
 }
 
-
 /******* セクション下 btn *******/
 .home__link-area {
   display: flex;
@@ -537,7 +627,7 @@
   margin: 0 auto;
   padding: 80px 0;
   position: relative;
-  width: 50%;
+  width: 90%;
 }
 
 .home__link-txt p {
@@ -549,7 +639,7 @@
 
 .home__link-btn {
   position: relative;
-    display: flex;
+  display: flex;
   align-items: center;
 }
 
@@ -569,7 +659,6 @@
 .home__link-btn a:hover {
   border: solid 1px var(--color-base-dark);
 }
-
 
 /* btn 矢印 */
 .home__link-btn-arrow {
@@ -626,7 +715,6 @@
   transform: translateX(5px) rotate(-35deg); /* 矢印の下側 */
 }
 
-
 /******************
  hover skewアニメーション 
  - header
@@ -636,7 +724,7 @@
 /* ボタン共通設定 */
 .header-btn,
 .reserve__btn-footer,
-.home__link-url  {
+.home__link-url {
   /*アニメーションの起点とするためrelativeを指定*/
   position: relative;
   overflow: hidden;
@@ -650,15 +738,15 @@
 /*ボタン内spanの形状*/
 .header-btn span,
 .reserve__btn-footer span,
-.home__link-url  span {
+.home__link-url span {
   position: relative;
-  z-index: 3; /*z-indexの数値をあげて文字を背景よりも手前に表示*/
-  color: var(--color-base-base);
+  z-index: 3; 
+  color: var(--color-base-light);
 }
 
-.header-btn :hover span,
-.home__link-url :hover span,
-.reserve__btn-footer :hover span {
+.header-btn:hover span,
+.home__link-url:hover span,
+.reserve__btn-footer:hover span {
   color: var(--color-base-dark);
 }
 
@@ -694,15 +782,29 @@
 /* =======================
      sp 共通パーツ
  ======================= */
-     @media screen and (max-width: 1300px) and (min-width: 1024px) {
-      .home__link-txt p {
-        font-size: 1rem;
-        line-height: var(--line-height-tight);
-        letter-spacing: 1.5px;
-        padding-bottom: 20px;
-      }
-      
-     }
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .home__link-txt p {
+    font-size: 1rem;
+    line-height: var(--line-height-tight);
+    letter-spacing: 1.5px;
+    padding-bottom: 20px;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 768px) {
+  .home__link-area {
+    width: 100%;
+  }
+
+  .home__link-btn a {
+    padding: 8vw 23.5vw;;
+  }
+
+  .home__link-btn-arrow {
+    display: none;
+  }
+}
 
 /* =======================
    個別page top (img/ttl)
@@ -745,4 +847,22 @@
   z-index: 2;
   letter-spacing: 8px;
   text-align: center;
+}
+
+/* sp */
+@media screen and (max-width: 768px) {
+  .individual-top-img {
+    padding: 0;
+  }
+
+  .individual-top-img::before {
+    top: 0;
+    left: 0;
+    padding-top: 53.3%;
+  }
+  
+  
+.individual-top-ttl {
+  top: 50%;
+}
 }

@@ -176,7 +176,7 @@
 }
 
 .common__voice-customer p {
-  font-size: 2.45rem;
+  font-size: 1.85rem;
 }
 
 .voice__voice-customer p {
@@ -209,7 +209,7 @@
 
 @media screen and (max-width: 1300px) and (min-width: 1024px) {
   .common__voice-customer p {
-    font-size: 2.75vw;
+    font-size: 2.2vw;
     line-height: var(--line-height-base);
   }
 
@@ -250,7 +250,7 @@
   }
 
   .common__voice-customer p {
-    font-size: 2.55vw;
+    font-size: 2vw;
     line-height: var(--line-height-base);
   }
 

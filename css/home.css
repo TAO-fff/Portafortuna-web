@@ -373,6 +373,7 @@
   display: flex;
   justify-content: center;
   align-items: stretch;
+  flex-wrap: wrap;
   gap: 5%;
   padding: 45px 0;
 }
@@ -438,10 +439,8 @@
   アニメーション reason
 ======================= */
 /* レイアウトのためのCSS */
-
 .bgextend {
   width: 42%;
-  padding: 20px;
   margin: 0 20px 20px 0;
   box-sizing: border-box;
 }
@@ -487,12 +486,14 @@
 }
 
 /*--------- 上から --------*/
-.bgUDextend::before {
+.bgextend::before {
   animation-name: bgUDextendAnime;
   animation-duration: 1s;
   animation-fill-mode: forwards;
   content: "";
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: #715f5a; /*伸びる背景色の設定*/
@@ -534,6 +535,35 @@
     transform: translateY(0);
   }
 }
+
+/* 背景色アニメーション（上から下に伸びる） */
+.bgextend::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #715f5a; /* 伸びる背景色の色 */
+  transform-origin: top;
+  transform: scaleY(0);
+  transition: transform 1s ease;
+}
+
+.home__reason-item.bg-animate .bgextend::before {
+  transform: scaleY(1); /* 背景が上から下に伸びる */
+}
+
+/* フェードアップアニメーション */
+.home__reason-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.home__reason-item.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* =======================
   sp reason
@@ -684,6 +714,10 @@
   transform: translateY(0); /* 左から元の位置に移動 */
 }
 
+.sp-home__menu-item-ttl {
+  display: none;
+}
+
 /* =======================
   sp  menu
 ======================= */
@@ -736,6 +770,46 @@
 
 /* sp */
 @media screen and (max-width: 767px) {
+  .home__menu-list ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .home__menu-item {
+    width: 100%;
+    gap: 30px;
+    padding-bottom: 100px;
+  }
+
+  .home__menu-item-ttl {
+    display: none;
+  }
+
+  .sp-home__menu-item-ttl {
+    display: block;
+  }
+
+  .sp-home__menu-item-ttl p {
+    font-family: var(--font-ja-heading);
+    font-size: 5.85vw;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-base);
+  }
+
+  .home__menu-item-rank {
+    font-size: .75rem;
+  }
+
+  .home__menu-item-ttl p {
+    font-size: 3vw;
+  }
+
+  .home__menu-item-img::before {
+   display: none;
+  }
 }
 
 /* =======================
@@ -1083,6 +1157,10 @@
     margin-left: 0;
   }
 
+  .home__profile-txt-wrap {
+    padding-right: 0;
+  }
+
   .sp-home__profile-txt-name {
     display: block;
     width: 50%;
@@ -1109,6 +1187,10 @@
 
   .home__profile-txt-name {
     display: none;
+  }
+
+  .home__profile-txt-content {
+    width: 100%;
   }
 }
 

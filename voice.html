@@ -632,14 +632,17 @@
                 </li>
               </ul>
               <ul>
-                <div class="footer__nav-sns">
-                  <li class="footer__item footer_nav-ttl nav-item">
-                    <a href="">Instagram</a>
-                  </li>
-                  <div class="footer__sns-img">
-                    <img src="/img/Vector.png" alt="Instagram" />
-                  </div>
-                </div>
+                <li class="footer__nav-sns">
+                  <a href="">
+                    <span class="footer__sns-text">Instagram</span>
+                    <div class="footer__sns-img">
+                      <picture>
+                        <source srcset="./img/sp-Instagram-icon.png" media="(max-width: 767px)" />
+                        <img src="./img/Vector.png" alt="Instagram" />
+                      </picture>
+                    </div>
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -655,6 +658,7 @@
     <!-- slick -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- js -->
+    <script src="./js/components.js"></script>
     <script src="./js/voice.js" defer></script>
   </body>
 </html>

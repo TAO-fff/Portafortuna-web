@@ -63,25 +63,37 @@
       </nav>
 
       <!-- humメニュー -->
-      <div class="sp-menu-btn"><span></span></div>
+      <div class="sp-menu-btn sp-top__menu-btn"><span></span></div>
       <nav class="header-nav-sp">
         <ul>
-          <li><a href="#about"> ホーム</a></li>
-          <li><a href="#menu">メニュー</a></li>
-          <li><a href="#gallery">プロフィール</a></li>
-          <li><a href="#event">お客様の声</a></li>
-          <li><a href="#access">お問い合わせ</a></li>
-          <div class="header-btn">
-            <a class="cta-btn header-btn-link" href="">ご予約はこちら</a>
-          </div>
+          <li><a href="./index.html"> ホーム</a></li>
+          <li><a href="./menu.html">メニュー</a></li>
+          <li><a href="./profile.html">プロフィール</a></li>
+          <li><a href="./voice.html">お客様の声</a></li>
+          <li><a href="">お問い合わせ</a></li>
         </ul>
+        <div class="sp-header-btn">
+          <a class="sp-cta-btn sp-header-btn-link" href=""
+            ><span>ご予約はこちら</span></a
+          >
+        </div>
       </nav>
     </header>
 
     <!-- top -->
     <div class="individual-top components-container">
       <div class="individual-top-img">
-        <img src="./img/menu-top.jpg" alt="プロフィール" />
+        <picture>
+          <source
+            srcset="./img/sp-menu-top.jpg"
+            media="(max-width: 768px)"
+          />
+          <img
+            src="./img/menu-top.jpg"
+            alt="メニューページ"
+            focusable="false"
+          />
+        </picture>
       </div>
       <h1 class="individual-top-ttl l-container">MENU</h1>
     </div>
@@ -96,7 +108,7 @@
           </div>
           <div class="l-heading-ttl">
             <p class="l-heading-ttl-ja">
-              どんな方でも安心できるサービスをお約束
+              どんな方でも<span class="sp-br">安心できるサービスをお約束</span>
             </p>
           </div>
         </div>
@@ -108,6 +120,7 @@
               <h3 class="menu__concept-ttl">
                 ご購入の必要は<br />一切ありません
               </h3>
+              <span class="sp-concept__toggle-btn"></span>
             </div>
             <div class="menu__concept-txt">
               <p>
@@ -122,6 +135,7 @@
               <h3 class="menu__concept-ttl">
                 お買い物が苦手な方も<br />安心のサポート体制
               </h3>
+              <span class="sp-concept__toggle-btn"></span>
             </div>
             <div class="menu__concept-txt">
               <p>
@@ -136,6 +150,7 @@
               <h3 class="menu__concept-ttl">
                 診断未経験・他サロン<br />診断済みの方も大歓迎
               </h3>
+              <span class="sp-concept__toggle-btn"></span>
             </div>
             <div class="menu__concept-txt">
               <p>
@@ -181,10 +196,42 @@
                 </div>
               </div>
             </div>
+
+            <!-- sp用 menu-item 上部 -->
+            <div class="sp-menu__item-top">
+              <!-- sp用 menu top-left 画像 -->
+              <div class="sp-menu__item-top-wrap">
+                <div class="sp-menu__item-top-img">
+                  <img
+                    src="./img/menu-shopping-trip.jpg"
+                    alt="ショッピング同行メニュー"
+                  />
+                </div>
+                <div class="sp-menu__top-ttl-wrap">
+                  <div class="sp-menu__item-top-sub-ttl">
+                    <p>理想のスタイルを見つける1日</p>
+                  </div>
+                  <div class="sp-menu__item-top-ttl">
+                    <p>ショッピング同行</p>
+                  </div>
+                </div>
+              </div>
+              <!-- sp用 menu top 説明文 -->
+                <div class="sp-menu__item-top-txt">
+                  <p>
+                    当サロンが下見を行い、お客様に似合うショップやアイテムをセレクトします。<br />
+                    当日はセレクトしたアイテムを試着いただきながら、具体的なショップ選びのコツや、お悩みに添ったコーディネートのご提案、さらに着こなすためのアドバイスを丁寧にお伝えします。試着いただくことで、自分に似合うお洋服や新たな可能性を体感いただけます。
+                  </p>
+                </div>
+            </div>
             <!-- menu-item 下部（flow） -->
             <div class="menu__item-bottom">
               <div class="menu__item-bottom-ttl">
+                <p>当日の流れ</p>
+              </div>
+              <div class="sp-menu__item-bottom-ttl sp-menu__flow-btn">
                 <p>お申し込み後から当日の流れ</p>
+                <span class="sp-menu__toggle-btn"></span>
               </div>
               <ul class="menu__item-flow">
                 <li class="menu__item-flow-list">
@@ -284,10 +331,42 @@
                 </div>
               </div>
             </div>
+              <!-- sp用 menu-item 上部 -->
+              <div class="sp-menu__item-top">
+                <!-- sp用 menu top-left 画像 -->
+                <div class="sp-menu__item-top-wrap">
+                  <div class="sp-menu__item-top-img">
+                    <img
+                      src="./img/sp-menu-shopping-clues.jpg"
+                      alt="ショップクルーズ＋お茶会"
+                    />
+                  </div>
+                  <div class="sp-menu__top-ttl-wrap">
+                    <div class="sp-menu__item-top-sub-ttl">
+                      <p>気軽におしゃれを楽しめる</p>
+                    </div>
+                    <div class="sp-menu__item-top-ttl">
+                      <p>ショップクルーズ＋お茶会</p>
+                    </div>
+                  </div>
+                </div>
+                <!-- sp用 menu top 説明文 -->
+                  <div class="sp-menu__item-top-txt">
+                    <p>
+                      一緒にショップを巡りながら、ショップ選びのコツやおすすめのショップをご紹介します。気軽にショッピングを楽しみながら、日常のオシャレに役立つ視点をお伝えします。<br />
+                    さらに、リラックスした雰囲気で楽しくお話ができるお茶会がセットになっています。
+                    <br />※お茶代はお客様に負担いただきます。
+                    </p>
+                  </div>
+              </div>
             <!-- menu-item 下部（flow） -->
             <div class="menu__item-bottom">
               <div class="menu__item-bottom-ttl">
                 <p>当日の流れ</p>
+              </div>
+              <div class="sp-menu__item-bottom-ttl sp-menu__flow-btn">
+                <p>お申し込み後から当日の流れ</p>
+                <span class="sp-menu__toggle-btn"></span>
               </div>
               <ul class="menu__item-flow">
                 <li class="menu__item-flow-list">
@@ -374,10 +453,46 @@
                 </div>
               </div>
             </div>
+             <!-- sp用 menu-item 上部 -->
+             <div class="sp-menu__item-top">
+              <!-- sp用 menu top-left 画像 -->
+              <div class="sp-menu__item-top-wrap">
+                <div class="sp-menu__item-top-img">
+                  <img
+                    src="./img/sp-menu-closet-check.jpg"
+                    alt="オンラインクローゼット診断"
+                  />
+                </div>
+                <div class="sp-menu__top-ttl-wrap">
+                  <div class="sp-menu__item-top-sub-ttl">
+                    <p>ご自宅でスタイリングを学べる</p>
+                  </div>
+                  <div class="sp-menu__item-top-ttl">
+                    <p>オンラインクローゼット診断</p>
+                  </div>
+                </div>
+              </div>
+              <!-- sp用 menu top 説明文 -->
+                <div class="sp-menu__item-top-txt">
+                  <p>
+                    ZOOMを使用してご自宅にあるお洋服を診断いたします。
+                    着こなしが難しいお洋服のスタイリングのコツや、着回しコーディネートのご提案、断捨離をするか悩まれているアイテムなど、幅広く対応させていただきます。<br />
+                    <br />
+                    また、オンラインで購入可能なおすすめのブランドのご紹介もいたします。ショップ事情に詳しい当サロンだからこそ、オンラインでも満足いただけるご提案をします。
+                   </p>
+                </div>
+            </div>
             <!-- menu-item 下部（flow） -->
             <div class="menu__item-bottom">
               <div class="menu__item-bottom-ttl">
                 <p>当日の流れ</p>
+                <div class="menu__item-bottom-ttl">
+                  <p>お申し込み後から当日の流れ</p>
+                </div>
+              </div>
+              <div class="sp-menu__item-bottom-ttl sp-menu__flow-btn">
+                <p>お申し込み後から当日の流れ</p>
+                <span class="sp-menu__toggle-btn"></span>
               </div>
               <ul class="menu__item-flow">
                 <li class="menu__item-flow-list">
@@ -798,14 +913,17 @@
                 </li>
               </ul>
               <ul>
-                <div class="footer__nav-sns">
-                  <li class="footer__item footer_nav-ttl nav-item">
-                    <a href="">Instagram</a>
-                  </li>
-                  <div class="footer__sns-img">
-                    <img src="./img/Vector.png" alt="Instagram" />
-                  </div>
-                </div>
+                <li class="footer__nav-sns">
+                  <a href="">
+                    <span class="footer__sns-text">Instagram</span>
+                    <div class="footer__sns-img">
+                      <picture>
+                        <source srcset="./img/sp-Instagram-icon.png" media="(max-width: 767px)" />
+                        <img src="./img/Vector.png" alt="Instagram" />
+                      </picture>
+                    </div>
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
@@ -815,5 +933,13 @@
         </div>
       </footer>
     </div>
+
+      <!-- jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <!-- slick -->
+      <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <!-- js -->
+      <script src="./js/components.js"></script>
+      <script src="./js/menu.js"></script>
   </body>
 </html>

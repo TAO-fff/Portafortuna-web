@@ -67,7 +67,7 @@
       </nav>
 
       <!-- humメニュー -->
-      <div class="sp-menu-btn"><span></span></div>
+      <div class="sp-menu-btn sp-top__menu-btn"><span></span></div>
       <nav class="header-nav-sp">
         <ul>
           <li><a href="./index.html"> ホーム</a></li>
@@ -205,8 +205,6 @@
                       </div>
                     </span>
                   </li>
-                </ul>
-                <ul class="home__reason-groupe delayScroll">
                   <li
                     class="home__reason-item bgextend bgLRextend"
                     id="homeReason3"
@@ -296,6 +294,9 @@
                     />
                   </picture>
                 </div>
+                <div class="sp-home__menu-item-ttl">
+                  <p>ショッピング同行</p>
+                </div>
                 <div class="home__menu-item-txt">
                   <p>
                     お客様に合うお洋服を事前に下見してご用意。当日は試着しながら、ショップ選びやコーディネートのアドバイスをいたします。新しい自分の魅力を発見できる、当サロンで一番人気のメニューです。
@@ -317,6 +318,9 @@
                       alt="ショップクルーズ＋お茶会"
                     />
                   </picture>
+                </div>
+                <div class="sp-home__menu-item-ttl">
+                  <p>ショップクルーズ+お茶会</p>
                 </div>
                 <div class="home__menu-item-txt">
                   <p>
@@ -340,6 +344,9 @@
                       alt="オンラインクローゼット診断"
                     />
                   </picture>
+                </div>
+                <div class="sp-home__menu-item-ttl">
+                  <p>オンラインクローゼット診断</p>
                 </div>
                 <div class="home__menu-item-txt">
                   <p>
@@ -393,8 +400,8 @@
               <!-- 感想 -->
               <div class="common__voice-customer">
                 <p>
-                  “感動の連続！<br />
-                  毎日がもっと素敵になりました”
+                  “その場で変わる！<br />
+                  一瞬で似合うがわかるショッピング体験”
                 </p>
               </div>
             </div>
@@ -427,8 +434,8 @@
               <!-- 感想 -->
               <div class="common__voice-customer">
                 <p>
-                  “似合うアイテムを手元に<br />
-                  揃える喜びを実感しました”
+                  “毎朝が楽になる！<br />
+                  似合う定番アイテムで時短コーデ”
                 </p>
               </div>
             </div>
@@ -461,8 +468,8 @@
               <!-- 感想 -->
               <div class="common__voice-customer">
                 <p>
-                  “みんなに褒められるお洋服と<br />
-                  出会えて毎日がハッピーです”
+                  “褒められる喜びを実感！<br />
+                  毎日が楽しくなるオシャレ体験”
                 </p>
               </div>
             </div>
@@ -613,7 +620,7 @@
       <section class="reserve__btn">
         <div class="reserve__btn-wrap l-container">
           <div class="reserve__btn-message">
-            <p>あなたの毎日を輝かせるためのおしゃれを見つけましょう</p>
+            <p>あなたの毎日を輝かせるための<span class="sp-br">おしゃれを見つけましょう<span></p>
           </div>
           <div class="reserve__btn-link">
             <a class="reserve__btn-footer cta-btn bg-skew" href=""
@@ -729,20 +736,23 @@
                 </li>
               </ul>
               <ul>
-                <div class="footer__nav-sns">
-                  <li class="footer__item footer_nav-ttl nav-item">
-                    <a href="">Instagram</a>
-                  </li>
-                  <div class="footer__sns-img">
-                    <img src="./img/Vector.png" alt="Instagram" />
-                  </div>
-                </div>
+                <li class="footer__nav-sns footer__item nav-item">
+                  <a href="">
+                    <span class=" footer_nav-ttl">Instagram</span>
+                    <div class="footer__sns-img">
+                      <picture>
+                        <source srcset="./img/sp-Instagram-icon.png" media="(max-width: 767px)" />
+                        <img src="./img/Vector.png" alt="Instagram" />
+                      </picture>
+                    </div>
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
         </div>
         <div class="footer__copyright">
-          <p>©2024 porta fortuna プライバシーポリシー</p>
+          <p><span>©2024 porta fortuna </span></p>
         </div>
       </footer>
     </div>
@@ -753,6 +763,7 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- js -->
     <script src="./js/common.js" defer></script>
+    <script src="./js/components.js"></script>
     <script src="./js/index.js" defer></script>
   </body>
 </html>
