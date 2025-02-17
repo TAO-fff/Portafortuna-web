@@ -25,6 +25,7 @@
   --color-base-dark: #715f5a; /* 暗いベースカラー */
   --color-key: #8b3333; /* キーカラー */
   --color-primary: #716053; /* nav・あしらい */
+  --hum-btn-color: #fff; /* hum-btn 初期色 */
 
   /* Line-height */
   --line-height-base: 2; /* 基本の行間 */
@@ -55,10 +56,10 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width: 1024px)  {
+@media screen and (max-width: 1024px) {
   :root {
     /* font size */
-  --font-size-text: 1rem;
-  --heading-en-pc-size: 2.25rem;
+    --font-size-text: 1rem;
+    --heading-en-pc-size: 2.25rem;
   }
 }

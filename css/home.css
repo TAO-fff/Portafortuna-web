@@ -392,6 +392,7 @@
   box-sizing: border-box;
 }
 
+
 .home__reason-item-ttl {
   padding-bottom: 17px;
   position: relative;
@@ -444,8 +445,6 @@
   margin: 0 20px 20px 0;
   box-sizing: border-box;
 }
-
-/* 背景色の動きのCSS */
 
 /*背景色が伸びて出現 共通*/
 .bgextend {
@@ -1128,7 +1127,7 @@
 }
 
 /* sp */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .home__profile-wrap {
     align-items: center;
     flex-direction: column;
@@ -1159,6 +1158,7 @@
 
   .home__profile-txt-wrap {
     padding-right: 0;
+    width: 90%;
   }
 
   .sp-home__profile-txt-name {
@@ -1166,8 +1166,9 @@
     width: 50%;
     position: absolute;
     top: 60%;
-    left: 112%;
+    left: 110%;
     transform: translate(-50%, -50%);
+    mix-blend-mode: plus-lighter;
   }
 
   .sp-home__profile-txt-name p {

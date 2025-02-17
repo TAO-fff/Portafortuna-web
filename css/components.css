@@ -33,10 +33,21 @@
   width: 100%;
 }
 
+.pc-br {
+  display: block;
+}
+
 /* sp */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 426px) {
   .sp-br {
-    display: inline-block;
+    display: block;
+    padding-top: 8px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .min-sp-br {
+    display: block !important;
     padding-top: 8px;
   }
 }
@@ -164,6 +175,7 @@
   .header-nav-sp ul {
     gap: 24px;
     padding: 17% 5% 0 5%;
+    width: 100%;
   }
 
   .header-nav-sp ul li {
@@ -194,9 +206,17 @@
     height: 30px;
     position: absolute;
     top: 18px;
-    right: 20px;
+    right: 10px;
     cursor: pointer;
     z-index: 9999;
+  }
+  
+  .sp-menu-btn span,
+  .sp-menu-btn span::before,
+  .sp-menu-btn span::after {
+    background-color: var(--hum-btn-color);
+    transition: 0.3s ease;
+    border-radius: 5rem;
   }
 
   .sp-menu-btn span {
@@ -206,7 +226,6 @@
     height: 2px;
     background-color: var(--color-base-light);
     top: 15px;
-    transition: 0.5s;
   }
 
   .sp-menu-btn span::before {
@@ -216,7 +235,6 @@
     height: 2px;
     background-color: var(--color-base-light);
     top: -11px;
-    transition: 0.5s;
   }
 
   .sp-menu-btn span::after {
@@ -226,12 +244,18 @@
     height: 2px;
     background-color: var(--color-base-light);
     bottom: -11px;
-    transition: 0.5s;
   }
 
+  .sp-menu-btn.scrolled span,
+.sp-menu-btn.scrolled span::before,
+.sp-menu-btn.scrolled span::after {
+  background-color: var(--color-base-dark);
+  border-radius: 5rem;
+}
+
   /* hamメニュークリック時動き */
-  .open span {
-    background-color: transparent;
+  .sp-menu-btn.open span {
+    background-color: transparent; 
   }
 
   .open span::before {
@@ -284,7 +308,7 @@
 .footer__nav-wrap-centerleft,
 .footer__nav-wrap-centerright,
 .footer__nav-wrap-right {
-  width: 20%;
+  width: 22%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -391,7 +415,7 @@
   }
 
   .footer__item {
-    font-size: 0.7rem;
+    font-size: 1.5vw;
   }
 
   .footer_nav-ttl {
@@ -400,15 +424,15 @@
 
   .footer__nav-sns {
     align-items: flex-end;
+    color: var(--color-text-inverse);
   }
 
   .footer__sns-img {
     width: 35px;
   }
 }
-
 /* sp */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 426px) {
   .footer {
     background-color: var(--color-base);
     box-sizing: border-box;
@@ -440,11 +464,64 @@
   .footer__item {
     color: var(--color-text-inverse);
     width: 100%;
+    font-size: 5vw;
+    padding: 20px 0;
+  }
+
+  .footer_nav-ttl {
+    font-size: 5vw;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .footer__copyright {
+    color: var(--color-text-inverse);
+  }
+}
+
+/* sp */
+@media screen and (max-width: 426px) {
+  .footer {
+    background-color: var(--color-base);
+    box-sizing: border-box;
+  }
+
+  .footer__nav-wrap {
+    flex-direction: column;
+  }
+
+  .footer__nav-wrap-left,
+  .footer__nav-wrap-centerleft,
+  .footer__nav-wrap-centerright,
+  .footer__nav-wrap-right {
+    width: 90%;
+    align-items: flex-start;
+  }
+
+  .footer__nav {
+    width: 100%;
+  }
+
+  .footer__nav ul {
+    gap: 35px;
+    padding: 16px 0;
+    border-top: solid .5px var(--color-base-light);
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  .footer__item {
+    color: var(--color-text-inverse);
+    width: 100%;
   }
 
   .footer_nav-ttl {
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
+  }
+
+  .footer__nav-sns {
+    align-items: flex-end;
+    color: var(--color-text-inverse);
   }
 
   .footer__copyright {
@@ -499,12 +576,12 @@
 
   .reserve__btn-message,
   .reserve__btn-link a {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 }
 
 /* sp */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 426px) {
   .reserve__btn-wrap {
     gap: 4.25rem;
     flex-direction: column;
@@ -514,12 +591,31 @@
 
   .reserve__btn-message,
   .reserve__btn-link a {
-    font-size: 1rem;
+    font-size: 4vw;
     text-align: center;
   }
 
   .reserve__btn-link a {
-    padding: 10vw 17vw;
+    padding: 6vw 15vw;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .reserve__btn-wrap {
+    gap: 4.25rem;
+    flex-direction: column;
+    padding: 75px 0;
+    width: 90%;
+  }
+
+  .reserve__btn-message,
+  .reserve__btn-link a {
+    font-size: 6vw;
+    text-align: center;
+  }
+
+  .reserve__btn-link a {
+    padding: 6vw 15vw;
   }
 }
 
@@ -798,7 +894,7 @@
   }
 
   .home__link-btn a {
-    padding: 8vw 23.5vw;;
+    padding: 5vw 23.5vw;;
   }
 
   .home__link-btn-arrow {

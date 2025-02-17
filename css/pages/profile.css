@@ -1,5 +1,5 @@
 /* ===============================
-profile contents (top:名前・資格)
+profile共通
 ================================ */
 
 /****** profile共通 *****/
@@ -16,7 +16,6 @@ profile contents (top:名前・資格)
   color: var(--color-text-inverse);
 }
 
-/***** profile（上:名前・資格） *****/
 .profile,
 .experience,
 .outfit {
@@ -26,6 +25,59 @@ profile contents (top:名前・資格)
   position: relative;
 }
 
+/* ===============================
+sp profile共通
+================================ */
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  /****** profile共通 *****/
+  .profile__txt-lcontainer {
+    padding: 30px 10px 30px 40px;
+    margin: 50px 0;
+  }
+
+  .profile__section-title {
+    font-size: 2.75vw;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .profile__contents-lcontainer {
+    padding: 0px;
+  }
+
+  .profile,
+  .experience,
+  .outfit {
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 0 20px 0;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .profile__contents-lcontainer {
+    padding: 0px;
+  }
+
+  .profile__txt-lcontainer {
+    padding: 30px 10px;
+    margin: 20px 0;
+  }
+
+  .profile,
+  .experience,
+  .outfit {
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 0 20px 0;
+    position: relative;
+  }
+}
+
+/***** profile（上:名前・資格） *****/
 .profile__wrap {
   position: relative;
   margin: 0 auto;
@@ -39,6 +91,9 @@ profile contents (top:名前・資格)
   margin: 0 auto;
 }
 
+/* ===============================
+sp profile（上:名前・資格）
+================================ */
 /***** ヘッダー（名前）*****/
 .profile__header {
   padding: 0 20px;
@@ -106,7 +161,8 @@ profile contents (top:名前・資格)
   background-color: var(--color-base);
 }
 
-.profile__section-title {
+.profile__section-title,
+.sp-profile__section-title {
   font-family: var(--font-ja-heading);
   font-size: 1.75rem;
   font-weight: var(--font-weight-bold);
@@ -158,18 +214,121 @@ sp profile contents (top:名前・資格)
 ================================ */
 /* tab */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
-  /****** profile共通 *****/
-  .profile__txt-lcontainer {
-    padding: 30px 10px 30px 40px;
-    margin: 20px 0;
+  .profile__photo {
+    top: 25%;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  /***** ヘッダー（名前）*****/
+  .profile__header {
+    position: relative;
   }
 
-  .profile__section-title {
-    font-size: 2.75vw;
+  .profile__name-container {
+    text-align: center;
+    align-items: center;
+    gap: 0px;
+    padding: 20px 0px;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .profile__name {
+    width: 100%;
+  }
+
+  .profile__name-en {
+    font-size: 30vw;
+  }
+
+  .profile__name-ja {
+    text-align: right;
+    font-size: 0.75rem;
+  }
+
+  /***** 詳細部分 (資格) *****/
+  .profile__img-container {
+    position: static;
+  }
+
+  .profile__details {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .profile__qualifications::before {
+    width: 100%;
+    height: 94%;
+    color: inherit;
+    border-left: none;
+    border-right: none;
   }
 
   .profile__photo {
-    top: 25%;
+    top: -24vw;
+    left: 47%;
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  /***** ヘッダー（名前）*****/
+  .profile__header {
+    position: relative;
+  }
+
+  .profile__name-container {
+    text-align: center;
+    align-items: center;
+    gap: 0px;
+    padding: 20px 0px;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .profile__name {
+    width: 100%;
+  }
+
+  .profile__name-en {
+    font-size: 30vw;
+  }
+
+  .profile__name-ja {
+    text-align: right;
+    font-size: 0.75rem;
+  }
+
+  /***** 詳細部分 (資格) *****/
+  .profile__img-container {
+    position: static;
+  }
+
+  .profile__details {
+    position: static;
+    margin: 0 auto;
+  }
+
+  .profile__qualifications::before {
+    width: 100%;
+    height: 94%;
+    color: inherit;
+    border-left: none;
+    border-right: none;
+  }
+
+  .profile__photo {
+    top: -24vw;
+    left: 47%;
+    width: 30vw;
+  }
+
+  .sp-profile__outfit-left .sp-profile__section-title,
+  .sp-profile__outfit-center .sp-profile__section-title,
+  .sp-profile__outfit-right .sp-profile__section-title {
+    font-size: 1.2rem;
   }
 }
 
@@ -214,6 +373,10 @@ profile contents (各実績)
   border: solid 1px var(--color-base-light);
 }
 
+.sp-profile__experience-ttl {
+  display: none;
+}
+
 /* ===============================
  sp profile contents (各実績)
 ================================ */
@@ -229,6 +392,259 @@ profile contents (各実績)
 
   .profile__experience {
     width: 60%;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .profile__experience-wrap {
+    flex-direction: column;
+  }
+
+  .profile__experience-img {
+    width: 100%;
+    position: relative;
+  }
+
+  .profile__photo-career {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .profile__photo-career-img {
+    width: 40%;
+  }
+
+  .profile__experience-ttl-wrap {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .profile__photo-career::before {
+    width: 100%;
+    height: 65%;
+    bottom: 17%;
+    left: 0;
+    z-index: -2;
+  }
+
+  .profile__photo-career::after {
+    width: 100%;
+    height: 60%;
+    top: calc(100% - 49.5%);
+    border-left: none;
+    border-right: none;
+  }
+
+  /* toggle-btn */
+  .sp-profile__experience-toggle-btn {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sp-profile__experience-toggle-btn::before,
+  .sp-profile__experience-toggle-btn::after {
+    display: block;
+    content: "";
+    background: var(--color-primary);
+    position: absolute;
+    width: 1.5px;
+    height: 20px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .sp-profile__experience-toggle-btn::before {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%) rotate(32deg);
+  }
+
+  .sp-profile__experience-toggle-btn::after {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(-32deg);
+  }
+
+  /* アクティブ状態のボタン */
+  .sp-profile__experience-toggle-btn.active::before {
+    transform: translate(-50%, -50%) rotate(-32deg);
+    transition: 0.3s ease-in-out;
+  }
+
+  .sp-profile__experience-toggle-btn.active::after {
+    transform: translate(-50%, -50%) rotate(32deg);
+    transition: 0.3s ease-in-out;
+  }
+
+  .profile__experience {
+    width: 100%;
+  }
+
+  .profile__toggle-list {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .profile__toggle-list.show {
+    display: block;
+    opacity: 1;
+  }
+
+  .sp-profile__experience-ttl {
+    display: block;
+    width: 50%;
+  }
+
+  .sp-profile__experience-ttl p {
+    color: var(--color-text-inverse);
+    font-family: var(--font-en-cursive);
+    font-size: 7.5vw;
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-wide);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .profile__experience-ttl-wrap .profile__section-title {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .profile__experience-wrap {
+    flex-direction: column;
+  }
+
+  .profile__experience-img {
+    width: 100%;
+    position: relative;
+  }
+
+  .profile__photo-career {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+
+  .profile__photo-career-img {
+    width: 25%;
+  }
+
+  .profile__experience-ttl-wrap {
+    position: relative;
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .profile__photo-career::before {
+    width: 100%;
+    height: 65%;
+    bottom: 17%;
+    left: 0;
+    z-index: -2;
+  }
+
+  .profile__photo-career::after {
+    width: 100%;
+    height: 60%;
+    top: calc(100% - 49.5%);
+    border-left: none;
+    border-right: none;
+  }
+
+  /* toggle-btn */
+  .sp-profile__experience-toggle-btn {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%, -50%);
+  }
+
+  .sp-profile__experience-toggle-btn::before,
+  .sp-profile__experience-toggle-btn::after {
+    display: block;
+    content: "";
+    background: var(--color-primary);
+    position: absolute;
+    width: 1.5px;
+    height: 20px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .sp-profile__experience-toggle-btn::before {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%) rotate(32deg);
+  }
+
+  .sp-profile__experience-toggle-btn::after {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%) rotate(-32deg);
+  }
+
+  /* アクティブ状態のボタン */
+  .sp-profile__experience-toggle-btn.active::before {
+    transform: translate(-50%, -50%) rotate(-32deg);
+    transition: 0.3s ease-in-out;
+  }
+
+  .sp-profile__experience-toggle-btn.active::after {
+    transform: translate(-50%, -50%) rotate(32deg);
+    transition: 0.3s ease-in-out;
+  }
+
+  .profile__experience {
+    width: 100%;
+  }
+
+  .profile__toggle-list {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .profile__toggle-list.show {
+    display: block;
+    opacity: 1;
+  }
+
+  .sp-profile__experience-ttl {
+    display: block;
+    width: 70%;
+  }
+
+  .sp-profile__experience-ttl p {
+    color: var(--color-text-inverse);
+    font-family: var(--font-en-cursive);
+    font-size: 2.5rem;
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-wide);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .profile__experience-ttl-wrap .profile__section-title {
+    font-size: 5vw;
   }
 }
 
@@ -287,7 +703,8 @@ profile contents (各実績)
   z-index: -1;
 }
 
-.profile__photo-outfit-list {
+.profile__photo-outfit-list,
+.sp-profile__photo-outfit-list {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -313,9 +730,9 @@ profile contents (各実績)
   transform: translateY(0);
 }
 
-
 /* テキスト */
-.profile__outfit-reason {
+.profile__outfit-reason,
+.sp-profile__outfit-reason {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -323,35 +740,49 @@ profile contents (各実績)
 
 .profile__outfit-left-wrap,
 .profile__outfit-center-wrap,
-.profile__outfit-right-wrap {
+.profile__outfit-right-wrap,
+.sp-profile__outfit-left-wrap,
+.sp-profile__outfit-center-wrap,
+.sp-profile__outfit-right-wrap {
   width: 28%;
   padding: 0 20px;
   line-height: var(--line-height-base);
 }
 
 .profile__outfit-center-wrap,
-.profile__outfit-right-wrap {
+.profile__outfit-right-wrap,
+.sp-profile__outfit-center-wrap,
+.sp-profile__outfit-right-wrap {
   border-left: dotted 1px var(--color-base);
 }
 
 .profile__outfit-left,
 .profile__outfit-center,
-.profile__outfit-right {
+.profile__outfit-right,
+.sp-profile__outfit-left,
+.sp-profile__outfit-center,
+.sp-profile__outfit-right {
   width: 100%;
   margin: 0 auto;
 }
 
-.profile_outfit-ttl {
+.profile_outfit-ttl,
+.sp-profile_outfit-ttl {
   font-size: 1.35rem;
   text-align: center;
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-base);
 }
 
-.profile__outfit-txt {
+.profile__outfit-txt,
+.sp-profile__outfit-txt {
   padding-top: 10px;
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-base);
+}
+
+.sp-profile__outfit-wrap {
+  display: none;
 }
 
 /* =======================
@@ -401,7 +832,180 @@ profile contents (各実績)
 }
 
 /* sp */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .profile__outfit-wrap {
+    display: none;
+  }
+
+  .sp-profile__outfit-wrap {
+    display: block;
+  }
+
+  .sp-profile__outfit-img-ttl {
+    font-size: 30vw;
+  }
+
+  .sp-profile__outfit-img-ttl {
+    text-shadow: -7px 2px 1px var(--color-text-inverse);
+  }
+
+  .sp-profile__outfit-reason {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .sp-profile__outfit-left-wrap,
+  .sp-profile__outfit-center-wrap,
+  .sp-profile__outfit-right-wrap {
+    width: 90%;
+    padding: 0px;
+    line-height: var(--line-height-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+  }
+
+  .sp-profile__outfit-left-img,
+  .sp-profile__outfit-center-img,
+  .sp-profile__outfit-right-img {
+    position: relative;
+  }
+
+  .sp-profile__outfit-left-img::before,
+  .sp-profile__outfit-center-img::before,
+  .sp-profile__outfit-right-img::before,
+  .sp-profile__outfit-left-img::after,
+  .sp-profile__outfit-center-img::after,
+  .sp-profile__outfit-right-img::after {
+    display: block;
+    content: "";
+    position: absolute;
+  }
+
+  .sp-profile__outfit-left-img::before,
+  .sp-profile__outfit-center-img::before,
+  .sp-profile__outfit-right-img::before {
+    background-color: var(--color-base);
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    z-index: -2;
+  }
+
+  .sp-profile__outfit-left-img::after,
+  .sp-profile__outfit-center-img::after,
+  .sp-profile__outfit-right-img::after {
+    border: solid 1px var(--color-base-light);
+    width: 94%;
+    height: 54%;
+    bottom: 13%;
+    left: 3%;
+    z-index: -1;
+  }
+
+  .sp-profile__outfit-center-wrap,
+  .sp-profile__outfit-right-wrap {
+    border-left: none;
+    border-top: dotted 1px var(--color-base);
+  }
+
+  .sp-profile_outfit-ttl {
+    font-size: 2.75vw;
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .profile__outfit-wrap {
+    display: none;
+  }
+
+  .sp-profile__outfit-wrap {
+    display: block;
+  }
+
+  .sp-profile__outfit-img-ttl {
+    font-size: 30vw;
+  }
+
+  .sp-profile__outfit-img-ttl {
+    text-shadow: -7px 2px 1px var(--color-text-inverse);
+  }
+
+  .sp-profile__outfit-reason {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .sp-profile__outfit-left-wrap,
+  .sp-profile__outfit-center-wrap,
+  .sp-profile__outfit-right-wrap {
+    width: 90%;
+    padding: 0px;
+    line-height: var(--line-height-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+  }
+
+  .sp-profile__outfit-left-img,
+  .sp-profile__outfit-center-img,
+  .sp-profile__outfit-right-img {
+    position: relative;
+  }
+
+  .sp-profile__outfit-left-img::before,
+  .sp-profile__outfit-center-img::before,
+  .sp-profile__outfit-right-img::before,
+  .sp-profile__outfit-left-img::after,
+  .sp-profile__outfit-center-img::after,
+  .sp-profile__outfit-right-img::after {
+    display: block;
+    content: "";
+    position: absolute;
+  }
+
+  .sp-profile__outfit-left-img::before,
+  .sp-profile__outfit-center-img::before,
+  .sp-profile__outfit-right-img::before {
+    background-color: var(--color-base);
+    width: 100%;
+    height: 60%;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    z-index: -2;
+  }
+
+  .sp-profile__outfit-left-img::after,
+  .sp-profile__outfit-center-img::after,
+  .sp-profile__outfit-right-img::after {
+    border: solid 1px var(--color-base-light);
+    width: 94%;
+    height: 54%;
+    bottom: 13%;
+    left: 3%;
+    z-index: -1;
+  }
+
+  .sp-profile__outfit-center-wrap,
+  .sp-profile__outfit-right-wrap {
+    border-left: none;
+    border-top: dotted 1px var(--color-base);
+  }
+
+  .sp-profile_outfit-ttl {
+    font-size: 2.75vw;
+    padding-bottom: 25px;
+  }
 }
 
 /* =======================
@@ -418,7 +1022,8 @@ profile contents (各実績)
   margin: 0 auto;
 }
 
-.profile__qa-img-ttl {
+.profile__qa-img-ttl,
+.sp-profile__qa-img-ttl {
   display: block;
   font-family: var(--font-en-cursive);
   font-size: 12rem;
@@ -427,9 +1032,6 @@ profile contents (各実績)
 }
 
 /* QA画像 */
-.profile__photo-qa {
-}
-
 .profile__photo-qa::before {
   display: block;
   content: "";
@@ -514,6 +1116,10 @@ profile contents (各実績)
   letter-spacing: var(--letter-spacing-base);
 }
 
+.sp-profile__qa-img {
+  display: none;
+}
+
 /* =======================
   sp QA
  ======================= */
@@ -549,5 +1155,184 @@ profile contents (各実績)
 
   .profile__qa-a-txt p {
     padding: 10px 15px 15px 10px;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 768px) and (min-width: 426) {
+  .sp-profile__qa-img {
+    position: relative;
+    width: 100%;
+  }
+
+  .sp-profile__photo-qa {
+    width: 60%;
+  }
+
+  .sp-profile__photo-qa img {
+    width: 100%;
+  }
+
+  .sp-profile__qa-img-ttl {
+    width: 35%;
+  }
+
+  .sp-profile__qa-img::before,
+  .sp-profile__qa-img::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+  }
+
+  .sp-profile__qa-img::before {
+    background-color: var(--color-base);
+    height: 60%;
+    bottom: 10%;
+    left: 0;
+    z-index: -2;
+  }
+
+  .sp-profile__qa-img::after {
+    border: solid 1px var(--color-base-light);
+    height: 54%;
+    bottom: 13%;
+    left: 0%;
+    z-index: -1;
+    border-left: none;
+    border-right: none;
+  }
+
+  .sp-profile__qa-img-ttl {
+    color: var(--color-base);
+    font-family: var(--font-en-cursive);
+    font-size: 7.5vw;
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-wide);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .sp-profile__qa-margin {
+    padding-left: 25px;
+  }
+
+  .sp-profile__qa-img {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .profile__qa-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .profile__qa-list-item {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .profile__qa-q-ttl p {
+    font-size: 1.85rem;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .profile__qa-a-txt p {
+    font-size: 1.5rem;
+  }
+
+  .profile__qa-img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .sp-profile__qa-img {
+    position: relative;
+    width: 100%;
+  }
+
+  .sp-profile__photo-qa {
+    width: 60%;
+  }
+
+  .sp-profile__photo-qa img {
+    width: 100%;
+  }
+
+  .sp-profile__qa-img-ttl {
+    width: 35%;
+  }
+
+  .sp-profile__qa-img::before,
+  .sp-profile__qa-img::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+  }
+
+  .sp-profile__qa-img::before {
+    background-color: var(--color-base);
+    height: 60%;
+    bottom: 10%;
+    left: 0;
+    z-index: -2;
+  }
+
+  .sp-profile__qa-img::after {
+    border: solid 1px var(--color-base-light);
+    height: 54%;
+    bottom: 13%;
+    left: 0%;
+    z-index: -1;
+    border-left: none;
+    border-right: none;
+  }
+
+  .sp-profile__qa-img-ttl {
+    color: var(--color-base);
+    font-family: var(--font-en-cursive);
+    font-size: 7.5vw;
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-wide);
+    font-weight: var(--font-weight-bold);
+  }
+
+  .sp-profile__qa-margin {
+    padding-left: 15px;
+  }
+
+  .sp-profile__qa-img {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .profile__qa-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .profile__qa-list-item {
+    width: 100%;
+    gap: 15px;
+  }
+
+  .profile__qa-q-ttl p {
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-bold);
+    padding: 10px 0;
+  }
+
+  .profile__qa-a-txt p {
+    font-size: 1.125rem;
+    padding: 10px 0;
+  }
+
+  .profile__qa-img {
+    display: none;
   }
 }

@@ -323,21 +323,23 @@
   .sp-voice__voice-text-wrap {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
-    gap: 6%;
-    width: 73%;
+    align-items: center;
+    gap: 3%;
+    width: 85%;
     margin: 0 auto;
   }
 
   .sp-voice__voice-order {
-    width: 24%;
+    width: 20%;
   }
 
   .sp-voice__voice-order::before {
     top: 0;
+    width: 80%;
   }
   .sp-voice__voice-order::after {
     bottom: 0;
+    width: 80%;
   }
 
   .sp-voice__voice-num p {
@@ -352,7 +354,7 @@
   }
 
   .sp-voice__voice-customer p {
-    font-size: 2.75vw;
+    font-size: 2.6vw;
     line-height: var(--line-height-base);
   }
 
@@ -376,5 +378,117 @@
 }
 
 /* sp */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+  .common__voice-area {
+    gap: 46px;
+    padding: 55px 50px 20px 50px;
+  }
+
+  .common__voice-text-wrap {
+    width: 55%;
+  }
+
+  .voice__after-item {
+    gap: 75px;
+  }
+
+  .common__voice-num {
+    font-size: 7.25vw;
+  }
+
+  .common__voice-customer p {
+    font-size: 2.75vw;
+    line-height: var(--line-height-base);
+  }
+
+  .common__voice-img-wrap {
+    width: 45%;
+  }
+
+  /* sp用 */
+  .sp-voice__after-group {
+    display: block;
+  }
+
+  .sp-voice__after-item {
+    padding: 26px 20px 120px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .sp-voice__voice-img-wrap {
+    width: 80%;
+    padding: 30px 0 20px 0;
+  }
+
+  .sp-voice__voice-img-wrap img {
+    width: 100%;
+  }
+
+  .sp-voice__voice-txt-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 50px;
+  }
+
+  .sp-voice__voice-text-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .sp-voice__voice-order {
+    width: 20%;
+    margin-top: -20px;
+  }
+
+  .sp-voice__voice-order::before {
+    top: 0;
+  }
+
+  .sp-voice__voice-order::after {
+    bottom: 0;
+  }
+
+  .sp-voice__voice-num-txt p {
+    font-size: 13px;
+  }
+
+  .sp-voice__voice-num p {
+    font-size: 28px;
+  }
+
+  .sp-voice__voice-customer {
+    width: 75%;
+    margin-bottom: -20px;
+  }
+
+  .sp-voice__voice-customer p {
+    font-size: 2.6vw;
+    line-height: var(--line-height-base);
+  }
+
+  .sp-voice__voice-txt {
+    color: var(--color-primary);
+    font-size: var(--font-size-text);
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-base);
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .sp-voice__voice-txt p {
+    color: var(--color-primary);
+    font-size: var(--font-size-text);
+  }
+
+  .voice__after-group {
+    display: none;
+  }
 }

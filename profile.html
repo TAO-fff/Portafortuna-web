@@ -42,12 +42,18 @@
     <header class="header components-container">
       <nav class="header-nav">
         <ul>
-          <li class="header-item nav-item"><a href="./index.html">ホーム</a></li>
-          <li class="header-item nav-item"><a href="./menu.html">メニュー</a></li>
+          <li class="header-item nav-item">
+            <a href="./index.html">ホーム</a>
+          </li>
+          <li class="header-item nav-item">
+            <a href="./menu.html">メニュー</a>
+          </li>
           <li class="header-item nav-item">
             <a href="./profile.html">プロフィール</a>
           </li>
-          <li class="header-item nav-item"><a href="./voice.html">お客様の声</a></li>
+          <li class="header-item nav-item">
+            <a href="./voice.html">お客様の声</a>
+          </li>
           <li class="header-item nav-item"><a href="">お問い合わせ</a></li>
         </ul>
         <div class="header-btn">
@@ -74,7 +80,13 @@
     <!-- top -->
     <div class="individual-top components-container">
       <div class="individual-top-img">
-        <img src="./img/profile-top.png" alt="プロフィール" />
+        <picture>
+          <source
+            srcset="./img/sp-profile-top.jpg"
+            media="(max-width: 768px)"
+          />
+          <img src="./img/profile-top.png" alt="プロフィール" />
+        </picture>
       </div>
       <h1 class="individual-top-ttl l-container">PROFILE</h1>
     </div>
@@ -98,58 +110,66 @@
           </div>
 
           <!-- 資格 -->
-          <div class="profile__img-container" id="profile-qualifications">
-            <div class="profile__img-position">
-              <!-- 資格テキスト -->
-              <div class="profile__details profile__contents-lcontainer">
-                <div
-                  class="profile__qualifications profile__txt-lcontainer profile__details-back"
-                >
-                  <h2 class="profile__section-title profile__list-inverse-txt">
-                    保有資格
-                  </h2>
-                  <ul class="profile__list">
-                    <li class="profile__list-item profile__list-inverse-txt">
-                      顔タイプ診断1級アドバイザー
-                    </li>
-                    <li class="profile__list-item profile__list-inverse-txt">
-                      顔タイプ診断®メンズアドバイザー
-                    </li>
-                    <li class="profile__list-item profile__list-inverse-txt">
-                      パーソナルカラー診断（Sci/ART 12分類）
-                    </li>
-                    <li class="profile__list-item profile__list-inverse-txt">
-                      骨格診断アドバイザー
-                    </li>
-                    <li class="profile__list-item profile__list-inverse-txt">
-                      イメージコントロールメイクアドバイザー
-                    </li>
-                  </ul>
-                </div>
-
-                <!-- タイプ -->
-                <div class="profile__content" id="profile-diagnosis">
-                  <div class="profile__diagnosis profile__txt-lcontainer">
-                    <h2 class="profile__section-title">診断タイプ</h2>
+          <div id="profile-qualifications">
+            <div class="profile__img-container">
+              <div class="profile__img-position">
+                <!-- 資格テキスト -->
+                <div class="profile__details profile__contents-lcontainer">
+                  <div
+                    class="profile__qualifications profile__txt-lcontainer profile__details-back"
+                  >
+                    <h2
+                      class="profile__section-title profile__list-inverse-txt"
+                    >
+                      保有資格
+                    </h2>
                     <ul class="profile__list">
-                      <li class="profile__list-item">
-                        顔タイプ：ソフトエレガント
+                      <li class="profile__list-item profile__list-inverse-txt">
+                        顔タイプ診断1級アドバイザー
                       </li>
-                      <li class="profile__list-item">
-                        パーソナルカラー：ソフトオータム（サイアート12分類）
+                      <li class="profile__list-item profile__list-inverse-txt">
+                        顔タイプ診断®メンズアドバイザー
                       </li>
-                      <li class="profile__list-item">骨格診断：ストレート</li>
-                      <li class="profile__list-item">
-                        （7タイプ：ドラマチックタイプ、12タイプ：メリハリナチュラル）
+                      <li class="profile__list-item profile__list-inverse-txt">
+                        パーソナルカラー診断（Sci/ART 12分類）
+                      </li>
+                      <li class="profile__list-item profile__list-inverse-txt">
+                        骨格診断アドバイザー
+                      </li>
+                      <li class="profile__list-item profile__list-inverse-txt">
+                        イメージコントロールメイクアドバイザー
                       </li>
                     </ul>
                   </div>
-                </div>
 
-                <!-- プロフィール画像 -->
-                <div class="profile__wrap-img">
-                  <div class="profile__photo">
-                    <img src="./img/analist-name.png" alt="SAYAの写真" />
+                  <!-- タイプ -->
+                  <div id="profile-diagnosis">
+                    <div class="profile__content">
+                      <div class="profile__diagnosis profile__txt-lcontainer">
+                        <h2 class="profile__section-title">診断タイプ</h2>
+                        <ul class="profile__list">
+                          <li class="profile__list-item">
+                            顔タイプ：ソフトエレガント
+                          </li>
+                          <li class="profile__list-item">
+                            パーソナルカラー：ソフトオータム（サイアート12分類）
+                          </li>
+                          <li class="profile__list-item">
+                            骨格診断：ストレート
+                          </li>
+                          <li class="profile__list-item">
+                            （7タイプ：ドラマチックタイプ、12タイプ：メリハリナチュラル）
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- プロフィール画像 -->
+                  <div class="profile__wrap-img">
+                    <div class="profile__photo">
+                      <img src="./img/analist-name.png" alt="SAYAの写真" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -224,6 +244,64 @@
               </div>
             </div>
           </div>
+          
+
+          <!-- sp用 -->
+          <div class="sp-profile__outfit-wrap">
+            <!-- outfit txt -->
+            <div class="sp-profile__outfit-reason">
+              <!-- reason left -->
+              <div class="sp-profile__outfit-left-wrap profile__txt-lcontainer">
+                <div class="sp-profile__outfit-left-img">
+                  <img src="./img/sp-profile-outfit-left.png" alt="">
+                </div>
+                <div class="sp-profile__outfit-left">
+                  <h3 class="sp-profile__section-title profile_outfit-ttl">
+                    得意なスタイルは<span class="pc-br"></span>キレイめ大人カジュアル
+                  </h3>
+                </div>
+                <div class="sp-profile__outfit-txt">
+                  <p>
+                    年齢を重ねていくうちに、カジュアルが似合いづらくなってきたと感じたことはありませんか？大人世代になるとカジュアルを着こなすために、コーディネートで抑えるぽいとがいくつもあります。大人世代でカジュアルがお好きな方はぜひ、私にお任せください。
+                  </p>
+                </div>
+              </div>
+
+              <!-- reason center -->
+              <div class="sp-profile__outfit-center-wrap profile__txt-lcontainer">
+                <div class="sp-profile__outfit-center-img">
+                  <img src="./img/sp-profile-outfit-center.png" alt="">
+                </div>
+                <div class="sp-profile__outfit-center">
+                  <h3 class="sp-profile__section-title profile_outfit-ttl">
+                    ワントーンコーデでも<br><span class="min-sp-br">地味にならないスタイリング</span> 
+                  </h3>
+                </div>
+                <div class="sp-profile__outfit-txt">
+                  <p>
+                    顔タイプのソフトエレガントは、得意なテイストがシンプルなワントーンコーデ。同じソフトエレガントの方で、なぜかいつも地味に見えてしまうという悩みを抱えていませんか？同じソフトエレガントだからこそ、ワントーンコーデでも具体的に垢抜けるテクニックをお伝えできます。
+                  </p>
+                </div>
+              </div>
+
+              <!-- reason right -->
+              <div class="sp-profile__outfit-right-wrap profile__txt-lcontainer">
+                <div class="sp-profile__outfit-right-img">
+                  <img src="./img/sp-profile-outfit-right.png" alt="">
+                </div>
+                <div class="sp-profile__outfit-right">
+                  <h3 class="sp-profile__section-title profile_outfit-ttl">
+                    プロも学びに来る<br />小物テクニックに自信あり
+                  </h3>
+                </div>
+                <div class="sp-profile__outfit-txt">
+                  <p>
+                    顔タイプのソフトエレガントは、得意なテイストがシンプルなワントーンコーデ。同じソフトエレガントの方で、なぜかいつも地味に見えてしまうという悩みを抱えていませんか？同じソフトエレガントだからこそ、ワントーンコーデでも具体的に垢抜けるテクニックをお伝えできます。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -236,75 +314,105 @@
             <!-- 実績画像 -->
             <div class="profile__experience-img">
               <div class="profile__photo-career">
-                <img src="./img/prof-career.png" alt="SAYAの写真" />
+                <div class="profile__photo-career-img">
+                  <picture>
+                    <source
+                      srcset="./img/sp-prof-career.png"
+                      media="(max-width: 768px)"
+                    />
+                    <img src="./img/prof-career.png" alt="" />
+                  </picture>
+                </div>
+                <div class="sp-profile__experience-ttl">
+                  <p>Achievements</p>
+                </div>
               </div>
             </div>
             <!-- 実績txt -->
             <div class="profile__experience">
-              <div class="profile__experience-txt profile__contents-lcontainer">
-                <!-- 企業実績 -->
+              <div id="profile-experience-conpany">
                 <div
-                  class="profile__experience-company profile__txt-lcontainer"
-                  id="experience-company"
+                  class="profile__experience-txt profile__contents-lcontainer"
                 >
-                  <h2 class="profile__section-title">企業研修</h2>
-                  <ul class="profile__list">
-                    <li class="profile__list-item">TDK株式会社 様</li>
-                    <li class="profile__list-item">
-                      株式会社トゥモローランド 様
-                    </li>
-                    <li class="profile__list-item">
-                      その他 大手電機会社などで診断・スタイリング指導を担当
-                    </li>
-                    <li class="profile__list-item">
-                      大学や企業内定者向け研修の講師アシスタントとしても参加
-                    </li>
-                  </ul>
-                </div>
-
-                <!-- イベント -->
-                <div class="profile__content profile__contents-lcontainer">
+                  <!-- 企業実績 -->
                   <div
-                    class="profile__experience-event profile__txt-lcontainer"
-                    id="experience-event"
+                    class="profile__experience-company profile__txt-lcontainer"
+                    id="experience-company"
                   >
-                    <h2 class="profile__section-title">イベント出演・監修</h2>
-                    <ul class="profile__list">
-                      <li class="profile__list-item">銀座三越 様</li>
+                    <div class="profile__experience-ttl-wrap">
+                      <h2 class="profile__section-title">企業研修</h2>
+                      <span class="sp-profile__experience-toggle-btn"></span>
+                    </div>
+                    <ul class="profile__list profile__toggle-list">
+                      <li class="profile__list-item">TDK株式会社 様</li>
                       <li class="profile__list-item">
-                        ニッケコルトンプラザ 様
+                        株式会社トゥモローランド 様
                       </li>
                       <li class="profile__list-item">
-                        s-pal仙台 様などの商業施設
-                      </li>
-                      <li class="profile__list-item">コスメウィーク</li>
-                      <li class="profile__list-item">
-                        JAPANドラッグストアショーなどの大型イベント
+                        その他 大手電機会社などで診断・スタイリング指導を担当
                       </li>
                       <li class="profile__list-item">
-                        和洋女子大学のオープンキャンパスなどの学生イベント
+                        大学や企業内定者向け研修の講師アシスタントとしても参加
                       </li>
                     </ul>
                   </div>
                 </div>
 
+                <!-- イベント -->
+                <div id="profile-experience-event">
+                  <div class="profile__content profile__contents-lcontainer">
+                    <div
+                      class="profile__experience-event profile__txt-lcontainer"
+                      id="experience-event"
+                    >
+                      <div class="profile__experience-ttl-wrap">
+                        <h2 class="profile__section-title">
+                          イベント出演・監修
+                        </h2>
+                        <span class="sp-profile__experience-toggle-btn"></span>
+                      </div>
+                      <ul class="profile__list profile__toggle-list">
+                        <li class="profile__list-item">銀座三越 様</li>
+                        <li class="profile__list-item">
+                          ニッケコルトンプラザ 様
+                        </li>
+                        <li class="profile__list-item">
+                          s-pal仙台 様などの商業施設
+                        </li>
+                        <li class="profile__list-item">コスメウィーク</li>
+                        <li class="profile__list-item">
+                          JAPANドラッグストアショーなどの大型イベント
+                        </li>
+                        <li class="profile__list-item">
+                          和洋女子大学のオープンキャンパスなどの学生イベント
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
                 <!-- メディア -->
-                <div class="profile__content profile__contents-lcontainer">
-                  <div
-                    class="profile__experience-media profile__txt-lcontainer"
-                    id="experience-media"
-                  >
-                    <h2 class="profile__section-title">メディア出演</h2>
-                    <ul class="profile__list">
-                      <li class="profile__list-item">
-                        顔タイプ診断&reg;公式Youtubeチャンネルに出演<br />各企画のスタイリストとして継続的に参加
-                      </li>
-                      <br />
-                      <li class="profile__list-item">
-                        コスメヲタクちゃんねる サラ様のYoutubeを企画、<br />
-                        骨格診断のスタイリング担当として出演
-                      </li>
-                    </ul>
+                <div id="profile-experience-media">
+                  <div class="profile__content profile__contents-lcontainer">
+                    <div
+                      class="profile__experience-media profile__txt-lcontainer"
+                      id="experience-media"
+                    >
+                      <div class="profile__experience-ttl-wrap">
+                        <h2 class="profile__section-title">メディア出演</h2>
+                        <span class="sp-profile__experience-toggle-btn"></span>
+                      </div>
+                      <ul class="profile__list profile__toggle-list">
+                        <li class="profile__list-item">
+                          顔タイプ診断&reg;公式Youtubeチャンネルに出演<br />各企画のスタイリストとして継続的に参加
+                        </li>
+                        <br />
+                        <li class="profile__list-item">
+                          コスメヲタクちゃんねる サラ様のYoutubeを企画、<br />
+                          骨格診断のスタイリング担当として出演
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -319,56 +427,80 @@
       <div class="l-container">
         <div class="profile__wrap">
           <div class="profile__qa-wrap">
+
+              <!-- sp用 画像 -->
+              <div class="sp-profile__qa-img">
+                <h3 class="sp-profile__qa-img-ttl">Q&A</h3>
+                <div class="sp-profile__photo-qa">
+                  <img src="./img/profile-qa.png" alt="" />
+                </div>
+              </div>
             <!-- qa項目 -->
             <!-- top -->
             <div class="profile__qa-wrap">
               <ul class="profile__qa-list">
                 <li class="profile__qa-list-item">
-                  <div class="profile__qa-q-ttl"><p>Q1 家族構成は？</p></div>
-                  <div class="profile__qa-a-txt"><p>夫、息子2人の4人家族です。</p></div>
+                  <div class="profile__qa-q-ttl"><p>Q1 <span class="sp-profile__qa-margin">家族構成は？</span></p></div>
+                  <div class="profile__qa-a-txt">
+                    <p>夫、息子2人の4人家族です。</p>
+                  </div>
                 </li>
                 <li class="profile__qa-list-item">
-                  <div class="profile__qa-q-ttl"><p>Q2 好きな雑誌は？</p></div>
+                  <div class="profile__qa-q-ttl"><p>Q2  <span class="sp-profile__qa-margin">好きな雑誌は？</span></p></div>
                   <div class="profile__qa-a-txt"><p>Marisol・Vintaine</p></div>
                 </li>
               </ul>
               <!-- middle -->
               <ul class="profile__qa-list">
                 <li class="profile__qa-list-item">
-                  <div class="profile__qa-q-ttl"><p>Q3 好きな色は？</p></div>
-                  <div class="profile__qa-a-txt"><p>グレージュ・白・ブラウン</p></div>
+                  <div class="profile__qa-q-ttl"><p>Q3 <span class="sp-profile__qa-margin">好きな色は？</span></p></div>
+                  <div class="profile__qa-a-txt">
+                    <p>グレージュ・白・ブラウン</p>
+                  </div>
                 </li>
                 <li class="profile__qa-list-item">
-                  <div class="profile__qa-q-ttl"><p>Q4 好きなスタイルは？</p></div>
-                  <div class="profile__qa-a-txt"><p>ミラノマダム・ミラネーゼ</p></div>
+                  <div class="profile__qa-q-ttl">
+                    <p>Q4 <span class="sp-profile__qa-margin">好きなスタイルは？</span></p>
+                  </div>
+                  <div class="profile__qa-a-txt">
+                    <p>ミラノマダム・ミラネーゼ</p>
+                  </div>
                 </li>
               </ul>
               <!-- bottom -->
               <ul class="profile__qa-list">
                 <li class="profile__qa-list-item">
-                  <div class="profile__qa-q-ttl"><p>Q5 昔の職業は？</p></div>
+                  <div class="profile__qa-q-ttl"><p>Q5 <span class="sp-profile__qa-margin">昔の職業は？</span></p></div>
                   <div class="profile__qa-a-txt">
-                    <p>電話のコミュニケーターや、銀行事務の仕事をしていました。</p>
+                    <p>
+                      電話のコミュニケーターや、銀行事務の仕事をしていました。
+                    </p>
                   </div>
                 </li>
                 <li class="profile__qa-list-item">
-                  <div class="profile__qa-q-ttl"><p>Q6 好きなブランドは？</p></div>
+                  <div class="profile__qa-q-ttl">
+                    <p>Q6 <span class="sp-profile__qa-margin">好きなブランドは？</span></p>
+                  </div>
                   <div class="profile__qa-a-txt">
-                    <p>Whim Gazette、1er
-                    Arrondissement、ユナイテッドアローズ、Deuxiem
-                    Classe、GALLARDA GALANTE、Maison de R
-                  </p></div>
+                    <p>
+                      Whim Gazette、1er
+                      Arrondissement、ユナイテッドアローズ、Deuxiem
+                      Classe、GALLARDA GALANTE、Maison de R
+                    </p>
+                  </div>
                 </li>
                 <li class="profile__qa-list-item">
-                  <div class="profile__qa-q-ttl"><p>Q7 お客様に一言</p></div>
+                  <div class="profile__qa-q-ttl"><p>Q7 <span class="sp-profile__qa-margin">お客様に一言</span></p></div>
                   <div class="profile__qa-a-txt">
-                    <p>「好き」を大事におしゃれを楽しむ方法をご提案します。ぜひ一緒におしゃれを楽しみましょう。</p>
+                    <p>
+                      「好き」を大事におしゃれを楽しむ方法をご提案します。ぜひ一緒におしゃれを楽しみましょう。
+                    </p>
                   </div>
                 </li>
               </ul>
             </div>
 
-            <!-- 画像 -->
+            <!-- pc用 画像 -->
             <div class="profile__qa-img">
               <h3 class="profile__qa-img-ttl">Q&A</h3>
               <div class="profile__photo-qa">
@@ -386,8 +518,8 @@
       <section class="reserve__btn">
         <div class="reserve__btn-wrap l-container">
           <div class="reserve__btn-message">
-            <p>あなたの毎日を輝かせるためのおしゃれを見つけましょう</p>
-          </div>
+            <p>あなたの毎日を輝かせるための<span class="sp-br">おしゃれを見つけましょう<span></p>
+            </div>
           <div class="reserve__btn-link">
             <a class="reserve__btn-footer cta-btn" href="">ご予約はこちら</a>
           </div>
@@ -505,7 +637,10 @@
                     <span class="footer__sns-text">Instagram</span>
                     <div class="footer__sns-img">
                       <picture>
-                        <source srcset="./img/sp-Instagram-icon.png" media="(max-width: 767px)" />
+                        <source
+                          srcset="./img/sp-Instagram-icon.png"
+                          media="(max-width: 767px)"
+                        />
                         <img src="./img/Vector.png" alt="Instagram" />
                       </picture>
                     </div>
@@ -521,10 +656,10 @@
       </footer>
     </div>
 
-     <!-- jquery -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-     <!-- js -->
-      <script src="./js/components.js"></script>
-     <script src="./js/profile.js" defer></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- js -->
+    <script src="./js/components.js"></script>
+    <script src="./js/profile.js" defer></script>
   </body>
 </html>

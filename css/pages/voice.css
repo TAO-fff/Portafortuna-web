@@ -143,7 +143,56 @@
 }
 
 /* sp */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+  .voice__before-area {
+    gap: 150px;
+    padding: 65px 0 100px 0;
+  }
+
+  .voice__before-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .voice__before-item {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .voice__before-ttl {
+    width: 100%;
+    font-size: 1.375rem;
+    padding: 50px 0;
+  }
+
+  .voice__before-ttl p {
+    padding: 8px;
+    font-size: 1.25rem;
+  }
+
+  .voice__before-num {
+    color: var(--color-primary);
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    padding: 2% 5%;
+    display: inline-block;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+
+  .voice__before-num:before {
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    transform: rotate(0);
+    z-index: -1;
+    background: var(--color-base);
+    opacity: 0.2;
+  }
 }
 
 /* =======================
@@ -176,7 +225,7 @@
 }
 
 /* sp */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 }
 
 /* =======================
@@ -276,7 +325,7 @@
 /* 矢印ラインのデザイン */
 .voice__gallery-slider-arrows button::before,
 .voice__gallery-slider-arrows button::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 60px;
   height: 1.5px;
@@ -305,7 +354,7 @@
 .voice__gallery-slider-arrows .slick-next::after {
   top: 100%;
   left: 50%;
-  transform: translate(-50%, 0%)  rotate(-60deg);
+  transform: translate(-50%, 0%) rotate(-60deg);
 }
 
 /* ホバー時のエフェクト */
@@ -313,8 +362,6 @@
 .voice__gallery-slider-arrows button:hover::after {
   background-color: var(--color-base);
 }
-
-
 
 .voice__gallery-slider-dots {
   display: flex;
@@ -345,4 +392,14 @@
 .voice__gallery-slider-dots li.slick-active .voice__dot {
   background-color: var(--color-base-light);
   border: solid.5px var(--color-base);
+}
+
+/* sp */
+@media screen and (max-width: 768px) {
+  .voice__gallery-slider {
+    display: block;
+    width: 83%;
+    overflow: hidden;
+    transform: translateX(15.5%);
+  }
 }

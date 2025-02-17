@@ -15,10 +15,18 @@ $(window).on("load", function () {
       appendArrows: ".voice__gallery-slider-arrows", // 独自のarrowコンテナを指定
       appendDots: ".voice__gallery-slider-dots", // 独自のdotsコンテナを指定
       customPaging: function (slider, i) {
-        // dotsのカスタムHTML
-        return '<span class="voice__dot"></span>';
+        return '<span class="voice__dot"></span>'; // dotsのカスタムHTML
       },
+      responsive: [
+        {
+          breakpoint: 769,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
     });
     console.log("Slick initialized with delay");
-  }, 500); // 500ミリ秒待つ
+  }, 500);
 });
