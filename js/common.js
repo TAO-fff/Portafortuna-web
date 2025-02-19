@@ -1,32 +1,4 @@
  // home voice スライダー
-//  $(function () {
-//     $(".home__voice-slider").slick({
-//       slidesToShow: 1,
-//       slidesToScroll: 1,
-//       arrows: true,
-//       dots: true,
-//       pauseOnFocus: false,
-//       pauseOnHover: false,
-//       pauseOnDotsHover: false,
-//       centerMode: false,
-//       autoplay: true,
-//       autoplaySpeed: 3000,
-//       responsive: [
-//         {
-//           breakpoint: 767,
-//           settings: {
-//             slidesToShow: 1,
-//             slidesToScroll: 1,
-//             arrows: false,
-//             autoplay: true,
-//             autoPlaySpeed: 1000,
-//             touchMove: true
-//           },
-//         },
-//       ],
-//     });
-//   });
-
 $(function () {
   $(".home__voice-slider").slick({
     slidesToShow: 1,
@@ -38,14 +10,14 @@ $(function () {
     pauseOnHover: false,
     pauseOnDotsHover: false,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 3500,
     responsive: [
       {
         breakpoint: 767,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
+          arrows: true,
           autoplay: true,
           autoplaySpeed: 1000,
           touchMove: true,

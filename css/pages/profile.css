@@ -328,7 +328,7 @@ sp profile contents (top:名前・資格)
   .sp-profile__outfit-left .sp-profile__section-title,
   .sp-profile__outfit-center .sp-profile__section-title,
   .sp-profile__outfit-right .sp-profile__section-title {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
 }
 

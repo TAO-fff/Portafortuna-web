@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reserve</title>
+    <meta name="description" content="" />
+
+    <!-- ファビコン有無確認 -->
+    <link rel="icon" href="" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Qwitcher+Grypen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- SEO関連 -->
+    <meta name="description" content="ページの簡単な説明" />
+    <!-- キーワード → 現在、あまり重要視されていないですが付けるか確認 -->
+    <meta name="keywords" content="キーワード1, キーワード2, キーワード3" />
+    <meta name="author" content="作成者名" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/components.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/pages/reserve.css" />
+
+    <!-- SNSやOGP対応（オプション） -->
+    <meta property="og:title" content="ページタイトル" />
+    <meta property="og:description" content="ページの説明" />
+    <meta property="og:image" content="og-image.jpg" />
+    <meta property="og:url" content="https://example.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header components-container">
+      <nav class="header-nav">
+        <ul>
+          <li class="header-item nav-item">
+            <a href="./index.html">ホーム</a>
+          </li>
+          <li class="header-item nav-item">
+            <a href="./menu.html">メニュー</a>
+          </li>
+          <li class="header-item nav-item">
+            <a href="./profile.html">プロフィール</a>
+          </li>
+          <li class="header-item nav-item">
+            <a href="./voice.html">お客様の声</a>
+          </li>
+          <li class="header-item nav-item"><a href="">お問い合わせ</a></li>
+        </ul>
+        <div class="header-btn">
+          <a class="cta-btn header-btn-link" href="">ご予約はこちら</a>
+        </div>
+      </nav>
+
+      <!-- humメニュー -->
+      <div class="sp-menu-btn"><span></span></div>
+      <nav class="header-nav-sp">
+        <ul>
+          <li><a href=""> ホーム</a></li>
+          <li><a href="">メニュー</a></li>
+          <li><a href="">プロフィール</a></li>
+          <li><a href="">お客様の声</a></li>
+          <li><a href="">お問い合わせ</a></li>
+          <div class="header-btn">
+            <a class="cta-btn header-btn-link" href="">ご予約はこちら</a>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- top -->
+    <!-- top -->
+    <div class="individual-top components-container">
+      <div class="individual-top-img">
+        <picture>
+          <source
+            srcset="./img/sp-reserve-top.jpg"
+            media="(max-width: 768px)"
+          />
+          <img src="./img/reserve-top.jpg" alt="予約ページ" focusable="false" />
+        </picture>
+      </div>
+      <h1 class="individual-top-ttl l-container">RESERVE</h1>
+    </div>
+
+    <!-- contact -->
+    <div class="l-container">
+      <section class="contact__form">
+        <div class="contact__form-wrap">
+          <div class="contact__attention-txt">
+            <p>
+              お申し込みありがとうございます。
+              <span class="pc-br"></span>
+              お手数をお掛けしますが、下記のご入力をお願いいたします。
+              <span class="pc-br"></span>3日以内にお返事させていただきます。
+              <span class="pc-br"></span>
+            </p>
+          </div>
+
+          <!-- contact form -->
+          <!-- 問い合わせフォーム -->
+          <div class="contact__form-list">
+            <form
+              class="contact-form"
+              action="https://docs.google.com/forms/u/2/d/1U1CP6dpZkFnAzMKftGXGVgEw2uRNiEmrJyam9gOstsU/edit?usp=drive_web"
+              target="hidden_iframe"
+              onsubmit="submitted=true;"
+              method="post"
+            >
+              <!-- 名前 -->
+              <div class="contact-form-item">
+                <label class="contact-form-label" for="field-name">
+                  お名前<span class="contact-form-required">必須</span>
+                </label>
+                <input
+                  name="entry.2029056993"
+                  type="text"
+                  class="contact-form-input"
+                  id="field-name"
+                  placeholder="山田  太郎"
+                  required="required"
+                />
+              </div>
+              <!-- アドレス -->
+              <div class="contact-form-item">
+                <label class="contact-form-label" for="field-mail"
+                  >メールアドレス<span class="contact-form-required"
+                    >必須</span
+                  ></label
+                >
+                <input
+                  name="entry.1312078891"
+                  type="email"
+                  class="contact-form-input"
+                  id="field-mail"
+                  placeholder="sample@sample.com"
+                  required="required"
+                />
+              </div>
+              <!-- 内容 -->
+              <div class="contact-form-item">
+                <label class="contact-form-label" for="field-mesasge"
+                  >ご希望日時<span class="contact-form-required"
+                  >必須</span
+                  ></label
+                >
+                <textarea
+                  name="entry.291790567"
+                  class="contact-form-input"
+                  id="field-mesasge"
+                  placeholder="・お申込み日程のご希望を複数ご記入ください。"
+                ></textarea>
+              </div>
+              <!--媒体 -->
+              <div class="contact-form-item">
+                <label class="contact-form-label" for="field-mesasge"
+                  >当サロンを知ったきっかけ<span class="contact-form-required"
+                  >必須</span
+                  ></label
+                >
+                <div class="radio-group">
+                  <label>
+                    <input
+                      type="radio"
+                      name="entry.291790567"
+                      value="ホームページ"
+                      class="radio-item"
+                    />
+                    ホームページ
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="entry.291790567"
+                      value="知人紹介"
+                      class="radio-item"
+                    />
+                    知人紹介
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="entry.291790567"
+                      value="Instagram"
+                      class="radio-item"
+                    />
+                    Instagram
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="entry.291790567"
+                      value="YouTube"
+                      class="radio-item"
+                    />
+                    YouTube
+                  </label>
+                  <label>
+                    <input type="radio" name="entry.291790567" value="ブログ"  class="radio-item" />
+                    ブログ
+                  </label>
+                  <label>
+                    <input type="radio" name="entry.291790567" value="その他"  class="radio-item" />
+                    その他
+                  </label>
+                </div>
+              </div>
+              <!--attention1 -->
+              <div class="contact-form-item">
+                <label class="contact-form-label" for="field-mesasge">
+                  <p class="contact-form-attention">
+                    延期の体調不良などのやむを得ない理由による延期は、当日でも対応可能です。お気軽にご相談ください。当日キャンセルのみ、サービス料金の100%をキャンセル料としてご請求させていただきます。ご了承ください。
+                  </p></label
+                >
+                <div class="radio-group">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="entry.22203267"
+                      value="上記内容に同意する"
+                    />
+                    上記内容に同意する
+                  </label>
+                </div>
+              </div>
+
+               <!--attention1 -->
+               <div class="contact-form-item">
+                <label class="contact-form-label" for="field-mesasge">
+                  <p class="contact-form-attention">
+                    お客様の個人情報は、お申し込み対応やサービス提供のために適切に管理・利用いたします。第三者への提供は行いません。
+同意いただける場合は、以下のチェックボックスにチェックをお願いいたします。
+                  </p></label
+                >
+                <div class="radio-group">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="entry.1428046597"
+                      value="上記内容に同意する"
+                    />
+                    上記内容に同意する
+                  </label>
+                </div>
+              </div>
+
+              <div class="contact-form-submit">
+                <button type="submit">送信</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- //フォーム -->
+      </section>
+    </div>
+
+    <!-- 以下、前ページ共通 -->
+    <!-- reserve -->
+    <div class="reserve__container components-container">
+      <section class="reserve__btn">
+        <div class="reserve__btn-wrap l-container">
+          <div class="reserve__btn-message">
+            <p>
+              あなたの毎日を輝かせるための<span class="sp-br"
+                >おしゃれを見つけましょう</span
+              >
+            </p>
+          </div>
+          <div class="reserve__btn-link">
+            <a class="reserve__btn-footer cta-btn" href="">ご予約はこちら</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+    <div class="components-container">
+      <footer class="footer">
+        <div class="footer__nav-wrap l-container">
+          <!-- left -->
+          <div class="footer__nav-wrap-left">
+            <nav class="footer__nav">
+              <ul>
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="./index.html">ホーム</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="">メニュー</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">ショッピング同行</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">ショップクルーズ＋お茶会</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">オンラインクローゼット診断</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">料金のご案内</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">サービス対応エリア</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">よくある質問</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- center left-->
+          <div class="footer__nav-wrap-centerleft">
+            <nav class="footer__nav">
+              <ul>
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="">お客様の声</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">診断前のお客様のお悩み</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">診断後のお客様の感想 </a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="">ご提案コーデ一覧</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- center right -->
+          <div class="footer__nav-wrap-centerright">
+            <nav class="footer__nav">
+              <ul>
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="./profile.html">プロフィール</a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#profile-qualifications"
+                    >保有資格</a
+                  >
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#profile-diagnosis"
+                    >各診断タイプ</a
+                  >
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#profile-outfit"
+                    >サロンオーナーの強み</a
+                  >
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#experience-company"
+                    >企業研修実績
+                  </a>
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#experience-event"
+                    >イベント出演・監修実績</a
+                  >
+                </li>
+                <li class="footer__item nav-item">
+                  <a href="./test-profile.html#experience-media"
+                    >メディア出演実績</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <!-- right -->
+          <div class="footer__nav-wrap-right">
+            <nav class="footer__nav">
+              <ul>
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="">お問い合わせ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="footer__nav-sns">
+                  <a href="">
+                    <span class="footer__sns-text">Instagram</span>
+                    <div class="footer__sns-img">
+                      <picture>
+                        <source
+                          srcset="./img/sp-Instagram-icon.png"
+                          media="(max-width: 767px)"
+                        />
+                        <img src="./img/Vector.png" alt="Instagram" />
+                      </picture>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="footer__copyright">
+          <p>©2024 porta fortuna プライバシーポリシー</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- slick -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- js -->
+    <script src="./js/components.js"></script>
+    <script src="./js/voice.js" defer></script>
+  </body>
+</html>

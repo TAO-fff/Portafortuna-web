@@ -89,16 +89,25 @@
       <!-- 画像back -->
       <div class="home__mv-img-wrap">
         <div class="home__top-mv">
-          <img src="./img/home-fv-pic.png" />
+          <picture>
+            <source srcset="./img/sp-home-fv-pic.jpg" media="(max-width: 768px)">
+            <img src="./img/home-fv-pic.png" alt="">
+            </picture>
         </div>
 
         <!-- 画像 triangle -->
         <div class="home__top-mv-triangle">
-          <img src="./img/home-mv-triangle.png" alt="" />
+          <picture>
+            <source srcset="./img/sp-home-mv-triangle.png" media="(max-width: 768px)">
+            <img src="./img/home-mv-triangle.png" alt="">
+            </picture>
         </div>
         <!-- 画像 -->
         <div class="home__top-mv-small">
-          <img src="./img/home-fv-pic-saya.png" alt="" />
+          <picture>
+            <source srcset="./img/sp-home-fv-pic-saya.png" media="(max-width: 768px)">
+            <img src="./img/home-fv-pic-saya.png" alt="">
+            </picture>
         </div>
 
         <!-- ロゴ -->
@@ -109,10 +118,20 @@
         <div class="home__mv-txt-wrap">
           <div class="home__top-copy">
             <div class="home__top-copy-vertical">
-              <p>何を着ればいいかもう迷わない</p>
+              <p>何を着ればいいか<span class="sp-br">もう迷わない</span></p>
+            </div>
+            <div class="sp-home__top-copy-vertical">
+              <p class="sp-home__top-vertical-txt">何を着ればいいか</p>
+              <p class="sp-home__top-vertical-txt">もう迷わない</p>
             </div>
             <div class="home__top-copy-horizontal">
-              <p>似合うがその場でわかる特別な体験</p>
+              <p>似合うがその場でわかる<span class="sp-br">特別な体験</span></p>
+            </div>
+            <div class="sp-home__top-copy-horizontal-right">
+              <p class="sp-home__top-horizontal-txt-right">似合うがその場でわかる</p>
+            </div>
+            <div class="sp-home__top-copy-horizontal-left">
+              <p class="sp-home__top-horizontal-txt-left">特別な体験</p>
             </div>
           </div>
           <!-- メッセージ -->
@@ -138,6 +157,33 @@
         </div>
       </div>
     </div>
+
+     <!-- sp メッセージ -->
+     <div class="sp-home__top-message">
+      <div class="l-heading-ttl-wrap">
+
+      <div class="l-heading-ttl">
+        <p class="l-heading-ttl-en sp-home__top-message-ttl-en">Message</p>
+      </div>
+      </div>
+
+      <div class="sp-home__top-message-wrap">
+        <div class="sp-home__top-message-ttl-ja">
+          <p>年齢でおしゃれを諦めていませんか？</p>
+        </div>
+      </div>
+
+      <div class="sp-home__top-message-txt">
+        <p>
+          年齢とともにライフスタイルや体型が変わり、<span class="pc-br"></span>
+          『似合う服がわからない』『何を買えばいいのか迷う』と悩んでいませんか？<span class="pc-br"></span>当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
+          お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。<span class="pc-br"></span>
+          ファッションのお悩みを解決して、おしゃれを楽しみましょう。<span class="pc-br"></span>
+        </p>
+      </div>
+    </div>
+
+
     <!-- reasonコンテンツ -->
     <div class="home__l-container">
       <section class="home__reason">
@@ -741,7 +787,7 @@
                     <span class=" footer_nav-ttl">Instagram</span>
                     <div class="footer__sns-img">
                       <picture>
-                        <source srcset="./img/sp-Instagram-icon.png" media="(max-width: 767px)" />
+                        <source srcset="./img/sp-Instagram-icon.png" media="(max-width: 768px)" />
                         <img src="./img/Vector.png" alt="Instagram" />
                       </picture>
                     </div>
@@ -754,6 +800,19 @@
         <div class="footer__copyright">
           <p><span>©2024 porta fortuna </span></p>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
       </footer>
     </div>
 
