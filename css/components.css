@@ -587,12 +587,12 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  color: inherit;
 }
 
 .footer__sns-text {
   font-size: 1.1rem;
   font-weight: var(--font-weight-bold);
+  color: var(--color-text);
 }
 
 .footer__sns-img {
@@ -656,7 +656,6 @@
 
   .footer__nav-sns {
     align-items: flex-end;
-    color: var(--color-text-inverse);
   }
 
   .footer__sns-img {
