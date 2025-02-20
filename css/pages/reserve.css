@@ -124,9 +124,8 @@
   }
   
   .contact-form-submit button:hover {
-    opacity: 0.6;
-    background-color: transparent;
-    color: var(--color-inverse);
+    background-color: var(--color-base);
+    color: var(--color-text-inverse);
   }
 
   #error-message {
@@ -134,3 +133,4 @@
     color: var(--color-key);
    display: none;
   }
+
