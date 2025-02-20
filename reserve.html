@@ -118,7 +118,7 @@
               method="post"
             >
               <!-- 名前 -->
-              <div class="contact-form-item">
+              <div class="contact-form-item required-field">
                 <label class="contact-form-label" for="field-name">
                   お名前<span class="contact-form-required">必須</span>
                 </label>
@@ -132,7 +132,7 @@
                 />
               </div>
               <!-- アドレス -->
-              <div class="contact-form-item">
+              <div class="contact-form-item required-field">
                 <label class="contact-form-label" for="field-mail"
                   >メールアドレス<span class="contact-form-required"
                     >必須</span
@@ -148,7 +148,7 @@
                 />
               </div>
               <!-- 内容 -->
-              <div class="contact-form-item">
+              <div class="contact-form-item required-field">
                 <label class="contact-form-label" for="field-mesasge"
                   >ご希望日時<span class="contact-form-required"
                   >必須</span
@@ -162,7 +162,7 @@
                 ></textarea>
               </div>
               <!--媒体 -->
-              <div class="contact-form-item">
+              <div class="contact-form-item required-field">
                 <label class="contact-form-label" for="field-mesasge"
                   >当サロンを知ったきっかけ<span class="contact-form-required"
                   >必須</span
@@ -216,7 +216,7 @@
                 </div>
               </div>
               <!--attention1 -->
-              <div class="contact-form-item">
+              <div class="contact-form-item required-field">
                 <label class="contact-form-label" for="field-mesasge">
                   <p class="contact-form-attention">
                     延期の体調不良などのやむを得ない理由による延期は、当日でも対応可能です。お気軽にご相談ください。当日キャンセルのみ、サービス料金の100%をキャンセル料としてご請求させていただきます。ご了承ください。
@@ -235,7 +235,7 @@
               </div>
 
                <!--attention1 -->
-               <div class="contact-form-item">
+               <div class="contact-form-item required-field">
                 <label class="contact-form-label" for="field-mesasge">
                   <p class="contact-form-attention">
                     お客様の個人情報は、お申し込み対応やサービス提供のために適切に管理・利用いたします。第三者への提供は行いません。
@@ -255,7 +255,8 @@
               </div>
 
               <div class="contact-form-submit">
-                <button type="submit">送信</button>
+                <button type="submit" class="submit-btn" disabled>送信</button>
+                <p id="error-message">未記入の項目があります</p>
               </div>
             </form>
           </div>

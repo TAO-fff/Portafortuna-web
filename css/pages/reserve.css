@@ -128,3 +128,9 @@
     background-color: transparent;
     color: var(--color-inverse);
   }
+
+  #error-message {
+    margin-top: 20px;
+    color: var(--color-key);
+   display: none;
+  }
