@@ -1591,13 +1591,14 @@
 
 .home__news-txt {
   padding: 60px 0 70px 0;
+  width: 95%;
 }
 
 .home__news-txt p {
   font-size: var(--font-size-text);
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-base);
-  text-align: center;
+  text-align: left;
 }
 
 .home__news-img-groupe {
