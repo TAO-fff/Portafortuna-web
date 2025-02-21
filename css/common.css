@@ -475,14 +475,19 @@
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 100px;
+    gap: 0;
   }
 
   .voice__after-item {
     gap: 75px;
   }
 
+  .common__voice-num-txt p {
+    font-size: 0.5rem;
+  }
+
   .common__voice-num {
-    font-size: 7.25vw;
+    font-size: 1.125rem;
   }
 
   .common__voice-customer p {
