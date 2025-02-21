@@ -113,7 +113,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 17px;
+  gap: 10px;
   position: relative;
   border-bottom: solid 1px var(--color-primary);
   border-top: solid 1px var(--color-primary);
@@ -132,7 +132,8 @@
   letter-spacing: var(--letter-spacing-base);
 }
 
-.common__voice-num {
+.common__voice-num,
+.sp-voice__voice-num {
   font-family: var(--font-ja-heading);
   font-size: 4.375rem;
   line-height: var(--line-height-base);
@@ -389,7 +390,7 @@
   }
 
   .sp-voice__after-item {
-    padding: 26px 20px 120px 20px;
+    padding: 26px 0px 120px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -422,7 +423,7 @@
   }
 
   .sp-voice__voice-order {
-    width: 20%;
+    width: 15%;
     margin-top: -20px;
   }
 
@@ -440,7 +441,7 @@
   }
 
   .sp-voice__voice-customer p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: var(--line-height-base);
   }
 
@@ -470,7 +471,7 @@
   }
 
   .common__voice-text-wrap {
-    width: 80%;
+    width: 100%;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 100px;
@@ -485,13 +486,13 @@
   }
 
   .common__voice-customer p {
-    font-size: 2.2vw;
+    font-size: 16px;
     line-height: var(--line-height-base);
     margin-top: 20px;
   }
 
   .common__voice-img-wrap {
-    width: 70%;
+    width: 100%;
   }
 
   /* sp用 */
@@ -500,11 +501,11 @@
   }
 
   .sp-voice__after-item {
-    padding: 26px 20px 120px 20px;
+    padding: 26px 0px 120px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 60px;
+    gap: 0px;
   }
 
   .sp-voice__voice-img-wrap {
@@ -520,33 +521,37 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 50px;
+    gap: 30px;
   }
 
   .sp-voice__voice-text-wrap {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 30px;
+    gap: 20px;
     width: 100%;
     margin: 0 auto;
   }
 
   .sp-voice__voice-order {
     width: 25%;
-    margin-top: -20px;
+    margin-top: -100px;
+    gap: 10px;
+    background-color: rgb(255, 255, 255, .5);
+    padding: 5px;
   }
 
   .sp-voice__voice-num-txt p {
-    font-size: 3vw;
+    font-size: 12px;
+    opacity: 1;
   }
 
   .sp-voice__voice-num p {
-    font-size: 7vw;
+    font-size: 28px;
   }
 
   .sp-voice__voice-customer {
-    width: 100%;
+    padding-top: 20px;
   }
 
   .sp-voice__voice-customer p {
@@ -560,7 +565,7 @@
     font-size: var(--font-size-text);
     line-height: var(--line-height-base);
     letter-spacing: var(--letter-spacing-base);
-    width: 70%;
+    width: 85%;
     margin: 0 auto;
   }
 

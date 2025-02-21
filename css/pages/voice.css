@@ -278,11 +278,11 @@
 
 .voice__gallery-attention p {
   color: var(--color-primary);
-  text-align: center;
+  text-align: left;
   font-family: var(--font-ja-heading);
   font-size: var(--font-size-text);
   font-weight: var(--font-weight-bold);
-  line-height: 1.2;
+  line-height: 1.65;
   letter-spacing: var(--letter-spacing-base);
 }
 
@@ -299,7 +299,7 @@
 /* arrowボタン全体のデザイン */
 .voice__gallery-slider-arrows button {
   position: absolute;
-  top: 50%;
+  top: 45%;
   transform: translateY(-50%);
   width: 70px;
   height: 50px;

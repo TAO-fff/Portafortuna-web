@@ -286,7 +286,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 112px;
 }
 
 .menu__item-wrap {
@@ -330,6 +329,11 @@
   border: solid 1px var(--color-base-dark);
 }
 
+.menu__item-closet-img {
+  width: 86%;
+  padding: 5% 5% 8% 5%;
+}
+
 .menu__item-top-img img,
 .sp-menu__item-top-img img {
   width: 100%;
@@ -370,7 +374,7 @@
 }
 
 .menu__item-top-ttl p {
-  font-size: 3.125rem;
+  font-size: 2.5rem;
   font-weight: var(--font-weight-bold);
   letter-spacing: 0.3125rem;
   padding: 10px 15px;
@@ -389,11 +393,32 @@
   letter-spacing: var(--letter-spacing-base);
 }
 
+/*closetのみ テキスト感のライン消す用 */
+.menu_closet-txt-block {
+  position: relative;
+}
+
+.menu__closet-block-element {
+  display: block;
+  content: "";
+  background: var(--color-base-light);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 19%;
+  left: -13%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+
 /* menu下部 flow */
 .menu__item-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 110px;
+  padding: 110px 0 0px 0;
 }
 
 .menu__item-bottom-ttl {
@@ -436,11 +461,11 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 50px;
-  padding-top: 47px;
+  padding-top: 50px;
 }
 
 .menu__item-flow-list {
-  width: 22%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -488,7 +513,7 @@
   height: 1px;
   position: absolute;
   bottom: 50%;
-  right: -40%;
+  right: -45%;
 }
 
 .menu__item-arrow::before,
@@ -537,7 +562,7 @@
 
 .menu_item-flow-ttl p {
   font-family: var(--font-ja-heading);
-  font-size: 1.75rem;
+  font-size: 1.55rem;
   font-weight: var(--font-weight-bold);
   line-height: 1.4;
   letter-spacing: var(--letter-spacing-base);
@@ -958,7 +983,7 @@
 }
 
 .menu__price-list-ttl p {
-  font-size: 1.375rem;
+  font-size: 1.3rem;
   letter-spacing: var(--letter-spacing-base);
   width: 100%;
 }

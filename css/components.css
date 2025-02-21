@@ -58,6 +58,12 @@
     margin: 0 auto;
   }
 
+  .sp-br {
+    display: block;
+    margin-top: 10px;
+  }
+
+
   .min-sp-br {
     display: block !important;
     margin-top: 8px;
@@ -85,6 +91,7 @@
   line-height: var(--line-height-heading);
   letter-spacing: var(--letter-spacing-base);
   color: var(--color-text);
+  text-align: center;
 }
 
 .l-heading-ttl-en:before {
@@ -266,6 +273,11 @@
 .sp-cta-btn {
   padding: 3vw 20vw;
 }
+
+  .home__link-txt p {
+    padding-bottom: 0px;
+  }
+
 }
 
 /* =======================
@@ -591,16 +603,19 @@
 
 .footer__sns-text {
   font-size: 1.1rem;
+  font-family: var(--font-ja-heading);
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
+  font-size: 1.6rem;
 }
 
 .footer__sns-img {
-  width: 45px;
+  width: 25px;
 }
 
 .footer__sns-img img {
   width: 100%;
+  padding-top: 10px;
 }
 
 

@@ -107,7 +107,17 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: var(--font-ja-heading);
   line-height: var(--line-height-base);
+}
+
+.home__top-copy-vertical p,
+.home__top-copy-horizontal p {
   letter-spacing: var(--letter-spacing-base);
+}
+
+.sp-home__top-copy-vertical p,
+.sp-home__top-copy-horizontal-right p,
+.sp-home__top-copy-horizontal-left p {
+  letter-spacing: var(--letter-spacing-wide);
 }
 
 .home__top-copy-vertical p {
@@ -182,7 +192,7 @@
 
 .home__top-message-ttl-en {
   position: absolute;
-  top: 20%;
+  top: 27%;
 }
 
 .home__top-message-ttl-en p {
@@ -312,7 +322,7 @@
 }
 
 /* sp */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 426px) {
   .home__top {
     padding-top: 0;
     margin: 0 auto;
@@ -406,7 +416,158 @@
   }
 
   .home__top-logo h1 {
-    font-size: 8vw;
+    font-size: 6vw;
+    writing-mode: unset;
+    width: 98%;
+  }
+
+  .home__top-message {
+    display: none;
+  }
+
+  .sp-home__top-message {
+    display: block;
+  }
+
+  .sp-home__top-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .sp-home__top-message-ttl-ja {
+    color: var(--color-primary);
+    text-align: center;
+    font-family: var(--font-ja-heading);
+    font-size: 1.125rem;
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-tight);
+    letter-spacing: var(--letter-spacing-base);
+  }
+
+  .sp-home__top-message-txt {
+    width: 80%;
+  }
+
+  .sp-home__top-message-txt p {
+    width: 100%;
+    font-size: 1.125rem;
+    line-height: var(--line-height-base);
+    letter-spacing: var(--letter-spacing-base);
+  }
+
+  /* =======================
+  sp アニメーション FV
+======================= */
+
+  @keyframes fadeInRight {
+    from {
+      opacity: 1;
+      left: 0%;
+    }
+    to {
+      opacity: 1;
+      left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .home__top {
+    padding-top: 0;
+    margin: 0 auto;
+  }
+
+  /* 画像 back */
+  .home__top-mv-small {
+    width: 60%;
+    top: 22vh;
+  }
+
+  .home__top-mv-triangle {
+    bottom: 8.5%;
+  }
+
+  /* テキスト */
+  .home__mv-txt-wrap {
+    width: 53%;
+    top: 19.5%;
+    right: 1vw;
+    z-index: 10;
+  }
+
+  .home__top-copy {
+    display: block;
+    animation: fadeInUp 1.75s ease-in-out forwards;
+    opacity: 0;
+  }
+
+  .home__top-copy-vertical p,
+  .home__top-copy-horizontal p {
+    display: none;
+  }
+
+  .sp-home__top-copy-vertical .sp-home__top-copy-horizontal-right,
+  .sp-home__top-copy-horizontal-left,
+  .sp-home__top-copy-vertical p,
+  .sp-home__top-copy-horizontal-right p,
+  .sp-home__top-copy-horizontal-left p {
+    display: block;
+  }
+
+  .sp-home__top-copy-vertical p {
+    font-size: 4.6vw;
+    text-align: right;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(2px);
+    padding: 0 5.1vw;
+    letter-spacing: var(--letter-spacing-wide);
+  }
+
+  .sp-home__top-copy-vertical p + p {
+    margin-top: 10px;
+  }
+
+  .sp-home__top-copy-horizontal-right,
+  .sp-home__top-copy-horizontal-left {
+    position: absolute;
+  }
+
+  .sp-home__top-copy-horizontal-right {
+    right: 5%;
+    top: 50vw;
+  }
+
+  .sp-home__top-copy-horizontal-left {
+    right: 35%;
+    top: 90vw;
+  }
+
+  .sp-home__top-horizontal-txt-right,
+  .sp-home__top-horizontal-txt-left {
+    font-size: 6vw;
+    writing-mode: vertical-rl;
+    text-align: end;
+    border-right: 1px solid var(--color-text-inverse); /* 縦線を追加 */
+    padding-right: 0px;
+  }
+
+  .sp-home__top-horizontal-txt-left {
+    top: 0;
+    left: 20%;
+  }
+
+  .home__top-logo {
+    top: 97%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 95%;
+  }
+
+  .home__top-logo h1 {
+    font-size: 6vw;
     writing-mode: unset;
     width: 98%;
   }
@@ -574,16 +735,17 @@
 
 .home__reason-item-ttl p {
   font-family: var(--font-ja-heading);
-  font-size: var(--font-size-text);
+  font-size: 1.5rem;
   line-height: var(--line-height-base);
   text-align: center;
 }
 
 .home__reason-big-txt {
-  font-size: 1.875rem;
+  font-size: 1.75rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-base);
+  padding-bottom: 2px;
 }
 
 .home__reason-txt p {
@@ -1186,6 +1348,11 @@
 }
 
 @media screen and (max-width: 426px) {
+  /* slider */
+.home__voice-slider {
+  width: 100%;
+}
+
   .slick-slide {
     flex-direction: column-reverse;
     align-items: center;
@@ -1401,6 +1568,7 @@
 
   .home__profile-wrap {
     gap: 50px;
+    padding: 0;
   }
 
   .home__profile-txt-name {
