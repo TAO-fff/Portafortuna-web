@@ -135,7 +135,7 @@
 .common__voice-num,
 .sp-voice__voice-num {
   font-family: var(--font-ja-heading);
-  font-size: 4.375rem;
+  font-size: 2.375rem;
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-base);
 }
@@ -155,7 +155,7 @@
 }
 
 .common__voice-customer p {
-  font-size: 1.85rem;
+  font-size: 1.9rem;
 }
 
 .voice__voice-customer p {
@@ -374,7 +374,7 @@
   }
 
   .common__voice-customer p {
-    font-size: 2.2vw;
+    font-size: 19px;
     line-height: var(--line-height-base);
     margin-top: 20px;
     width: 100%;
@@ -441,7 +441,7 @@
   }
 
   .sp-voice__voice-customer p {
-    font-size: 18px;
+    font-size: 19px;
     line-height: var(--line-height-base);
   }
 
@@ -474,30 +474,40 @@
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 100px;
-    gap: 0;
+    margin-bottom: 120px;
+    gap: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 1.5%;
+    z-index: 10;
   }
 
   .voice__after-item {
     gap: 75px;
   }
 
+  .common__voice-order {
+    background-color: rgb(255, 255, 255, 0.5);
+    padding: 0 8px;
+  }
+
   .common__voice-num-txt p {
-    font-size: 0.5rem;
+    font-size: 12px;
   }
 
   .common__voice-num {
-    font-size: 1.125rem;
+    font-size: 28px;
   }
 
   .common__voice-customer p {
-    font-size: 16px;
+    font-size: 4.4vw;
     line-height: var(--line-height-base);
     margin-top: 20px;
   }
 
   .common__voice-img-wrap {
     width: 100%;
+    padding-bottom: 200px;
   }
 
   /* sp用 */
@@ -542,7 +552,7 @@
     width: 25%;
     margin-top: -100px;
     gap: 10px;
-    background-color: rgb(255, 255, 255, .5);
+    background-color: rgb(255, 255, 255, 0.5);
     padding: 5px;
   }
 
@@ -557,6 +567,8 @@
 
   .sp-voice__voice-customer {
     padding-top: 20px;
+    padding-left: 2.5vw;
+    width: 100%;
   }
 
   .sp-voice__voice-customer p {

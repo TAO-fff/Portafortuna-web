@@ -331,7 +331,7 @@
   /* 画像 back */
   .home__top-mv-small {
     width: 60%;
-    top: 30vh;
+    top: 45vw;
   }
 
   .home__top-mv-triangle {
@@ -368,8 +368,7 @@
   .sp-home__top-copy-vertical p {
     font-size: 4.6vw;
     text-align: right;
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(2px);
+    background-color: rgba(162, 143, 129, 0.5);    backdrop-filter: blur(2px);
     padding: 0 5.1vw;
     letter-spacing: var(--letter-spacing-wide);
   }
@@ -493,7 +492,7 @@
   .home__mv-txt-wrap {
     width: 53%;
     top: 19.5%;
-    right: 1vw;
+    right: 0;
     z-index: 10;
   }
 
@@ -519,7 +518,7 @@
   .sp-home__top-copy-vertical p {
     font-size: 4.6vw;
     text-align: right;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(162, 143, 129, 0.5);
     backdrop-filter: blur(2px);
     padding: 0 5.1vw;
     letter-spacing: var(--letter-spacing-wide);
@@ -711,6 +710,18 @@
   box-sizing: border-box;
 }
 
+.home__reason-item-wrap {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.home__reason-item-wrap.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .home__reason-item-ttl {
   padding-bottom: 17px;
   position: relative;
@@ -763,6 +774,7 @@
   width: 42%;
   margin: 0 20px 20px 0;
   box-sizing: border-box;
+  opacity: 0;
 }
 
 /*背景色が伸びて出現 共通*/
@@ -771,8 +783,14 @@
   animation-duration: 1s;
   animation-fill-mode: forwards;
   position: relative;
-  overflow: hidden; /*　はみ出た色要素を隠す　*/
+  overflow: hidden;
   opacity: 0;
+}
+
+/* アニメーションを開始するクラス */
+.animate .bgextend {
+  opacity: 1;
+  animation: bgextendAnimeBase 1s ease-out forwards, bgextendAnimeSecond 1s ease-out 0.5s forwards;
 }
 
 @keyframes bgextendAnimeBase {
@@ -814,8 +832,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #715f5a; /*伸びる背景色の設定*/
+  background-color: #715f5a;
 }
+
 
 @keyframes bgUDextendAnime {
   0% {
@@ -919,7 +938,7 @@
 }
 
 /* sp */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 }
 
 /* =======================
@@ -1086,7 +1105,7 @@
 }
 
 /* sp */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .home__menu-list ul {
     display: flex;
     flex-direction: column;
@@ -1117,7 +1136,7 @@
   }
 
   .home__menu-item-rank {
-    font-size: 0.75rem;
+    font-size: 3.8vw;
   }
 
   .home__menu-item-ttl p {
@@ -1316,6 +1335,10 @@
 
 /* sp */
 @media screen and (max-width: 768px) and (min-width: 426px) {
+  .slick-list draggable {
+    width: 100%;
+  }
+  
   .slick-slide {
     flex-direction: column-reverse;
     align-items: center;
@@ -1354,10 +1377,9 @@
 }
 
   .slick-slide {
-    flex-direction: column-reverse;
-    align-items: center;
-    gap: 10px;
+   display: block;
     padding: 0 5px;
+    position: relative;
   }
 
   .slick-prev,
@@ -1479,6 +1501,7 @@
   font-size: var(--font-size-text);
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-base);
+  padding-top: 20px;
 }
 
 /* =======================
@@ -1612,6 +1635,7 @@
   width: 25%;
   position: relative;
   z-index: -1;
+  box-shadow: 7px 7px 10px rgb(85, 85, 85, 0.4);
 }
 
 .home_news-img-item img {

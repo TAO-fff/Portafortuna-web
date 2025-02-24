@@ -299,7 +299,7 @@
 /* arrowボタン全体のデザイン */
 .voice__gallery-slider-arrows button {
   position: absolute;
-  top: 45%;
+  top: 48%;
   transform: translateY(-50%);
   width: 70px;
   height: 50px;

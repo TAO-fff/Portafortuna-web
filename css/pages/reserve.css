@@ -1,136 +1,393 @@
 .contact__form {
-    padding-top: 80px;
+  padding-top: 80px;
 }
 
 .contact__form-wrap {
 }
 
+.contact__attention {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+
 .contact__attention-txt {
-    display: flex;
-    flex-direction: column;
-    align-items: center
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .contact__attention-txt p,
 .contact-form-attention {
-    font-size: var(--font-size-text);
-    line-height: var(--line-height-base);
-    letter-spacing: var(--letter-spacing-base);
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
 }
 
 .contact__attention-txt p {
-    text-align: center;
+  text-align: left;
 }
 
 .contact-form-attention {
-    text-align: left;
-    padding-bottom: 25px;
+  text-align: left;
+  padding-bottom: 25px;
+  width: 80%;
 }
 
+.contact-form-attention p:nth-child(2) {
+  text-indent: 1em;
+}
+
+.contact__attention-add {
+  width: 80%;
+}
+
+.contact__email {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+}
+
+.contact__email:hover {
+  opacity: .5;
+}
+
+.contact__email img {
+  width: 20px;
+  height: auto;
+}
+
+
+
 .contact__form-list {
-   width: 80%;
-   margin: 0 auto;
-   padding: 40px 0 160px 0;
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0 160px 0;
 }
 
 .contact-form-item {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .radio-group {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-content: flex-start;
+  width: 80%;
 }
 
+.radio-group label {
+  font-size: 1.25rem;
+}
 
+.radio-span {
+  text-indent: 20px;
+}
+
+.reserve-menu-sub-text {
+  font-size: 1.125rem;
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  padding: 8px 0 20px 0;
+  text-indent: 1.8em;
+}
+
+.contact-cancel-text,
+.contact-privacy-text {
+  width: 80%;
+}
+
+.contact-form-cancel-attention,
+.contact-form-privacy-attention {
+  font-size: 1.25rem;
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  padding-bottom: 20px;
+}
 
 /*************************** 
 
 ****************************/
 /* フォーム */
 .contact-form {
+  width: 100%;
+  padding-bottom: 120px;
+  margin: 0 auto;
+}
+
+.contact-form-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.contact-form-label,
+.contact-form-input {
+  padding: 10px;
+}
+
+.contact-form-label {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-family: var(--font-ja-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+.contact-form-input {
+  width: 75%;
+  font-size: 1.25rem;
+  border: 1px solid var(--color-base);
+  background-color: var(--color-base-light);
+  border-radius: 0.35em;
+  font-family: var(--font-ja-heading);
+}
+
+.contact-form-input:focus-visible {
+  outline: var(--color-key) auto 1px;
+}
+
+.contact-form-required {
+  font-family: var(--font-ja-heading);
+  font-size: 1rem;
+  color: var(--color-base-light);
+  background-color: var(--color-key);
+  border: 1px solid var(--color-key);
+  border-radius: 5px;
+  padding: 5px 7px;
+  margin: 0 0 0 18px;
+}
+
+/* 希望日時用 高さだし */
+textarea.contact-form-input {
+  height: 160px;
+}
+
+.contact-form-submit {
+  text-align: center;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.button {
+  height: 100%;
+}
+
+.contact-form-submit button {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-base);
+  background-color: var(--color-base-light);
+  border: 1px solid var(--color-base);
+  border-radius: 0.35em;
+  padding: 30px 100px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.contact-form-submit button:hover {
+  background-color: var(--color-base);
+  color: var(--color-text-inverse);
+}
+
+#error-message {
+  margin: 20px auto;
+  color: var(--color-key);
+  display: none;
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+}
+
+/* ラジオボタン・チェックボックス サイズ調整 */
+input[type="radio"],
+input[type="checkbox"] {
+  transform: scale(1.75); /* 1.5倍に拡大 */
+  margin-right: 8px; /* テキストとの間隔を調整 */
+  accent-color: var(--color-key);
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .contact__form-list {
     width: 100%;
-    padding-bottom: 120px;
-    margin: 0 auto;
   }
+}
+
+/* sp */
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  .contact__attention {
+    width: 100%;
+}
+
+.contact-form-attention p:nth-child(2) {
+  text-indent: 0;
+  padding-bottom: 15px;
+}
+
+.contact__attention-txt,
+.contact__attention-add {
+  width: 90%;
+}
+
   
+  .contact__form-list {
+    width: 100%;
+  }
+
   .contact-form-item {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1vw;
-    justify-content: center;
-    margin-bottom: 50px;
+    gap: 35px;
   }
-  
+
+  .contact-form-label {
+    width: 100%;
+  }
+
+  .contact-form-input {
+    width: 100%;
+  }
+
   .contact-form-label,
   .contact-form-input {
-    padding: 10px;
+    padding: 30px 10px;
   }
-  
-  .contact-form-label {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    font-size: 1.6vmin;
+
+  .radio-group {
+    width: 100%;
+    gap: 35px;
   }
-  
-  .contact-form-input {
-    width: 80%;
-    font-size: 1.25vmin;
-    border: 1px solid var(--color-base);
-    background-color: var(--color-base-light);
-    border-radius: 1em;
+
+  .radio-group label {
+    border-bottom: solid 1px rgba(162, 143, 129, 0.49);
+    padding-bottom: 20px;
   }
-  
-  .contact-form-input:focus-visible {
-    outline: var(--color-key) auto 1px;
+
+  .reserve-menu-sub-text {
+    text-indent: 0;
   }
-  
-  .contact-form-required {
-    font-size: 1.1vw;
-    color: var(--color-base-light);
-    background-color: var(--color-key);
-    border: 1px solid var(--color-key);
-    border-radius: 5px;
-    padding: 5px 5px;
-    margin: 0 0 0 18px;
+
+  .radio-span {
+    display: block;
+    padding: 15px 0;
   }
-  
-  textarea.contact-form-input {
-    height: 160px;
+
+  .reserve-menu-sub-text {
+    padding: 15px 0 25px 0;
   }
-  
-  .contact-form-submit {
-    text-align: center;
+
+  .contact-form-attention {
     width: 100%;
   }
-  
-  .button {
-    height: 100%;
-  }
-  
-  .contact-form-submit button {
-    font-size: 2vmin;
-    font-weight: 500;
-    color: var(--color-base);
-    background-color: var(--color-base-light);
-    border: 1px solid var(--color-base);
-    border-radius: 2vw;
-    padding: 2vmin 8vmin;
-    transition: 0.4s;
-    cursor: pointer;
-  }
-  
-  .contact-form-submit button:hover {
-    background-color: var(--color-base);
-    color: var(--color-text-inverse);
+
+  .contact-cancel-text,
+  .contact-privacy-text {
+    width: 100%;
   }
 
-  #error-message {
-    margin-top: 20px;
-    color: var(--color-key);
-   display: none;
+  /* ラジオボタン・チェックボックス サイズ調整 */
+  input[type="radio"],
+  input[type="checkbox"] {
+    transform: scale(2);
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .contact__attention {
+    width: 100%;
+}
+
+.contact__attention-txt,
+.contact__attention-add {
+  width: 90%;
+}
+
+.contact-form-attention p:nth-child(2) {
+  text-indent: 0;
+}
+
+  .contact__form-list {
+    width: 100%;
   }
 
+  .contact-form-label {
+    width: 100%;
+    font-size: 1.125rem;
+  }
+
+  .contact-form-input {
+    width: 100%;
+    font-size: 1.125rem;
+  }
+
+  .contact-form-label,
+  .contact-form-input {
+    padding: 30px 3px;
+  }
+
+  .contact-form-required {
+    margin: 0 0 0 10px;
+    font-size: 0.65rem;
+    padding: 3px 7px;
+  }
+
+
+  .radio-group {
+    width: 100%;
+  }
+
+  .radio-group label {
+    border-bottom: solid 1px rgba(162, 143, 129, 0.49);
+    padding-bottom: 20px;
+    font-size: 1.15rem;
+  }
+
+  .reserve-menu-sub-text {
+    text-indent: 0;
+    padding: 30px 0;
+  }
+
+  .radio-span {
+    display: block;
+    padding: 15px 0;
+  }
+
+  .reserve-menu-sub-text {
+    padding: 15px 0 25px 0;
+  }
+
+  .contact-form-attention {
+    width: 100%;
+  }
+
+  .contact-form-attention p {
+    font-size: 0.95rem;
+  }
+
+  .contact-form-attention p:nth-child(2) {
+    padding-bottom: 15px;
+  }
+
+  .contact-cancel-text,
+  .contact-privacy-text {
+    width: 100%;
+  }
+
+  /* ラジオボタン・チェックボックス サイズ調整 */
+  input[type="radio"],
+  input[type="checkbox"] {
+    transform: scale(1.85);
+    margin-right: 10px;
+  }
+}

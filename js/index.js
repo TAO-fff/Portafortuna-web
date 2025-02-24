@@ -1,25 +1,84 @@
-// reason
-$(document).ready(function () {
-  $(window).on("scroll", function () {
-      let scrollTop = $(window).scrollTop();
-      let triggerPos = $(".home__reason-area").offset().top - $(window).height() * 0.8;
+// // ページ内リンクのスムーズスクロール
+$(function () {
+  // ページ内リンクをクリックしたとき
+  $('a[href^="#"]').on('click', function (e) {
+    // スクロール先のIDを取得
+    var target = $($(this).attr('href'));
 
-      if (scrollTop > triggerPos) {
-          // ① 各 home__reason-item の背景色を上から下に伸ばす
-          $(".home__reason-item").each(function (index) {
-              $(this)
-                  .delay(index * 200) // 0.2秒ずつ遅延
-                  .animate({ backgroundSize: "100% 100%" }, 500);
-          });
-
-          // ② 各 home__reason-item-wrap を順番にフェードイン
-          $("#homeReason1").delay(800).fadeIn(800);
-          $("#homeReason2").delay(1600).fadeIn(800);
-          $("#homeReason3").delay(2400).fadeIn(800);
-          $("#homeReason4").delay(3200).fadeIn(800);
-      }
+    // 対象が見つかった場合にスムーズにスクロール
+    if (target.length) {
+      e.preventDefault();  // デフォルトのリンク動作を無効化
+      $('html, body').animate({
+        scrollTop: target.offset().top - 50 // 50pxの余白を追加
+      }, 500); // 500msでスクロール
+    }
   });
 });
+
+// reason 背景色
+// 動きのきっかけとなるアニメーションの名前を定義
+function fadeAnime() {
+
+  // 左から右に伸びるアニメーション（fadeUpTriggerクラスに設定）
+  $('.fadeUpTrigger').each(function() {
+      var elemPos = $(this).offset().top - 0; // 要素より、50px上の位置
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+
+      if (scroll >= elemPos - windowHeight) {
+          $(this).addClass('bgLRextend'); // 画面内に入ったらアニメーションを追加
+      } else {
+          $(this).removeClass('bgLRextend'); // 画面外に出たらアニメーションを外す
+      }
+  });
+
+  // 右から左に伸びるアニメーション（fadeDownTriggerクラスに設定）
+  $('.fadeDownTrigger').each(function() {
+      var elemPos = $(this).offset().top - 0; // 要素より、50px上の位置
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+
+      if (scroll >= elemPos - windowHeight) {
+          $(this).addClass('bgRLextend'); // 画面内に入ったらアニメーションを追加
+      } else {
+          $(this).removeClass('bgRLextend'); // 画面外に出たらアニメーションを外す
+      }
+  });
+}
+
+$(window).on('scroll', function() {
+  fadeAnime(); // スクロール時にアニメーションを実行
+});
+
+$(window).on('load', function() {
+  fadeAnime(); // ページ読み込み時にもアニメーションを実行
+});
+
+
+
+
+// reason wrapper1つずつ表示
+document.addEventListener("DOMContentLoaded", function () {
+  const reasonItems = document.querySelectorAll(".home__reason-item-wrap");
+
+  function fadeUpOnScroll() {
+    const scrollPosition = window.scrollY + window.innerHeight;
+
+    reasonItems.forEach((item, index) => {
+      const itemPosition = item.offsetTop;
+
+      if (scrollPosition > itemPosition + 100) {
+        setTimeout(() => {
+          item.classList.add("fade-in");
+        }, index * 1000); 
+      }
+    });
+  }
+
+  window.addEventListener("scroll", fadeUpOnScroll);
+});
+
+
 
 
 

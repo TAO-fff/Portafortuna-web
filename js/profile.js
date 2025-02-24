@@ -21,6 +21,36 @@ const observer = new IntersectionObserver((entries) => {
 orderedItems.forEach(item => observer.observe(item));
 
 
+// sp- outfit アニメーション
+$(document).ready(function () {
+  function fadeUpOnScroll(target) {
+    $(target).each(function () {
+      let position = $(this).offset().top; // 要素の位置
+      let scroll = $(window).scrollTop();  // スクロール位置
+      let windowHeight = $(window).height(); // ウィンドウの高さ
+
+      if (scroll > position - windowHeight + 100) { // 100px 手前で発火
+        $(this).animate({ opacity: 1, top: 0 }, 800); // フェードアップ
+      }
+    });
+  }
+
+  // 初期設定：画像を隠し、下にオフセット
+  $(".sp-profile__outfit-left-img img, .sp-profile__outfit-center-img img, .sp-profile__outfit-right-img img").css({
+    opacity: 0,
+    position: "relative",
+    top: "50px"
+  });
+
+  // スクロールイベント
+  $(window).on("scroll", function () {
+    fadeUpOnScroll(".sp-profile__outfit-left-img img");
+    fadeUpOnScroll(".sp-profile__outfit-center-img img");
+    fadeUpOnScroll(".sp-profile__outfit-right-img img");
+  });
+});
+
+
 
 //  768px以下 実績toggle-btn
 $(document).ready(function () {

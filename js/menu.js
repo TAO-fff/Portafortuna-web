@@ -2,31 +2,32 @@
 concept toggle
 **************/
 document.addEventListener('DOMContentLoaded', () => {
-    const conceptGroups = document.querySelectorAll('.menu__concept-left-wrap, .menu__concept-center-wrap, .menu__concept-right-wrap');
-  
-    conceptGroups.forEach(group => {
+  const conceptGroups = document.querySelectorAll('.menu__concept-left-wrap, .menu__concept-center-wrap, .menu__concept-right-wrap');
+
+  conceptGroups.forEach(group => {
       const toggleBtn = group.querySelector('.sp-concept__toggle-btn');
       const conceptTxt = group.querySelector('.menu__concept-txt');
       const clickableArea = group.querySelector('.menu__concept-left, .menu__concept-center, .menu__concept-right');
-  
+
       const toggleContent = () => {
-        if (window.innerWidth <= 768) {
-          conceptTxt.classList.toggle('active');
-        }
+          if (window.innerWidth <= 768) {
+              conceptTxt.classList.toggle('active');
+              toggleBtn.classList.toggle('active'); // ここでボタンにもクラスを付与
+          }
       };
-  
+
       if (toggleBtn) {
-        toggleBtn.addEventListener('click', (e) => {
-          e.stopPropagation();  // 他のクリックイベントとバッティングしないようにする
-          toggleContent();
-        });
+          toggleBtn.addEventListener('click', (e) => {
+              e.stopPropagation();  
+              toggleContent();
+          });
       }
-  
+
       if (clickableArea) {
-        clickableArea.addEventListener('click', toggleContent);
+          clickableArea.addEventListener('click', toggleContent);
       }
-    });
   });
+});
 
 
 /**************

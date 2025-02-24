@@ -29,12 +29,39 @@
     font-size: 6.25vw;
     color: var(--color-text-inverse);
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
     letter-spacing: 8px;
     text-align: center;
+}
+
+.snow {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: snowAnimation 1.5s forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes snowAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  30% {
+    opacity: 0.2;
+    transform: translateY(30px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .thanks__page {
@@ -45,10 +72,11 @@
 
 .thanks__page-top-message {
     padding: 100px 0 120px 0;
+    width: 80%;
 }
 
 .thanks__page-top-message p {
-    text-align: center;
+    text-align: left;
     font-size: 1.125rem;
     line-height: var(--line-height-base);
     letter-spacing: var(--letter-spacing-base);
@@ -58,11 +86,17 @@
 @media screen and (max-width: 768px) {
   .thanks-top-ttl {
     top: 50%;
-}
+    font-size: 8.25vw;
+  }
 
   .thanks-top-img::before {
     top: 0;
     left: 0;
     padding-top: 53.3%;
   }
+
+  .thanks__page-top-message {
+    padding: 100px 0 20px 0;
+    width: 80%;
+}
 }

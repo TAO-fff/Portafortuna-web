@@ -21,8 +21,9 @@ profile共通
 .outfit {
   width: 100%;
   margin: 0 auto;
-  padding: 100px 0 70px 0;
+  padding: 100px 20px 70px 20px;
   position: relative;
+  box-sizing: border-box;
 }
 
 /* ===============================
@@ -426,20 +427,30 @@ profile contents (各実績)
   }
 
   .profile__photo-career::before {
-    width: 100%;
-    height: 65%;
-    bottom: 17%;
-    left: 0;
-    z-index: -2;
+    display: none;
   }
 
   .profile__photo-career::after {
-    width: 100%;
+    width: 100vw;
     height: 60%;
     top: calc(100% - 49.5%);
     border-left: none;
     border-right: none;
   }
+
+  
+  .sp-profile__photo-back {
+    display: block;
+    content: "";
+    background: var(--color-base);
+    position: absolute;
+    width: 100vw;
+    height: 65%;
+    bottom: 17%;
+    left: -5.5%;
+    z-index: -2;
+  }
+
 
   /* toggle-btn */
   .sp-profile__experience-toggle-btn {
@@ -552,19 +563,34 @@ profile contents (各実績)
   }
 
   .profile__photo-career::before {
-    width: 100%;
+    display: none;
+    /* width: 100%;
     height: 65%;
     bottom: 17%;
     left: 0;
-    z-index: -2;
+    z-index: -2; */
   }
 
   .profile__photo-career::after {
-    width: 100%;
+    width: 100vw;
     height: 60%;
     top: calc(100% - 49.5%);
     border-left: none;
     border-right: none;
+    overflow-x: hidden;
+  }
+
+    
+  .sp-profile__photo-back {
+    display: block;
+    content: "";
+    background: var(--color-base);
+    position: absolute;
+    width: 100vw;
+    height: 65%;
+    bottom: 17%;
+    left: -5.5%;
+    z-index: -2;
   }
 
   /* toggle-btn */
@@ -791,7 +817,7 @@ profile contents (各実績)
 
 @media screen and (max-width: 1300px) and (min-width: 1024px) {
   .profile_outfit-ttl {
-    font-size: 1.9vw;
+    font-size: 1.7vw;
   }
 }
 
@@ -874,6 +900,14 @@ profile contents (各実績)
     position: relative;
   }
 
+  .sp-profile__outfit-left-img img,
+  .sp-profile__outfit-center-img img,
+  .sp-profile__outfit-right-img img {
+    position: relative;
+    opacity: 0;
+    top: 50px;
+  }
+
   .sp-profile__outfit-left-img::before,
   .sp-profile__outfit-center-img::before,
   .sp-profile__outfit-right-img::before,
@@ -907,6 +941,8 @@ profile contents (各実績)
     left: 3%;
     z-index: -1;
   }
+
+
 
   .sp-profile__outfit-center-wrap,
   .sp-profile__outfit-right-wrap {
@@ -1145,6 +1181,28 @@ profile contents (各実績)
     width: 30%;
   }
 
+  .sp-profile__qa-img::before {
+    display: none;
+  }
+
+  .sp-profile__qa-img::after {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .sp-profile__qa-back {
+    display: block;
+    content: "";
+    background: var(--color-base);
+    position: absolute;
+    width: 100vw;
+    height: 60%;
+    top: 30%;
+    bottom: 17%;
+    left: -5.5%;
+    z-index: -2;
+  }
+
   .profile__qa-list-item {
     width: 32%;
     margin: 0;
@@ -1160,7 +1218,7 @@ profile contents (各実績)
 }
 
 /* sp */
-@media screen and (max-width: 768px) and (min-width: 426) {
+@media screen and (max-width: 768px) and (min-width: 426px) {
   .sp-profile__qa-img {
     position: relative;
     width: 100%;
@@ -1180,29 +1238,37 @@ profile contents (各実績)
 
   .sp-profile__qa-img::before,
   .sp-profile__qa-img::after {
-    display: block;
-    content: "";
-    position: absolute;
-    width: 100%;
+    display: none;
   }
 
-  .sp-profile__qa-img::before {
-    background-color: var(--color-base);
+  .sp-profile__qa-back {
+    display: block;
+    content: "";
+    background: var(--color-base);
+    position: absolute;
+    width: 100vw;
     height: 60%;
-    bottom: 10%;
-    left: 0;
+    top: 30%;
+    bottom: 17%;
+    left: -5.5%;
     z-index: -2;
   }
 
-  .sp-profile__qa-img::after {
+  .sp-profile__qa-back::after {
+    display: block;
+    content: "";
+    background: var(--color-base);
+    position: absolute;
+    width: 100vw;
     border: solid 1px var(--color-base-light);
-    height: 54%;
-    bottom: 13%;
+    height: 92%;
+    bottom: 4%;
     left: 0%;
     z-index: -1;
     border-left: none;
     border-right: none;
-  }
+  } 
+
 
   .sp-profile__qa-img-ttl {
     color: var(--color-base);
@@ -1266,32 +1332,34 @@ profile contents (各実績)
     width: 35%;
   }
 
-  .sp-profile__qa-img::before,
-  .sp-profile__qa-img::after {
+  .sp-profile__qa-back {
     display: block;
     content: "";
+    background: var(--color-base);
     position: absolute;
-    width: 100%;
-  }
-
-  .sp-profile__qa-img::before {
-    background-color: var(--color-base);
+    width: 100vw;
     height: 60%;
-    bottom: 10%;
-    left: 0;
+    top: 30%;
+    bottom: 17%;
+    left: -5.5%;
     z-index: -2;
   }
 
-  .sp-profile__qa-img::after {
+  .sp-profile__qa-back::after {
+    display: block;
+    content: "";
+    background: var(--color-base);
+    position: absolute;
+    width: 100vw;
     border: solid 1px var(--color-base-light);
-    height: 54%;
-    bottom: 13%;
+    height: 92%;
+    bottom: 4%;
     left: 0%;
     z-index: -1;
     border-left: none;
     border-right: none;
-  }
-
+  } 
+  
   .sp-profile__qa-img-ttl {
     color: var(--color-base);
     font-family: var(--font-en-cursive);

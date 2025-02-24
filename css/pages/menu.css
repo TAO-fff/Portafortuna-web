@@ -138,6 +138,7 @@
     position: absolute;
     width: 1.5px;
     height: 35px;
+    transition: transform 0.45s ease-in-out;
   }
 
   .sp-concept__toggle-btn::before {
@@ -153,6 +154,18 @@
     left: 3%;
     transform: translate(-50%, -50%) rotate(-32deg);
   }
+
+  
+  .sp-concept__toggle-btn.active::before {
+    transform: rotate(-32deg);
+    transition: 0.45s ease-in-out;
+}
+
+.sp-concept__toggle-btn.active::after {
+  transform: rotate(32deg);
+  transition: 0.45s ease-in-out;
+}
+
 
   .menu__concept-txt {
     max-height: 0;
@@ -228,6 +241,7 @@
     top: 50%;
     right: 10%;
     transform: translate(-50%, -50%);
+
   }
 
   .sp-concept__toggle-btn:hover {
@@ -242,6 +256,7 @@
     position: absolute;
     width: 1.5px;
     height: 35px;
+    transition: transform 0.45s ease-in-out;
   }
 
   .sp-concept__toggle-btn::before {
@@ -258,11 +273,22 @@
     transform: translate(-50%, -50%) rotate(-32deg);
   }
 
+  .sp-concept__toggle-btn.active::before {
+    transform: rotate(-32deg);
+    transition: 0.45s ease-in-out;
+}
+
+.sp-concept__toggle-btn.active::after {
+  transform: rotate(32deg);
+  transition: 0.45s ease-in-out;
+}
+
+
   .menu__concept-txt {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: max-height 0.8s ease, opacity 0.5s ease;
+    transition: max-height 0.3s ease, opacity 0.5s ease;
     padding: 0 15px;
     position: relative;
   }
@@ -612,7 +638,7 @@
   }
 
   .menu__item-top-ttl p {
-    font-size: 3vw;
+    font-size: 2.85vw;
   }
 
   .menu__item-bottom-ttl p {
@@ -730,6 +756,9 @@
   .menu__item-top {
     display: none;
   }
+  .sp-menu__item-top {
+    display: block;
+  }
 
   /* menu下部 flow */
   .menu__item-bottom {
@@ -742,17 +771,18 @@
 
   .menu__item-bottom-ttl {
     display: none;
+    margin: 30px 0;
   }
 
   /* sp用 */
   .sp-menu__item-top {
-    display: block;
   }
 
   .sp-menu__item-bottom-wrap {
     position: relative;
     margin: 0 auto;
-    width: 70%;
+    width: 90%;
+    padding: 30px 0;
   }
 
   .sp-menu__item-bottom-ttl {
@@ -766,6 +796,7 @@
     cursor: pointer;
     border: solid 1px var(--color-primary);
     box-shadow: 7px 7px 10px rgb(85, 85, 85, 0.2);
+    margin-top: 40px;
   }
 
   .sp-menu__item-bottom-ttl p {
@@ -844,7 +875,7 @@
   }
 
   .sp-menu__item-top-img {
-    width: 80%;
+    width: 90%;
     box-shadow: 7px 7px 10px rgb(85, 85, 85, 0.4);
   }
 
@@ -858,7 +889,7 @@
   }
 
   .sp-menu__top-ttl-wrap {
-    width: 65%;
+    width: 77%;
     position: absolute;
     top: 100%;
     right: -30%;
@@ -866,7 +897,7 @@
   }
 
   .sp-menu__item-top-sub-ttl {
-    width: 88%;
+    width: 100%;
   }
 
   .sp-menu__item-top-ttl {
@@ -879,13 +910,13 @@
   }
 
   .sp-menu__item-top-sub-ttl p {
-    font-size: 3.2vw;
-    padding: 3vw 1.5vw 3vw 20px;
+    font-size: 16px;
+    padding: 3vw 2.5vw 3vw 20px;
     text-align: center;
   }
 
   .sp-menu__item-top-ttl p {
-    font-size: 3.85vw;
+    font-size: 18px;
     padding: 3vw 1.5vw 3vw 2vw;
     text-align: center;
   }
@@ -1032,13 +1063,24 @@
   padding-bottom: 56px;
 }
 
-.menu__price-attention-list:nth-child(2) {
-  padding-top: 30px;
+.menu__price-attention-list {
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-base);
 }
+
+.menu__price-attention-list:nth-child(2) {
+  padding: 40px 0;
+}
+
+.menu__price-attention-list:nth-child(2) p {
+  text-indent: 1rem;
+}
+
 
 .menu__price-attention-list p {
   display: block;
-  padding-top: 30px;
+  padding-top: 18px;
+
 }
 
 /* =======================
@@ -1108,12 +1150,17 @@
   }
 
   .menu__price-list-ttl p {
-    font-size: 1.375rem;
+    font-size: 1.155rem;
   }
 
   .menu_price-one {
     padding: 30px 0 50px 0;
   }
+
+  .menu__price-attention-list:nth-child(2) p {
+    text-indent: 0;
+  }
+
 }
 
 /* =======================
@@ -1486,14 +1533,14 @@
 }
 
 .menu__qa-list-inner {
-  padding: 20px 0;
+  padding: 20px 0 50px 0;
   margin: 0 auto;
   position: relative;
 }
 
 .menu__qa-list-q {
   position: relative;
-  transition: 0.8s ease;
+  transition: 0.3s ease;
 }
 
 .menu__qa-list-q p,
@@ -1509,6 +1556,7 @@
   line-height: var(--line-height-base);
   letter-spacing: 0.225rem;
   padding-bottom: 20px;
+  width: 80%;
 }
 
 .sp-menu__qa-toggle-btn {
@@ -1518,8 +1566,8 @@
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 5px;
-  right: -10%;
+  top: 8px;
+  right: 4%;
   transition: transform 0.3s ease-in-out;
 }
 

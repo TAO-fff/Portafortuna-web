@@ -584,29 +584,29 @@
 }
 
 .footer_nav-ttl {
+  display: block;
   font-size: 1.6rem;
   font-weight: var(--font-weight-bold);
 }
 
 .footer__nav-sns {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px; /* 文字と画像の間の余白 */
 }
 
 .footer__nav-sns a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
 }
 
 .footer__sns-text {
-  font-size: 1.1rem;
   font-family: var(--font-ja-heading);
   font-weight: var(--font-weight-bold);
   color: var(--color-text);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 .footer__sns-img {
@@ -677,6 +677,7 @@
     width: 35px;
     display: flex;
   }
+
 }
 /* sp */
 @media screen and (max-width: 768px) and (min-width: 426px) {
@@ -719,6 +720,18 @@
     font-size: 5vw;
     font-weight: var(--font-weight-bold);
   }
+
+  .footer__sns-text {
+    color: var(--color-text-inverse);
+  }
+  
+  .footer__sns-img {
+    line-height: 5vw;
+  }
+
+  .footer__sns-img img {
+    width: 100%;
+}
 
   .footer__copyright {
     color: var(--color-text-inverse);
@@ -768,6 +781,14 @@
 
   .footer__nav-sns {
     align-items: flex-end;
+    color: var(--color-text-inverse);
+  }
+
+  .footer__sns-img {
+    line-height: 24px;
+  }
+
+    .footer__sns-text {
     color: var(--color-text-inverse);
   }
 
@@ -829,6 +850,25 @@
 
 /* sp */
 @media screen and (max-width: 768px) and (min-width: 426px) {
+  .reserve__container {
+    position: relative;
+  }
+  
+  .reserve__container::before {
+    display: block;
+    content: "";
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    background-image: url(../img/RESERVE-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: -1;
+  }
+  
   .reserve__btn-wrap {
     gap: 4.25rem;
     flex-direction: column;

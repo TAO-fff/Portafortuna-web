@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>予約ページ | Porta fortuna</title>
+    <title>お問い合わせページ | Porta fortuna</title>
     <meta name="description" content="大人世代の「何を着たらいいかわからない」を解決！ ショッピング同行とオンラインクローゼット診断で、あなたにぴったりの着こなしをご提案します。" />
 
     <!-- ファビコン有無確認 -->
@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/pages/reserve.css" />
+    <link rel="stylesheet" href="./css/pages/contact.css" />
 
     <!-- SNSやOGP対応（オプション） -->
     <meta property="og:title" content="ページタイトル" />
@@ -88,10 +88,10 @@
             srcset="./img/sp-reserve-top.jpg"
             media="(max-width: 768px)"
           />
-          <img src="./img/reserve-top.jpg" alt="予約ページ" focusable="false" />
+          <img src="./img/reserve-top.jpg" alt="お問い合わせページ" focusable="false" />
         </picture>
       </div>
-      <h1 class="individual-top-ttl l-container">RESERVE</h1>
+      <h1 class="individual-top-ttl l-container">CONTACT</h1>
     </div>
 
     <!-- contact -->
@@ -101,7 +101,9 @@
           <div class="contact__attention">
             <div class="contact__attention-txt">
               <p>
-                お申し込みありがとうございます。
+                お問い合わせいただきありがとうございます。
+                <span class="pc-br"></span>
+                ご相談やお仕事のご依頼など、お気軽にご連絡ください。
                 <span class="pc-br"></span>
                 通常3日以内にご返信いたします。万が一、期日を過ぎても返信が届かない場合は、お手数ですがInstagramのDMまたはメールにてご連絡いただけますと幸いです。
               </p>
@@ -130,7 +132,7 @@
                   お名前<span class="contact-form-required">必須</span>
                 </label>
                 <input
-                  name="entry.809361586"
+                  name="entry.1579993151"
                   type="text"
                   class="contact-form-input"
                   id="field-name"
@@ -146,24 +148,11 @@
                   ></label
                 >
                 <input
-                  name="entry.1841439309"
+                  name="entry.1529738847"
                   type="email"
                   class="contact-form-input"
                   id="field-mail"
                   placeholder="sample@sample.com"
-                  required="required"
-                />
-              </div>
-              <!-- 生年月日 -->
-              <div class="contact-form-item required-field">
-                <label class="contact-form-label" for="field-birthdate">
-                  生年月日 <span class="contact-form-required">必須</span>
-                </label>
-                <input
-                  name="entry.1765883313"
-                  type="date"
-                  class="contact-form-input"
-                  id="field-birthdate"
                   required="required"
                 />
               </div>
@@ -173,7 +162,7 @@
                   電話番号 <span class="contact-form-required">必須</span>
                 </label>
                 <input
-                  name="entry.797015839"
+                  name="entry.1988013298"
                   type="tel"
                   class="contact-form-input"
                   id="field-tel"
@@ -182,169 +171,39 @@
                   placeholder="例: 090-1234-5678"
                 />
               </div>
-              <!--媒体 -->
-              <div class="contact-form-item required-field">
-                <label class="contact-form-label" for="field-menu"
-                  >お申込みメニュー<span class="contact-form-required"
-                    >必須</span
-                  ></label
-                >
-                <div class="radio-group">
-                  <label>
-                    <input
-                      type="radio"
-                      name="entry.2120555649"
-                      value="メニュー"
-                      class="radio-item"
-                    />
-                    ショッピング同行<span class="radio-span"
-                      >（事前リサーチあり）</span
-                    >
-                    <p class="reserve-menu-sub-text">
-                      事前にご希望に合う店舗をリサーチし、スムーズにご案内します。
-                    </p>
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="entry.2120555649"
-                      value="知人紹介"
-                      class="radio-item"
-                    />
-                    ショップクルーズ＋お茶会<span class="radio-span"
-                      >（当日セレクト）</span
-                    >
-                    <p class="reserve-menu-sub-text">
-                      当日、店舗を巡りながら、お似合いのアイテムを一緒に探します。
-                    </p>
-                  </label>
-
-                  <label>
-                    <input
-                      type="radio"
-                      name="entry.2120555649"
-                      value="Instagram"
-                      class="radio-item"
-                    />
-                    オンラインクローゼット診断
-                    <p class="reserve-menu-sub-text">
-                      オンラインでお手持ちの服を診断し、コーディネート提案を行います。
-                    </p>
-                  </label>
-                </div>
-              </div>
-
-              <!-- 内容 -->
+              <!-- 会社名 -->
+              <div class="contact-form-item optional-field"> 
+                <label class="contact-form-label" for="field-company">会社名</label>
+                <input
+                  name="entry.1811652054"
+                  type="text"
+                  class="contact-form-input optional-input" 
+                  id="field-company"
+                  placeholder="会社名を入力してください"
+              />
+          </div>
+              <!-- メッセージ -->
               <div class="contact-form-item required-field">
                 <label class="contact-form-label" for="field-mesasge"
-                  >ご希望日時<span class="contact-form-required">必須</span>
-                </label>
-                <div class="contact-form-attention">
-                  <p>・お申込み日程のご希望をご記入ください。</p>
-                  <p>
-                    日程はいくつかご記入いただくと、スムーズに予約いただけます。
-                  </p>
-                  <p>・お時間は11時半～14時スタートでご記入ください。</p>
-                </div>
+                  >メッセージ<span class="contact-form-required"
+                    >必須</span
+                  >
+                  </label
+                >
                 <textarea
-                  name="entry.1307274012"
+                  name="entry.1654460343"
                   class="contact-form-input"
                   id="field-mesasge"
-                  placeholder="・お申込み日程のご希望を複数ご記入ください。"
+                  required="required"
+                  placeholder="・お問い合わせ内容をご記入ください。"
                 ></textarea>
               </div>
-              <!--媒体 -->
-              <div class="contact-form-item required-field">
-                <label class="contact-form-label" for="field-mesasge"
-                  >サロンを知ったきっかけ<span class="contact-form-required"
-                    >必須</span
-                  ></label
-                >
-                <div class="radio-group">
-                  <label>
-                    <input
-                      type="radio"
-                      name="entry.182693352"
-                      value="ホームページ"
-                      class="radio-item"
-                    />
-                    ホームページ
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="entry.182693352"
-                      value="知人紹介"
-                      class="radio-item"
-                    />
-                    知人紹介
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="entry.182693352"
-                      value="Instagram"
-                      class="radio-item"
-                    />
-                    Instagram
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="entry.182693352"
-                      value="YouTube"
-                      class="radio-item"
-                    />
-                    YouTube
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="entry.182693352"
-                      value="ブログ"
-                      class="radio-item"
-                    />
-                    ブログ
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      name="entry.182693352"
-                      value="その他"
-                      class="radio-item"
-                    />
-                    その他
-                  </label>
-                </div>
-              </div>
-              <!--attention1 -->
-              <div class="contact-form-item required-field">
-                <label class="contact-form-label" for="field-cancel">
-                  キャンセルポリシー</label
-                >
-                <div class="contact-cancel-text">
-                  <p class="contact-form-cancel-attention">
-                    延期の体調不良などのやむを得ない理由による延期は、当日でも対応可能です。お気軽にご相談ください。当日キャンセルのみ、サービス料金の100%をキャンセル料としてご請求させていただきます。ご了承ください。
-                  </p>
-                </div>
-                <div class="radio-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="entry.22203267"
-                      value="上記内容に同意する"
-                    />
-                    上記内容に同意する
-                  </label>
-                </div>
-              </div>
-
-              <!--attention2 -->
+           
+              <!--コンタクト attention1 -->
               <div class="contact-form-item required-field">
                 <label class="contact-form-label" for="field-privacy">
                   プライバシーポリシー</label
-                >
-                <div class="contact-privacy-text">
+                ><div class="contact-privacy-text">
                   <p class="contact-form-privacy-attention">
                     お客様の個人情報は、お申し込み対応やサービス提供のために適切に管理・利用いたします。第三者への提供は行いません。
                     同意いただける場合は、以下のチェックボックスにチェックをお願いいたします。
@@ -354,22 +213,23 @@
                   <label>
                     <input
                       type="checkbox"
-                      name="entry.1428046597"
+                      name="entry.2000978159"
                       value="上記内容に同意する"
-                    />
+                      required="required"
+                      />
                     上記内容に同意する
                   </label>
                 </div>
               </div>
 
-              <!-- 送信btn -->
-              <div class="contact-form-submit">
-                <p id="error-message">未記入の項目があります</p>
-                <button type="submit" class="submit-btn" disabled>送信</button>
-              </div>
-            </form>
-          </div>
+            <!-- 送信btn -->
+            <div class="contact-form-submit">
+              <p id="error-message">未記入の項目があります</p>
+              <button type="submit" class="submit-btn" disabled>送信</button>
+            </div>
+          </form>
         </div>
+      </div>
         <!-- //フォーム -->
       </section>
     </div>
@@ -397,8 +257,8 @@
     <div class="components-container">
       <footer class="footer">
         <div class="footer__nav-wrap l-container">
-          <!-- left -->
-          <div class="footer__nav-wrap-left">
+           <!-- left -->
+           <div class="footer__nav-wrap-left">
             <nav class="footer__nav">
               <ul>
                 <li class="footer__item footer_nav-ttl nav-item">
@@ -489,30 +349,30 @@
               </ul>
             </nav>
           </div>
-         <!-- right -->
-         <div class="footer__nav-wrap-right">
-          <nav class="footer__nav">
-            <ul>
-              <li class="footer__item footer_nav-ttl nav-item">
-                <a href="./contact.html">お問い合わせ</a>
-              </li>
-            </ul>
-            <ul>
-              <li class="footer__nav-sns footer__item nav-item">
-                <a href="https://www.instagram.com/saya.takahashi0124/"
-                target="_blank">
-                  <span class="footer_nav-ttl">Instagram</span>
-                  <div class="footer__sns-img">
-                    <picture>
-                      <source srcset="./img/sp-Instagram-icon.png" media="(max-width: 768px)" />
-                      <img src="./img/Vector.png" alt="Instagram" />
-                    </picture>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+          <!-- right -->
+          <div class="footer__nav-wrap-right">
+            <nav class="footer__nav">
+              <ul>
+                <li class="footer__item footer_nav-ttl nav-item">
+                  <a href="./contact.html">お問い合わせ</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="footer__nav-sns footer__item nav-item">
+                  <a href="https://www.instagram.com/saya.takahashi0124/"
+                  target="_blank">
+                    <span class="footer_nav-ttl">Instagram</span>
+                    <div class="footer__sns-img">
+                      <picture>
+                        <source srcset="./img/sp-Instagram-icon.png" media="(max-width: 768px)" />
+                        <img src="./img/Vector.png" alt="Instagram" />
+                      </picture>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <div class="footer__copyright">
           <p>©2024 porta fortuna プライバシーポリシー</p>
@@ -526,6 +386,6 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- js -->
     <script src="./js/components.js"></script>
-    <script src="./js/reserve.js" defer></script>
+    <script src="./js/contact.js" defer></script>
   </body>
 </html>
