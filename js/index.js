@@ -15,73 +15,6 @@ $(function () {
   });
 });
 
-// reason 背景色
-// 動きのきっかけとなるアニメーションの名前を定義
-function fadeAnime() {
-
-  // 左から右に伸びるアニメーション（fadeUpTriggerクラスに設定）
-  $('.fadeUpTrigger').each(function() {
-      var elemPos = $(this).offset().top - 0; // 要素より、50px上の位置
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-
-      if (scroll >= elemPos - windowHeight) {
-          $(this).addClass('bgLRextend'); // 画面内に入ったらアニメーションを追加
-      } else {
-          $(this).removeClass('bgLRextend'); // 画面外に出たらアニメーションを外す
-      }
-  });
-
-  // 右から左に伸びるアニメーション（fadeDownTriggerクラスに設定）
-  $('.fadeDownTrigger').each(function() {
-      var elemPos = $(this).offset().top - 0; // 要素より、50px上の位置
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-
-      if (scroll >= elemPos - windowHeight) {
-          $(this).addClass('bgRLextend'); // 画面内に入ったらアニメーションを追加
-      } else {
-          $(this).removeClass('bgRLextend'); // 画面外に出たらアニメーションを外す
-      }
-  });
-}
-
-$(window).on('scroll', function() {
-  fadeAnime(); // スクロール時にアニメーションを実行
-});
-
-$(window).on('load', function() {
-  fadeAnime(); // ページ読み込み時にもアニメーションを実行
-});
-
-
-
-
-// reason wrapper1つずつ表示
-document.addEventListener("DOMContentLoaded", function () {
-  const reasonItems = document.querySelectorAll(".home__reason-item-wrap");
-
-  function fadeUpOnScroll() {
-    const scrollPosition = window.scrollY + window.innerHeight;
-
-    reasonItems.forEach((item, index) => {
-      const itemPosition = item.offsetTop;
-
-      if (scrollPosition > itemPosition + 100) {
-        setTimeout(() => {
-          item.classList.add("fade-in");
-        }, index * 1000); 
-      }
-    });
-  }
-
-  window.addEventListener("scroll", fadeUpOnScroll);
-});
-
-
-
-
-
 //home__menu 各メニューfadeUpアニメーション 
 function menuScrollAnime() {
   var time = 750;
@@ -109,4 +42,48 @@ function menuScrollAnime() {
 
 $(window).on('scroll', function () {
   menuScrollAnime();
+});
+
+
+// reason
+// reason 背景色
+$(window).on('scroll', function () {
+  var triggerPos = $('.home__reason-groupe').offset().top; // 発火位置
+  var scroll = $(window).scrollTop();
+  var windowHeight = $(window).height();
+
+  if (scroll + windowHeight > triggerPos) {
+      $('.bgextend').each(function () {
+          if (!$(this).hasClass('animated')) { // すでにアニメーションが実行されたか確認
+              $(this).css('animation-play-state', 'running'); // アニメーションを開始
+              $(this).addClass('animated'); // 二度発火を防ぐ
+          }
+      });
+  }
+});
+
+
+
+
+
+
+// reason wrapper1つずつ表示
+document.addEventListener("DOMContentLoaded", function () {
+  const reasonItems = document.querySelectorAll(".home__reason-item-wrap");
+
+  function fadeUpOnScroll() {
+    const scrollPosition = window.scrollY + window.innerHeight;
+
+    reasonItems.forEach((item, index) => {
+      const itemPosition = item.offsetTop;
+
+      if (scrollPosition > itemPosition + 100) {
+        setTimeout(() => {
+          item.classList.add("fade-in");
+        }, index * 1000); 
+      }
+    });
+  }
+
+  window.addEventListener("scroll", fadeUpOnScroll);
 });
