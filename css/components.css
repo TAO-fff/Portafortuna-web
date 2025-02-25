@@ -401,8 +401,7 @@
   }
 
   .header-nav-sp {
-    display: none;
-    position: absolute;
+    visibility: hidden;    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -496,6 +495,7 @@
   background-color: var(--color-base-dark);
   border-radius: 5rem;
 }
+
 
   /* hamメニュークリック時動き */
   .sp-menu-btn.open span {
@@ -889,7 +889,7 @@
 
 @media screen and (max-width: 426px) {
   .reserve__btn-wrap {
-    gap: 4.25rem;
+    gap: 2.25rem;
     flex-direction: column;
     padding: 75px 0;
     width: 90%;
@@ -897,7 +897,7 @@
 
   .reserve__btn-message,
   .reserve__btn-link a {
-    font-size: 6vw;
+    font-size: 5.2vw;
     text-align: center;
   }
 

@@ -4,37 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>プロフィールページ | Porta fortuna</title>
-    <meta name="description" content="大人世代の「何を着たらいいかわからない」を解決！ ショッピング同行とオンラインクローゼット診断で、あなたにぴったりの着こなしをご提案します。" />
+   <!-- Google tag (gtag.js) -->
+   <script
+   async
+   src="https://www.googletagmanager.com/gtag/js?id=G-ZE9HY8JX1H"
+ ></script>
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag() {
+     dataLayer.push(arguments);
+   }
+   gtag("js", new Date());
 
-    <!-- ファビコン有無確認 -->
-    <link rel="icon" href="./img/favicon-icon.jpg" />
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Qwitcher+Grypen:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
+   gtag("config", "G-ZE9HY8JX1H");
+ </script>
 
-    <!-- SEO関連 -->
-    <meta name="description" content="ページの簡単な説明" />
-    <!-- キーワード → 現在、あまり重要視されていないですが付けるか確認 -->
-    <meta name="keywords" content="キーワード1, キーワード2, キーワード3" />
-    <meta name="author" content="作成者名" />
+<!-- SEO関連 -->
+<meta name="description" content="大人世代の「何を着たらいいかわからない」を解決！ ショッピング同行とオンラインクローゼット診断で、あなたにぴったりの着こなしをご提案します。" />
+<meta name="keywords" content="ファッション, コーディネート, ショッピング同行, オンラインクローゼット診断, 大人世代のファッション" />
+<meta name="author" content="MATO-マト-" />
 
+  <!-- SNSやOGP対応 -->
+ <meta property="og:title" content="porta fortuna" />
+ <meta property="og:type" content="website">
+ <meta property="og:url" content="シェア時のリンク先（サイトのURL）" />
+ <meta property="og:image" content="サイトURLの後に、使いたい画像の相対パスを記載する" />
+ <meta property="og:description" content="大人世代のファッションコーディネートサービス" />
+ <meta property="og:site_name" content="porta fortuna">
+
+ <!-- ファビコン有無確認 -->
+ <link rel="icon" href="./img/favicon-icon.jpg" />
+
+ <!-- font -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+ <link
+   href="https://fonts.googleapis.com/css2?family=Aboreto&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&family=Qwitcher+Grypen:wght@400;700&display=swap"
+   rel="stylesheet"
+ />
     <!-- css -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/pages/profile.css" />
-
-    <!-- SNSやOGP対応（オプション） -->
-    <meta property="og:title" content="ページタイトル" />
-    <meta property="og:description" content="ページの説明" />
-    <meta property="og:image" content="og-image.jpg" />
-    <meta property="og:url" content="https://example.com" />
-    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <!-- header -->
@@ -512,19 +525,25 @@
     </section>
 
     <!-- 以下、前ページ共通 -->
-    <!-- reserve -->
-    <div class="reserve__container components-container">
-      <section class="reserve__btn">
-        <div class="reserve__btn-wrap l-container">
-          <div class="reserve__btn-message">
-            <p>「毎日のオシャレをもっと楽しく。」<span class="sp-br">似合う服に出会う体験を。</span></p>
+      <!-- reserve -->
+      <div class="reserve__container components-container">
+        <section class="reserve__btn">
+          <div class="reserve__btn-wrap l-container">
+            <div class="reserve__btn-message">
+              <p>
+                「毎日のオシャレをもっと楽しく」<span class="sp-br"
+                  >似合う服に出会う体験を。</span
+                >
+              </p>
             </div>
-          <div class="reserve__btn-link">
-            <a class="reserve__btn-footer cta-btn" href="">ご予約はこちら</a>
+            <div class="reserve__btn-link">
+              <a class="reserve__btn-footer cta-btn bg-skew" href="./reserve.html"
+                ><span>今すぐ予約する</span></a
+              >
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
 
     <!-- footer -->
     <div class="components-container">

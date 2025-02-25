@@ -3,11 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Porta fortuna</title>
-    <meta name="description" content="大人世代の「何を着たらいいかわからない」を解決！ ショッピング同行とオンラインクローゼット診断で、あなたにぴったりの着こなしをご提案します。" />
+    <title>porta fortuna</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-ZE9HY8JX1H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
+      gtag("config", "G-ZE9HY8JX1H");
+    </script>
+<!-- SEO関連 -->
+<meta name="description" content="大人世代の「何を着たらいいかわからない」を解決！ ショッピング同行とオンラインクローゼット診断で、あなたにぴったりの着こなしをご提案します。" />
+<meta name="keywords" content="ファッション, コーディネート, ショッピング同行, オンラインクローゼット診断, 大人世代のファッション" />
+<meta name="author" content="MATO-マト-" />
+
+     <!-- SNSやOGP対応 -->
+    <meta property="og:title" content="porta fortuna" />
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="シェア時のリンク先（サイトのURL）" />
+    <meta property="og:image" content="サイトURLの後に、使いたい画像の相対パスを記載する" />
+    <meta property="og:description" content="大人世代のファッションコーディネートサービス" />
+    <meta property="og:site_name" content="porta fortuna">
+ 
     <!-- ファビコン有無確認 -->
-    <link rel="icon" href="./img/favicon-icon.jpg" />
+    <link rel="icon" href="./img/favicon-icon-04.jpg" />
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,12 +42,6 @@
       rel="stylesheet"
     />
 
-    <!-- SEO関連 -->
-    <meta name="description" content="ページの簡単な説明" />
-    <!-- キーワード → 現在、あまり重要視されていないですが付けるか確認 -->
-    <meta name="keywords" content="キーワード1, キーワード2, キーワード3" />
-    <meta name="author" content="作成者名" />
-
     <!-- css -->
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/base.css" />
@@ -31,14 +50,6 @@
     <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./css/home.css" />
 
-    <!-- SNSやOGP対応（オプション） -->
-    <meta property="og:title" content="ページタイトル" />
-    <meta property="og:description" content="ページの説明" />
-    <meta property="og:image" content="og-image.jpg" />
-    <meta property="og:url" content="https://example.com" />
-    <meta name="twitter:card" content="summary_large_image" />
-
-    <!-- jsファイル -->
   </head>
   <body>
     <!-- header -->
@@ -57,10 +68,14 @@
           <li class="header-item nav-item">
             <a href="#homeVoice">お客様の声</a>
           </li>
-          <li class="header-item nav-item"><a href="./contact.html">お問い合わせ</a></li>
+          <li class="header-item nav-item">
+            <a href="./contact.html">お問い合わせ</a>
+          </li>
         </ul>
         <div class="header-btn">
-          <a class="cta-btn header-btn-link bg-skew-header" href="./reserve.html"
+          <a
+            class="cta-btn header-btn-link bg-skew-header"
+            href="./reserve.html"
             ><span>ご予約はこちら</span></a
           >
         </div>
@@ -90,24 +105,33 @@
       <div class="home__mv-img-wrap">
         <div class="home__top-mv">
           <picture>
-            <source srcset="./img/sp-home-fv-pic.jpg" media="(max-width: 768px)">
-            <img src="./img/home-fv-pic.png" alt="">
-            </picture>
+            <source
+              srcset="./img/sp-home-fv-pic.jpg"
+              media="(max-width: 768px)"
+            />
+            <img src="./img/home-fv-pic.png" alt="" />
+          </picture>
         </div>
 
         <!-- 画像 triangle -->
         <div class="home__top-mv-triangle">
           <picture>
-            <source srcset="./img/sp-home-mv-triangle.png" media="(max-width: 768px)">
-            <img src="./img/home-mv-triangle.png" alt="">
-            </picture>
+            <source
+              srcset="./img/sp-home-mv-triangle.png"
+              media="(max-width: 768px)"
+            />
+            <img src="./img/home-mv-triangle.png" alt="" />
+          </picture>
         </div>
         <!-- 画像 -->
         <div class="home__top-mv-small">
           <picture>
-            <source srcset="./img/sp-home-fv-pic-saya.png" media="(max-width: 768px)">
-            <img src="./img/home-fv-pic-saya.png" alt="">
-            </picture>
+            <source
+              srcset="./img/sp-home-fv-pic-saya.png"
+              media="(max-width: 768px)"
+            />
+            <img src="./img/home-fv-pic-saya.png" alt="" />
+          </picture>
         </div>
 
         <!-- ロゴ -->
@@ -128,7 +152,9 @@
               <p>似合うがその場でわかる<span class="sp-br">特別な体験</span></p>
             </div>
             <div class="sp-home__top-copy-horizontal-right">
-              <p class="sp-home__top-horizontal-txt-right">似合うがその場でわかる</p>
+              <p class="sp-home__top-horizontal-txt-right">
+                似合うがその場でわかる
+              </p>
             </div>
             <div class="sp-home__top-copy-horizontal-left">
               <p class="sp-home__top-horizontal-txt-left">特別な体験</p>
@@ -148,8 +174,8 @@
             <div class="home__top-message-txt">
               <p>
                 年齢とともにライフスタイルや体型が変わり、<br />
-               『似合う服がわからない』『何を買えばいいのか迷う』と悩んでいませんか？<br />
-               当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
+                『似合う服がわからない』『何を買えばいいのか迷う』と悩んでいませんか？<br />
+                当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
                 お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。
                 ファッションのお悩みを解決して、おしゃれを楽しみましょう。
               </p>
@@ -159,13 +185,12 @@
       </div>
     </div>
 
-     <!-- sp メッセージ -->
-     <div class="sp-home__top-message">
+    <!-- sp メッセージ -->
+    <div class="sp-home__top-message">
       <div class="l-heading-ttl-wrap">
-
-      <div class="l-heading-ttl">
-        <p class="l-heading-ttl-en sp-home__top-message-ttl-en">Message</p>
-      </div>
+        <div class="l-heading-ttl">
+          <p class="l-heading-ttl-en sp-home__top-message-ttl-en">Message</p>
+        </div>
       </div>
 
       <div class="sp-home__top-message-wrap">
@@ -177,13 +202,19 @@
       <div class="sp-home__top-message-txt">
         <p>
           年齢とともにライフスタイルや体型が変わり、<span class="pc-br"></span>
-          <span class="min-sp-br">『似合う服がわからない』</span> <span class="min-sp-br">『何を買えばいいのか迷う』</span>と悩んでいませんか？<span class="pc-br"></span>当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
-          お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。<span class="pc-br"></span>
-          ファッションのお悩みを解決して、おしゃれを楽しみましょう。<span class="pc-br"></span>
+          <span class="min-sp-br">『似合う服がわからない』</span>
+          <span class="min-sp-br">『何を買えばいいのか迷う』</span
+          >と悩んでいませんか？<span class="pc-br"></span
+          >当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
+          お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。<span
+            class="pc-br"
+          ></span>
+          ファッションのお悩みを解決して、おしゃれを楽しみましょう。<span
+            class="pc-br"
+          ></span>
         </p>
       </div>
     </div>
-
 
     <!-- reasonコンテンツ -->
     <div class="home__l-container">
@@ -206,11 +237,10 @@
               <div class="home__reason-area">
                 <ul class="home__reason-groupe delayScroll">
                   <li
-                    class="home__reason-item bgextend bgLRextend fadeUpTrigger" 
-                   
+                    class="home__reason-item bgextend bgLRextend fadeUpTrigger"
                   >
                     <span class="bgappear"
-                      ><div class="home__reason-item-wrap"  id="homeReason1">
+                      ><div class="home__reason-item-wrap" id="homeReason1">
                         <div class="home__reason-item-ttl">
                           <span class="home__reason-ttl-back">01</span>
                           <p>
@@ -230,10 +260,9 @@
                   </li>
                   <li
                     class="home__reason-item bgextend bgLRextend fadeUpTrigger"
-                   
                   >
                     <span class="bgappear"
-                      ><div class="home__reason-item-wrap"  id="homeReason2">
+                      ><div class="home__reason-item-wrap" id="homeReason2">
                         <div class="home__reason-item-ttl">
                           <span class="home__reason-ttl-back">02</span>
                           <p>
@@ -254,10 +283,9 @@
                   </li>
                   <li
                     class="home__reason-item bgextend bgLRextend fadeUpTrigger"
-                  
                   >
                     <span class="bgappear"
-                      ><div class="home__reason-item-wrap"   id="homeReason3">
+                      ><div class="home__reason-item-wrap" id="homeReason3">
                         <div class="home__reason-item-ttl">
                           <span class="home__reason-ttl-back">03</span>
                           <p>
@@ -278,10 +306,9 @@
                   </li>
                   <li
                     class="home__reason-item bgextend bgLRextend fadeUpTrigger"
-                  
                   >
                     <span class="bgappear"
-                      ><div class="home__reason-item-wrap"   id="homeReason4">
+                      ><div class="home__reason-item-wrap" id="homeReason4">
                         <div class="home__reason-item-ttl">
                           <span class="home__reason-ttl-back">04</span>
                           <p>
@@ -300,6 +327,91 @@
                         </div>
                       </div>
                     </span>
+                  </li>
+                </ul>
+
+                <!-- sp 4つの理由 -->
+                <ul class="sp-home__reason-groupe">
+                  <li class="sp-home__reason-item">
+                    <div class="sp-home__reason-item-wrap">
+                      <div class="sp-home__reason-item-ttl">
+                        <span class="sp-home__reason-arrow"></span>
+                        <span class="sp-home__reason-ttl-back">01</span>
+                        <p>
+                          <span class="sp-home__reason-big-txt">
+                            1,000名以上の診断実績</span
+                          >で磨いた確かな提案力
+                        </p>
+                      </div>
+                      <div class="sp-home__reason-txt">
+                        <p>
+                          イメージコンサルタント歴5年以上、診断実績1,000名以上の豊富な経験を活かし、お客様の「好き」やライフスタイルに寄り添った具体的なコーディネートをご提案します。
+                          さらに、年齢や体型に縛られず、自分らしさを引き出すスタイリングのコツを丁寧にお伝えし、おしゃれの可能性を広げるお手伝いをいたします。
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="sp-home__reason-item bgextend">
+                    <div class="sp-home__reason-item-wrap">
+                      <div class="sp-home__reason-item-ttl">
+                        <span class="sp-home__reason-arrow"></span>
+
+                        <span class="sp-home__reason-ttl-back">02</span>
+                        <p>
+                          <span class="sp-home__reason-big-txt">
+                            リピーター続出中</span
+                          >の
+                          満足度が高いサービス
+                        </p>
+                      </div>
+                      <div class="sp-home__reason-txt">
+                        <p>
+                          お手持ちのお洋服にどんなアイテムを買い足せばコーディネートが広がるのか。また、着こなしに悩むお洋服をどうすればおしゃれに見えるのか。そんなお悩みに丁寧にお応えします。
+                          「自分らしい新しいおしゃれが見つかる」と多くの好評を頂戴しており、定期的に予約いただくお客様が増えております。
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="sp-home__reason-item">
+                    <div class="sp-home__reason-item-wrap">
+                      <div class="sp-home__reason-item-ttl">
+                        <span class="sp-home__reason-arrow"></span>
+                        <span class="sp-home__reason-ttl-back">03</span>
+                        <p>
+                          <span class="sp-home__reason-big-txt">
+                            専門資格を持つプロ</span
+                          >が
+                          お伝えする身につくセンス
+                        </p>
+                      </div>
+                      <div class="sp-home__reason-txt">
+                        <p>
+                          顔タイプ診断®︎1級アドバイザー、パーソナルカラー診断、骨格診断などの資格保有者として、確かな知識に基づいた自信を持てるおしゃれのご提案をします。
+                          また、なぜお似合いになるのかを理論に基づいてお伝えするため、お洋服選びやコーディネートの組み方に活かせるようなセンスを身に付けていただけます。
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="sp-home__reason-item">
+                    <div class="sp-home__reason-item-wrap">
+                      <div class="sp-home__reason-item-ttl">
+                        <span class="sp-home__reason-arrow"></span>
+                        <span class="sp-home__reason-ttl-back">04</span>
+                        <p>
+                          <span class="sp-home__reason-big-txt"><span class="min-sp-br">
+                            業界内から信頼される</span
+                          ></span>
+                          スタイリング技術
+                        </p>
+                      </div>
+                      <div class="sp-home__reason-txt">
+                        <p>
+                          顔タイプ診断®︎協会公式YouTubeを筆頭に、さまざまなメディアでスタイリングを担当。
+                          さらに、プロのイメージコンサルタントを育成する講座でスタイリングの実習講師を担当しており、業界内からも「信頼性が高いスタイリング技術」と支持されております。
+                          プロも認める技術で、お客様の魅力を引き立たせる提案をいたします。
+                        </p>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -579,16 +691,24 @@
               <p>SAYA</p>
             </div>
             <div class="home__profile-txt-content">
+              <p>50代、身長150cm。背が低く、ぽっちゃり体型の私。<br /></p>
               <p>
-                50代、身長150cm。背が低く、ぽっちゃり体型の私。<br /></p>
-                <p>数年前までは、どこにでもいる普通の50代の主婦でした。<br />
-                会社員、結婚、出産、子育て、専業主婦、パート勤務…。<br /></p>
-                <p>人生のさまざまな場面を経験してきたからこそ、「年齢を重ねてもおしゃれを楽しむことの大切さ」を実感しています。</p>
-                <p>お洋服選びに迷ったり、似合うスタイルがわからなくなったりするのは、
-                どんな方でも経験すること。</p>
-                <p>私自身もその悩みを抱えた一人だからこそ、
-                お客様にリアルなお悩みに寄り添ったご提案ができます。</p>
-                <p>「今の自分だからこそ楽しめるおしゃれ」を一緒に見つけましょう。
+                数年前までは、どこにでもいる普通の50代の主婦でした。<br />
+                会社員、結婚、出産、子育て、専業主婦、パート勤務…。<br />
+              </p>
+              <p>
+                人生のさまざまな場面を経験してきたからこそ、「年齢を重ねてもおしゃれを楽しむことの大切さ」を実感しています。
+              </p>
+              <p>
+                お洋服選びに迷ったり、似合うスタイルがわからなくなったりするのは、
+                どんな方でも経験すること。
+              </p>
+              <p>
+                私自身もその悩みを抱えた一人だからこそ、
+                お客様にリアルなお悩みに寄り添ったご提案ができます。
+              </p>
+              <p>
+                「今の自分だからこそ楽しめるおしゃれ」を一緒に見つけましょう。
               </p>
             </div>
           </div>
@@ -668,11 +788,15 @@
       <section class="reserve__btn">
         <div class="reserve__btn-wrap l-container">
           <div class="reserve__btn-message">
-            <p>「毎日のオシャレをもっと楽しく。」<span class="sp-br">似合う服に出会う体験を。</span></p>
+            <p>
+              「毎日のオシャレをもっと楽しく」<span class="sp-br"
+                >似合う服に出会う体験を。</span
+              >
+            </p>
           </div>
           <div class="reserve__btn-link">
             <a class="reserve__btn-footer cta-btn bg-skew" href="./reserve.html"
-              ><span>ご予約はこちら</span></a
+              ><span>今すぐ予約する</span></a
             >
           </div>
         </div>
@@ -702,7 +826,9 @@
                   <a href="./menu.html#menu-cruise">ショップクルーズ＋お茶会</a>
                 </li>
                 <li class="footer__item nav-item">
-                  <a href="./menu.html#menu-closet">オンラインクローゼット診断</a>
+                  <a href="./menu.html#menu-closet"
+                    >オンラインクローゼット診断</a
+                  >
                 </li>
                 <li class="footer__item nav-item">
                   <a href="./menu.html#menu-price">料金のご案内</a>
@@ -743,14 +869,10 @@
                   <a href="./profile.html">プロフィール</a>
                 </li>
                 <li class="footer__item nav-item">
-                  <a href="./profile.html#profile-qualifications"
-                    >保有資格</a
-                  >
+                  <a href="./profile.html#profile-qualifications">保有資格</a>
                 </li>
                 <li class="footer__item nav-item">
-                  <a href="./profile.html#profile-diagnosis"
-                    >各診断タイプ</a
-                  >
+                  <a href="./profile.html#profile-diagnosis">各診断タイプ</a>
                 </li>
                 <li class="footer__item nav-item">
                   <a href="./profile.html#profile-outfit"
@@ -785,12 +907,17 @@
               </ul>
               <ul>
                 <li class="footer__nav-sns footer__item nav-item">
-                  <a href="https://www.instagram.com/saya.takahashi0124/"
-                  target="_blank">
+                  <a
+                    href="https://www.instagram.com/saya.takahashi0124/"
+                    target="_blank"
+                  >
                     <span class="footer_nav-ttl">Instagram</span>
                     <div class="footer__sns-img">
                       <picture>
-                        <source srcset="./img/sp-Instagram-icon.png" media="(max-width: 768px)" />
+                        <source
+                          srcset="./img/sp-Instagram-icon.png"
+                          media="(max-width: 768px)"
+                        />
                         <img src="./img/Vector.png" alt="Instagram" />
                       </picture>
                     </div>
@@ -803,19 +930,6 @@
         <div class="footer__copyright">
           <p><span>©2024 porta fortuna </span></p>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
       </footer>
     </div>
 

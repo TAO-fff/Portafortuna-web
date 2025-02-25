@@ -687,7 +687,8 @@
   padding-bottom: 120px;
 }
 
-.home__reason-groupe {
+.home__reason-groupe,
+.sp-home__reason-groupe {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -696,7 +697,8 @@
   padding: 45px 0;
 }
 
-.home__reason-item {
+.home__reason-item,
+.sp-home__reason-item {
   background-color: var(--color-base-light);
   display: flex;
   flex-direction: column;
@@ -704,7 +706,8 @@
   width: 42%;
 }
 
-.home__reason-item-wrap {
+.home__reason-item-wrap,
+.sp-home__reason-item-wrap {
   padding: 45px 30px;
   width: 100%;
   box-sizing: border-box;
@@ -722,12 +725,14 @@
 }
 
 
-.home__reason-item-ttl {
+.home__reason-item-ttl,
+.sp-home__reason-item-ttl {
   padding-bottom: 17px;
   position: relative;
 }
 
-.home__reason-ttl-back {
+.home__reason-ttl-back,
+.sp-home__reason-ttl-back {
   display: block;
   content: "";
   color: var(--color-text);
@@ -744,14 +749,16 @@
   line-height: var(--line-height-base);
 }
 
-.home__reason-item-ttl p {
+.home__reason-item-ttl p,
+.sp-home__reason-item-ttl p {
   font-family: var(--font-ja-heading);
   font-size: 1.5rem;
   line-height: var(--line-height-base);
   text-align: center;
 }
 
-.home__reason-big-txt {
+.home__reason-big-txt,
+.sp-home__reason-big-txt {
   font-size: 1.75rem;
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
@@ -759,11 +766,16 @@
   padding-bottom: 2px;
 }
 
-.home__reason-txt p {
+.home__reason-txt p,
+.sp-home__reason-txt p {
   font-size: var(--font-size-text);
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-wide);
   padding: 0 30px;
+}
+
+.sp-home__reason-groupe {
+  display: none;
 }
 
 /* =======================
@@ -912,12 +924,18 @@
 
 /* tab */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
+
   .home__l-container {
     padding: 130px 0;
   }
 
   .home__reason-item-wrap {
     padding: 45px 15px;
+    margin: 0 auto;
+  }
+  
+  .home__reason-item {
+    width: 80%;
   }
 
   .home__reason-item-ttl {
@@ -926,10 +944,11 @@
 
   .home__reason-ttl-back {
     font-size: 7.5vw;
+    top: 2%;
   }
 
   .home__reason-big-txt {
-    font-size: 2.15vw;
+    font-size: 28px;
   }
 
   .home__reason-txt p {
@@ -938,7 +957,245 @@
 }
 
 /* sp */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 426px) {
+    .home__reason-groupe {
+    display: none;
+  }
+
+  .sp-home__reason-groupe {
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding: 45px 0;
+  }
+
+  .home__reason-area {
+    width: 90%;
+  }
+
+  .sp-home__reason-item-wrap {
+    padding: 45px 0px;
+  }
+
+  .sp-home__reason-item {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .sp-home__reason-item-ttl {
+    position: relative;
+    padding: 10px 20px 20px 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .sp-home__reason-arrow {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 100%;
+    right: 40%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sp-home__reason-arrow:before,
+  .sp-home__reason-arrow::after {
+    display: block;
+    content: "";
+    background: var(--color-primary);
+    height: 40px;
+    width: 1px;
+    position: absolute;
+    top: 60%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* ▼ 初期状態（下向き三角） */
+  .sp-home__reason-arrow:before {
+    left: -18px;
+    transform: translate(-50%, -50%) rotate(-65deg);
+  }
+  
+  .sp-home__reason-arrow::after {
+    left: 18px;
+    transform: translate(-50%, -50%) rotate(65deg);
+  }
+  
+  /* ▲ アコーディオンが開いたとき（上向き三角） */
+  .sp-home__reason-item.active .sp-home__reason-arrow:before {
+    transform: translate(-50%, -50%) rotate(65deg);
+  }
+  
+  .sp-home__reason-item.active .sp-home__reason-arrow::after {
+    transform: translate(-50%, -50%) rotate(-65deg);
+  }
+  
+
+  .sp-home__reason-ttl-back {
+    top: 6%;
+    left: 7%;
+    font-size: 50px;
+  }
+
+  .sp-home__reason-item-ttl p {
+    text-align: center;
+    padding: 0px;
+    font-size: 18px;
+  }
+
+  .sp-home__reason-big-txt {
+    font-size: 22px;
+  }
+
+  .sp-home__reason-txt {
+    position: relative;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .sp-home__reason-item.active .sp-home__reason-txt {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  /* .sp-home__reason-txt::before {
+    display: block;
+    content: "";
+    background-color: var(--color-primary);
+    width: 60%;
+    height: 0.25px;
+    position: absolute;
+    top: 35px;
+    left: 20%;
+  } */
+
+  .sp-home__reason-txt p {
+padding: 40px 15px 30px 15px;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .home__reason-groupe {
+    display: none;
+  }
+
+  .sp-home__reason-groupe {
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding: 45px 0;
+  }
+
+  .sp-home__reason-item-wrap {
+    padding: 45px 0px;
+  }
+
+  .sp-home__reason-item {
+    width: 100%;
+    margin: 10px auto;
+  }
+
+  .sp-home__reason-item-ttl {
+    position: relative;
+    padding: 10px 20px 20px 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .sp-home__reason-arrow {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 100%;
+    right: 30%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .sp-home__reason-arrow:before,
+  .sp-home__reason-arrow::after {
+    display: block;
+    content: "";
+    background: var(--color-primary);
+    height: 40px;
+    width: 1px;
+    position: absolute;
+    top: 60%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* ▼ 初期状態（下向き三角） */
+  .sp-home__reason-arrow:before {
+    left: -18px;
+    transform: translate(-50%, -50%) rotate(-65deg);
+  }
+  
+  .sp-home__reason-arrow::after {
+    left: 18px;
+    transform: translate(-50%, -50%) rotate(65deg);
+  }
+  
+  /* ▲ アコーディオンが開いたとき（上向き三角） */
+  .sp-home__reason-item.active .sp-home__reason-arrow:before {
+    transform: translate(-50%, -50%) rotate(65deg);
+  }
+  
+  .sp-home__reason-item.active .sp-home__reason-arrow::after {
+    transform: translate(-50%, -50%) rotate(-65deg);
+  }
+  
+
+  .sp-home__reason-ttl-back {
+    top: 50%;
+    left: 12%;
+    font-size: 50px;
+  }
+
+  .sp-home__reason-item-ttl p {
+    text-align: left;
+    padding: 0px;
+    font-size: 22px;
+    font-weight: var(--font-weight-bold);
+  }
+
+  .sp-home__reason-big-txt {
+    font-size: 22px;
+  }
+
+  .sp-home__reason-txt {
+    position: relative;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .sp-home__reason-item.active .sp-home__reason-txt {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  /* .sp-home__reason-txt::before {
+    display: block;
+    content: "";
+    background-color: var(--color-primary);
+    width: 60%;
+    height: 0.25px;
+    position: absolute;
+    top: 35px;
+    left: 20%;
+  } */
+
+  .sp-home__reason-txt p {
+padding: 40px 15px 30px 15px;
+  }
 }
 
 /* =======================
@@ -1111,12 +1368,13 @@
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    gap: 80px;
   }
 
   .home__menu-item {
     width: 100%;
     gap: 30px;
-    padding-bottom: 100px;
+    padding-bottom: 0px;
   }
 
   .home__menu-item-ttl {
@@ -1694,5 +1952,9 @@
 
   .sp-home__news-img-item img {
     width: 100%;
+  }
+
+  .home__news-img-groupe {
+    padding-bottom: 0;
   }
 }

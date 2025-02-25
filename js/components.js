@@ -18,21 +18,21 @@
       $(".sp-menu-btn").removeClass("hidden"); // sp-menu-btn を表示
     }
   });
+});
 
-  // スクロールイベント
-  $(window).on("scroll", function () {
-    const scrollTop = $(this).scrollTop();
-    const homeTopHeight = $(".home__reason").outerHeight() || 0; // 存在しない場合は0
-    const individualTopHeight = $(".individual-top").outerHeight() || 0;
-    const triggerHeight = Math.max(homeTopHeight, individualTopHeight); // どちらか大きい方を基準
+ // スクロールイベント
+ $(window).on("scroll", function () {
+  const scrollTop = $(this).scrollTop();
+  const homeTopHeight = $(".home__reason").outerHeight() || 0; // 存在しない場合は0
+  const individualTopHeight = $(".individual-top").outerHeight() || 0;
+  const triggerHeight = Math.max(homeTopHeight, individualTopHeight); // どちらか大きい方を基準
 
-    // スクロール位置が home__top または individual-top より下にきたら
-    if (scrollTop > triggerHeight) {
-      $(".sp-menu-btn").addClass("scrolled");
-      $(".sp-menu-btn span::before, .sp-menu-btn span::after").css("background-color", "#715F5A");
-    } else {
-      $(".sp-menu-btn").removeClass("scrolled");
-      $(".sp-menu-btn span::before, .sp-menu-btn span::after").css("background-color", ""); // 初期状態に戻す
-    }
-  });
+  // スクロール位置が home__top または individual-top より下にきたら
+  if (scrollTop > triggerHeight) {
+    $(".sp-menu-btn").addClass("scrolled");
+    $(".sp-menu-btn span::before, .sp-menu-btn span::after").css("background-color", "#715F5A");
+  } else {
+    $(".sp-menu-btn").removeClass("scrolled");
+    $(".sp-menu-btn span::before, .sp-menu-btn span::after").css("background-color", ""); // 初期状態に戻す
+  }
 });

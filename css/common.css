@@ -176,6 +176,7 @@
 
 .common__voice-img-wrap img {
   width: 100%;
+  box-shadow: 7px 7px 10px rgb(85, 85, 85, 0.4);
 }
 
 .sp-voice__after-group {
@@ -202,7 +203,7 @@
   }
 
   .voice__voice-customer p {
-    font-size: 1.33rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -417,8 +418,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    width: 85%;
+    gap: 10px;
+    width: 87%;
     margin: 0 auto;
   }
 
@@ -428,11 +429,11 @@
   }
 
   .sp-voice__voice-num-txt p {
-    font-size: 13px;
+    font-size: 10px;
   }
 
   .sp-voice__voice-num p {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .sp-voice__voice-customer {

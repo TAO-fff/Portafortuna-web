@@ -479,7 +479,7 @@
   line-height: 1.2;
   letter-spacing: var(--letter-spacing-base);
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
 .menu__item-flow {
@@ -487,7 +487,7 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 50px;
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 .menu__item-flow-list {
@@ -1647,8 +1647,18 @@ transition: 0.45s ease-in-out;
 
 /* tab */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
+  .menu__qa-wrap {
+    width: 90%;
+  }
+
+  .menu__qa-list-inner {
+    padding: 20px 0;
+  }
 }
 
 /* sp */
 @media screen and (max-width: 767px) {
+  .menu__qa-wrap {
+    width: 90%;
+  }
 }

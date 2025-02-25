@@ -80,10 +80,28 @@ document.addEventListener("DOMContentLoaded", function () {
       if (scrollPosition > itemPosition + 100) {
         setTimeout(() => {
           item.classList.add("fade-in");
-        }, index * 1000); 
+        }, index * 850); 
       }
     });
   }
 
   window.addEventListener("scroll", fadeUpOnScroll);
 });
+
+//768px以下 アコーディオン
+  $(document).ready(function () {
+    $(".sp-home__reason-item-wrap").on("click", function () {
+      var $item = $(this).closest(".sp-home__reason-item");
+      var $content = $item.find(".sp-home__reason-txt");
+      var $arrow = $item.find(".sp-home__reason-arrow");
+
+      if ($item.hasClass("active")) {
+        $content.slideUp(300);
+        $item.removeClass("active");
+      } else {
+        $(".sp-home__reason-item").removeClass("active").find(".sp-home__reason-txt").slideUp(300);
+        $item.addClass("active");
+        $content.slideDown(300);
+      }
+    });
+  });
