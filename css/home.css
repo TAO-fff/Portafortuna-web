@@ -938,6 +938,10 @@
     width: 80%;
   }
 
+ .bgextend {
+    margin: 0 0px 20px 0;
+}
+
   .home__reason-item-ttl {
     padding-bottom: 30px;
   }
