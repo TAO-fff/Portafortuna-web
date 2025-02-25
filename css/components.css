@@ -380,7 +380,7 @@
 
   .header-btn {
     width: 25%;
-  padding: 13px 20px;
+  padding: 0px 20px;
   }
 
   .header-btn-link,
@@ -675,7 +675,7 @@
   }
 
   .footer__sns-img {
-    width: 35px;
+    width: 20px;
     display: flex;
   }
 
