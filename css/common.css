@@ -516,7 +516,7 @@
   }
 
   .sp-voice__after-item {
-    padding: 26px 0px 120px 0px;
+    padding: 26px 0px 10vw 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
