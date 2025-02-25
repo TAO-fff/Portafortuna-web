@@ -23,16 +23,38 @@
  // スクロールイベント
  $(window).on("scroll", function () {
   const scrollTop = $(this).scrollTop();
-  const homeTopHeight = $(".home__reason").outerHeight() || 0; // 存在しない場合は0
-  const individualTopHeight = $(".individual-top").outerHeight() || 0;
-  const triggerHeight = Math.max(homeTopHeight, individualTopHeight); // どちらか大きい方を基準
+  const windowHeight = $(window).height();
+  const spMenu = $(".sp-menu-btn");
 
-  // スクロール位置が home__top または individual-top より下にきたら
-  if (scrollTop > triggerHeight) {
-    $(".sp-menu-btn").addClass("scrolled");
-    $(".sp-menu-btn span::before, .sp-menu-btn span::after").css("background-color", "#715F5A");
+  let isWhite = false; // 白にするかどうかのフラグ
+
+  // 判定する要素
+  const targets = [
+    ".individual-top",
+    ".header-nav-sp",
+    ".home__reason",
+    ".reserve__container",
+    ".footer"
+  ];
+
+  targets.forEach((selector) => {
+    const target = $(selector);
+    if (target.length) {
+      const targetTop = target.offset().top;
+      const targetBottom = targetTop + target.outerHeight();
+      
+      // sp-menu-btn がターゲットの範囲内にある場合
+      if (scrollTop + spMenu.height() >= targetTop && scrollTop <= targetBottom) {
+        isWhite = true;
+      }
+    }
+  });
+
+  if (isWhite) {
+    spMenu.addClass("white-bg").removeClass("scrolled");
   } else {
-    $(".sp-menu-btn").removeClass("scrolled");
-    $(".sp-menu-btn span::before, .sp-menu-btn span::after").css("background-color", ""); // 初期状態に戻す
+    spMenu.addClass("scrolled").removeClass("white-bg");
   }
 });
+
+

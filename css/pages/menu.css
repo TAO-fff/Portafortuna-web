@@ -104,6 +104,10 @@
     margin: 0 auto;
   }
 
+  .menu__concept-ttl:hover{
+    cursor: pointer;
+  }
+
   .menu__concept-txt::before {
     display: block;
     content: "";

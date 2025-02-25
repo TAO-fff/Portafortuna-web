@@ -736,7 +736,7 @@
   display: block;
   content: "";
   color: var(--color-text);
-  opacity: 0.15;
+  opacity: 0.08;
   width: 60%;
   height: 100%;
   position: absolute;
