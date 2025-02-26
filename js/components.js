@@ -1,24 +1,18 @@
  // humメニュー
  $(function () { 
-  // ページロード時に必ず非表示に設定
   $(".header-nav-sp").hide();
-  
+
   $(".sp-menu-btn").on("click", function () {
     $(this).toggleClass("open");
 
-    // ハンバーガーメニューが開かれているかどうかで処理を分ける
     if ($(this).hasClass("open")) {
-      // 開く処理
       $(".header-nav-sp").stop().fadeIn(300);
-      $(".sp-menu-btn").addClass("hidden"); // sp-menu-btn を非表示
-      $(".sp-menu-btn span::before, .sp-menu-btn span::after").css("background-color", "#fff");
     } else {
-      // 閉じる処理
       $(".header-nav-sp").stop().fadeOut(300);
-      $(".sp-menu-btn").removeClass("hidden"); // sp-menu-btn を表示
     }
   });
 });
+
 
  // スクロールイベント
  $(window).on("scroll", function () {
