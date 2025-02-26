@@ -1099,6 +1099,7 @@ padding: 40px 15px 30px 15px;
 
   .sp-home__reason-item-wrap {
     padding: 45px 0px;
+    position: relative;
   }
 
   .sp-home__reason-item {
@@ -1108,18 +1109,18 @@ padding: 40px 15px 30px 15px;
 
   .sp-home__reason-item-ttl {
     position: relative;
-    padding: 10px 20px 20px 20px;
+    padding: 10px 0px 20px 0px;
     width: 80%;
     margin: 0 auto;
   }
 
   .sp-home__reason-arrow {
     display: block;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     position: absolute;
     top: 100%;
-    right: 30%;
+    right: 32%;
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease-in-out;
   }
@@ -1138,12 +1139,12 @@ padding: 40px 15px 30px 15px;
   
   /* ▼ 初期状態（下向き三角） */
   .sp-home__reason-arrow:before {
-    left: -18px;
+    left: -17px;
     transform: translate(-50%, -50%) rotate(-65deg);
   }
   
   .sp-home__reason-arrow::after {
-    left: 18px;
+    left: 20px;
     transform: translate(-50%, -50%) rotate(65deg);
   }
   
@@ -1166,12 +1167,12 @@ padding: 40px 15px 30px 15px;
   .sp-home__reason-item-ttl p {
     text-align: left;
     padding: 0px;
-    font-size: 22px;
+    font-size: 5.85vw;
     font-weight: var(--font-weight-bold);
   }
 
   .sp-home__reason-big-txt {
-    font-size: 22px;
+    font-size: 5.85vw;
   }
 
   .sp-home__reason-txt {
