@@ -449,8 +449,8 @@
   /* ハンバーガーメニュー */
   .sp-menu-btn {
     display: block;
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     position: absolute;
     top: 0;
     right: 0;
@@ -473,8 +473,8 @@
 
   .sp-menu-btn span {
     background-color: var(--color-base-light);
-    top: 35px;
-    left: 17px;
+    top: 30px;
+    left: 12px;
   }
 
   .sp-menu-btn span::before {
