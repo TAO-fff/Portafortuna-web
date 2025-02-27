@@ -400,7 +400,7 @@
 
   .header-nav-sp {
     visibility: hidden;
-    display: none;
+    opacity: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -456,7 +456,7 @@
     right: 0;
     cursor: pointer;
     z-index: 9999;
-    background-color: rgb(162, 143, 129, .2);
+    background-color: rgb(162, 143, 129, 0.2);
   }
 
   .sp-menu-btn span,
@@ -510,42 +510,47 @@
   } */
 
   /* ハンバーガーメニューを開いた時 */
-.sp-menu-btn.open span {
-  width: 0;
-  height: 0;
-  transition: width 0.01s ease-in, height 0.01s ease-in;
-  background: var(--color-base-light);
-}
+  .header-nav-sp.open {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .sp-menu-btn.open span {
+    width: 0;
+    height: 0;
+    transition: width 0.01s ease-in, height 0.01s ease-in;
+    background: var(--color-base-light);
+  }
 
-.sp-menu-btn.open span::before,
-.sp-menu-btn.open span::after {
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  background: var(--color-base-light);
-}
+  .sp-menu-btn.open span::before,
+  .sp-menu-btn.open span::after {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    background: var(--color-base-light);
+  }
 
-.sp-menu-btn.open span::before {
-  transform: rotate(45deg) translate(0, 0); /* バツの上ライン */
-  top: 0;
-}
+  .sp-menu-btn.open span::before {
+    transform: rotate(45deg) translate(0, 0); /* バツの上ライン */
+    top: 0;
+  }
 
-.sp-menu-btn.open span::after {
-  transform: rotate(-45deg) translate(0, 0); /* バツの下ライン */
-  top: 0;
-}
+  .sp-menu-btn.open span::after {
+    transform: rotate(-45deg) translate(0, 0); /* バツの下ライン */
+    top: 0;
+  }
 
   /* スクロール時の背景色 */
-.sp-menu-btn.scrolled span,
-.sp-menu-btn.scrolled span::before,
-.sp-menu-btn.scrolled span::after {
-  background-color: var(--color-primary);
-}
+  .sp-menu-btn.scrolled span,
+  .sp-menu-btn.scrolled span::before,
+  .sp-menu-btn.scrolled span::after {
+    background-color: var(--color-primary);
+  }
 
-/* 白背景の場合 */
-.sp-menu-btn.white-bg span,
-.sp-menu-btn.white-bg span::before,
-.sp-menu-btn.white-bg span::after {
-  background-color: var(--color-base-light);
-}
+  /* 白背景の場合 */
+  .sp-menu-btn.white-bg span,
+  .sp-menu-btn.white-bg span::before,
+  .sp-menu-btn.white-bg span::after {
+    background-color: var(--color-base-light);
+  }
 }
 
 /* =======================
