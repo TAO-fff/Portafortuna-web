@@ -442,16 +442,21 @@
     padding: 5vw 10vw;
   }
 
+  .sp-header-btn {
+    margin-top: 30px;
+  }
+
   /* ハンバーガーメニュー */
   .sp-menu-btn {
     display: block;
-    width: 50px;
-    height: 40px;
+    width: 75px;
+    height: 75px;
     position: absolute;
-    top: 18px;
-    right: 10px;
+    top: 0;
+    right: 0;
     cursor: pointer;
     z-index: 9999;
+    background-color: rgb(162, 143, 129, .2);
   }
 
   .sp-menu-btn span,
@@ -462,23 +467,24 @@
     border-radius: 5rem;
     position: absolute;
     content: "";
-    width: 50px;
+    width: 40px;
     height: 2px;
   }
 
   .sp-menu-btn span {
     background-color: var(--color-base-light);
-    top: 15px;
+    top: 35px;
+    left: 17px;
   }
 
   .sp-menu-btn span::before {
     background-color: var(--color-base-light);
-    top: -11px;
+    top: -13px;
   }
 
   .sp-menu-btn span::after {
     background-color: var(--color-base-light);
-    bottom: -11px;
+    bottom: -13px;
   }
 
   .sp-menu-btn.scrolled span,
@@ -518,11 +524,13 @@
 }
 
 .sp-menu-btn.open span::before {
-  transform: rotate(45deg) translate(7px, 7px); /* バツの上ライン */
+  transform: rotate(45deg) translate(0, 0); /* バツの上ライン */
+  top: 0;
 }
 
 .sp-menu-btn.open span::after {
-  transform: rotate(-45deg) translate(7px, -7px); /* バツの下ライン */
+  transform: rotate(-45deg) translate(0, 0); /* バツの下ライン */
+  top: 0;
 }
 
   /* スクロール時の背景色 */
