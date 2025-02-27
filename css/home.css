@@ -600,6 +600,13 @@
     width: 90%;
   }
 
+  
+  .sp-home__message-center {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+
   .sp-home__top-message-txt p {
     width: 100%;
     font-size: 1.125rem;
@@ -990,7 +997,7 @@
 
   .sp-home__reason-item-ttl {
     position: relative;
-    padding: 10px 20px 20px 20px;
+    padding: 10px 0px 20px 0px;
     width: 90%;
     margin: 0 auto;
   }
@@ -1000,10 +1007,10 @@
     width: 50px;
     height: 50px;
     position: absolute;
-    top: 100%;
-    right: 40%;
-    transform: translate(-50%, -50%);
-    transition: transform 0.3s ease-in-out;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+        transition: transform 0.3s ease-in-out;
   }
   
   .sp-home__reason-arrow:before,
@@ -1020,12 +1027,12 @@
   
   /* ▼ 初期状態（下向き三角） */
   .sp-home__reason-arrow:before {
-    left: -18px;
+    left: 4px;
     transform: translate(-50%, -50%) rotate(-65deg);
   }
   
   .sp-home__reason-arrow::after {
-    left: 18px;
+    left: 40px;
     transform: translate(-50%, -50%) rotate(65deg);
   }
   
@@ -1079,7 +1086,7 @@
   } */
 
   .sp-home__reason-txt p {
-padding: 40px 15px 30px 15px;
+padding: 50px 15px 30px 15px;
   }
 }
 
@@ -1119,9 +1126,9 @@ padding: 40px 15px 30px 15px;
     width: 40px;
     height: 40px;
     position: absolute;
-    top: 100%;
-    right: 32%;
-    transform: translate(-50%, -50%);
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
     transition: transform 0.3s ease-in-out;
   }
   
@@ -1139,12 +1146,12 @@ padding: 40px 15px 30px 15px;
   
   /* ▼ 初期状態（下向き三角） */
   .sp-home__reason-arrow:before {
-    left: -17px;
+    left: 0px;
     transform: translate(-50%, -50%) rotate(-65deg);
   }
   
   .sp-home__reason-arrow::after {
-    left: 20px;
+    left: 37px;
     transform: translate(-50%, -50%) rotate(65deg);
   }
   

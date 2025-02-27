@@ -399,6 +399,7 @@
   }
 
   .header-nav-sp {
+    visibility: hidden;
     display: none;
     position: absolute;
     top: 0;
@@ -444,8 +445,8 @@
   /* ハンバーガーメニュー */
   .sp-menu-btn {
     display: block;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 40px;
     position: absolute;
     top: 18px;
     right: 10px;
@@ -459,31 +460,23 @@
     background-color: var(--hum-btn-color);
     transition: 0.3s ease;
     border-radius: 5rem;
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
   }
 
   .sp-menu-btn span {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 2px;
     background-color: var(--color-base-light);
     top: 15px;
   }
 
   .sp-menu-btn span::before {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 2px;
     background-color: var(--color-base-light);
     top: -11px;
   }
 
   .sp-menu-btn span::after {
-    position: absolute;
-    content: "";
-    width: 30px;
-    height: 2px;
     background-color: var(--color-base-light);
     bottom: -11px;
   }
