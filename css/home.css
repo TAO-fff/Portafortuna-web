@@ -84,8 +84,8 @@
   flex-direction: column;
   align-items: flex-start;
   position: absolute;
-  top: 35.5%;
-  right: 0vw;
+  top: 36.5%;
+  right: 4.25vw;
   gap: 110px;
 }
 
@@ -368,7 +368,8 @@
   .sp-home__top-copy-vertical p {
     font-size: 4.6vw;
     text-align: right;
-    background-color: rgba(162, 143, 129, 0.5);    backdrop-filter: blur(2px);
+    background-color: rgba(162, 143, 129, 0.5);
+    backdrop-filter: blur(2px);
     padding: 0 5.1vw;
     letter-spacing: var(--letter-spacing-wide);
   }
@@ -600,7 +601,6 @@
     width: 90%;
   }
 
-  
   .sp-home__message-center {
     display: block;
     text-align: center;
@@ -731,7 +731,6 @@
   transform: translateY(0);
 }
 
-
 .home__reason-item-ttl,
 .sp-home__reason-item-ttl {
   padding-bottom: 17px;
@@ -786,7 +785,7 @@
 }
 
 /* =======================
-  アニメーション reason
+  背景伸びるアニメーション reason
 ======================= */
 /* レイアウトのためのCSS */
 .bgextend {
@@ -807,9 +806,10 @@
 }
 
 /* アニメーションを開始するクラス */
-.animate .bgextend {
+.animate.bgextend {
   opacity: 1;
-  animation: bgextendAnimeBase 1s ease-out forwards, bgextendAnimeSecond 1s ease-out 0.5s forwards;
+  animation: bgextendAnimeBase 1s ease-out forwards,
+    bgextendAnimeSecond 1s ease-out 0.5s forwards;
 }
 
 @keyframes bgextendAnimeBase {
@@ -854,7 +854,6 @@
   background-color: #715f5a;
 }
 
-
 @keyframes bgUDextendAnime {
   0% {
     transform-origin: top;
@@ -898,7 +897,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #715f5a; /* 伸びる背景色の色 */
+  background-color: #715f5a;
   transform-origin: top;
   transform: scaleY(0);
   transition: transform 1s ease;
@@ -920,6 +919,8 @@
   transform: translateY(0);
 }
 
+/*  */
+
 /* =======================
   sp reason
 ======================= */
@@ -931,7 +932,6 @@
 
 /* tab */
 @media screen and (max-width: 1024px) and (min-width: 768px) {
-
   .home__l-container {
     padding: 130px 0;
   }
@@ -940,14 +940,14 @@
     padding: 45px 15px;
     margin: 0 auto;
   }
-  
+
   .home__reason-item {
     width: 80%;
   }
 
- .bgextend {
+  .bgextend {
     margin: 0 0px 20px 0;
-}
+  }
 
   .home__reason-item-ttl {
     padding-bottom: 30px;
@@ -969,17 +969,17 @@
 
 /* sp */
 @media screen and (max-width: 768px) and (min-width: 426px) {
-    .home__reason-groupe {
+  .home__reason-groupe {
     display: none;
   }
 
   .sp-home__reason-groupe {
     display: flex;
     flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 5%;
-  padding: 45px 0;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    padding: 45px 0;
   }
 
   .home__reason-area {
@@ -1010,9 +1010,9 @@
     top: 80%;
     left: 50%;
     transform: translateX(-50%);
-        transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
   }
-  
+
   .sp-home__reason-arrow:before,
   .sp-home__reason-arrow::after {
     display: block;
@@ -1024,27 +1024,26 @@
     top: 60%;
     transition: transform 0.3s ease-in-out;
   }
-  
+
   /* ▼ 初期状態（下向き三角） */
   .sp-home__reason-arrow:before {
     left: 4px;
     transform: translate(-50%, -50%) rotate(-65deg);
   }
-  
+
   .sp-home__reason-arrow::after {
     left: 40px;
     transform: translate(-50%, -50%) rotate(65deg);
   }
-  
+
   /* ▲ アコーディオンが開いたとき（上向き三角） */
   .sp-home__reason-item.active .sp-home__reason-arrow:before {
     transform: translate(-50%, -50%) rotate(65deg);
   }
-  
+
   .sp-home__reason-item.active .sp-home__reason-arrow::after {
     transform: translate(-50%, -50%) rotate(-65deg);
   }
-  
 
   .sp-home__reason-ttl-back {
     top: 6%;
@@ -1086,7 +1085,7 @@
   } */
 
   .sp-home__reason-txt p {
-padding: 50px 15px 30px 15px;
+    padding: 50px 15px 30px 15px;
   }
 }
 
@@ -1098,10 +1097,10 @@ padding: 50px 15px 30px 15px;
   .sp-home__reason-groupe {
     display: flex;
     flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 5%;
-  padding: 45px 0;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5%;
+    padding: 45px 0;
   }
 
   .sp-home__reason-item-wrap {
@@ -1131,7 +1130,7 @@ padding: 50px 15px 30px 15px;
     transform: translateX(-50%);
     transition: transform 0.3s ease-in-out;
   }
-  
+
   .sp-home__reason-arrow:before,
   .sp-home__reason-arrow::after {
     display: block;
@@ -1143,27 +1142,26 @@ padding: 50px 15px 30px 15px;
     top: 60%;
     transition: transform 0.3s ease-in-out;
   }
-  
+
   /* ▼ 初期状態（下向き三角） */
   .sp-home__reason-arrow:before {
     left: 0px;
     transform: translate(-50%, -50%) rotate(-65deg);
   }
-  
+
   .sp-home__reason-arrow::after {
     left: 36px;
     transform: translate(-50%, -50%) rotate(65deg);
   }
-  
+
   /* ▲ アコーディオンが開いたとき（上向き三角） */
   .sp-home__reason-item.active .sp-home__reason-arrow:before {
     transform: translate(-50%, -50%) rotate(65deg);
   }
-  
+
   .sp-home__reason-item.active .sp-home__reason-arrow::after {
     transform: translate(-50%, -50%) rotate(-65deg);
   }
-  
 
   .sp-home__reason-ttl-back {
     top: 50%;
@@ -1206,7 +1204,7 @@ padding: 50px 15px 30px 15px;
   } */
 
   .sp-home__reason-txt p {
-padding: 40px 15px 30px 15px;
+    padding: 40px 15px 30px 15px;
   }
 }
 
@@ -1494,7 +1492,6 @@ padding: 40px 15px 30px 15px;
   background-color: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
   z-index: 5;
-  
 }
 
 .slick-prev {
@@ -1609,7 +1606,7 @@ padding: 40px 15px 30px 15px;
   .slick-list draggable {
     width: 100%;
   }
-  
+
   .slick-slide {
     flex-direction: column-reverse;
     align-items: center;
@@ -1643,12 +1640,12 @@ padding: 40px 15px 30px 15px;
 
 @media screen and (max-width: 426px) {
   /* slider */
-.home__voice-slider {
-  width: 100%;
-}
+  .home__voice-slider {
+    width: 100%;
+  }
 
   .slick-slide {
-   display: block;
+    display: block;
     padding: 0 5px;
     position: relative;
   }

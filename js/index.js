@@ -10,7 +10,7 @@ $(function () {
       e.preventDefault();  // デフォルトのリンク動作を無効化
       $('html, body').animate({
         scrollTop: target.offset().top - 50 // 50pxの余白を追加
-      }, 500); // 500msでスクロール
+      }, 500);
     }
   });
 });
@@ -48,17 +48,12 @@ $(window).on('scroll', function () {
 // reason
 // reason 背景色
 $(window).on('scroll', function () {
-  var triggerPos = $('.home__reason-groupe').offset().top; // 発火位置
+  var triggerPos = $('.home__reason-groupe').offset().top; 
   var scroll = $(window).scrollTop();
   var windowHeight = $(window).height();
 
   if (scroll + windowHeight > triggerPos) {
-      $('.bgextend').each(function () {
-          if (!$(this).hasClass('animated')) { // すでにアニメーションが実行されたか確認
-              $(this).css('animation-play-state', 'running'); // アニメーションを開始
-              $(this).addClass('animated'); // 二度発火を防ぐ
-          }
-      });
+    $('.home__reason-groupe').addClass('animate');
   }
 });
 
@@ -68,6 +63,7 @@ $(window).on('scroll', function () {
 
 
 // reason wrapper1つずつ表示
+// 
 document.addEventListener("DOMContentLoaded", function () {
   const reasonItems = document.querySelectorAll(".home__reason-item-wrap");
 
