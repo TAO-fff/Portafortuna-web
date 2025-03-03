@@ -713,6 +713,10 @@
   width: 42%;
 }
 
+.home__reason-item {
+  margin: 0 auto 30px auto;
+}
+
 .home__reason-item-wrap,
 .sp-home__reason-item-wrap {
   padding: 45px 30px;
@@ -720,21 +724,15 @@
   box-sizing: border-box;
 }
 
-.home__reason-item-wrap {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.home__reason-item-wrap.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .home__reason-item-ttl,
 .sp-home__reason-item-ttl {
   padding-bottom: 17px;
   position: relative;
+}
+
+.home__reason-item-ttl {
+  padding-top: 30px;
 }
 
 .home__reason-ttl-back,
@@ -746,7 +744,7 @@
   width: 60%;
   height: 100%;
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: var(--font-ja-heading);
@@ -761,6 +759,11 @@
   font-size: 1.5rem;
   line-height: var(--line-height-base);
   text-align: center;
+  padding: 20px 30px;
+}
+
+.home__reason-txt {
+  padding-bottom: 30px;
 }
 
 .home__reason-big-txt,
@@ -777,149 +780,102 @@
   font-size: var(--font-size-text);
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-wide);
-  padding: 0 30px;
+  padding: 30px;
 }
 
 .sp-home__reason-groupe {
   display: none;
 }
 
-/* =======================
-  背景伸びるアニメーション reason
-======================= */
-/* レイアウトのためのCSS */
-.bgextend {
-  width: 42%;
-  margin: 0 20px 20px 0;
-  box-sizing: border-box;
-  opacity: 0;
+
+/*  */
+/*  */
+/*  */
+/*==================================================
+印象編 4 最低限おぼえておきたい動き
+===================================*/
+
+/*印象編　4-9、4-10　背景色が伸びて出現（左から・右から）　*/
+.bgextend{
+	animation-name:bgextendAnimeBase;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	position: relative;
+	overflow: hidden;/*　はみ出た色要素を隠す　*/
+	opacity:0;
 }
 
-/*背景色が伸びて出現 共通*/
-.bgextend {
-  animation-name: bgextendAnimeBase;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  position: relative;
-  overflow: hidden;
-  opacity: 0;
-}
-
-/* アニメーションを開始するクラス */
-.animate.bgextend {
-  opacity: 1;
-  animation: bgextendAnimeBase 1s ease-out forwards,
-    bgextendAnimeSecond 1s ease-out 0.5s forwards;
-}
-
-@keyframes bgextendAnimeBase {
+@keyframes bgextendAnimeBase{
   from {
-    opacity: 0;
+    opacity:0;
   }
 
   to {
-    opacity: 1;
-  }
+    opacity:1;  
+}
 }
 
 /*中の要素*/
-.bgappear {
-  animation-name: bgextendAnimeSecond;
-  animation-duration: 1s;
-  animation-delay: 0.6s;
-  animation-fill-mode: forwards;
-  opacity: 0;
+.bgappear{
+	animation-name:bgextendAnimeSecond;
+	animation-duration:1s;
+	animation-delay: 0.6s;
+	animation-fill-mode:forwards;
+	opacity: 0;
 }
 
-@keyframes bgextendAnimeSecond {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+@keyframes bgextendAnimeSecond{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
 }
 
+/*印象編　4-9 背景色が伸びて出現（左から）*/
 /*--------- 上から --------*/
-.bgextend::before {
-  animation-name: bgUDextendAnime;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #715f5a;
+.bgUDextend::before{
+	animation-name:bgUDextendAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #a28f81;/*伸びる背景色の設定*/
 }
 
-@keyframes bgUDextendAnime {
-  0% {
-    transform-origin: top;
-    transform: scaleY(0);
-  }
-  50% {
-    transform-origin: top;
-    transform: scaleY(1);
-  }
-  50.001% {
-    transform-origin: bottom;
-  }
-  100% {
-    transform-origin: bottom;
-    transform: scaleY(0);
-  }
+@keyframes bgUDextendAnime{
+	0% {
+		transform-origin:top;
+		transform:scaleY(0);
+	}
+	50% {
+		transform-origin:top;
+		transform:scaleY(1);
+	}
+	50.001% {
+		transform-origin:bottom;
+	}
+	100% {
+		transform-origin:bottom;
+		transform:scaleY(0);
+	}
 }
 
-.fadeUp {
-  animation-name: fadeUpAnime;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-}
-
-@keyframes fadeUpAnime {
-  from {
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.bgappearTrigger,
+.bgUDextendTrigger,
+.bgDUextendTrigger,
+.bgRLextendTrigger,
+.bgLRextendTrigger{
     opacity: 0;
-    transform: translateY(100px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
-/* 背景色アニメーション（上から下に伸びる） */
-.bgextend::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: #715f5a;
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: transform 1s ease;
-}
 
-.home__reason-item.bg-animate .bgextend::before {
-  transform: scaleY(1); /* 背景が上から下に伸びる */
-}
 
-/* フェードアップアニメーション */
-.home__reason-item {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
 
-.home__reason-item.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/*  */
 
 /* =======================
   sp reason
@@ -955,7 +911,7 @@
 
   .home__reason-ttl-back {
     font-size: 7.5vw;
-    top: 2%;
+    top: 70%;
   }
 
   .home__reason-big-txt {
@@ -963,7 +919,7 @@
   }
 
   .home__reason-txt p {
-    padding: 0 10px;
+    padding: 20px 25px;
   }
 }
 
@@ -1073,19 +1029,8 @@
     opacity: 1;
   }
 
-  /* .sp-home__reason-txt::before {
-    display: block;
-    content: "";
-    background-color: var(--color-primary);
-    width: 60%;
-    height: 0.25px;
-    position: absolute;
-    top: 35px;
-    left: 20%;
-  } */
-
   .sp-home__reason-txt p {
-    padding: 50px 15px 30px 15px;
+    padding: 60px 25px 0px 25px;
   }
 }
 
@@ -1192,19 +1137,9 @@
     opacity: 1;
   }
 
-  /* .sp-home__reason-txt::before {
-    display: block;
-    content: "";
-    background-color: var(--color-primary);
-    width: 60%;
-    height: 0.25px;
-    position: absolute;
-    top: 35px;
-    left: 20%;
-  } */
 
   .sp-home__reason-txt p {
-    padding: 40px 15px 30px 15px;
+    padding: 40px 15px 0px 15px;
   }
 }
 

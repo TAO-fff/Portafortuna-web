@@ -1,0 +1,278 @@
+/* =======================
+  reason
+======================= */
+.home__reason {
+  position: relative;
+}
+
+.home__reason-back {
+  background-image: url(../img/home-reason-abck.jpg);
+  background-size: cover;
+}
+
+.home__reason-back img {
+  width: 100%;
+}
+
+.home__reason-back::before {
+  display: block;
+  content: "";
+  background: var(--color-base-dark);
+  opacity: 0.8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* テキスト */
+.home__reason-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.home__reason-ttl-en,
+.home__reason-ttl-ja {
+  position: relative;
+  color: var(--color-text-inverse);
+}
+
+.home__reason-ttl-en {
+  padding-bottom: 9px;
+}
+
+.home__reason-ttl-en::before {
+  display: block;
+  content: "";
+  background: var(--color-text-inverse);
+  opacity: 0.3;
+  width: 0.5px;
+  height: 90px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(30deg);
+  z-index: 1;
+}
+
+.home__reason-area {
+  padding-bottom: 120px;
+}
+
+.home__reason-groupe,
+.sp-home__reason-groupe {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 5%;
+  padding: 45px 0;
+}
+
+.home__reason-item,
+.sp-home__reason-item {
+  background-color: var(--color-base-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 42%;
+}
+
+.home__reason-item-wrap,
+.sp-home__reason-item-wrap {
+  padding: 45px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+.home__reason-item-ttl,
+.sp-home__reason-item-ttl {
+  padding-bottom: 17px;
+  position: relative;
+}
+
+.home__reason-ttl-back,
+.sp-home__reason-ttl-back {
+  display: block;
+  content: "";
+  color: var(--color-text);
+  opacity: 0.08;
+  width: 60%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-ja-heading);
+  font-size: 5rem;
+  text-align: center;
+  line-height: var(--line-height-base);
+}
+
+.home__reason-item-ttl p,
+.sp-home__reason-item-ttl p {
+  font-family: var(--font-ja-heading);
+  font-size: 1.5rem;
+  line-height: var(--line-height-base);
+  text-align: center;
+}
+
+.home__reason-big-txt,
+.sp-home__reason-big-txt {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-base);
+  padding-bottom: 2px;
+}
+
+.home__reason-txt p,
+.sp-home__reason-txt p {
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-wide);
+  padding: 0 30px;
+}
+
+.sp-home__reason-groupe {
+  display: none;
+}
+
+
+
+/*  */
+
+/* =======================
+  sp reason
+======================= */
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .home__reason-big-txt {
+    font-size: 2.35vw;
+  }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .home__l-container {
+    padding: 130px 0;
+  }
+
+  .home__reason-item-wrap {
+    padding: 45px 15px;
+    margin: 0 auto;
+  }
+
+  .home__reason-item {
+    width: 80%;
+  }
+
+  .bgextend {
+    margin: 0 0px 20px 0;
+  }
+
+  .home__reason-item-ttl {
+    padding-bottom: 30px;
+  }
+
+  .home__reason-ttl-back {
+    font-size: 7.5vw;
+    top: 2%;
+  }
+
+  .home__reason-big-txt {
+    font-size: 28px;
+  }
+
+  .home__reason-txt p {
+    padding: 0 10px;
+  }
+}
+
+/*  */
+/*  */
+/*  */
+/*==================================================
+印象編 4 最低限おぼえておきたい動き
+===================================*/
+
+/*印象編　4-9、4-10　背景色が伸びて出現（左から・右から）　*/
+.bgextend{
+	animation-name:bgextendAnimeBase;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+	position: relative;
+	overflow: hidden;/*　はみ出た色要素を隠す　*/
+	opacity:0;
+}
+
+@keyframes bgextendAnimeBase{
+  from {
+    opacity:0;
+  }
+
+  to {
+    opacity:1;  
+}
+}
+
+/*中の要素*/
+.bgappear{
+	animation-name:bgextendAnimeSecond;
+	animation-duration:1s;
+	animation-delay: 0.6s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes bgextendAnimeSecond{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}
+
+/*印象編　4-9 背景色が伸びて出現（左から）*/
+/*--------- 上から --------*/
+.bgUDextend::before{
+	animation-name:bgUDextendAnime;
+	animation-duration:1s;
+	animation-fill-mode:forwards;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #a28f81;/*伸びる背景色の設定*/
+}
+
+@keyframes bgUDextendAnime{
+	0% {
+		transform-origin:top;
+		transform:scaleY(0);
+	}
+	50% {
+		transform-origin:top;
+		transform:scaleY(1);
+	}
+	50.001% {
+		transform-origin:bottom;
+	}
+	100% {
+		transform-origin:bottom;
+		transform:scaleY(0);
+	}
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.bgappearTrigger,
+.bgUDextendTrigger,
+.bgDUextendTrigger,
+.bgRLextendTrigger,
+.bgLRextendTrigger{
+    opacity: 0;
+}
