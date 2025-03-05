@@ -120,6 +120,9 @@
               srcset="./img/sp-home-fv-pic.jpg"
               media="(max-width: 768px)"
             />
+            <!-- PC用 (AVIF → WebP → PNG) -->
+            <source srcset="./img/home-fv-pic.avif" type="image/avif" />
+            <source srcset="./img/home-fv-pic.webp" type="image/webp" />
             <img src="./img/home-fv-pic.png" alt="" />
           </picture>
         </div>
@@ -343,89 +346,90 @@
                     </span>
                   </li>
                 </ul>
-                  <!-- sp 4つの理由 -->
-                  <ul class="sp-home__reason-groupe">
-                    <li class="sp-home__reason-item">
-                      <div class="sp-home__reason-item-wrap">
-                        <div class="sp-home__reason-item-ttl">
-                          <span class="sp-home__reason-arrow"></span>
-                          <span class="sp-home__reason-ttl-back">01</span>
-                          <p>
-                            <span class="sp-home__reason-big-txt">
-                              1,000名以上の診断実績</span
-                            >で磨いた確かな提案力
-                          </p>
-                        </div>
-                        <div class="sp-home__reason-txt">
-                          <p>
-                            イメージコンサルタント歴5年以上、診断実績1,000名以上の豊富な経験を活かし、お客様の「好き」やライフスタイルに寄り添った具体的なコーディネートをご提案します。
-                            さらに、年齢や体型に縛られず、自分らしさを引き出すスタイリングのコツを丁寧にお伝えし、おしゃれの可能性を広げるお手伝いをいたします。
-                          </p>
-                        </div>
+                <!-- sp 4つの理由 -->
+                <ul class="sp-home__reason-groupe">
+                  <li class="sp-home__reason-item">
+                    <div class="sp-home__reason-item-wrap">
+                      <div class="sp-home__reason-item-ttl">
+                        <span class="sp-home__reason-arrow"></span>
+                        <span class="sp-home__reason-ttl-back">01</span>
+                        <p>
+                          <span class="sp-home__reason-big-txt">
+                            1,000名以上の診断実績</span
+                          >で磨いた確かな提案力
+                        </p>
                       </div>
-                    </li>
-                    <li class="sp-home__reason-item">
-                      <div class="sp-home__reason-item-wrap">
-                        <div class="sp-home__reason-item-ttl">
-                          <span class="sp-home__reason-arrow"></span>
-  
-                          <span class="sp-home__reason-ttl-back">02</span>
-                          <p>
-                            <span class="sp-home__reason-big-txt">
-                              リピーター続出中</span
-                            >の満足度が高いサービス
-                          </p>
-                        </div>
-                        <div class="sp-home__reason-txt">
-                          <p>
-                            お手持ちのお洋服にどんなアイテムを買い足せばコーディネートが広がるのか。また、着こなしに悩むお洋服をどうすればおしゃれに見えるのか。そんなお悩みに丁寧にお応えします。
-                            「自分らしい新しいおしゃれが見つかる」と多くの好評を頂戴しており、定期的に予約いただくお客様が増えております。
-                          </p>
-                        </div>
+                      <div class="sp-home__reason-txt">
+                        <p>
+                          イメージコンサルタント歴5年以上、診断実績1,000名以上の豊富な経験を活かし、お客様の「好き」やライフスタイルに寄り添った具体的なコーディネートをご提案します。
+                          さらに、年齢や体型に縛られず、自分らしさを引き出すスタイリングのコツを丁寧にお伝えし、おしゃれの可能性を広げるお手伝いをいたします。
+                        </p>
                       </div>
-                    </li>
-                    <li class="sp-home__reason-item">
-                      <div class="sp-home__reason-item-wrap">
-                        <div class="sp-home__reason-item-ttl">
-                          <span class="sp-home__reason-arrow"></span>
-                          <span class="sp-home__reason-ttl-back">03</span>
-                          <p>
-                            <span class="sp-home__reason-big-txt">
-                              専門資格を持つプロ</span
-                            >が
-                            お伝えする身につくセンス
-                          </p>
-                        </div>
-                        <div class="sp-home__reason-txt">
-                          <p>
-                            顔タイプ診断®︎1級アドバイザー、パーソナルカラー診断、骨格診断などの資格保有者として、確かな知識に基づいた自信を持てるおしゃれのご提案をします。
-                            また、なぜお似合いになるのかを理論に基づいてお伝えするため、お洋服選びやコーディネートの組み方に活かせるようなセンスを身に付けていただけます。
-                          </p>
-                        </div>
+                    </div>
+                  </li>
+                  <li class="sp-home__reason-item">
+                    <div class="sp-home__reason-item-wrap">
+                      <div class="sp-home__reason-item-ttl">
+                        <span class="sp-home__reason-arrow"></span>
+
+                        <span class="sp-home__reason-ttl-back">02</span>
+                        <p>
+                          <span class="sp-home__reason-big-txt">
+                            リピーター続出中</span
+                          >の満足度が高いサービス
+                        </p>
                       </div>
-                    </li>
-                    <li class="sp-home__reason-item">
-                      <div class="sp-home__reason-item-wrap">
-                        <div class="sp-home__reason-item-ttl">
-                          <span class="sp-home__reason-arrow"></span>
-                          <span class="sp-home__reason-ttl-back">04</span>
-                          <p>
-                            <span class="sp-home__reason-big-txt"><span class="min-sp-br">
+                      <div class="sp-home__reason-txt">
+                        <p>
+                          お手持ちのお洋服にどんなアイテムを買い足せばコーディネートが広がるのか。また、着こなしに悩むお洋服をどうすればおしゃれに見えるのか。そんなお悩みに丁寧にお応えします。
+                          「自分らしい新しいおしゃれが見つかる」と多くの好評を頂戴しており、定期的に予約いただくお客様が増えております。
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="sp-home__reason-item">
+                    <div class="sp-home__reason-item-wrap">
+                      <div class="sp-home__reason-item-ttl">
+                        <span class="sp-home__reason-arrow"></span>
+                        <span class="sp-home__reason-ttl-back">03</span>
+                        <p>
+                          <span class="sp-home__reason-big-txt">
+                            専門資格を持つプロ</span
+                          >が お伝えする身につくセンス
+                        </p>
+                      </div>
+                      <div class="sp-home__reason-txt">
+                        <p>
+                          顔タイプ診断®︎1級アドバイザー、パーソナルカラー診断、骨格診断などの資格保有者として、確かな知識に基づいた自信を持てるおしゃれのご提案をします。
+                          また、なぜお似合いになるのかを理論に基づいてお伝えするため、お洋服選びやコーディネートの組み方に活かせるようなセンスを身に付けていただけます。
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="sp-home__reason-item">
+                    <div class="sp-home__reason-item-wrap">
+                      <div class="sp-home__reason-item-ttl">
+                        <span class="sp-home__reason-arrow"></span>
+                        <span class="sp-home__reason-ttl-back">04</span>
+                        <p>
+                          <span class="sp-home__reason-big-txt"
+                            ><span class="min-sp-br">
                               業界内から信頼される</span
-                            ></span>
-                            スタイリング技術
-                          </p>
-                        </div>
-                        <div class="sp-home__reason-txt">
-                          <p>
-                            顔タイプ診断®︎協会公式YouTubeを筆頭に、さまざまなメディアでスタイリングを担当。
-                            さらに、プロのイメージコンサルタントを育成する講座でスタイリングの実習講師を担当しており、業界内からも「信頼性が高いスタイリング技術」と支持されております。
-                            プロも認める技術で、お客様の魅力を引き立たせる提案をいたします。
-                          </p>
-                        </div>
+                            ></span
+                          >
+                          スタイリング技術
+                        </p>
                       </div>
-                    </li>
-                  </ul>
+                      <div class="sp-home__reason-txt">
+                        <p>
+                          顔タイプ診断®︎協会公式YouTubeを筆頭に、さまざまなメディアでスタイリングを担当。
+                          さらに、プロのイメージコンサルタントを育成する講座でスタイリングの実習講師を担当しており、業界内からも「信頼性が高いスタイリング技術」と支持されております。
+                          プロも認める技術で、お客様の魅力を引き立たせる提案をいたします。
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -761,14 +765,35 @@
         </div>
         <!-- 画像 -->
         <div class="home__news-img-groupe">
+          <!-- 左  PC用 (AVIF → WebP → PNG) -->
           <div class="home_news-img-item home__news-left">
-            <img src="./img/home-news-left-tiny.jpg" alt="" />
+            <source srcset="./img/home-news-left-tiny.avif" type="image/avif" />
+            <source srcset="./img/home-news-left-tiny.webp" type="image/webp" />
+            <img src="/img/home-news-left-tiny.jpg" alt="" />
           </div>
           <div class="home_news-img-item home__news-center">
-            <img src="./img/home-news-center-tiny.jpg" alt="" />
+            <!-- センター  PC用 (AVIF → WebP → PNG) -->
+            <source
+              srcset="./img/home-news-center-tiny.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="./img/home-news-center-tiny.webp"
+              type="image/webp"
+            />
+            <img src="/img/home-news-center-tiny.jpg" alt="" />
           </div>
+          <!-- 右  PC用 (AVIF → WebP → PNG) -->
           <div class="home_news-img-item home__news-right">
-            <img src="./img/home-news-right-tiny.jpg" alt="" />
+            <source
+              srcset="./img/home-news-right-tiny.avif"
+              type="image/avif"
+            />
+            <source
+              srcset="./img/home-news-right-tiny.webp"
+              type="image/webp"
+            />
+            <img src="/img/home-news-right-tiny.jpg" alt="" />
           </div>
           <!-- sp用 img -->
           <div class="sp-home__news-img-item">

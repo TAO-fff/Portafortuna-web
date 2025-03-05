@@ -638,7 +638,7 @@
 }
 
 .home__reason-back {
-  background-image: url(../img/home-reason-abck.jpg);
+  background-image:  url(../img/home-reason-abck.avif), url(../img/home-reason-abck.webp), url(../img/home-reason-abck.jpg);
   background-size: cover;
 }
 
