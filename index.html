@@ -459,16 +459,28 @@
                 <div class="home__menu-item-img">
                   <span class="home__menu-item-rank common__menu-rank"></span>
                   <picture>
+                    <!-- スマートフォン用（1024px 以下） -->
                     <source
                       srcset="./img/sp-menu-shopping-trip.jpg"
                       media="(max-width: 1024px)"
                     />
+                  
+                    <!-- PC用（AVIF、WebP → JPEG） -->
+                    <source
+                      srcset="./img/menu-shopping-trip.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./img/menu-shopping-trip.webp"
+                      type="image/webp"
+                    />
                     <img
                       src="./img/menu-shopping-trip.jpg"
-                      alt="ショッピング同行"
+                      alt="ショップクルーズ＋お茶会"
                     />
                   </picture>
                 </div>
+                <!-- sp用 同行テキスト-->
                 <div class="sp-home__menu-item-ttl">
                   <p>ショッピング同行</p>
                 </div>
@@ -478,15 +490,27 @@
                   </p>
                 </div>
               </li>
+              <!-- クルーズ -->
               <li class="home__menu-item">
                 <div class="home__menu-item-ttl">
                   <p>ショップクルーズ+お茶会</p>
                 </div>
                 <div class="home__menu-item-img">
                   <picture>
+                    <!-- スマートフォン用（1024px 以下） -->
                     <source
                       srcset="./img/sp-menu-shopping-clues.jpg"
                       media="(max-width: 1024px)"
+                    />
+
+                    <!-- PC用（AVIF、WebP → JPEG） -->
+                    <source
+                      srcset="./img/menu-shopping-clues.avif"
+                      type="image/avif"
+                    />
+                    <source
+                      srcset="./img/menu-shopping-clues.webp"
+                      type="image/webp"
                     />
                     <img
                       src="./img/menu-shopping-clues.jpg"
