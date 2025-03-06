@@ -100,6 +100,13 @@
             srcset="./img/sp-voice-top.jpg"
             media="(max-width: 768px)"
           />
+            <!-- PC用 (AVIF → WebP → PNG) -->
+            <source
+              srcset="./img/voice-top.avif"
+              type="image/avif"
+              loading="lazy"
+            />
+            <source srcset="./img/voice-top.webp" type="image/webp" />
           <img
             src="./img/voice-top.jpg"
             alt="お客様の声"
