@@ -535,12 +535,12 @@
   }
 
   .sp-home__top-copy-horizontal-right {
-    right: calc(100% - 87%);
+    right: calc(100% - 81%);
     top: 50vw;
   }
 
   .sp-home__top-copy-horizontal-left {
-    right: calc(100% - 62%);
+    right: calc(100% - 55%);
     top: 90vw;
   }
 
