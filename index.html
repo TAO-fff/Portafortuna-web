@@ -867,7 +867,22 @@
           </div>
           <!-- sp用 img -->
           <div class="sp-home__news-img-item">
-            <img src="./img/sp-home-news.jpg" alt="" />
+            <picture>
+              <source
+                srcset="./img/sp-home-news.avif"
+                type="image/avif"
+                loading="lazy"
+              />
+              <source
+                srcset="./img/sp-home-news.webp"
+                type="image/webp"
+              />
+
+              <img src="./img/sp-home-news.jpg"
+                alt=""
+                focusable="false"
+              />
+            </picture>
           </div>
         </div>
 
