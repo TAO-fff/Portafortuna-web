@@ -123,7 +123,11 @@
               media="(max-width: 768px)"
             />
             <!-- PC用 (AVIF → WebP → PNG) -->
-            <source srcset="./img/home-fv-pic.avif" type="image/avif" loading="lazy" />
+            <source
+              srcset="./img/home-fv-pic.avif"
+              type="image/avif"
+              loading="lazy"
+            />
             <source srcset="./img/home-fv-pic.webp" type="image/webp" />
             <img src="./img/home-fv-pic.png" alt="" />
           </picture>
@@ -148,8 +152,13 @@
               srcset="./img/sp-home-fv-pic-saya.png"
               media="(max-width: 768px)"
             />
-             <!-- PC用 (WebP → PNG) -->
-             <source srcset="./img/home-fv-pic-saya.webp" type="image/webp" />
+            <!-- PC用 (WebP → PNG) -->
+            <source
+              srcset="./img/home-fv-pic-saya.avif"
+              type="image/avif"
+              loading="lazy"
+            />
+            <source srcset="./img/home-fv-pic-saya.webp" type="image/webp" />
             <img src="./img/home-fv-pic-saya.png" alt="" />
           </picture>
         </div>
@@ -544,6 +553,17 @@
                       srcset="./img/sp-menu-closet-check.jpg"
                       media="(max-width: 1024px)"
                     />
+                    <!-- PC用 (WebP → PNG) -->
+                    <source
+                      srcset="./img/menu-closet-check.avif"
+                      type="image/avif"
+                      loading="lazy"
+                    />
+                    <source
+                      srcset="./img/menu-closet-check.webp"
+                      type="image/webp"
+                    />
+
                     <img
                       src="./img/menu-closet-check.png"
                       alt="オンラインクローゼット診断"
@@ -653,9 +673,9 @@
                   srcset="./img/sp-home-voice2.jpg"
                   media="(max-width: 1024px)"
                 />
-                 <!-- PC用 (AVIF → WebP → PNG) -->
-                 <source srcset="./img/home-voice2.avif" type="image/avif" />
-                 <source srcset="./img/home-voice2.webp" type="image/webp" />
+                <!-- PC用 (AVIF → WebP → PNG) -->
+                <source srcset="./img/home-voice2.avif" type="image/avif" />
+                <source srcset="./img/home-voice2.webp" type="image/webp" />
                 <img
                   src="./img/home-voice2.jpg"
                   alt="50代お客様の声"
@@ -690,9 +710,9 @@
                   srcset="./img/sp-home-voice3.jpg"
                   media="(max-width: 1024px)"
                 />
-                   <!-- PC用 (AVIF → WebP → PNG) -->
-                   <source srcset="./img/home-voice3.avif" type="image/avif" />
-                   <source srcset="./img/home-voice3.webp" type="image/webp" />
+                <!-- PC用 (AVIF → WebP → PNG) -->
+                <source srcset="./img/home-voice3.avif" type="image/avif" />
+                <source srcset="./img/home-voice3.webp" type="image/webp" />
                 <img
                   src="./img/home-voice3.jpg"
                   alt="50代お客様の声"
@@ -729,6 +749,17 @@
                   srcset="./img/sp-home-profile-img.png"
                   media="(max-width: 767px)"
                 />
+                <!-- PC用 (WebP → PNG) -->
+                <source
+                  srcset="./img/home-profile-img.avif"
+                  type="image/avif"
+                  loading="lazy"
+                />
+                <source
+                  srcset="./img/home-profile-img.webp"
+                  type="image/webp"
+                />
+
                 <img
                   src="./img/home-profile-img.png"
                   alt="プロフィール写真"
@@ -1014,8 +1045,8 @@
     <!-- slick -->
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <!-- js -->
-    <script defer src="./js/common.js" ></script>
-    <script defer src="./js/components.js" ></script>
-    <script defer src="./js/index.js" ></script>
+    <script defer src="./js/common.js"></script>
+    <script defer src="./js/components.js"></script>
+    <script defer src="./js/index.js"></script>
   </body>
 </html>
