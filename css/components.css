@@ -266,6 +266,17 @@
    sp 共通パーツ
    - btn
 ======================= */
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .home__link-btn-arrow::before {
+    bottom: 4px;
+  }
+  
+  .home__link-btn-arrow::after {
+    bottom: -4px;
+  }
+}
+
 /* sp */
 @media screen and (max-width: 768px) {
   .cta-btn,
