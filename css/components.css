@@ -195,7 +195,7 @@
   font-size: 1.5rem;
   line-height: var(--line-height-tight);
   letter-spacing: var(--letter-spacing-base);
-  padding: 25px 100px;
+  padding: 25px 90px;
   color: var(--color-text-inverse);
   background-color: var(--color-base);
   border: solid 1px var(--color-base-dark);
