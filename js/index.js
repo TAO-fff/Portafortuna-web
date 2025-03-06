@@ -40,8 +40,11 @@ function menuScrollAnime() {
   });
 }
 
-$(window).on('scroll', function () {
-  menuScrollAnime();
+// スクロールイベントに passive を適用
+$(window).each(function () {
+  this.addEventListener("scroll", function () {
+    menuScrollAnime();
+  }, { passive: true });
 });
 
 
