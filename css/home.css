@@ -1448,6 +1448,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-decoration: none;
+  color: inherit;
 }
 
 .slick-prev:before {
