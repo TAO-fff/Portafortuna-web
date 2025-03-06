@@ -97,6 +97,14 @@
             srcset="./img/sp-profile-top.jpg"
             media="(max-width: 768px)"
           />
+           <!-- PC用 (AVIF → WebP → PNG) -->
+           <source
+           srcset="./img/profile-top.avif"
+           type="image/avif"
+           loading="lazy"
+         />
+         <source srcset="./img/profile-top.webp" type="image/webp" />
+      
           <img src="./img/profile-top.png" alt="プロフィール" />
         </picture>
       </div>
@@ -675,7 +683,7 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- js -->
-    <script src="./js/components.js"></script>
+    <script src="./js/components.js" defer></script>
     <script src="./js/profile.js" defer></script>
   </body>
 </html>

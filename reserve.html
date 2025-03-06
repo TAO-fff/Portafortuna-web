@@ -100,6 +100,14 @@
             srcset="./img/sp-reserve-top.jpg"
             media="(max-width: 768px)"
           />
+            <!-- PC用 (AVIF → WebP → PNG) -->
+            <source
+              srcset="./img/reserve-top.avif"
+              type="image/avif"
+              loading="lazy"
+            />
+            <source srcset="./img/reserve-top.webp" type="image/webp" />
+          
           <img src="./img/reserve-top.jpg" alt="予約ページ" focusable="false" />
         </picture>
       </div>
@@ -120,7 +128,7 @@
             </div>
             <div class="contact__attention-add">
               <a href="mailto:saya.portafortuna@gmail.com" class="contact__email">
-                <img src="./img/アセット 1.svg" alt="メールアイコン"> 
+                <img src="./img/アセット 1.svg" alt="メールアドレス"> 
                 <span>saya.portafortuna@gmail.com</span>
               </a>
             </div>
