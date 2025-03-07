@@ -1633,7 +1633,16 @@ transition: 0.45s ease-in-out;
 .sp-menu__faq-toggle-btn.active::after {
   transform: rotate(32deg);
   transition: 0.45s ease-in-out;
+}
 
+.menu__faq-reserve-url {
+  display: inline-block;
+  transition: .2s ease-in-out;
+  text-align: center;
+  color: var(--color-primary);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  opacity: .7;
 }
 
 /* =======================
