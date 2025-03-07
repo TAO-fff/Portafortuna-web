@@ -37,15 +37,6 @@
   --letter-spacing-tight: -0.02em; /* 狭め */
 }
 
-/* お客様voice フォント */
-@font-face {
-  font-family: "Syunka";
-  src: url("../font/syunka2pbb.woff2") format("woff2"),
-       url("../font/syunka2pbb.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
   color: var(--color-text);
   font-size: 1rem;
