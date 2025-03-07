@@ -119,6 +119,17 @@
       <div class="home__mv-img-wrap">
         <div class="home__top-mv">
           <picture>
+            <!-- スマホ版 (AVIF → WebP → JPG) -->
+            <source
+              srcset="./img/sp-home-fv-pic.avif"
+              type="image/avif"
+              media="(max-width: 768px)"
+            />
+            <source
+              srcset="./img/sp-home-fv-pic.webp"
+              type="image/webp"
+              media="(max-width: 768px)"
+            />
             <source
               srcset="./img/sp-home-fv-pic.jpg"
               media="(max-width: 768px)"
