@@ -1174,7 +1174,7 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  padding: 75px 0 40px 0;
+  padding: 75px 10px 40px 10px;
   gap: 38px;
 }
 
