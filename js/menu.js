@@ -91,11 +91,11 @@ $(document).ready(function() {
 **************/
 
 document.addEventListener('DOMContentLoaded', () => {
-  const qaItems = document.querySelectorAll('.menu__qa-list');
+  const qaItems = document.querySelectorAll('.menu__faq-list');
 
   qaItems.forEach(item => {
-    const toggleBtn = item.querySelector('.sp-menu__qa-toggle-btn'); // ボタン
-    const question = item.querySelector('.menu__qa-list-q'); // 質問部分
+    const toggleBtn = item.querySelector('.sp-menu__faq-toggle-btn'); // ボタン
+    const question = item.querySelector('.menu__faq-list-q'); // 質問部分
 
     question.addEventListener('click', () => {
       // クリックした項目の開閉

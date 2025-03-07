@@ -535,16 +535,12 @@
   }
 
   .sp-home__top-copy-horizontal-right {
-    /* right: calc(100% - 76%); */
-    right: 0;
-    transform: translateX(-50%);
+    right: calc(100% - 76%);
     top: 50vw;
   }
 
   .sp-home__top-copy-horizontal-left {
-    /* right: calc(100% - 46%); */
-    right: 0;
-    transform: translateX(-190%);
+    right: calc(100% - 46%);
     top: 90vw;
   }
 
