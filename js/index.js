@@ -87,7 +87,7 @@ $(document).ready(function () {
           var scroll = $(window).scrollTop();
           var windowHeight = $(window).height();
           if (scroll >= elemPos - windowHeight) {
-              $(this).stop().delay(index * 400).fadeIn(1000); // 300msの遅延を加えて、1つずつ表示
+              $(this).stop().delay(index * 300).fadeIn(1000); // 300msの遅延を加えて、1つずつ表示
           } else {
               $(this).stop().fadeOut(500); // 画面外に出たらフェードアウト
           }
