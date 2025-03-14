@@ -1677,4 +1677,8 @@ transition: 0.45s ease-in-out;
   .menu__faq-wrap {
     width: 90%;
   }
+
+  .menu__faq-reserve-url {
+    text-indent: 0px;
+  }
 }
