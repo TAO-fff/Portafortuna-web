@@ -1648,6 +1648,10 @@ transition: 0.45s ease-in-out;
   text-indent: 8px;
 }
 
+.menu__faq-reserve-url:hover {
+  color: var(--color-key);
+}
+
 /* =======================
   sp menu Q&A
 ======================= */
