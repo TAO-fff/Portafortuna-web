@@ -39,3 +39,27 @@ window.addEventListener('DOMContentLoaded', function() {
     validateForm();
   });
   
+
+// thanksページ移動
+document.addEventListener("DOMContentLoaded", function () {
+  var form = document.querySelector("form");
+
+  if (form) {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // デフォルトのフォーム送信を防ぐ
+
+      var formData = new FormData(form);
+      var actionUrl = form.getAttribute("action"); // Googleフォームの送信先URL
+
+      fetch(actionUrl, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors", // GoogleフォームのCORS制限を回避する
+      }).then(() => {
+        window.location.href = "thanks.html"; // 送信完了後にthanks.htmlへリダイレクト
+      }).catch(error => {
+        console.error("送信エラー:", error);
+      });
+    });
+  }
+});
