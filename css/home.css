@@ -82,6 +82,21 @@
   }
 }
 
+/* 文字光る キラキラ */
+@keyframes sparkle-light {
+  0% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.4),
+      0 0 4px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.6),
+      0 0 4px rgba(255, 255, 255, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.4), 0 0 4px rgba(255, 255, 255, .4);
+  }
+}
+
 /* 文字が一つずつ表示されるアニメーション */
 @keyframes fadeInSoft {
   from {
@@ -431,7 +446,7 @@
   .sp-home__top-horizontal-txt {
     font-size: 4.4vw;
     width: 100%;
-    animation: fadeInSoft 0.8s ease-out forwards, sparkle 1.5s infinite alternate;
+    animation: fadeInSoft 0.8s ease-out forwards,  sparkle-light 1.5s infinite alternate;
     animation-delay: var(--delay);
     /* text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2); */
   }
@@ -565,6 +580,8 @@
 
   .sp-home__top-horizontal-txt {
     padding: 20px 10px 30px 10px;
+    animation: fadeInSoft 0.8s ease-out forwards, sparkle-light 1.5s infinite alternate;
+    animation-delay: var(--delay);
   }
 
   .sp-home__top-logo {
