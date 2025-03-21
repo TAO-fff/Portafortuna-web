@@ -89,8 +89,8 @@
       0 0 4px rgba(255, 255, 255, 0.4);
   }
   50% {
-    text-shadow: 0 0 2px rgba(255, 255, 255, 0.8),
-      0 0 4px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.65),
+      0 0 4px rgba(255, 255, 255, 0.65);
   }
   100% {
     text-shadow: 0 0 2px rgba(255, 255, 255, 0.4), 0 0 4px rgba(255, 255, 255, .4);
@@ -721,6 +721,10 @@
   margin-top: 100px;
 }
 
+.home__top-message-ttl-ja  {
+  position: relative;
+}
+
 .home__top-message-ttl-ja p {
   font-family: var(--font-ja-heading);
   font-size: 2rem;
@@ -751,7 +755,7 @@
 .home__top-message-ttl-en {
   position: absolute;
   top: 0%;
-  left: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   white-space: nowrap;
@@ -820,6 +824,22 @@
 
 .home__top-message-ttl-ja p {
   font-size: 4vw;
+}
+
+.home__top-message-ttl-en {
+  left: 35%;
+}
+
+.home__top-message-ttl-en p {
+  font-size: 16vw;
+}
+
+.home__top-message-txt p {
+  background: #fff;
+}
+
+.home__top-message-img {
+  opacity: .5;
 }
 }
 
