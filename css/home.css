@@ -206,7 +206,7 @@
   font-size: 8rem;
   line-height: var(--line-height-base);
   letter-spacing: 0.6rem;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .sp-home__top-logo {
@@ -354,10 +354,6 @@
     font-size: 8.5vw;
   }
 
-  .sp-home__top-logo {
-    display: none;
-  }
-
   .home__top-message-ttl-ja p {
     font-size: 3vw;
     letter-spacing: var(--letter-spacing-base);
@@ -424,7 +420,8 @@
   .sp-home__top-vertical-txt {
     font-size: 4.6vw;
     text-align: center;
-    letter-spacing: var(--letter-spacing-wide);
+    letter-spacing: 2vw;
+    padding-top: 60px;
   }
 
   .sp-home__top-copy-horizontal {
@@ -432,12 +429,12 @@
   }
 
   .sp-home__top-horizontal-txt {
-    font-size: 4.2vw;
+    font-size: 4.4vw;
     padding-right: 10px;
     width: 100%;
     animation: fadeInSoft 0.8s ease-out forwards, sparkle 1.5s infinite alternate;
     animation-delay: var(--delay);
-    /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2); */
+    /* text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2); */
   }
 
   .sp-home__top-logo {
@@ -568,6 +565,7 @@
   }
 
   .sp-home__top-logo {
+    display: block;
     top: 97%;
     left: 52%;
     transform: translate(-50%, -50%);
@@ -581,6 +579,7 @@
     width: 98%;
     color: var(--color-text-inverse);
   }
+
 
   .home__top-logo {
     display: none;
