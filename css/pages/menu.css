@@ -355,10 +355,6 @@
 }
 
 
-.sp-menu__item-top-img {
-  border: solid 1px var(--color-base-dark);
-}
-
 .menu__item-closet-img {
   width: 86%;
   padding: 5% 5% 8% 5%;
