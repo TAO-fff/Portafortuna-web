@@ -24,20 +24,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ページ内リンクのスムーズスクロール
 $(function () {
-  // ページ内リンクをクリックしたとき
   $('a[href^="#"]').on('click', function (e) {
-    // スクロール先のIDを取得
     var target = $($(this).attr('href'));
+    var headerHeight = $('header').outerHeight();
 
-    // 対象が見つかった場合にスムーズにスクロール
     if (target.length) {
-      e.preventDefault();  // デフォルトのリンク動作を無効化
+      e.preventDefault();
+      
+      // 1回目の計算
+      var scrollPos = target.offset().top - headerHeight - 20;
+
       $('html, body').animate({
-        scrollTop: target.offset().top - 50 // 50pxの余白を追加
-      }, 500);
+        scrollTop: scrollPos
+      }, 500, function() {
+        // 2回目の再計算
+        var newScrollPos = target.offset().top - headerHeight - 20;
+        $('html, body').animate({ scrollTop: newScrollPos }, 200);
+      });
     }
   });
 });
+
 
 //home__menu 各メニューfadeUpアニメーション 
 function menuScrollAnime() {
