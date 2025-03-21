@@ -987,7 +987,7 @@
   font-size: 1.5rem;
   line-height: var(--line-height-base);
   text-align: center;
-  padding: 20px 30px;
+  padding: 20px;
 }
 
 .home__reason-txt {
@@ -1009,6 +1009,7 @@
   line-height: var(--line-height-base);
   letter-spacing: var(--letter-spacing-wide);
   padding: 30px;
+  padding-top: 0;
 }
 
 .sp-home__reason-groupe {

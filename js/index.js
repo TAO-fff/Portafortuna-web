@@ -46,7 +46,11 @@ $(function () {
 });
 
 
-//home__menu 各メニューfadeUpアニメーション 
+//home__menu 各メニューfadeUpアニメーション
+/*******
+pc版 sp版共通 menuアイテムfade-up
+1.スクロールダウンしたら、左からフェードアップ
+ *******/
 function menuScrollAnime() {
   var time = 750;
 
@@ -80,6 +84,11 @@ $(window).each(function () {
 
 
 // reason
+/*******
+pc版 reason
+1.スクロールダウンしたら、背景色が上から下に伸びる
+2.背景色が伸びた後、一つずつreasonが表示される。
+ *******/
 $(document).ready(function () {
   // スクロールイベントを監視
   $(window).on("scroll", function () {
