@@ -62,153 +62,248 @@
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/components.css" />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/font.css" />
     <link rel="stylesheet" href="./css/home.css" />
   </head>
   <body>
-    <!-- header -->
-    <header class="header components-container">
-      <nav class="header-nav">
-        <ul>
-          <li class="header-item nav-item">
-            <a href="./index.html">ホーム</a>
-          </li>
-          <li class="header-item nav-item">
-            <a href="#homeMenu">メニュー</a>
-          </li>
-          <li class="header-item nav-item">
-            <a href="#homeProfile">プロフィール</a>
-          </li>
-          <li class="header-item nav-item">
-            <a href="#homeVoice">お客様の声</a>
-          </li>
-          <li class="header-item nav-item">
-            <a href="./contact.html">お問い合わせ</a>
-          </li>
-        </ul>
-        <div class="header-btn">
-          <a
-            class="cta-btn header-btn-link bg-skew-header"
-            href="./reserve.html"
-            ><span>ご予約はこちら</span></a
-          >
-        </div>
-      </nav>
+    <!-- copy -->
+    <div class="home__top-copy-horizontal">
+      <p>似合うがその場でわかる<span class="sp-br">特別な体験</span></p>
+    </div>
 
-      <!-- humメニュー -->
-      <div class="sp-menu-btn sp-top__menu-btn"><span></span></div>
-      <nav class="header-nav-sp">
-        <ul>
-          <li><a href="./index.html"> ホーム</a></li>
-          <li><a href="#homeMenu">メニュー</a></li>
-          <li><a href="#homeProfile">プロフィール</a></li>
-          <li><a href="#homeVoice">お客様の声</a></li>
-          <li><a href="./contact.html">お問い合わせ</a></li>
-        </ul>
-        <div class="sp-header-btn">
-          <a class="sp-cta-btn sp-header-btn-link" href="./reserve.html"
-            ><span>ご予約はこちら</span></a
-          >
-        </div>
-      </nav>
-    </header>
+    <main class="site-content">
+      <!-- header -->
+      <header class="header components-container">
+        <nav class="header-nav">
+          <ul>
+            <li class="header-item nav-item">
+              <a href="./index.html">ホーム</a>
+            </li>
+            <li class="header-item nav-item">
+              <a href="#homeMenu">メニュー</a>
+            </li>
+            <li class="header-item nav-item">
+              <a href="#homeProfile">プロフィール</a>
+            </li>
+            <li class="header-item nav-item">
+              <a href="#homeVoice">お客様の声</a>
+            </li>
+            <li class="header-item nav-item">
+              <a href="./contact.html">お問い合わせ</a>
+            </li>
+          </ul>
+          <div class="header-btn">
+            <a
+              class="cta-btn header-btn-link bg-skew-header"
+              href="./reserve.html"
+              ><span>ご予約はこちら</span></a
+            >
+          </div>
+        </nav>
 
-    <!-- top -->
-    <div class="home__top">
-      <!-- 画像back -->
-      <div class="home__mv-img-wrap">
-        <div class="home__top-mv">
-          <picture>
-            <!-- スマホ版 (AVIF → WebP → JPG) -->
-            <source
-              srcset="./img/sp-home-fv-pic.avif"
-              type="image/avif"
-              media="(max-width: 768px)"
-            />
-            <source
-              srcset="./img/sp-home-fv-pic.webp"
-              type="image/webp"
-              media="(max-width: 768px)"
-            />
-            <source
-              srcset="./img/sp-home-fv-pic.jpg"
-              media="(max-width: 768px)"
-            />
-            <!-- PC用 (AVIF → WebP → PNG) -->
-            <source
-              srcset="./img/home-fv-pic.avif"
-              type="image/avif"
-              loading="lazy"
-            />
-            <source srcset="./img/home-fv-pic.webp" type="image/webp" />
-            <img src="./img/home-fv-pic.png" alt="" />
-          </picture>
-        </div>
+        <!-- humメニュー -->
+        <div class="sp-menu-btn sp-top__menu-btn"><span></span></div>
+        <nav class="header-nav-sp">
+          <ul>
+            <li><a href="#homeTop"> ホーム</a></li>
+            <li><a href="#homeMenu">メニュー</a></li>
+            <li><a href="#homeProfile">プロフィール</a></li>
+            <li><a href="#homeVoice">お客様の声</a></li>
+            <li><a href="./contact.html">お問い合わせ</a></li>
+          </ul>
+          <div class="sp-header-btn">
+            <a class="sp-cta-btn sp-header-btn-link" href="./reserve.html"
+              ><span>ご予約はこちら</span></a
+            >
+          </div>
+        </nav>
+      </header>
 
-        <!-- 画像 triangle -->
-        <div class="home__top-mv-triangle">
-          <picture>
-            <source
-              srcset="./img/sp-home-mv-triangle.png"
-              media="(max-width: 768px)"
-            />
-            <!-- PC用 (WebP → PNG) -->
-            <source srcset="./img/home-mv-triangle.webp" type="image/webp" />
-            <img src="./img/home-mv-triangle.png" alt="" />
-          </picture>
-        </div>
-        <!-- 画像 -->
-        <div class="home__top-mv-small">
-          <picture>
-            <source
-              srcset="./img/sp-home-fv-pic-saya.png"
-              media="(max-width: 768px)"
-            />
-            <!-- PC用 (WebP → PNG) -->
-            <source
-              srcset="./img/home-fv-pic-saya.avif"
-              type="image/avif"
-              loading="lazy"
-            />
-            <source srcset="./img/home-fv-pic-saya.webp" type="image/webp" />
-            <img src="./img/home-fv-pic-saya.png" alt="" />
-          </picture>
-        </div>
-
-        <!-- ロゴ -->
-        <div class="home__top-logo">
-          <h1>porta fortuna</h1>
-        </div>
-        <!-- キャッチコピー -->
-        <div class="home__mv-txt-wrap">
-          <div class="home__top-copy">
-            <div class="home__top-copy-vertical">
-              <p>何を着ればいいか<span class="sp-br">もう迷わない</span></p>
+      <!-- top -->
+      <div class="home__top" id="homeTop">
+        <!-- 画像back -->
+        <div class="home__mv-img-wrap">
+          <div class="home__top-mv">
+            <!-- fv上段 -->
+            <div class="home__top-mv-upper">
+              <div class="home__top-mv-upper-item">
+                <picture>
+                  <source
+                    srcset="./img/fv-1.avif"
+                    type="image/avif"
+                    loading="lazy"
+                  />
+                  <source srcset="./img/fv-1.webp" type="image/webp" />
+                  <img src="./img/fv-1.png" alt="" />
+                </picture>
+              </div>
+              <div class="home__top-mv-upper-item">
+                <picture>
+                  <source
+                    srcset="./img/fv-2.avif"
+                    type="image/avif"
+                    loading="lazy"
+                  />
+                  <source srcset="./img/fv-2.webp" type="image/webp" />
+                  <img src="./img/fv-2.png" alt="" />
+                </picture>
+              </div>
+              <div class="home__top-mv-upper-item">
+                <picture>
+                  <source
+                    srcset="./img/fv-3.avif"
+                    type="image/avif"
+                    loading="lazy"
+                  />
+                  <source srcset="./img/fv-3.webp" type="image/webp" />
+                  <img src="./img/fv-3.png" alt="" />
+                </picture>
+              </div>
+              <div class="home__top-mv-upper-item">
+                <picture>
+                  <source
+                    srcset="./img/fv-4.avif"
+                    type="image/avif"
+                    loading="lazy"
+                  />
+                  <source srcset="./img/fv-4.webp" type="image/webp" />
+                  <img src="./img/fv-4.png" alt="" />
+                </picture>
+              </div>
             </div>
-            <div class="sp-home__top-copy-vertical">
-              <p class="sp-home__top-vertical-txt">何を着ればいいか</p>
-              <p class="sp-home__top-vertical-txt">もう迷わない</p>
-            </div>
-            <div class="home__top-copy-horizontal">
-              <p>似合うがその場でわかる<span class="sp-br">特別な体験</span></p>
-            </div>
-            <div class="sp-home__top-copy-horizontal-right">
-              <p class="sp-home__top-horizontal-txt-right">
-                似合うがその場でわかる
-              </p>
-            </div>
-            <div class="sp-home__top-copy-horizontal-left">
-              <p class="sp-home__top-horizontal-txt-left">特別な体験</p>
+            <!-- fv 下段 -->
+            <div class="home__top-mv-lower">
+              <div class="home__top-mv-lower-item">
+                <picture>
+                  <source
+                    srcset="./img/fv-5.avif"
+                    type="image/avif"
+                    loading="lazy"
+                  />
+                  <source srcset="./img/fv-5.webp" type="image/webp" />
+                  <img src="./img/fv-5.png" alt="" />
+                </picture>
+              </div>
+              <div class="home__top-mv-lower-item">
+                <picture>
+                  <source
+                    srcset="./img/fv-6.avif"
+                    type="image/avif"
+                    loading="lazy"
+                  />
+                  <source srcset="./img/fv-6.webp" type="image/webp" />
+                  <img src="./img/fv-6.png" alt="" />
+                </picture>
+              </div>
+              <div class="home__top-mv-lower-item">
+                <picture>
+                  <source
+                    srcset="./img/fv-7.avif"
+                    type="image/avif"
+                    loading="lazy"
+                  />
+                  <source srcset="./img/fv-7.webp" type="image/webp" />
+                  <img src="./img/fv-7.png" alt="" />
+                </picture>
+              </div>
+              <div class="home__top-mv-lower-item">
+                <picture>
+                  <source
+                    srcset="./img/fv-8.avif"
+                    type="image/avif"
+                    loading="lazy"
+                  />
+                  <source srcset="./img/fv-8.webp" type="image/webp" />
+                  <img src="./img/fv-8.png" alt="" />
+                </picture>
+              </div>
             </div>
           </div>
+          <!-- sp キャッチコピー -->
+          <div class="sp-home__top-copy">
+            <div class="sp-home__top-copy-vertical">
+              <p class="sp-home__top-vertical-txt">
+                何を着ればいいかもう迷わない
+              </p>
+            </div>
+          </div>
+
+          <!-- sabキャッチコピー -->
+          <div class="sp-home__sub-copy">
+            <div class="sp-home__top-copy-horizontal">
+              <p class="sp-home__top-horizontal-txt">
+                似合うがその場でわかる特別な体験
+              </p>
+            </div>
+               <!-- ロゴ -->
+          <div class="sp-home__top-logo">
+            <h1>porta fortuna</h1>
+          </div>
+          </div>
+       
+           <!-- ロゴ -->
+           <div class="home__top-logo">
+            <h1>porta fortuna</h1>
+          </div>
+          <!-- キャッチコピー -->
+          <div class="home__mv-txt-wrap">
+            <div class="home__top-copy">
+              <div class="home__top-copy-vertical">
+                <p>何を着ればいいか<span class="sp-br">もう迷わない</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- sp メッセージ -->
+      <div class="sp-home__top-message">
+        <div class="l-heading-ttl-wrap">
+          <div class="l-heading-ttl">
+            <p class="l-heading-ttl-en sp-home__top-message-ttl-en">Message</p>
+          </div>
+        </div>
+
+        <div class="sp-home__top-message-wrap">
+          <div class="sp-home__top-message-ttl-ja">
+            <p>
+              年齢でおしゃれを<span class="min-sp-br">諦めていませんか？</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="sp-home__top-message-txt">
+          <p>
+            年齢とともにライフスタイルや体型が変わり、<span
+              class="pc-br"
+            ></span>
+            <span class="sp-home__message-center"
+              ><br />『似合う服がわからない』<span class="min-sp-br"></span>
+              『何を買えばいいのか迷う』</span
+            ><br />と悩んでいませんか？<span class="pc-br"></span
+            >当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
+            お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。<span
+              class="pc-br"
+            ></span>
+            ファッションのお悩みを解決して、おしゃれを楽しみましょう。<span
+              class="pc-br"
+            ></span>
+          </p>
+        </div>
+      </div>
+      <!-- //spメッセ―ジ -->
+
+      <!-- message -->
+      <section class="home__message">
+        <div class="home__message-wrap">
           <!-- メッセージ -->
           <div class="home__top-message">
-            <div class="home__top-message-ttl-en">
-              <p>Message</p>
-            </div>
-            <div class="home__top-message-wrap">
+            <div class="home__top-message-ttl-wrap">
               <div class="home__top-message-ttl-ja">
                 <p>年齢でおしゃれを諦めていませんか？</p>
+              </div>
+              <div class="home__top-message-ttl-en">
+                <p>Message</p>
               </div>
             </div>
 
@@ -222,858 +317,838 @@
               </p>
             </div>
           </div>
+          <!-- message img -->
+          <div class="home__top-message-img">
+            <img src="./img/message-img.png" alt="" />
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
 
-    <!-- sp メッセージ -->
-    <div class="sp-home__top-message">
-      <div class="l-heading-ttl-wrap">
-        <div class="l-heading-ttl">
-          <p class="l-heading-ttl-en sp-home__top-message-ttl-en">Message</p>
-        </div>
-      </div>
-
-      <div class="sp-home__top-message-wrap">
-        <div class="sp-home__top-message-ttl-ja">
-          <p>
-            年齢でおしゃれを<span class="min-sp-br">諦めていませんか？</span>
-          </p>
-        </div>
-      </div>
-
-      <div class="sp-home__top-message-txt">
-        <p>
-          年齢とともにライフスタイルや体型が変わり、<span class="pc-br"></span>
-          <span class="sp-home__message-center"
-            ><br>『似合う服がわからない』<span class="min-sp-br"></span>
-            『何を買えばいいのか迷う』</span
-          ><br>と悩んでいませんか？<span class="pc-br"></span
-          >当サロンでは東京・千葉にて40～50代の女性のお客様を中心に、
-          お洋服服選びのコツや自分に似合うスタイルを丁寧にご提案します。<span
-            class="pc-br"
-          ></span>
-          ファッションのお悩みを解決して、おしゃれを楽しみましょう。<span
-            class="pc-br"
-          ></span>
-        </p>
-      </div>
-    </div>
-
-    <!-- reasonコンテンツ -->
-    <div class="home__l-container">
-      <section class="home__reason">
-        <div class="home__reason-back">
-          <div class="l-container">
-            <div class="home__reason-wrap">
-              <!-- タイトル -->
-              <div class="l-heading-ttl-wrap">
-                <div class="l-heading-ttl">
-                  <h2 class="l-heading-ttl-en home__reason-ttl-en">REASON</h2>
+      <!-- reasonコンテンツ -->
+      <div class="home__l-container">
+        <section class="home__reason">
+          <div class="home__reason-back">
+            <div class="l-container">
+              <div class="home__reason-wrap">
+                <!-- タイトル -->
+                <div class="l-heading-ttl-wrap">
+                  <div class="l-heading-ttl">
+                    <h2 class="l-heading-ttl-en home__reason-ttl-en">REASON</h2>
+                  </div>
+                  <div class="l-heading-ttl">
+                    <p class="l-heading-ttl-ja home__reason-ttl-ja">
+                      当サロンが選ばれる4つの理由
+                    </p>
+                  </div>
                 </div>
-                <div class="l-heading-ttl">
-                  <p class="l-heading-ttl-ja home__reason-ttl-ja">
-                    当サロンが選ばれる4つの理由
-                  </p>
-                </div>
-              </div>
-              <!-- 4つの理由 -->
-              <div class="home__reason-area">
-                <ul class="home__reason-groupe delayScroll">
-                  <li
-                    class="home__reason-item bgextend bgUDextendTrigger bgUDextend"
-                  >
-                    <span class="bgappear bgappearTrigger">
-                      <span class="home__reason-item-wrap" id="homeReason1">
-                        <span class="home__reason-item-ttl">
-                          <span class="home__reason-ttl-back">01</span>
-                          <p>
-                            <span class="home__reason-big-txt">
-                              1,000名以上の診断実績</span
-                            >で<br />磨いた確かな提案力
-                          </p>
+                <!-- 4つの理由 -->
+                <div class="home__reason-area">
+                  <ul class="home__reason-groupe delayScroll">
+                    <li
+                      class="home__reason-item bgextend bgUDextendTrigger bgUDextend"
+                    >
+                      <span class="bgappear bgappearTrigger">
+                        <span class="home__reason-item-wrap" id="homeReason1">
+                          <span class="home__reason-item-ttl">
+                            <span class="home__reason-ttl-back">01</span>
+                            <p>
+                              <span class="home__reason-big-txt">
+                                1,000名以上の診断実績</span
+                              >で<br />磨いた確かな提案力
+                            </p>
+                          </span>
+                          <span class="home__reason-txt">
+                            <p>
+                              イメージコンサルタント歴5年以上、診断実績1,000名以上の豊富な経験を活かし、お客様の「好き」やライフスタイルに寄り添った具体的なコーディネートをご提案します。
+                              さらに、年齢や体型に縛られず、自分らしさを引き出すスタイリングのコツを丁寧にお伝えし、おしゃれの可能性を広げるお手伝いをいたします。
+                            </p>
+                          </span>
                         </span>
-                        <span class="home__reason-txt">
+                      </span>
+                    </li>
+                    <li
+                      class="home__reason-item bgextend bgUDextendTrigger bgUDextend"
+                    >
+                      <span class="bgappear bgappearTrigger">
+                        <span class="home__reason-item-wrap" id="homeReason2">
+                          <span class="home__reason-item-ttl">
+                            <span class="home__reason-ttl-back">02</span>
+                            <p>
+                              <span class="home__reason-big-txt">
+                                リピーター続出中</span
+                              >の<br />
+                              満足度が高いサービス
+                            </p>
+                          </span>
+                          <div class="home__reason-txt">
+                            <p>
+                              お手持ちのお洋服にどんなアイテムを買い足せばコーディネートが広がるのか。また、着こなしに悩むお洋服をどうすればおしゃれに見えるのか。そんなお悩みに丁寧にお応えします。
+                              「自分らしい新しいおしゃれが見つかる」と多くの好評を頂戴しており、定期的にご予約いただくお客様が増えております。
+                            </p>
+                          </div>
+                        </span>
+                      </span>
+                    </li>
+                    <li
+                      class="home__reason-item bgextend bgUDextendTrigger bgUDextend"
+                    >
+                      <span class="bgappear bgappearTrigger">
+                        <span class="home__reason-item-wrap" id="homeReason3">
+                          <span class="home__reason-item-ttl">
+                            <span class="home__reason-ttl-back">03</span>
+                            <p>
+                              <span class="home__reason-big-txt">
+                                専門資格を持つプロ</span
+                              >が<br />
+                              お伝えする身につくセンス
+                            </p>
+                          </span>
+                          <span class="home__reason-txt">
+                            <p>
+                              顔タイプ診断®︎1級アドバイザー、パーソナルカラー診断、骨格診断などの資格保有者として、確かな知識に基づいた自信を持てるおしゃれのご提案をします。
+                              また、なぜお似合いになるのかを理論に基づいてお伝えするため、お洋服選びやコーディネートの組み方に活かせるようなセンスを身に付けていただけます。
+                            </p>
+                          </span>
+                        </span>
+                      </span>
+                    </li>
+                    <li
+                      class="home__reason-item bgextend bgUDextendTrigger bgUDextend"
+                    >
+                      <span class="bgappear bgappearTrigger">
+                        <span class="home__reason-item-wrap" id="homeReason4">
+                          <span class="home__reason-item-ttl">
+                            <span class="home__reason-ttl-back">04</span>
+                            <p>
+                              <span class="home__reason-big-txt">
+                                業界内から信頼される</span
+                              ><br />
+                              スタイリング技術
+                            </p>
+                          </span>
+                          <span class="home__reason-txt">
+                            <p>
+                              顔タイプ診断®︎協会公式YouTubeを筆頭に、さまざまなメディアでスタイリングを担当。
+                              さらに、プロのイメージコンサルタントを育成する講座でスタイリングの実習講師を担当しており、業界内からも「信頼性が高いスタイリング技術」と支持されております。
+                              プロも認める技術で、お客様の魅力を引き立たせる提案をいたします。
+                            </p>
+                          </span>
+                        </span>
+                      </span>
+                    </li>
+                  </ul>
+                  <!-- sp 4つの理由 -->
+                  <ul class="sp-home__reason-groupe">
+                    <li class="sp-home__reason-item">
+                      <div class="sp-home__reason-item-wrap">
+                        <div class="sp-home__reason-item-ttl">
+                          <span class="sp-home__reason-arrow"></span>
+                          <span class="sp-home__reason-ttl-back">01</span>
+                          <p>
+                            <span class="sp-home__reason-big-txt">
+                              1,000名以上の診断実績</span
+                            >で磨いた確かな提案力
+                          </p>
+                        </div>
+                        <div class="sp-home__reason-txt">
                           <p>
                             イメージコンサルタント歴5年以上、診断実績1,000名以上の豊富な経験を活かし、お客様の「好き」やライフスタイルに寄り添った具体的なコーディネートをご提案します。
                             さらに、年齢や体型に縛られず、自分らしさを引き出すスタイリングのコツを丁寧にお伝えし、おしゃれの可能性を広げるお手伝いをいたします。
                           </p>
-                        </span>
-                      </span>
-                    </span>
-                  </li>
-                  <li
-                    class="home__reason-item bgextend bgUDextendTrigger bgUDextend"
-                  >
-                    <span class="bgappear bgappearTrigger">
-                      <span class="home__reason-item-wrap" id="homeReason2">
-                        <span class="home__reason-item-ttl">
-                          <span class="home__reason-ttl-back">02</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="sp-home__reason-item">
+                      <div class="sp-home__reason-item-wrap">
+                        <div class="sp-home__reason-item-ttl">
+                          <span class="sp-home__reason-arrow"></span>
+
+                          <span class="sp-home__reason-ttl-back">02</span>
                           <p>
-                            <span class="home__reason-big-txt">
+                            <span class="sp-home__reason-big-txt">
                               リピーター続出中</span
-                            >の<br />
-                            満足度が高いサービス
+                            >の満足度が高いサービス
                           </p>
-                        </span>
-                        <div class="home__reason-txt">
+                        </div>
+                        <div class="sp-home__reason-txt">
                           <p>
                             お手持ちのお洋服にどんなアイテムを買い足せばコーディネートが広がるのか。また、着こなしに悩むお洋服をどうすればおしゃれに見えるのか。そんなお悩みに丁寧にお応えします。
                             「自分らしい新しいおしゃれが見つかる」と多くの好評を頂戴しており、定期的にご予約いただくお客様が増えております。
                           </p>
                         </div>
-                      </span>
-                    </span>
-                  </li>
-                  <li
-                    class="home__reason-item bgextend bgUDextendTrigger bgUDextend"
-                  >
-                    <span class="bgappear bgappearTrigger">
-                      <span class="home__reason-item-wrap" id="homeReason3">
-                        <span class="home__reason-item-ttl">
-                          <span class="home__reason-ttl-back">03</span>
+                      </div>
+                    </li>
+                    <li class="sp-home__reason-item">
+                      <div class="sp-home__reason-item-wrap">
+                        <div class="sp-home__reason-item-ttl">
+                          <span class="sp-home__reason-arrow"></span>
+                          <span class="sp-home__reason-ttl-back">03</span>
                           <p>
-                            <span class="home__reason-big-txt">
+                            <span class="sp-home__reason-big-txt">
                               専門資格を持つプロ</span
-                            >が<br />
-                            お伝えする身につくセンス
+                            >が お伝えする身につくセンス
                           </p>
-                        </span>
-                        <span class="home__reason-txt">
+                        </div>
+                        <div class="sp-home__reason-txt">
                           <p>
                             顔タイプ診断®︎1級アドバイザー、パーソナルカラー診断、骨格診断などの資格保有者として、確かな知識に基づいた自信を持てるおしゃれのご提案をします。
                             また、なぜお似合いになるのかを理論に基づいてお伝えするため、お洋服選びやコーディネートの組み方に活かせるようなセンスを身に付けていただけます。
                           </p>
-                        </span>
-                      </span>
-                    </span>
-                  </li>
-                  <li
-                    class="home__reason-item bgextend bgUDextendTrigger bgUDextend"
-                  >
-                    <span class="bgappear bgappearTrigger">
-                      <span class="home__reason-item-wrap" id="homeReason4">
-                        <span class="home__reason-item-ttl">
-                          <span class="home__reason-ttl-back">04</span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="sp-home__reason-item">
+                      <div class="sp-home__reason-item-wrap">
+                        <div class="sp-home__reason-item-ttl">
+                          <span class="sp-home__reason-arrow"></span>
+                          <span class="sp-home__reason-ttl-back">04</span>
                           <p>
-                            <span class="home__reason-big-txt">
-                              業界内から信頼される</span
-                            ><br />
+                            <span class="sp-home__reason-big-txt"
+                              ><span class="min-sp-br">
+                                業界内から信頼される</span
+                              ></span
+                            >
                             スタイリング技術
                           </p>
-                        </span>
-                        <span class="home__reason-txt">
+                        </div>
+                        <div class="sp-home__reason-txt">
                           <p>
                             顔タイプ診断®︎協会公式YouTubeを筆頭に、さまざまなメディアでスタイリングを担当。
                             さらに、プロのイメージコンサルタントを育成する講座でスタイリングの実習講師を担当しており、業界内からも「信頼性が高いスタイリング技術」と支持されております。
                             プロも認める技術で、お客様の魅力を引き立たせる提案をいたします。
                           </p>
-                        </span>
-                      </span>
-                    </span>
-                  </li>
-                </ul>
-                <!-- sp 4つの理由 -->
-                <ul class="sp-home__reason-groupe">
-                  <li class="sp-home__reason-item">
-                    <div class="sp-home__reason-item-wrap">
-                      <div class="sp-home__reason-item-ttl">
-                        <span class="sp-home__reason-arrow"></span>
-                        <span class="sp-home__reason-ttl-back">01</span>
-                        <p>
-                          <span class="sp-home__reason-big-txt">
-                            1,000名以上の診断実績</span
-                          >で磨いた確かな提案力
-                        </p>
+                        </div>
                       </div>
-                      <div class="sp-home__reason-txt">
-                        <p>
-                          イメージコンサルタント歴5年以上、診断実績1,000名以上の豊富な経験を活かし、お客様の「好き」やライフスタイルに寄り添った具体的なコーディネートをご提案します。
-                          さらに、年齢や体型に縛られず、自分らしさを引き出すスタイリングのコツを丁寧にお伝えし、おしゃれの可能性を広げるお手伝いをいたします。
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="sp-home__reason-item">
-                    <div class="sp-home__reason-item-wrap">
-                      <div class="sp-home__reason-item-ttl">
-                        <span class="sp-home__reason-arrow"></span>
-
-                        <span class="sp-home__reason-ttl-back">02</span>
-                        <p>
-                          <span class="sp-home__reason-big-txt">
-                            リピーター続出中</span
-                          >の満足度が高いサービス
-                        </p>
-                      </div>
-                      <div class="sp-home__reason-txt">
-                        <p>
-                          お手持ちのお洋服にどんなアイテムを買い足せばコーディネートが広がるのか。また、着こなしに悩むお洋服をどうすればおしゃれに見えるのか。そんなお悩みに丁寧にお応えします。
-                          「自分らしい新しいおしゃれが見つかる」と多くの好評を頂戴しており、定期的にご予約いただくお客様が増えております。
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="sp-home__reason-item">
-                    <div class="sp-home__reason-item-wrap">
-                      <div class="sp-home__reason-item-ttl">
-                        <span class="sp-home__reason-arrow"></span>
-                        <span class="sp-home__reason-ttl-back">03</span>
-                        <p>
-                          <span class="sp-home__reason-big-txt">
-                            専門資格を持つプロ</span
-                          >が お伝えする身につくセンス
-                        </p>
-                      </div>
-                      <div class="sp-home__reason-txt">
-                        <p>
-                          顔タイプ診断®︎1級アドバイザー、パーソナルカラー診断、骨格診断などの資格保有者として、確かな知識に基づいた自信を持てるおしゃれのご提案をします。
-                          また、なぜお似合いになるのかを理論に基づいてお伝えするため、お洋服選びやコーディネートの組み方に活かせるようなセンスを身に付けていただけます。
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="sp-home__reason-item">
-                    <div class="sp-home__reason-item-wrap">
-                      <div class="sp-home__reason-item-ttl">
-                        <span class="sp-home__reason-arrow"></span>
-                        <span class="sp-home__reason-ttl-back">04</span>
-                        <p>
-                          <span class="sp-home__reason-big-txt"
-                            ><span class="min-sp-br">
-                              業界内から信頼される</span
-                            ></span
-                          >
-                          スタイリング技術
-                        </p>
-                      </div>
-                      <div class="sp-home__reason-txt">
-                        <p>
-                          顔タイプ診断®︎協会公式YouTubeを筆頭に、さまざまなメディアでスタイリングを担当。
-                          さらに、プロのイメージコンサルタントを育成する講座でスタイリングの実習講師を担当しており、業界内からも「信頼性が高いスタイリング技術」と支持されております。
-                          プロも認める技術で、お客様の魅力を引き立たせる提案をいたします。
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-    <!-- menuコンテンツ -->
-    <div class="l-container" id="homeMenu">
-      <section class="home__menu">
-        <div class="home__menu-wrap">
+        </section>
+      </div>
+      <!-- menuコンテンツ -->
+      <div class="l-container">
+        <section class="home__menu">
+          <div class="home__menu-wrap">
+            <!-- タイトル -->
+            <div class="l-heading-ttl-wrap">
+              <div class="l-heading-ttl">
+                <h2 class="l-heading-ttl-en">MENU</h2>
+              </div>
+              <div class="l-heading-ttl">
+                <p class="l-heading-ttl-ja">メニュー</p>
+              </div>
+            </div>
+            <!-- メニュー内容 -->
+            <div class="home__menu-list">
+              <ul class="home__menu-delayScroll" id="homeMenu">
+                <li class="home__menu-item">
+                  <div class="home__menu-item-ttl">
+                    <p>ショッピング同行</p>
+                  </div>
+                  <div class="home__menu-item-img">
+                    <span class="home__menu-item-rank common__menu-rank"></span>
+                    <picture>
+                      <!-- スマートフォン用（1024px 以下） -->
+                      <source
+                        srcset="./img/sp-menu-shopping-trip.jpg"
+                        media="(max-width: 1024px)"
+                      />
+
+                      <!-- PC用（AVIF、WebP → JPEG） -->
+                      <source
+                        srcset="./img/menu-shopping-trip.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="./img/menu-shopping-trip.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./img/menu-shopping-trip.jpg"
+                        alt="ショップクルーズ＋お茶会"
+                      />
+                    </picture>
+                  </div>
+                  <!-- sp用 同行テキスト-->
+                  <div class="sp-home__menu-item-ttl">
+                    <p>ショッピング同行</p>
+                  </div>
+                  <div class="home__menu-item-txt">
+                    <p>
+                      お客様に合うお洋服を事前に下見してご用意。当日は試着しながら、ショップ選びやコーディネートのアドバイスをいたします。新しい自分の魅力を発見できる、当サロンで一番人気のメニューです。
+                    </p>
+                  </div>
+                </li>
+                <!-- クルーズ -->
+                <li class="home__menu-item">
+                  <div class="home__menu-item-ttl">
+                    <p>ショップクルーズ+お茶会</p>
+                  </div>
+                  <div class="home__menu-item-img">
+                    <picture>
+                      <!-- スマートフォン用（1024px 以下） -->
+                      <source
+                        srcset="./img/sp-menu-shopping-clues.jpg"
+                        media="(max-width: 1024px)"
+                      />
+
+                      <!-- PC用（AVIF、WebP → JPEG） -->
+                      <source
+                        srcset="./img/menu-shopping-clues.avif"
+                        type="image/avif"
+                      />
+                      <source
+                        srcset="./img/menu-shopping-clues.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="./img/menu-shopping-clues.jpg"
+                        alt="ショップクルーズ＋お茶会"
+                      />
+                    </picture>
+                  </div>
+                  <div class="sp-home__menu-item-ttl">
+                    <p>ショップクルーズ+お茶会</p>
+                  </div>
+                  <div class="home__menu-item-txt">
+                    <p>
+                      ショップを巡りながら、ショップ選びのコツやお客様におすすめのお店をご紹介します。その後は、お茶を楽しみながら気軽にお話しできる時間もご用意しています。
+                    </p>
+                  </div>
+                </li>
+                <li class="home__menu-item">
+                  <div class="home__menu-item-ttl">
+                    <p>オンラインクローゼット診断</p>
+                  </div>
+
+                  <div class="home__menu-item-img">
+                    <picture>
+                      <source
+                        srcset="./img/menu-closet-check.png"
+                        media="(max-width: 1024px)"
+                      />
+                      <!-- PC用 (WebP → PNG) -->
+                      <source
+                        srcset="./img/menu-closet-check.avif"
+                        type="image/avif"
+                        loading="lazy"
+                      />
+                      <source
+                        srcset="./img/menu-closet-check.webp"
+                        type="image/webp"
+                      />
+
+                      <img
+                        src="./img/menu-closet-check.png"
+                        alt="オンラインクローゼット診断"
+                      />
+                    </picture>
+                  </div>
+                  <div class="sp-home__menu-item-ttl">
+                    <p>オンラインクローゼット診断</p>
+                  </div>
+                  <div class="home__menu-item-txt">
+                    <p>
+                      オンラインでご自宅にあるお洋服を診断し、着回しのご提案や断捨離のご相談、おすすめのブランドのご紹介をいたします。ご自宅で気軽におしゃれを学べるメニューです。
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <!-- btn -->
+              <div class="home__link-area">
+                <div class="home__link-txt">
+                  <p>メニューの詳細はこちら</p>
+                </div>
+                <div class="home__link-btn">
+                  <a class="home__link-url bg-skew" href="./menu.html"
+                    ><span>CHECK</span></a
+                  >
+                  <span class="home__link-btn-arrow"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- voiceコンテンツ -->
+      <div class="l-container" id="homeVoice">
+        <section class="home__voice">
           <!-- タイトル -->
           <div class="l-heading-ttl-wrap">
             <div class="l-heading-ttl">
-              <h2 class="l-heading-ttl-en">MENU</h2>
+              <h2 class="l-heading-ttl-en">VOICE</h2>
             </div>
             <div class="l-heading-ttl">
-              <p class="l-heading-ttl-ja">メニュー</p>
+              <p class="l-heading-ttl-ja">お客様からの声</p>
             </div>
           </div>
-          <!-- メニュー内容 -->
-          <div class="home__menu-list">
-            <ul class="home__menu-delayScroll">
-              <li class="home__menu-item">
-                <div class="home__menu-item-ttl">
-                  <p>ショッピング同行</p>
+          <div class="home__voice-slider">
+            <!-- voice1 -->
+            <div class="home__voice-area">
+              <div class="common__voice-text-wrap">
+                <!-- num -->
+                <div class="common__voice-order">
+                  <div class="common__voice-num-txt">
+                    <p>User<br />Voice</p>
+                  </div>
+                  <div class="common__voice-num">
+                    <p>1</p>
+                  </div>
                 </div>
-                <div class="home__menu-item-img">
-                  <span class="home__menu-item-rank common__menu-rank"></span>
-                  <picture>
-                    <!-- スマートフォン用（1024px 以下） -->
-                    <source
-                      srcset="./img/sp-menu-shopping-trip.jpg"
-                      media="(max-width: 1024px)"
-                    />
-
-                    <!-- PC用（AVIF、WebP → JPEG） -->
-                    <source
-                      srcset="./img/menu-shopping-trip.avif"
-                      type="image/avif"
-                    />
-                    <source
-                      srcset="./img/menu-shopping-trip.webp"
-                      type="image/webp"
-                    />
-                    <img
-                      src="./img/menu-shopping-trip.jpg"
-                      alt="ショップクルーズ＋お茶会"
-                    />
-                  </picture>
-                </div>
-                <!-- sp用 同行テキスト-->
-                <div class="sp-home__menu-item-ttl">
-                  <p>ショッピング同行</p>
-                </div>
-                <div class="home__menu-item-txt">
+                <!-- 感想 -->
+                <div class="common__voice-customer">
                   <p>
-                    お客様に合うお洋服を事前に下見してご用意。当日は試着しながら、ショップ選びやコーディネートのアドバイスをいたします。新しい自分の魅力を発見できる、当サロンで一番人気のメニューです。
+                    “その場で変わる！<br />
+                    一瞬で似合うがわかるショッピング体験”
                   </p>
                 </div>
-              </li>
-              <!-- クルーズ -->
-              <li class="home__menu-item">
-                <div class="home__menu-item-ttl">
-                  <p>ショップクルーズ+お茶会</p>
-                </div>
-                <div class="home__menu-item-img">
-                  <picture>
-                    <!-- スマートフォン用（1024px 以下） -->
-                    <source
-                      srcset="./img/sp-menu-shopping-clues.jpg"
-                      media="(max-width: 1024px)"
-                    />
-
-                    <!-- PC用（AVIF、WebP → JPEG） -->
-                    <source
-                      srcset="./img/menu-shopping-clues.avif"
-                      type="image/avif"
-                    />
-                    <source
-                      srcset="./img/menu-shopping-clues.webp"
-                      type="image/webp"
-                    />
-                    <img
-                      src="./img/menu-shopping-clues.jpg"
-                      alt="ショップクルーズ＋お茶会"
-                    />
-                  </picture>
-                </div>
-                <div class="sp-home__menu-item-ttl">
-                  <p>ショップクルーズ+お茶会</p>
-                </div>
-                <div class="home__menu-item-txt">
-                  <p>
-                    ショップを巡りながら、ショップ選びのコツやお客様におすすめのお店をご紹介します。その後は、お茶を楽しみながら気軽にお話しできる時間もご用意しています。
-                  </p>
-                </div>
-              </li>
-              <li class="home__menu-item">
-                <div class="home__menu-item-ttl">
-                  <p>オンラインクローゼット診断</p>
-                </div>
-
-                <div class="home__menu-item-img">
-                  <picture>
-                    <source
-                      srcset="./img/sp-menu-closet-check.jpg"
-                      media="(max-width: 1024px)"
-                    />
-                    <!-- PC用 (WebP → PNG) -->
-                    <source
-                      srcset="./img/menu-closet-check.avif"
-                      type="image/avif"
-                      loading="lazy"
-                    />
-                    <source
-                      srcset="./img/menu-closet-check.webp"
-                      type="image/webp"
-                    />
-
-                    <img
-                      src="./img/menu-closet-check.png"
-                      alt="オンラインクローゼット診断"
-                    />
-                  </picture>
-                </div>
-                <div class="sp-home__menu-item-ttl">
-                  <p>オンラインクローゼット診断</p>
-                </div>
-                <div class="home__menu-item-txt">
-                  <p>
-                    オンラインでご自宅にあるお洋服を診断し、着回しのご提案や断捨離のご相談、おすすめのブランドのご紹介をいたします。ご自宅で気軽におしゃれを学べるメニューです。
-                  </p>
-                </div>
-              </li>
-            </ul>
-            <!-- btn -->
-            <div class="home__link-area">
-              <div class="home__link-txt">
-                <p>メニューの詳細はこちら</p>
               </div>
-              <div class="home__link-btn">
-                <a class="home__link-url bg-skew" href="./menu.html"
-                  ><span>CHECK</span></a
-                >
-                <span class="home__link-btn-arrow"></span>
+              <div class="common__voice-img-wrap">
+                <picture>
+                  <source
+                    srcset="./img/sp-home-voice1.jpg"
+                    media="(max-width: 1024px)"
+                  />
+                  <!-- PC用 (AVIF → WebP → PNG) -->
+                  <source srcset="./img/home-voice1.avif" type="image/avif" />
+                  <source srcset="./img/home-voice1.webp" type="image/webp" />
+                  <img
+                    src="./img/home-voice1.jpg"
+                    alt="40代お客様の声"
+                    focusable="false"
+                  />
+                </picture>
+              </div>
+            </div>
+            <!-- voice2 -->
+            <div class="home__voice-area">
+              <div class="common__voice-text-wrap">
+                <!-- num -->
+                <div class="common__voice-order">
+                  <div class="common__voice-num-txt">
+                    <p>User<br />Voice</p>
+                  </div>
+                  <div class="common__voice-num">
+                    <p>2</p>
+                  </div>
+                </div>
+                <!-- 感想 -->
+                <div class="common__voice-customer">
+                  <p>
+                    “毎朝が楽になる！<br />
+                    似合う定番アイテムで時短コーデ”
+                  </p>
+                </div>
+              </div>
+              <div class="common__voice-img-wrap">
+                <picture>
+                  <source
+                    srcset="./img/sp-home-voice2.jpg"
+                    media="(max-width: 1024px)"
+                  />
+                  <!-- PC用 (AVIF → WebP → PNG) -->
+                  <source srcset="./img/home-voice2.avif" type="image/avif" />
+                  <source srcset="./img/home-voice2.webp" type="image/webp" />
+                  <img
+                    src="./img/home-voice2.jpg"
+                    alt="50代お客様の声"
+                    focusable="false"
+                  />
+                </picture>
+              </div>
+            </div>
+            <!-- voice3 -->
+            <div class="home__voice-area">
+              <div class="common__voice-text-wrap">
+                <!-- num -->
+                <div class="common__voice-order">
+                  <div class="common__voice-num-txt">
+                    <p>User<br />Voice</p>
+                  </div>
+                  <div class="common__voice-num">
+                    <p>3</p>
+                  </div>
+                </div>
+                <!-- 感想 -->
+                <div class="common__voice-customer">
+                  <p>
+                    “褒められる喜びを実感！<br />
+                    毎日が楽しくなるオシャレ体験”
+                  </p>
+                </div>
+              </div>
+              <div class="common__voice-img-wrap">
+                <picture>
+                  <source
+                    srcset="./img/sp-home-voice3.jpg"
+                    media="(max-width: 1024px)"
+                  />
+                  <!-- PC用 (AVIF → WebP → PNG) -->
+                  <source srcset="./img/home-voice3.avif" type="image/avif" />
+                  <source srcset="./img/home-voice3.webp" type="image/webp" />
+                  <img
+                    src="./img/home-voice3.jpg"
+                    alt="50代お客様の声"
+                    focusable="false"
+                  />
+                </picture>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+          <!-- link-btn -->
+          <div class="home__link-area">
+            <div class="home__link-txt">
+              <p>詳しいお客様の声はこちら</p>
+            </div>
+            <div class="home__link-btn">
+              <a class="home__link-url bg-skew" href="./voice.html"
+                ><span>CHECK</span></a
+              >
+              <span class="home__link-btn-arrow"></span>
+            </div>
+          </div>
+        </section>
+      </div>
 
-    <!-- voiceコンテンツ -->
-    <div class="l-container" id="homeVoice">
-      <section class="home__voice">
-        <!-- タイトル -->
-        <div class="l-heading-ttl-wrap">
-          <div class="l-heading-ttl">
-            <h2 class="l-heading-ttl-en">VOICE</h2>
-          </div>
-          <div class="l-heading-ttl">
-            <p class="l-heading-ttl-ja">お客様からの声</p>
-          </div>
-        </div>
-        <div class="home__voice-slider">
-          <!-- voice1 -->
-          <div class="home__voice-area">
-            <div class="common__voice-text-wrap">
-              <!-- num -->
-              <div class="common__voice-order">
-                <div class="common__voice-num-txt">
-                  <p>User<br />Voice</p>
-                </div>
-                <div class="common__voice-num">
-                  <p>1</p>
+      <!-- profile -->
+      <div class="l-container" id="homeProfile">
+        <section class="home__profile">
+          <div class="home__profile-wrap">
+            <!-- 画像 -->
+            <div class="home__profile-img-wrap">
+              <div class="home__profile-img">
+                <picture>
+                  <source
+                    srcset="./img/sp-home-profile-img.png"
+                    media="(max-width: 767px)"
+                  />
+                  <!-- PC用 (WebP → PNG) -->
+                  <source
+                    srcset="./img/home-profile-img.avif"
+                    type="image/avif"
+                    loading="lazy"
+                  />
+                  <source
+                    srcset="./img/home-profile-img.webp"
+                    type="image/webp"
+                  />
+
+                  <img
+                    src="./img/home-profile-img.png"
+                    alt="プロフィール写真"
+                    focusable="false"
+                  />
+                </picture>
+                <div class="sp-home__profile-txt-name">
+                  <p><span class="sp-home__inverse-txt">S</span>AYA</p>
                 </div>
               </div>
-              <!-- 感想 -->
-              <div class="common__voice-customer">
+            </div>
+            <!-- 文章 -->
+            <div class="home__profile-txt-wrap">
+              <div class="home__profile-txt-name">
+                <p>SAYA</p>
+              </div>
+              <div class="home__profile-txt-content">
+                <p>50代、身長150cm。背が低く、ぽっちゃり体型の私。<br /></p>
                 <p>
-                  “その場で変わる！<br />
-                  一瞬で似合うがわかるショッピング体験”
+                  数年前までは、どこにでもいる普通の50代の主婦でした。<br />
+                  会社員、結婚、出産、子育て、専業主婦、パート勤務…。<br />
+                </p>
+                <p>
+                  人生のさまざまな場面を経験してきたからこそ、「年齢を重ねてもおしゃれを楽しむことの大切さ」を実感しています。
+                </p>
+                <p>
+                  お洋服選びに迷ったり、似合うスタイルがわからなくなったりするのは、
+                  どんな方でも経験すること。
+                </p>
+                <p>
+                  私自身もその悩みを抱えた一人だからこそ、
+                  お客様にリアルなお悩みに寄り添ったご提案ができます。
+                </p>
+                <p>
+                  「今の自分だからこそ楽しめるおしゃれ」を一緒に見つけましょう。
                 </p>
               </div>
             </div>
-            <div class="common__voice-img-wrap">
-              <picture>
-                <source
-                  srcset="./img/sp-home-voice1.jpg"
-                  media="(max-width: 1024px)"
-                />
-                <!-- PC用 (AVIF → WebP → PNG) -->
-                <source srcset="./img/home-voice1.avif" type="image/avif" />
-                <source srcset="./img/home-voice1.webp" type="image/webp" />
-                <img
-                  src="./img/home-voice1.jpg"
-                  alt="40代お客様の声"
-                  focusable="false"
-                />
-              </picture>
+          </div>
+          <div class="home__link-area">
+            <div class="home__link-txt">
+              <p>詳しいプロフィールはこちら</p>
+            </div>
+            <div class="home__link-btn">
+              <a class="home__link-url bg-skew" href="./profile.html"
+                ><span>CHECK</span></a
+              >
+              <span class="home__link-btn-arrow"></span>
             </div>
           </div>
-          <!-- voice2 -->
-          <div class="home__voice-area">
-            <div class="common__voice-text-wrap">
-              <!-- num -->
-              <div class="common__voice-order">
-                <div class="common__voice-num-txt">
-                  <p>User<br />Voice</p>
-                </div>
-                <div class="common__voice-num">
-                  <p>2</p>
-                </div>
-              </div>
-              <!-- 感想 -->
-              <div class="common__voice-customer">
-                <p>
-                  “毎朝が楽になる！<br />
-                  似合う定番アイテムで時短コーデ”
-                </p>
-              </div>
-            </div>
-            <div class="common__voice-img-wrap">
-              <picture>
-                <source
-                  srcset="./img/sp-home-voice2.jpg"
-                  media="(max-width: 1024px)"
-                />
-                <!-- PC用 (AVIF → WebP → PNG) -->
-                <source srcset="./img/home-voice2.avif" type="image/avif" />
-                <source srcset="./img/home-voice2.webp" type="image/webp" />
-                <img
-                  src="./img/home-voice2.jpg"
-                  alt="50代お客様の声"
-                  focusable="false"
-                />
-              </picture>
-            </div>
-          </div>
-          <!-- voice3 -->
-          <div class="home__voice-area">
-            <div class="common__voice-text-wrap">
-              <!-- num -->
-              <div class="common__voice-order">
-                <div class="common__voice-num-txt">
-                  <p>User<br />Voice</p>
-                </div>
-                <div class="common__voice-num">
-                  <p>3</p>
-                </div>
-              </div>
-              <!-- 感想 -->
-              <div class="common__voice-customer">
-                <p>
-                  “褒められる喜びを実感！<br />
-                  毎日が楽しくなるオシャレ体験”
-                </p>
-              </div>
-            </div>
-            <div class="common__voice-img-wrap">
-              <picture>
-                <source
-                  srcset="./img/sp-home-voice3.jpg"
-                  media="(max-width: 1024px)"
-                />
-                <!-- PC用 (AVIF → WebP → PNG) -->
-                <source srcset="./img/home-voice3.avif" type="image/avif" />
-                <source srcset="./img/home-voice3.webp" type="image/webp" />
-                <img
-                  src="./img/home-voice3.jpg"
-                  alt="50代お客様の声"
-                  focusable="false"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-        <!-- link-btn -->
-        <div class="home__link-area">
-          <div class="home__link-txt">
-            <p>詳しいお客様の声はこちら</p>
-          </div>
-          <div class="home__link-btn">
-            <a class="home__link-url bg-skew" href="./voice.html"
-              ><span>CHECK</span></a
-            >
-            <span class="home__link-btn-arrow"></span>
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
 
-    <!-- profile -->
-    <div class="l-container" id="homeProfile">
-      <section class="home__profile">
-        <div class="home__profile-wrap">
+      <!-- NEWS -->
+      <div class="l-container">
+        <section class="home__news">
+          <!-- タイトル -->
+          <div class="l-heading-ttl-wrap">
+            <div class="l-heading-ttl">
+              <h2 class="l-heading-ttl-en">NEWS</h2>
+            </div>
+            <div class="l-heading-ttl">
+              <p class="l-heading-ttl-ja">最新情報</p>
+            </div>
+          </div>
+          <!-- テキスト -->
+          <div class="home__news-wrap">
+            <div class="home__news-txt">
+              <p>
+                最新情報はInstagramにて更新しております。<br />ファッションのお役立ち情報も発信しておりますので、ぜひご確認ください。
+              </p>
+            </div>
+          </div>
           <!-- 画像 -->
-          <div class="home__profile-img-wrap">
-            <div class="home__profile-img">
+          <div class="home__news-img-groupe">
+            <!-- 左  PC用 (AVIF → WebP → PNG) -->
+            <div class="home_news-img-item home__news-left">
+              <source
+                srcset="./img/home-news-left-tiny.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/home-news-left-tiny.webp"
+                type="image/webp"
+              />
+              <img src="./img/home-news-left-tiny.jpg" alt="" loading="lazy" />
+            </div>
+            <div class="home_news-img-item home__news-center">
+              <!-- センター  PC用 (AVIF → WebP → PNG) -->
+              <source
+                srcset="./img/home-news-center-tiny.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/home-news-center-tiny.webp"
+                type="image/webp"
+              />
+              <img
+                src="./img/home-news-center-tiny.jpg"
+                alt=""
+                loading="lazy"
+              />
+            </div>
+            <!-- 右  PC用 (AVIF → WebP → PNG) -->
+            <div class="home_news-img-item home__news-right">
+              <source
+                srcset="./img/home-news-right-tiny.avif"
+                type="image/avif"
+              />
+              <source
+                srcset="./img/home-news-right-tiny.webp"
+                type="image/webp"
+              />
+              <img src="./img/home-news-right-tiny.jpg" alt="" loading="lazy" />
+            </div>
+            <!-- sp用 img -->
+            <div class="sp-home__news-img-item">
               <picture>
                 <source
-                  srcset="./img/sp-home-profile-img.png"
-                  media="(max-width: 767px)"
-                />
-                <!-- PC用 (WebP → PNG) -->
-                <source
-                  srcset="./img/home-profile-img.avif"
+                  srcset="./img/sp-home-news.avif"
                   type="image/avif"
                   loading="lazy"
                 />
-                <source
-                  srcset="./img/home-profile-img.webp"
-                  type="image/webp"
-                />
+                <source srcset="./img/sp-home-news.webp" type="image/webp" />
 
-                <img
-                  src="./img/home-profile-img.png"
-                  alt="プロフィール写真"
-                  focusable="false"
-                />
+                <img src="./img/sp-home-news.jpg" alt="" focusable="false" />
               </picture>
-              <div class="sp-home__profile-txt-name">
-                <p><span class="sp-home__inverse-txt">S</span>AYA</p>
-              </div>
             </div>
           </div>
-          <!-- 文章 -->
-          <div class="home__profile-txt-wrap">
-            <div class="home__profile-txt-name">
-              <p>SAYA</p>
+
+          <!-- btn -->
+          <div class="home__link-area">
+            <div class="home__link-txt">
+              <p>最新情報はこちら</p>
             </div>
-            <div class="home__profile-txt-content">
-              <p>50代、身長150cm。背が低く、ぽっちゃり体型の私。<br /></p>
-              <p>
-                数年前までは、どこにでもいる普通の50代の主婦でした。<br />
-                会社員、結婚、出産、子育て、専業主婦、パート勤務…。<br />
-              </p>
-              <p>
-                人生のさまざまな場面を経験してきたからこそ、「年齢を重ねてもおしゃれを楽しむことの大切さ」を実感しています。
-              </p>
-              <p>
-                お洋服選びに迷ったり、似合うスタイルがわからなくなったりするのは、
-                どんな方でも経験すること。
-              </p>
-              <p>
-                私自身もその悩みを抱えた一人だからこそ、
-                お客様にリアルなお悩みに寄り添ったご提案ができます。
-              </p>
-              <p>
-                「今の自分だからこそ楽しめるおしゃれ」を一緒に見つけましょう。
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="home__link-area">
-          <div class="home__link-txt">
-            <p>詳しいプロフィールはこちら</p>
-          </div>
-          <div class="home__link-btn">
-            <a class="home__link-url bg-skew" href="./profile.html"
-              ><span>CHECK</span></a
-            >
-            <span class="home__link-btn-arrow"></span>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- NEWS -->
-    <div class="l-container">
-      <section class="home__news">
-        <!-- タイトル -->
-        <div class="l-heading-ttl-wrap">
-          <div class="l-heading-ttl">
-            <h2 class="l-heading-ttl-en">NEWS</h2>
-          </div>
-          <div class="l-heading-ttl">
-            <p class="l-heading-ttl-ja">最新情報</p>
-          </div>
-        </div>
-        <!-- テキスト -->
-        <div class="home__news-wrap">
-          <div class="home__news-txt">
-            <p>
-              最新情報はInstagramにて更新しております。<br />ファッションのお役立ち情報も発信しておりますので、ぜひご確認ください。
-            </p>
-          </div>
-        </div>
-        <!-- 画像 -->
-        <div class="home__news-img-groupe">
-          <!-- 左  PC用 (AVIF → WebP → PNG) -->
-          <div class="home_news-img-item home__news-left">
-            <source srcset="./img/home-news-left-tiny.avif" type="image/avif" />
-            <source srcset="./img/home-news-left-tiny.webp" type="image/webp" />
-            <img src="./img/home-news-left-tiny.jpg" alt="" loading="lazy" />
-          </div>
-          <div class="home_news-img-item home__news-center">
-            <!-- センター  PC用 (AVIF → WebP → PNG) -->
-            <source
-              srcset="./img/home-news-center-tiny.avif"
-              type="image/avif"
-            />
-            <source
-              srcset="./img/home-news-center-tiny.webp"
-              type="image/webp"
-            />
-            <img src="./img/home-news-center-tiny.jpg" alt="" loading="lazy" />
-          </div>
-          <!-- 右  PC用 (AVIF → WebP → PNG) -->
-          <div class="home_news-img-item home__news-right">
-            <source
-              srcset="./img/home-news-right-tiny.avif"
-              type="image/avif"
-            />
-            <source
-              srcset="./img/home-news-right-tiny.webp"
-              type="image/webp"
-            />
-            <img src="./img/home-news-right-tiny.jpg" alt="" loading="lazy" />
-          </div>
-          <!-- sp用 img -->
-          <div class="sp-home__news-img-item">
-            <picture>
-              <source
-                srcset="./img/sp-home-news.avif"
-                type="image/avif"
-                loading="lazy"
-              />
-              <source
-                srcset="./img/sp-home-news.webp"
-                type="image/webp"
-              />
-
-              <img src="./img/sp-home-news.jpg"
-                alt=""
-                focusable="false"
-              />
-            </picture>
-          </div>
-        </div>
-
-        <!-- btn -->
-        <div class="home__link-area">
-          <div class="home__link-txt">
-            <p>最新情報はこちら</p>
-          </div>
-          <div class="home__link-btn">
-            <a
-              class="home__link-url bg-skew"
-              href="https://www.instagram.com/saya.takahashi0124/"
-              target="_blank"
-              ><span>CHECK</span></a
-            >
-            <span class="home__link-btn-arrow"></span>
-          </div>
-        </div>
-      </section>
-    </div>
-
-    <!-- 以下、前ページ共通 -->
-    <!-- reserve -->
-    <div class="reserve__container components-container">
-      <section class="reserve__btn">
-        <div class="reserve__btn-wrap l-container">
-          <div class="reserve__btn-message">
-            <p>
-              「毎日のオシャレをもっと楽しく」<span class="sp-br"
-                >似合う服に出会う体験を。</span
+            <div class="home__link-btn">
+              <a
+                class="home__link-url bg-skew"
+                href="https://www.instagram.com/saya.takahashi0124/"
+                target="_blank"
+                ><span>CHECK</span></a
               >
-            </p>
+              <span class="home__link-btn-arrow"></span>
+            </div>
           </div>
-          <div class="reserve__btn-link">
-            <a class="reserve__btn-footer cta-btn bg-skew" href="./reserve.html"
-              ><span>今すぐ予約する</span></a
-            >
-          </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
 
-    <!-- footer -->
-    <div class="components-container">
-      <footer class="footer">
-        <div class="footer__nav-wrap l-container">
-          <!-- left -->
-          <div class="footer__nav-wrap-left">
-            <nav class="footer__nav">
-              <ul>
-                <li class="footer__item footer_nav-ttl nav-item">
-                  <a href="./index.html">ホーム</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="footer__item footer_nav-ttl nav-item">
-                  <a href="./menu.html">メニュー</a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./menu.html#menu-trip">ショッピング同行</a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./menu.html#menu-cruise">ショップクルーズ＋お茶会</a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./menu.html#menu-closet"
-                    >オンラインクローゼット診断</a
-                  >
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./menu.html#menu-price">料金のご案内</a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./menu.html#menu-area">サービス対応エリア</a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./menu.html#menu-faq">よくある質問</a>
-                </li>
-              </ul>
-            </nav>
+      <!-- 以下、前ページ共通 -->
+      <!-- reserve -->
+      <div class="reserve__container components-container">
+        <section class="reserve__btn">
+          <div class="reserve__btn-wrap l-container">
+            <div class="reserve__btn-message">
+              <p>
+                「毎日のオシャレをもっと楽しく」<span class="sp-br"
+                  >似合う服に出会う体験を。</span
+                >
+              </p>
+            </div>
+            <div class="reserve__btn-link">
+              <a
+                class="reserve__btn-footer cta-btn bg-skew"
+                href="./reserve.html"
+                ><span>今すぐ予約する</span></a
+              >
+            </div>
           </div>
-          <!-- center left-->
-          <div class="footer__nav-wrap-centerleft">
-            <nav class="footer__nav">
-              <ul>
-                <li class="footer__item footer_nav-ttl nav-item">
-                  <a href="./voice.html">お客様の声</a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./voice.html#voice-before">診断前のお客様のお悩み</a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./voice.html#voice-after">診断後のお客様の感想 </a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./voice.html#voice-gallery">ご提案コーデ一覧</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <!-- center right -->
-          <div class="footer__nav-wrap-centerright">
-            <nav class="footer__nav">
-              <ul>
-                <li class="footer__item footer_nav-ttl nav-item">
-                  <a href="./profile.html">プロフィール</a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./profile.html#profile-qualifications">保有資格</a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./profile.html#profile-diagnosis">各診断タイプ</a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./profile.html#profile-outfit"
-                    >サロンオーナーの強み</a
-                  >
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./profile.html#profile-experience-conpany"
-                    >企業研修実績
-                  </a>
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./profile.html#profile-experience-event"
-                    >イベント出演・監修実績</a
-                  >
-                </li>
-                <li class="footer__item nav-item">
-                  <a href="./profile.html#profile-experience-media"
-                    >メディア出演実績</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <!-- right -->
-          <div class="footer__nav-wrap-right">
-            <nav class="footer__nav">
-              <ul>
-                <li class="footer__item footer_nav-ttl nav-item">
-                  <a href="./contact.html">お問い合わせ</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="footer__nav-sns footer__item nav-item">
-                  <a
-                    href="https://www.instagram.com/saya.takahashi0124/"
-                    target="_blank"
-                  >
-                    <span class="footer_nav-ttl">Instagram</span>
-                    <div class="footer__sns-img">
-                      <picture>
-                        <source
-                          srcset="./img/sp-Instagram-icon.png"
-                          media="(max-width: 768px)"
-                        />
-                        <img src="./img/Vector.png" alt="インスタグラムURL" />
-                      </picture>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <div class="footer__copyright">
-          <p><span>©2024 porta fortuna </span></p>
-        </div>
-      </footer>
-    </div>
+        </section>
+      </div>
 
-    <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- slick -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- js -->
-    <script defer src="./js/common.js"></script>
-    <script defer src="./js/components.js"></script>
-    <script defer src="./js/index.js"></script>
+      <!-- footer -->
+      <div class="components-container">
+        <footer class="footer">
+          <div class="footer__nav-wrap l-container">
+            <!-- left -->
+            <div class="footer__nav-wrap-left">
+              <nav class="footer__nav">
+                <ul>
+                  <li class="footer__item footer_nav-ttl nav-item">
+                    <a href="#homeTop">ホーム</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="footer__item footer_nav-ttl nav-item">
+                    <a href="./menu.html">メニュー</a>
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./menu.html#menu-trip">ショッピング同行</a>
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./menu.html#menu-cruise"
+                      >ショップクルーズ＋お茶会</a
+                    >
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./menu.html#menu-closet"
+                      >オンラインクローゼット診断</a
+                    >
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./menu.html#menu-price">料金のご案内</a>
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./menu.html#menu-area">サービス対応エリア</a>
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./menu.html#menu-faq">よくある質問</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- center left-->
+            <div class="footer__nav-wrap-centerleft">
+              <nav class="footer__nav">
+                <ul>
+                  <li class="footer__item footer_nav-ttl nav-item">
+                    <a href="./voice.html">お客様の声</a>
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./voice.html#voice-before"
+                      >診断前のお客様のお悩み</a
+                    >
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./voice.html#voice-after">診断後のお客様の感想 </a>
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./voice.html#voice-gallery">ご提案コーデ一覧</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- center right -->
+            <div class="footer__nav-wrap-centerright">
+              <nav class="footer__nav">
+                <ul>
+                  <li class="footer__item footer_nav-ttl nav-item">
+                    <a href="./profile.html">プロフィール</a>
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./profile.html#profile-qualifications">保有資格</a>
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./profile.html#profile-diagnosis">各診断タイプ</a>
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./profile.html#profile-outfit"
+                      >サロンオーナーの強み</a
+                    >
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./profile.html#profile-experience-conpany"
+                      >企業研修実績
+                    </a>
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./profile.html#profile-experience-event"
+                      >イベント出演・監修実績</a
+                    >
+                  </li>
+                  <li class="footer__item nav-item">
+                    <a href="./profile.html#profile-experience-media"
+                      >メディア出演実績</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- right -->
+            <div class="footer__nav-wrap-right">
+              <nav class="footer__nav">
+                <ul>
+                  <li class="footer__item footer_nav-ttl nav-item">
+                    <a href="./contact.html">お問い合わせ</a>
+                  </li>
+                </ul>
+                <ul>
+                  <li class="footer__nav-sns footer__item nav-item">
+                    <a
+                      href="https://www.instagram.com/saya.takahashi0124/"
+                      target="_blank"
+                    >
+                      <span class="footer_nav-ttl">Instagram</span>
+                      <div class="footer__sns-img">
+                        <picture>
+                          <source
+                            srcset="./img/sp-Instagram-icon.png"
+                            media="(max-width: 768px)"
+                          />
+                          <img src="./img/Vector.png" alt="インスタグラムURL" />
+                        </picture>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="footer__copyright">
+            <p><span>©2024 porta fortuna </span></p>
+          </div>
+        </footer>
+      </div>
+
+      <!-- jquery -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <!-- slick -->
+      <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+      <!-- js -->
+      <script defer src="./js/common.js"></script>
+      <script defer src="./js/components.js"></script>
+      <script defer src="./js/index.js"></script>
+    </main>
   </body>
 </html>

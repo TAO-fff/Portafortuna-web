@@ -16,6 +16,112 @@
 }
 
 /* =======================
+   copy → site-content
+======================= */
+.home__top-copy-horizontal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #a28f81;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.home__top-copy-horizontal p {
+  color: var(--color-text-inverse);
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-ja-heading);
+  line-height: var(--line-height-base);
+}
+
+.home__top-copy-horizontal p {
+  letter-spacing: var(--letter-spacing-base);
+}
+
+.home__top-copy-horizontal p {
+  font-size: 2.5rem;
+  letter-spacing: 0.375rem;
+}
+
+@keyframes fadeInSoft {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* pタグの中の文字を最初は完全に消す */
+.home__top-copy-horizontal p span {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeInSoft 0.8s ease-out forwards, sparkle 1.5s infinite alternate;
+  animation-delay: var(--delay);
+}
+
+/* 文字光る キラキラ */
+@keyframes sparkle {
+  0% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.4),
+      0 0 4px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 0.5),
+      0 0 4px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, 1), 0 0 4px rgba(255, 255, 255, .8);
+  }
+}
+
+/* 文字が一つずつ表示されるアニメーション */
+@keyframes fadeInSoft {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.site-content {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* =======================
+  sp  copy → site-content
+======================= */
+@media screen and (max-width: 1300px) and (min-width: 1024px) {
+  .home__top-copy-horizontal p {
+    font-size: 2.2rem;
+  }
+}
+
+/* tab */
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .home__top-copy-horizontal p {
+    font-size: 2.2rem;
+    letter-spacing: 0.2em;
+  }
+}
+
+/* sp */
+@media screen and (max-width: 768px) {
+  .home__top-copy-horizontal {
+    display: none;
+  }
+}
+
+/* =======================
   FV
 ======================= */
 .home__top {
@@ -30,13 +136,18 @@
   content: "";
   display: block;
   clear: both;
-  height: 1px; /* 高さを持たせる */
+  height: 1px;
   visibility: hidden;
 }
 
 /* 画像 back */
 .home__top-mv {
   width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 
 .home__top-mv img {
@@ -49,32 +160,53 @@
   max-width: 1440px;
 }
 
-.home__top-mv-small {
-  width: 29%;
-  position: absolute;
-  top: 5vh;
-  left: 5%;
-  z-index: 5;
-  animation: fadeInRight 1.4s ease-in-out forwards;
-  opacity: 0;
+.home__top-mv-upper,
+.home__top-mv-lower {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.home__top-mv-small img {
-  width: 100%;
+.home__top-mv-upper-item,
+.home__top-mv-lower-item {
+  width: 22%;
+  position: relative;
 }
 
-.home__top-mv-triangle {
+.home__top-mv-upper-item::before,
+.home__top-mv-lower-item::before,
+.home__top-message-img::before {
+  display: block;
+  content: "";
+  background: rgb(162, 143, 129, 0.5);
+  mix-blend-mode: soft-light;
   width: 100%;
+  height: 100%;
   position: absolute;
-  top: 30.5%;
+  top: 0;
+  left: 0;
+  filter: brightness(1.5);
+}
+
+.home__top-logo,
+.sp-home__top-logo {
+  position: absolute;
+  top: 103%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: fadeInDown 1.4s ease-out forwards;
-  opacity: 0;
+  width: 100%;
 }
 
-.home__top-mv-triangle img {
-  width: 100%;
+.home__top-logo h1,
+.sp-home__top-logo h1 {
+  color: var(--color-dark);
+  text-align: center;
+  font-family: var(--font-en-heading);
+  font-size: 8rem;
+  line-height: var(--line-height-base);
+  letter-spacing: 0.6rem;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* テキスト */
@@ -89,6 +221,13 @@
   gap: 110px;
 }
 
+.sp-home__top-copy {
+  position: absolute;
+  top: 30%;
+  left: 46%;
+  transform: translate(0, -50%);
+}
+
 .home__top-copy {
   display: flex;
   flex-direction: column;
@@ -97,27 +236,44 @@
   opacity: 0;
 }
 
-.home__top-copy-vertical p,
-.home__top-copy-horizontal p,
-.sp-home__top-copy-vertical p,
-.sp-home__top-copy-horizontal-right p,
-.sp-home__top-copy-horizontal-left p {
+.sp-home__sub-copy {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 30px;
+  position: absolute;
+  bottom: 20%;
+  left: 0%;
+  transform: translate(0, -50%);
+}
+
+.sp-home__top-copy-horizontal {
+  margin: 0 auto;
+}
+
+.sp-home__top-vertical-txt,
+.sp-home__top-horizontal-txt {
   color: var(--color-text-inverse);
   text-align: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: var(--font-ja-heading);
   line-height: var(--line-height-base);
 }
 
-.home__top-copy-vertical p,
-.home__top-copy-horizontal p {
-  letter-spacing: var(--letter-spacing-base);
+.sp-home__top-vertical-txt {
+  color: var(--color-base-dark);
+  text-align: center;
+  font-family: var(--font-ja-heading);
+  line-height: var(--line-height-base);
+  letter-spacing: 2px;
+  writing-mode: vertical-lr;
 }
 
-.sp-home__top-copy-vertical p,
-.sp-home__top-copy-horizontal-right p,
-.sp-home__top-copy-horizontal-left p {
+.sp-home__top-horizontal-txt {
+  padding: 20px 10px 50px 10px;
   letter-spacing: var(--letter-spacing-wide);
+  text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.5);
 }
 
 .home__top-copy-vertical p {
@@ -125,122 +281,11 @@
   letter-spacing: 0.5rem;
 }
 
-.sp-home__top-copy-vertical .sp-home__top-copy-horizontal-right,
-.sp-home__top-copy-horizontal-left,
-.sp-home__top-copy-vertical p,
-.sp-home__top-copy-horizontal-right p,
-.sp-home__top-copy-horizontal-left p {
+.sp-home__top-copy-vertical,
+.sp-home__top-copy-horizontal,
+.sp-home__top-vertical-txt,
+.sp-home__top-horizontal-txt {
   display: none;
-}
-
-.home__top-copy-horizontal p {
-  font-size: 1.875rem;
-  letter-spacing: 0.375rem;
-}
-
-.home__top-logo {
-  position: absolute;
-  top: 1.5%;
-  right: 0%;
-}
-
-.home__top-logo h1 {
-  color: var(--color-text-inverse);
-  opacity: 0.4;
-  text-align: center;
-  font-family: var(--font-en-heading);
-  font-size: 3rem;
-  line-height: var(--line-height-base);
-  letter-spacing: 0.6rem;
-  writing-mode: vertical-rl;
-}
-
-.home__top-message {
-  width: 100%;
-  animation: fadeInUp 1.75s ease-in-out forwards;
-  opacity: 0;
-  animation-delay: 1s;
-}
-
-.home__top-message-wrap {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 50px;
-  margin-top: 20px;
-}
-
-.home__top-message-ttl-ja p {
-  font-family: var(--font-ja-heading);
-  font-size: 2.25rem;
-  font-weight: var(--font-weight-bold);
-  line-height: 1.2;
-  letter-spacing: var(--letter-spacing-base);
-}
-
-.home__top-message-txt {
-  width: 85%;
-  padding-top: 37px;
-}
-
-.home__top-message-txt p {
-  font-size: var(--font-size-text);
-  line-height: var(--line-height-base);
-  letter-spacing: var(--letter-spacing-base);
-  font-size: var(--font-size-text);
-}
-
-.home__top-message-ttl-en {
-  position: absolute;
-  top: 27%;
-}
-
-.home__top-message-ttl-en p {
-  font-family: var(--font-en-cursive);
-  font-size: 14.375rem;
-  line-height: 1.2;
-  letter-spacing: var(--letter-spacing-base);
-  opacity: 0.1;
-}
-
-.sp-home__top-message {
-  display: none;
-}
-
-/* =======================
-  アニメーション FV
-======================= */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    top: 5%;
-  }
-  to {
-    opacity: 1;
-    top: 30.5%;
-  }
-}
-
-@keyframes fadeInRight {
-  from {
-    opacity: 1;
-    left: 0%;
-  }
-  to {
-    opacity: 1;
-    left: 5%;
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    bottom: 0;
-  }
-  to {
-    opacity: 1;
-    top: 0;
-  }
 }
 
 /* =======================
@@ -260,12 +305,12 @@
     font-size: 2.5vw;
   }
 
-  .home__top-copy-horizontal p {
-    font-size: 2.2vw;
+  .home__top-logo h1 {
+    font-size: 8.5vw;
   }
 
-  .home__top-logo h1 {
-    font-size: 3.1vw;
+  .sp-home__top-logo {
+    display: none;
   }
 
   .home__top-message-ttl-ja p {
@@ -298,17 +343,21 @@
     letter-spacing: 0.2em;
   }
 
-  .home__top-copy-horizontal p {
-    font-size: 2.4vw;
-    letter-spacing: 0.2em;
+  .sp-home__top-copy-horizontal {
+    writing-mode: horizontal-tb;
+    display: block;
   }
 
   .home__top-logo h1 {
-    font-size: 3.1vw;
+    font-size: 8.5vw;
+  }
+
+  .sp-home__top-logo {
+    display: none;
   }
 
   .home__top-message-ttl-ja p {
-    font-size: 2.7vw;
+    font-size: 3vw;
     letter-spacing: var(--letter-spacing-base);
   }
 
@@ -328,97 +377,85 @@
     margin: 0 auto;
   }
 
-  /* 画像 back */
-  .home__top-mv-small {
-    width: 60%;
-    top: 45vw;
+  .home__top-mv-upper-item:not(:first-child),
+  .home__top-mv-lower-item {
+    display: none;
   }
 
-  .home__top-mv-triangle {
-    bottom: 8.5%;
+  .home__top-mv-upper-item:first-child picture {
+    display: block;
+    width: 100%;
+  }
+
+  .home__top-mv-upper-item {
+    width: 100%;
+  }
+
+  .home__top-mv-lower-item {
+    display: none;
   }
 
   /* テキスト */
   .home__mv-txt-wrap {
     width: 53%;
     top: 19.5%;
-    right: 1vw;
+    right: 50%;
     z-index: 10;
+    transform: translate(-50%, -50%);
   }
 
   .home__top-copy {
     display: block;
-    animation: fadeInUp 1.75s ease-in-out forwards;
-    opacity: 0;
   }
 
-  .home__top-copy-vertical p,
-  .home__top-copy-horizontal p {
+  .home__top-copy-vertical p {
     display: none;
   }
 
-  .sp-home__top-copy-vertical .sp-home__top-copy-horizontal-right,
-  .sp-home__top-copy-horizontal-left,
-  .sp-home__top-copy-vertical p,
-  .sp-home__top-copy-horizontal-right p,
-  .sp-home__top-copy-horizontal-left p {
+  .sp-home__top-copy-vertical,
+  .sp-home__top-copy-horizontal,
+  .sp-home__top-vertical-txt,
+  .sp-home__top-horizontal-txt {
     display: block;
   }
 
-  .sp-home__top-copy-vertical p {
+  .sp-home__top-vertical-txt {
     font-size: 4.6vw;
-    text-align: right;
-    background-color: rgba(162, 143, 129, 0.5);
-    backdrop-filter: blur(2px);
-    padding: 0 5.1vw;
+    text-align: center;
     letter-spacing: var(--letter-spacing-wide);
   }
 
-  .sp-home__top-copy-vertical p + p {
-    margin-top: 10px;
-  }
-
-  .sp-home__top-copy-horizontal-right,
-  .sp-home__top-copy-horizontal-left {
+  .sp-home__top-copy-horizontal {
     position: absolute;
   }
 
-  .sp-home__top-copy-horizontal-right {
-    right: 5%;
-    top: 50vw;
-  }
-
-  .sp-home__top-copy-horizontal-left {
-    right: 35%;
-    top: 90vw;
-  }
-
-  .sp-home__top-horizontal-txt-right,
-  .sp-home__top-horizontal-txt-left {
-    font-size: 6vw;
-    writing-mode: vertical-rl;
-    text-align: end;
-    border-right: 1px solid var(--color-text-inverse); /* 縦線を追加 */
+  .sp-home__top-horizontal-txt {
+    font-size: 4.2vw;
     padding-right: 10px;
+    width: 100%;
+    animation: fadeInSoft 0.8s ease-out forwards, sparkle 1.5s infinite alternate;
+    animation-delay: var(--delay);
+    /* text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2); */
   }
 
-  .sp-home__top-horizontal-txt-left {
-    top: 0;
-    left: 20%;
-  }
-
-  .home__top-logo {
-    top: 97%;
+  .sp-home__top-logo {
+    display: block;
+    top: 85%;
     left: 52%;
     transform: translate(-50%, -50%);
     overflow: hidden;
     width: 95%;
+    color: var(--color-text-inverse);
   }
 
-  .home__top-logo h1 {
-    font-size: 6vw;
+  .sp-home__top-logo h1 {
+    font-size: 8vw;
     writing-mode: unset;
     width: 98%;
+  }
+
+  .home__top-logo {
+    display: none;
   }
 
   .home__top-message {
@@ -456,21 +493,6 @@
     line-height: var(--line-height-base);
     letter-spacing: var(--letter-spacing-base);
   }
-
-  /* =======================
-  sp アニメーション FV
-======================= */
-
-  @keyframes fadeInRight {
-    from {
-      opacity: 1;
-      left: 0%;
-    }
-    to {
-      opacity: 1;
-      left: 0;
-    }
-  }
 }
 
 @media screen and (max-width: 426px) {
@@ -479,14 +501,22 @@
     margin: 0 auto;
   }
 
-  /* 画像 back */
-  .home__top-mv-small {
-    width: 60%;
-    top: 46vw;
+  .home__top-mv-upper-item:not(:first-child),
+  .home__top-mv-lower-item {
+    display: none;
   }
 
-  .home__top-mv-triangle {
-    bottom: 8.5%;
+  .home__top-mv-upper-item:first-child picture {
+    display: block;
+    width: 100%;
+  }
+
+  .home__top-mv-upper-item {
+    width: 100%;
+  }
+
+  .home__top-mv-lower-item {
+    display: none;
   }
 
   /* テキスト */
@@ -503,62 +533,39 @@
     opacity: 0;
   }
 
-  .home__top-copy-vertical p,
-  .home__top-copy-horizontal p {
+  .home__top-copy-vertical p {
     display: none;
   }
 
-  .sp-home__top-copy-vertical .sp-home__top-copy-horizontal-right,
-  .sp-home__top-copy-horizontal-left,
-  .sp-home__top-copy-vertical p,
-  .sp-home__top-copy-horizontal-right p,
-  .sp-home__top-copy-horizontal-left p {
+  .sp-home__top-copy-vertical,
+   .sp-home__top-copy-horizontal,
+  .sp-home__top-vertical-txt,
+  .sp-home__top-horizontal-txt {
     display: block;
   }
 
-  .sp-home__top-copy-vertical p {
+  .sp-home__top-vertical-txt {
     font-size: 4.6vw;
-    text-align: right;
-    background-color: rgba(162, 143, 129, 0.5);
-    backdrop-filter: blur(2px);
-    padding: 0 5.1vw;
-    letter-spacing: var(--letter-spacing-wide);
+    text-align: center;
+    letter-spacing: 2vw;
+    padding-top: 15px;
   }
 
   .sp-home__top-copy-vertical p + p {
     margin-top: 10px;
   }
 
-  .sp-home__top-copy-horizontal-right,
-  .sp-home__top-copy-horizontal-left {
+  .sp-home__top-copy-horizontal {
     position: absolute;
   }
 
-  .sp-home__top-copy-horizontal-right {
-    right: calc(100% - 76%);
-    top: 50vw;
-  }
-
-  .sp-home__top-copy-horizontal-left {
-    right: calc(100% - 46%);
-    top: 90vw;
-  }
-
-  .sp-home__top-horizontal-txt-right,
-  .sp-home__top-horizontal-txt-left {
+  .sp-home__top-horizontal {
     font-size: 6vw;
-    writing-mode: vertical-rl;
     text-align: end;
-    border-right: 1px solid var(--color-text-inverse); /* 縦線を追加 */
     padding-right: 0px;
   }
 
-  .sp-home__top-horizontal-txt-left {
-    top: 0;
-    left: 20%;
-  }
-
-  .home__top-logo {
+  .sp-home__top-logo {
     top: 97%;
     left: 52%;
     transform: translate(-50%, -50%);
@@ -566,10 +573,15 @@
     width: 95%;
   }
 
-  .home__top-logo h1 {
+  .sp-home__top-logo h1 {
     font-size: 6vw;
     writing-mode: unset;
     width: 98%;
+    color: var(--color-text-inverse);
+  }
+
+  .home__top-logo {
+    display: none;
   }
 
   .home__top-message {
@@ -613,20 +625,114 @@
     line-height: var(--line-height-base);
     letter-spacing: var(--letter-spacing-base);
   }
+}
 
-  /* =======================
-  sp アニメーション FV
+/* =======================
+message
 ======================= */
+.home__message {
+  position: relative;
+  margin: 250px 0 120px 0;
+  padding: 150px 0 80px 0;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
 
-  @keyframes fadeInRight {
-    from {
-      opacity: 1;
-      left: 0%;
-    }
-    to {
-      opacity: 1;
-      left: 0;
-    }
+.home__message-wrap {
+  position: relative;
+  margin: 250px 0 150px 0;
+}
+
+.home__top-message {
+  position: relative;
+  width: 75%;
+  padding-left: 10%;
+}
+
+.home__top-message-ttl-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.home__top-message-ttl-ja p {
+  font-family: var(--font-ja-heading);
+  font-size: 2rem;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-base);
+}
+
+.home__top-message-txt {
+  width: 85%;
+  padding-top: 37px;
+}
+
+.home__top-message-txt p {
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-base);
+  letter-spacing: var(--letter-spacing-base);
+  font-size: var(--font-size-text);
+  padding: 25px 15px;
+  margin-top: 50px;
+  background: linear-gradient(
+    -18deg,
+    rgb(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.8)
+  );
+}
+
+.home__top-message-ttl-en {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(
+    15deg,
+    rgb(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.6)
+  );
+}
+
+.home__top-message-ttl-en p {
+  font-family: var(--font-en-cursive);
+  font-size: 14.375rem;
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-base);
+  opacity: 0.1;
+}
+
+.home__top-message-img {
+  position: absolute;
+  top: -100px;
+  right: 0;
+  z-index: -1;
+  opacity: 0.35;
+  width: 78%;
+}
+
+.home__top-message-img img {
+  width: 100%;
+}
+
+.sp-home__top-message {
+  display: none;
+}
+
+/* =======================
+  sp message
+======================= */
+/* sp */
+@media screen and (max-width: 768px) {
+  .home__message {
+    display: none;
   }
 }
 
@@ -638,7 +744,8 @@
 }
 
 .home__reason-back {
-  background-image:  url(../img/home-reason-abck.avif), url(../img/home-reason-abck.webp), url(../img/home-reason-abck.jpg);
+  background-image: url(../img/home-reason-abck.avif),
+    url(../img/home-reason-abck.webp), url(../img/home-reason-abck.jpg);
   background-size: cover;
 }
 
@@ -724,7 +831,6 @@
   box-sizing: border-box;
 }
 
-
 .home__reason-item-ttl,
 .sp-home__reason-item-ttl {
   padding-bottom: 17px;
@@ -787,7 +893,6 @@
   display: none;
 }
 
-
 /*  */
 /*  */
 /*  */
@@ -796,72 +901,72 @@
 ===================================*/
 
 /*印象編　4-9、4-10　背景色が伸びて出現（左から・右から）　*/
-.bgextend{
-	animation-name:bgextendAnimeBase;
-	animation-duration:1s;
-	animation-fill-mode:forwards;
-	position: relative;
-	overflow: hidden;/*　はみ出た色要素を隠す　*/
-	opacity:0;
+.bgextend {
+  animation-name: bgextendAnimeBase;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  position: relative;
+  overflow: hidden; /*　はみ出た色要素を隠す　*/
+  opacity: 0;
 }
 
-@keyframes bgextendAnimeBase{
+@keyframes bgextendAnimeBase {
   from {
-    opacity:0;
+    opacity: 0;
   }
 
   to {
-    opacity:1;  
-}
+    opacity: 1;
+  }
 }
 
 /*中の要素*/
-.bgappear{
-	animation-name:bgextendAnimeSecond;
-	animation-duration:1s;
-	animation-delay: 0.6s;
-	animation-fill-mode:forwards;
-	opacity: 0;
+.bgappear {
+  animation-name: bgextendAnimeSecond;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
 }
 
-@keyframes bgextendAnimeSecond{
-	0% {
-	opacity: 0;
-	}
-	100% {
-	opacity: 1;
-}
+@keyframes bgextendAnimeSecond {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*印象編　4-9 背景色が伸びて出現（左から）*/
 /*--------- 上から --------*/
-.bgUDextend::before{
-	animation-name:bgUDextendAnime;
-	animation-duration:1s;
-	animation-fill-mode:forwards;
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: #a28f81;/*伸びる背景色の設定*/
+.bgUDextend::before {
+  animation-name: bgUDextendAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #a28f81; /*伸びる背景色の設定*/
 }
 
-@keyframes bgUDextendAnime{
-	0% {
-		transform-origin:top;
-		transform:scaleY(0);
-	}
-	50% {
-		transform-origin:top;
-		transform:scaleY(1);
-	}
-	50.001% {
-		transform-origin:bottom;
-	}
-	100% {
-		transform-origin:bottom;
-		transform:scaleY(0);
-	}
+@keyframes bgUDextendAnime {
+  0% {
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  50% {
+    transform-origin: top;
+    transform: scaleY(1);
+  }
+  50.001% {
+    transform-origin: bottom;
+  }
+  100% {
+    transform-origin: bottom;
+    transform: scaleY(0);
+  }
 }
 
 /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
@@ -869,13 +974,9 @@
 .bgUDextendTrigger,
 .bgDUextendTrigger,
 .bgRLextendTrigger,
-.bgLRextendTrigger{
-    opacity: 0;
+.bgLRextendTrigger {
+  opacity: 0;
 }
-
-
-
-
 
 /* =======================
   sp reason
@@ -1136,7 +1237,6 @@
     max-height: 500px;
     opacity: 1;
   }
-
 
   .sp-home__reason-txt p {
     padding: 40px 15px 0px 15px;

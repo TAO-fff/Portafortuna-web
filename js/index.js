@@ -1,4 +1,28 @@
-// // ページ内リンクのスムーズスクロール
+document.addEventListener("DOMContentLoaded", function () {
+  // sessionStorage に訪問フラグがあるか確認
+  if (!sessionStorage.getItem("visited")) {
+    sessionStorage.setItem("visited", "true"); // 初回訪問時にフラグをセット
+
+    // ページが読み込まれた後に .home__top-copy-horizontal を表示
+    setTimeout(function () {
+      document.querySelector(".home__top-copy-horizontal").style.display = "flex"; // 表示
+    }, 10); // 少し遅延を入れて表示させる
+
+    // 2秒後に .home__top-copy-horizontal をフェードアウトさせ、site-content を表示
+    setTimeout(function () {
+      document.querySelector(".home__top-copy-horizontal").style.opacity = "0"; // フェードアウト
+      setTimeout(function () {
+        document.querySelector(".site-content").style.opacity = "1"; // site-content を表示
+      }, 1600); // フェードアウト後に表示
+    }, 2000);
+  } else {
+    // 再訪問時.home__top-copy-horizontal非表示
+    document.querySelector(".home__top-copy-horizontal").style.display = "none";
+    document.querySelector(".site-content").style.opacity = "1"; // site-content を即表示
+  }
+});
+
+// ページ内リンクのスムーズスクロール
 $(function () {
   // ページ内リンクをクリックしたとき
   $('a[href^="#"]').on('click', function (e) {
