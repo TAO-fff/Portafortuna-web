@@ -593,7 +593,7 @@
   }
 
   .sp-home__top-scroll::before {
-    animation: scroll 2s infinite;
+    animation: scroll 2.5s infinite;
   background-color: var(--color-base);
   bottom: -115px;
   content: "";
@@ -611,11 +611,11 @@
     transform: scale(1, 0);
     transform-origin: 0 0;
   }
-  50% {
+  60% {
     transform: scale(1, 1);
     transform-origin: 0 0;
   }
-  51% {
+  71% {
     transform: scale(1, 1);
     transform-origin: 0 100%;
   }
