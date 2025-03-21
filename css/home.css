@@ -209,6 +209,10 @@
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
+.sp-home__top-logo {
+  display: none;
+}
+
 /* テキスト */
 .home__mv-txt-wrap {
   width: 53%;
@@ -309,9 +313,7 @@
     font-size: 8.5vw;
   }
 
-  .sp-home__top-logo {
-    display: none;
-  }
+
 
   .home__top-message-ttl-ja p {
     font-size: 2.55vw;
