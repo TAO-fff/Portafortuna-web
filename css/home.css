@@ -221,7 +221,6 @@
   font-size: 8rem;
   line-height: var(--line-height-base);
   letter-spacing: 0.6rem;
-  text-shadow: 2px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .sp-home__top-logo {
