@@ -430,7 +430,6 @@
 
   .sp-home__top-horizontal-txt {
     font-size: 4.4vw;
-    padding-right: 10px;
     width: 100%;
     animation: fadeInSoft 0.8s ease-out forwards, sparkle 1.5s infinite alternate;
     animation-delay: var(--delay);
@@ -547,7 +546,7 @@
     font-size: 4.6vw;
     text-align: center;
     letter-spacing: 2vw;
-    padding-top: 15px;
+    padding-top: 40px;
   }
 
   .sp-home__top-copy-vertical p + p {
@@ -556,12 +555,17 @@
 
   .sp-home__top-copy-horizontal {
     position: absolute;
+    font-size: 4.4vw;
+    background-color: rgb(162, 143, 129, 0.1);
   }
 
   .sp-home__top-horizontal {
     font-size: 6vw;
-    text-align: end;
     padding-right: 0px;
+  }
+
+  .sp-home__top-horizontal-txt {
+    padding: 20px 10px 30px 10px;
   }
 
   .sp-home__top-logo {
@@ -574,7 +578,7 @@
   }
 
   .sp-home__top-logo h1 {
-    font-size: 6vw;
+    font-size: 6.2vw;
     writing-mode: unset;
     width: 98%;
     color: var(--color-text-inverse);
