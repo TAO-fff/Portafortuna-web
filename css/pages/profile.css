@@ -97,7 +97,7 @@ sp profile（上:名前・資格）
 ================================ */
 /***** ヘッダー（名前）*****/
 .profile__header {
-  padding: 0 20px;
+  padding: 0;
 }
 
 .profile__name-container {
@@ -106,7 +106,7 @@ sp profile（上:名前・資格）
   justify-content: flex-start;
   align-items: flex-end;
   gap: 20px;
-  padding: 20px 30px 20px 60px;
+  padding: 20px 30px 20px 40px;
 }
 
 .profile__name {

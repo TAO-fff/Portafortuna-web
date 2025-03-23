@@ -333,6 +333,7 @@
 /* menu上部 左（img） */
 .menu__item-top-left {
   width: 53%;
+  position: relative;
 }
 
 .menu__item-top-img,
@@ -718,13 +719,13 @@
   }
 
   .sp-menu__item-top-sub-ttl p {
-    font-size: 2.45vw;
-    padding: 10px 7px 10px 20px;
+    font-size: 23px;
+    padding: 10px 7px 10px 30px;
   }
 
   .sp-menu__item-top-ttl p {
-    font-size: 2.8vw;
-    padding: 10px 7px 10px 50px;
+    font-size: 23px;
+    padding: 10px 7px 10px 30px;
   }
 
   .sp-menu__item-top-txt {
@@ -889,36 +890,38 @@
   }
 
   .sp-menu__top-ttl-wrap {
-    width: 77%;
+    width: 82%;
     position: absolute;
+    align-items: flex-end;
     top: 100%;
     right: -30%;
     transform: translate(-50%, -50%);
   }
 
   .sp-menu__item-top-sub-ttl {
-    width: 100%;
   }
 
   .sp-menu__item-top-ttl {
-    width: 100%;
+    min-width: 233px;
   }
 
   .sp-menu__item-top-sub-ttl p,
   .sp-menu__item-top-ttl p {
     border: solid 0.5px var(--color-primary);
+    width: 100%;
   }
 
   .sp-menu__item-top-sub-ttl p {
-    font-size: 15px;
-    padding: 3vw 2.5vw 3vw 20px;
-    text-align: center;
+    font-size: 16px;
+    padding: 3vw 2.5vw 3vw 2.5vw;
+    text-align: right;
+    
   }
 
   .sp-menu__item-top-ttl p {
-    font-size: 17px;
-    padding: 3vw 1.5vw 3vw 2vw;
-    text-align: center;
+    font-size: 18px;
+    padding: 3vw 2.5vw 3vw 2.5vw;
+    text-align: right;
   }
 
   .sp-menu__item-top-txt {
@@ -1144,13 +1147,13 @@
   }
 
   .menu__price-list {
-    width: 80%;
+    width: 96%;
     gap: 2vw;
-    padding: 20vw 27px;
+    padding: 20vw 15px;
   }
 
   .menu__price-list-ttl p {
-    font-size: 1.155rem;
+    font-size: 1.13rem;
   }
 
   .menu_price-one {
@@ -1244,11 +1247,6 @@
 
 .menu__area-attention-list:nth-child(1) {
   padding-bottom: 35px;
-}
-
-.menu__area-attention-list:nth-child(2),
-.menu__area-attention-list:nth-child(3) {
-  padding-left: 16px;
 }
 
 .menu__area-attention-mark {
