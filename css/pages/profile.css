@@ -1300,9 +1300,39 @@ profile contents (各実績)
     gap: 15px;
   }
 
+  .profile__qa-q-ttl {
+    position: relative;
+  }
+
+  .profile__qa-q-ttl::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-120%); 
+    
+    border-style: solid;
+    border-width: 30px 0px 0px 30px;
+    border-color: transparent transparent transparent var(--color-primary);
+    z-index: -1;
+    opacity: .4;
+  }
+
   .profile__qa-q-ttl p {
     font-size: 1.85rem;
     font-weight: var(--font-weight-bold);
+  }
+
+  .profile__qa-q-ttl p::before  {
+    display: block;
+    content: "";
+   border: dotted 1px var(--color-primary);
+   width: 70%;
+   min-width: 320px;
+   position: absolute;
+   bottom: 9%;
+   left: 5%;
+   opacity: .4;
   }
 
   .profile__qa-a-txt p {
@@ -1390,10 +1420,40 @@ profile contents (各実績)
     gap: 15px;
   }
 
+  .profile__qa-q-ttl {
+    position: relative;
+  }
+
+  .profile__qa-q-ttl::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: translateY(-120%); 
+    
+    border-style: solid;
+    border-width: 30px 0px 0px 30px;
+    border-color: transparent transparent transparent var(--color-primary);
+    z-index: -1;
+    opacity: .4;
+  }
+
   .profile__qa-q-ttl p {
     font-size: 1.4rem;
     font-weight: var(--font-weight-bold);
     padding: 10px 0;
+  }
+
+  .profile__qa-q-ttl p::before  {
+    display: block;
+    content: "";
+   border: dotted 1px var(--color-primary);
+   width: 70%;
+   min-width: 250px;
+   position: absolute;
+   bottom: 9%;
+   left: 5%;
+   opacity: .4;
   }
 
   .profile__qa-a-txt p {

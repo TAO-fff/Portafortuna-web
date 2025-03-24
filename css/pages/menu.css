@@ -1481,11 +1481,6 @@
     margin: 0;
   }
 
-  .menu__area-attention-mark {
-    position: absolute;
-    top: 0%;
-    left: -2.5vw;
-  }
 
   .sp-menu__area-place-attention {
     display: block;
