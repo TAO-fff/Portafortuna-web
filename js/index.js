@@ -1,26 +1,36 @@
 document.addEventListener("DOMContentLoaded", function () {
+  // 画面幅を取得
+  const isMobile = window.innerWidth <= 768;
+  const topCopy = document.querySelector(".home__top-copy-horizontal");
+  const siteContent = document.querySelector(".site-content");
+
+  if (!topCopy || !siteContent) return; // 要素が存在しない場合は処理を中断
+
   // sessionStorage に訪問フラグがあるか確認
   if (!sessionStorage.getItem("visited")) {
     sessionStorage.setItem("visited", "true"); // 初回訪問時にフラグをセット
 
-    // ページが読み込まれた後に .home__top-copy-horizontal を表示
-    setTimeout(function () {
-      document.querySelector(".home__top-copy-horizontal").style.display = "flex"; // 表示
-    }, 10); // 少し遅延を入れて表示させる
+    if (!isMobile) { // 768px以下の場合は処理しない
+      setTimeout(() => {
+        topCopy.style.display = "flex"; // 表示
+      }, 10);
 
-    // 2秒後に .home__top-copy-horizontal をフェードアウトさせ、site-content を表示
-    setTimeout(function () {
-      document.querySelector(".home__top-copy-horizontal").style.opacity = "0"; // フェードアウト
-      setTimeout(function () {
-        document.querySelector(".site-content").style.opacity = "1"; // site-content を表示
-      }, 1600); // フェードアウト後に表示
-    }, 2000);
+      setTimeout(() => {
+        topCopy.style.opacity = "0"; // フェードアウト
+        setTimeout(() => {
+          siteContent.style.opacity = "1"; // site-content を表示
+        }, 1600);
+      }, 2000);
+    } else {
+      siteContent.style.opacity = "1"; // 直接 site-content を表示
+    }
   } else {
-    // 再訪問時.home__top-copy-horizontal非表示
-    document.querySelector(".home__top-copy-horizontal").style.display = "none";
-    document.querySelector(".site-content").style.opacity = "1"; // site-content を即表示
+    // 再訪問時 home__top-copy-horizontal を非表示
+    topCopy.style.display = "none";
+    siteContent.style.opacity = "1"; // site-content を即表示
   }
 });
+
 
 // ページ内リンクのスムーズスクロール
 $(function () {
